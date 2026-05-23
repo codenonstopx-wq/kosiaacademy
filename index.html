@@ -6,6 +6,7 @@
 <title>KOSIA Academy — Modern Education for Beauty Professionals</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -27,15 +28,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:va
 @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-
+ 
 /* CURSOR */
 #cursor{position:fixed;width:8px;height:8px;background:var(--clay);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s,background .18s;mix-blend-mode:multiply;}
 #cursor.big{width:36px;height:36px;background:rgba(196,138,113,0.2);}
-
+ 
 /* ── VIEWS ── */
 #view-marketing{display:block;}
 #view-dashboard{display:none;}
-
+ 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:1.2rem var(--pad);background:rgba(251,249,246,0.93);backdrop-filter:blur(18px);border-bottom:0.5px solid var(--border);}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;}
@@ -52,7 +53,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .nav-enroll:hover{background:var(--clay-dark);}
 .nav-user-btn{font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.55rem 1.2rem;font-weight:500;background:transparent;color:var(--onyx);border:0.5px solid var(--border-strong);cursor:none;transition:all .2s;display:none;}
 .nav-user-btn:hover{border-color:var(--clay);color:var(--clay);}
-
+ 
 /* ── AUTH MODAL ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(8,6,4,0.72);z-index:900;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .28s;}
 .modal-overlay.open{opacity:1;pointer-events:all;}
@@ -84,13 +85,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .auth-switch span{color:var(--clay);cursor:none;}
 .auth-toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--onyx);color:var(--cream);padding:0.75rem 1.5rem;font-size:0.72rem;letter-spacing:0.1em;z-index:1000;opacity:0;pointer-events:none;transition:opacity .3s;white-space:nowrap;}
 .auth-toast.show{opacity:1;}
-
+ 
 /* ── SHARED ── */
 .section-eyebrow{display:flex;align-items:center;gap:0.65rem;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:1rem;}
 .section-eyebrow-line{width:18px;height:0.5px;background:var(--clay);flex-shrink:0;}
 .section-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:300;line-height:1.08;letter-spacing:-0.01em;}
 .section-h2 em{font-style:italic;color:var(--clay);}
-
+ 
 /* ── HERO ── */
 .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;padding:8rem 0 0 var(--pad);position:relative;overflow:hidden;}
 .hero-bg-text{position:absolute;bottom:-3rem;left:-1rem;font-family:'Cormorant Garamond',serif;font-size:20vw;font-weight:300;font-style:italic;color:rgba(196,138,113,0.045);line-height:1;user-select:none;pointer-events:none;white-space:nowrap;}
@@ -122,13 +123,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .progress-bar{width:100%;height:1.5px;background:var(--sand);margin-bottom:0.6rem;position:relative;overflow:hidden;}
 .progress-fill{position:absolute;top:0;left:0;height:100%;width:62%;background:var(--clay);transform-origin:left;animation:slideRight 1.2s cubic-bezier(.4,0,.2,1) 1s both;}
 .progress-meta{display:flex;justify-content:space-between;font-size:0.62rem;color:var(--muted);}
-
+ 
 /* MARQUEE */
 .marquee-wrap{background:var(--onyx);overflow:hidden;padding:0.95rem 0;border-top:0.5px solid #252525;border-bottom:0.5px solid #252525;}
 .marquee-track{display:flex;white-space:nowrap;animation:marqueeScroll 30s linear infinite;}
 .marquee-item{display:inline-flex;align-items:center;gap:1.3rem;padding:0 1.8rem;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:#4A4440;flex-shrink:0;}
 .marquee-dot{width:3px;height:3px;border-radius:50%;background:var(--clay);flex-shrink:0;}
-
+ 
 /* ABOUT */
 .about-section{display:grid;grid-template-columns:1fr 1fr;}
 .about-left{padding:6.5rem var(--pad);border-right:0.5px solid var(--border);display:flex;flex-direction:column;justify-content:center;}
@@ -142,7 +143,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .pillar-num{font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--clay);padding-top:0.08rem;}
 .pillar-name{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:400;margin-bottom:0.25rem;}
 .pillar-desc{font-size:0.74rem;color:var(--muted);line-height:1.75;}
-
+ 
 /* TRACK SPLIT */
 .track-split{display:grid;grid-template-columns:1fr 1fr;}
 .track-panel{padding:5.5rem var(--pad);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:72vh;}
@@ -176,7 +177,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .track-pill{position:absolute;top:2.25rem;right:2.25rem;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 0.8rem;border:0.5px solid;}
 .track-panel-stylist .track-pill{color:var(--clay);border-color:rgba(196,138,113,0.3);}
 .track-panel-owner .track-pill{color:var(--clay-light);border-color:rgba(196,138,113,0.2);}
-
+ 
 /* COLOR WHEEL */
 .color-section{padding:7.5rem var(--pad);background:var(--onyx);color:var(--cream);}
 .color-section .section-eyebrow{color:var(--clay);}
@@ -197,7 +198,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .ct-comp-label{font-size:0.63rem;color:#4A4040;line-height:1.4;}
 .ct-comp-label strong{color:#6A6060;font-weight:400;display:block;}
 .ct-rule{width:100%;height:0.5px;background:#1E1E1E;}
-
+ 
 /* LEVEL TABLE */
 .levels-section{padding:7.5rem var(--pad);}
 .levels-intro{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:end;margin-bottom:3rem;}
@@ -219,7 +220,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .up-sw{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .neut-tag{font-size:0.65rem;color:var(--sage);font-style:italic;}
 .why-n{font-size:0.68rem;color:var(--muted);line-height:1.6;}
-
+ 
 /* PLACEMENT */
 .placement-section{padding:7.5rem var(--pad);background:var(--alabaster);}
 .placement-intro{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;margin-bottom:4rem;align-items:end;}
@@ -242,7 +243,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .pcard-num{font-family:'Cormorant Garamond',serif;font-size:2.75rem;font-weight:300;color:rgba(196,138,113,0.1);line-height:1;margin-bottom:0.6rem;}
 .pcard-title{font-family:'Cormorant Garamond',serif;font-size:1.08rem;margin-bottom:0.5rem;}
 .pcard-body{font-size:0.71rem;color:var(--muted);line-height:1.8;}
-
+ 
 /* CURRICULUM */
 .curric-section{padding:6.5rem var(--pad);}
 .curric-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.75rem;padding-bottom:1.75rem;border-bottom:0.5px solid var(--border);}
@@ -262,7 +263,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .ccard-link{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--clay);display:flex;align-items:center;gap:0.38rem;cursor:none;}
 .ccard-arrow{transition:transform .22s;}
 .ccard:hover .ccard-arrow{transform:translateX(4px);}
-
+ 
 /* OWNER CURRICULUM DARK */
 .curric-section.owner-track{background:var(--onyx);}
 .curric-section.owner-track .curric-header{border-bottom-color:#252525;}
@@ -276,7 +277,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .curric-section.owner-track .cunit{color:#3A3530;}
 .curric-section.owner-track .ccard-link{color:var(--clay-light);}
 .curric-section.owner-track .ccard:hover .ccard-name{color:var(--cream);}
-
+ 
 /* PRICING */
 .pricing-section{padding:7.5rem var(--pad);background:var(--alabaster);}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem;}
@@ -311,7 +312,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .btn-price-outline{background:transparent;color:#4A4440;border:0.5px solid #2A2A2A;}
 .btn-price-outline:hover{border-color:#4A4440;color:#6A6060;}
 .pricing-note{text-align:center;margin-top:2rem;font-size:0.72rem;color:var(--muted);}
-
+ 
 /* CALENDLY */
 .calendly-section{padding:7rem var(--pad);background:var(--onyx);color:var(--cream);}
 .calendly-section .section-eyebrow{color:var(--clay);}
@@ -329,10 +330,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:cen
 .mtype-desc{font-size:0.67rem;color:rgba(251,249,246,0.25);line-height:1.5;}
 .btn-cal{width:100%;padding:0.85rem;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:400;background:rgba(196,138,113,0.15);color:rgba(196,138,113,0.8);border:0.5px solid rgba(196,138,113,0.25);cursor:none;transition:all .22s;}
 .btn-cal:hover{background:var(--clay);color:var(--cream);border-color:var(--clay);}
-.cal-widget{border:0.5px solid #1A1A1A;min-height:600px;background:#080808;overflow:hidden;}
+.cal-widget{border:0.5px solid #1A1A1A;min-height:700px;background:#080808;overflow:hidden;}
 .cal-placeholder-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#2E2A28;font-style:italic;}
 .cal-placeholder-sub{font-size:0.65rem;color:#1E1A18;letter-spacing:0.1em;text-transform:uppercase;text-align:center;}
-
+ 
 /* CTA + VOICE + WHO */
 .pillars-section{display:grid;grid-template-columns:repeat(3,1fr);}
 .pcol{padding:5rem var(--pad);border-right:0.5px solid var(--border);position:relative;overflow:hidden;}
@@ -386,7 +387,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .footer-links a{text-decoration:none;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:#252525;transition:color .2s;cursor:none;}
 .footer-links a:hover{color:var(--clay);}
 .footer-copy{font-size:0.58rem;color:#1E1E1E;}
-
+ 
 /* ══════════════════════════════════
    DASHBOARD STYLES
 ══════════════════════════════════ */
@@ -412,7 +413,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-nav-check.current{border-color:var(--clay);color:var(--clay);}
 .db-nav-check.locked{border-color:#252525;color:#252525;}
 .db-main{margin-left:240px;background:var(--cream);min-height:calc(100vh - 58px);display:flex;flex-direction:column;}
-
+ 
 /* DB - LESSON VIEW */
 .db-lesson{display:none;flex-direction:column;min-height:calc(100vh - 58px);}
 .db-lesson.active-view{display:flex;}
@@ -440,7 +441,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-ctab.active{color:var(--clay);border-bottom-color:var(--clay);}
 .db-content-panel{display:none;}
 .db-content-panel.active{display:block;}
-
+ 
 /* Notes/Why panel */
 .db-why-block{margin-bottom:1.75rem;}
 .db-why-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.6rem;}
@@ -451,7 +452,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-formula-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--onyx);}
 .db-formula-val{font-size:0.72rem;color:var(--muted);margin-top:0.18rem;}
 .db-formula-badge{font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.6rem;background:rgba(196,138,113,0.1);color:var(--clay);}
-
+ 
 /* Photo resources */
 .db-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:0.85rem;}
 .db-photo-card{aspect-ratio:4/3;background:var(--alabaster);border:0.5px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;}
@@ -459,7 +460,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-photo-icon{font-size:1.5rem;color:var(--taupe);}
 .db-photo-upload{position:absolute;inset:0;opacity:0;cursor:none;}
 .db-photo-label-btn{position:absolute;bottom:0.5rem;right:0.5rem;font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.5rem;background:var(--cream);border:0.5px solid var(--border);color:var(--muted);}
-
+ 
 /* Sidebar right panel */
 .db-lesson-sidebar{background:var(--onyx);}
 .db-sidebar-tabs{display:flex;border-bottom:0.5px solid #1A1A1A;}
@@ -478,7 +479,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .btn-lesson-nav:hover{border-color:var(--clay);color:var(--clay);}
 .btn-lesson-nav.primary-nav{background:var(--onyx);color:var(--cream);border-color:var(--onyx);}
 .btn-lesson-nav.primary-nav:hover{background:var(--clay-dark);}
-
+ 
 /* DB - COURSE LIST VIEW */
 .db-course-list{display:none;overflow-y:auto;}
 .db-course-list.active-view{display:block;}
@@ -497,7 +498,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-cl-prog-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);}
 .db-cl-prog-text{font-size:0.58rem;color:var(--muted);display:flex;justify-content:space-between;}
 .db-cl-lock-badge{position:absolute;top:1rem;right:1rem;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;border:0.5px solid var(--taupe);color:var(--taupe);}
-
+ 
 /* DB - RESOURCES VIEW */
 .db-resources{display:none;overflow-y:auto;}
 .db-resources.active-view{display:block;}
@@ -508,7 +509,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-res-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;margin-bottom:0.35rem;}
 .db-res-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:0.85rem;}
 .db-res-btn{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);display:flex;align-items:center;gap:0.35rem;}
-
+ 
 /* DB NAV */
 /* HERO TRUST BAR */
 .hero-trust{display:flex;align-items:center;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .6s ease .8s both;}
@@ -516,7 +517,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .hero-trust-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--onyx);line-height:1;}
 .hero-trust-label{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
 .hero-trust-divider{width:0.5px;height:28px;background:var(--border-strong);}
-
+ 
 /* MISSION SECTION */
 .mission-section{display:grid;grid-template-columns:1fr 1fr;border-top:0.5px solid var(--border);}
 .mission-left{padding:6.5rem var(--pad);border-right:0.5px solid var(--border);display:flex;flex-direction:column;justify-content:center;}
@@ -529,7 +530,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .mp-icon{font-size:1rem;color:var(--clay);flex-shrink:0;margin-top:0.1rem;width:20px;text-align:center;}
 .mp-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;margin-bottom:0.25rem;}
 .mp-desc{font-size:0.73rem;color:var(--muted);line-height:1.7;}
-
+ 
 /* OUTCOMES SECTION */
 .outcomes-section{padding:7.5rem var(--pad);background:var(--onyx);}
 .outcomes-header{margin-bottom:4rem;}
@@ -544,7 +545,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .outcome-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem;line-height:1.2;}
 .outcome-desc{font-size:0.76rem;color:#4A4440;line-height:1.85;margin-bottom:1.25rem;}
 .outcome-tag{font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);padding:0.28rem 0.65rem;border:0.5px solid rgba(196,138,113,0.25);display:inline-block;}
-
+ 
 .db-topnav{position:fixed;top:0;left:0;right:0;z-index:800;display:none;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(10,10,10,0.97);backdrop-filter:blur(18px);border-bottom:0.5px solid #1A1A1A;height:58px;}
 .db-topnav.visible{display:flex;}
 .db-topnav-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--cream);}
@@ -616,7 +617,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </div>
   </div>
 </div>
-
+ 
 <!-- MARKETING NAV -->
 <nav id="marketingNav">
   <div class="nav-logo">K<span class="dot">·</span>O<span class="dot">·</span>S<span class="dot">·</span>I<span class="dot">·</span>A <span style="color:var(--taupe);letter-spacing:0.14em;font-weight:300;font-size:0.86rem;margin-left:0.2rem;">Academy</span></div>
@@ -632,7 +633,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <button class="nav-enroll" onclick="openAuth('signup')">Enroll Now</button>
   </div>
 </nav>
-
+ 
 <!-- DASHBOARD NAV -->
 <nav class="db-topnav" id="dashNav">
   <div class="db-topnav-logo">K<span class="dot">·</span>O<span class="dot">·</span>S<span class="dot">·</span>I<span class="dot">·</span>A <span style="color:#3A3530;letter-spacing:0.14em;font-weight:300;font-size:0.82rem;margin-left:0.2rem;">Academy</span></div>
@@ -641,12 +642,12 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <button class="db-logout" onclick="logout()">Sign Out</button>
   </div>
 </nav>
-
+ 
 <!-- ════════════════════════════════
      MARKETING VIEW
 ════════════════════════════════ -->
 <div id="view-marketing">
-
+ 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-bg-text">KOSIA</div>
@@ -689,7 +690,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ MARQUEE ═══ -->
 <div class="marquee-wrap"><div class="marquee-track">
   <span class="marquee-item">Color Theory<span class="marquee-dot"></span></span>
@@ -711,7 +712,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   <span class="marquee-item">Placement Theory<span class="marquee-dot"></span></span>
   <span class="marquee-item">Face Shape Analysis<span class="marquee-dot"></span></span>
 </div></div>
-
+ 
 <!-- ═══ MISSION STATEMENT ═══ -->
 <section class="mission-section">
   <div class="mission-left reveal">
@@ -729,7 +730,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ TWO TRACKS ═══ -->
 <section id="tracks" class="track-split">
   <div class="track-panel track-panel-stylist reveal">
@@ -765,7 +766,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <button class="btn-track-o" onclick="openAuth('signup')">Enroll — Owner Track →</button>
   </div>
 </section>
-
+ 
 <!-- ═══ OUTCOMES ═══ -->
 <section class="outcomes-section">
   <div class="outcomes-header reveal">
@@ -817,7 +818,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ COLOR WHEEL ═══ -->
 <section id="color" class="color-section">
   <div class="reveal">
@@ -893,7 +894,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ LEVEL SYSTEM ═══ -->
 <section class="levels-section">
   <div class="levels-intro reveal">
@@ -928,7 +929,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     </tbody>
   </table>
 </section>
-
+ 
 <!-- ═══ PLACEMENT ═══ -->
 <section class="placement-section">
   <div class="placement-intro reveal">
@@ -950,7 +951,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <div class="pcard"><div class="pcard-num">04</div><div class="pcard-title">Read the Face First</div><p class="pcard-body">No technique decision before mapping facial structure. The face is the canvas — placement is in service of it.</p></div>
   </div>
 </section>
-
+ 
 <!-- ═══ CURRICULUM PREVIEW ═══ -->
 <div id="curric-section" style="padding:4rem var(--pad) 2rem;border-bottom:0.5px solid var(--border);">
   <div class="section-eyebrow reveal"><span class="section-eyebrow-line"></span>Track 01 — Stylist Curriculum</div>
@@ -970,7 +971,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Workshops &amp; Formula Vault</div><p class="ccard-desc">Live sessions, case studies, and a resource library for every stage of your journey.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Live hands-on workshops (virtual &amp; in-person)</li><li class="cunit"><span class="cunit-dot"></span>Real case studies &amp; before/after breakdowns</li><li class="cunit"><span class="cunit-dot"></span>The KOSIA Formula Vault — all formulas archived</li><li class="cunit"><span class="cunit-dot"></span>Placement guides by face shape (PDFs)</li><li class="cunit"><span class="cunit-dot"></span>Consultation scripts for common scenarios</li><li class="cunit"><span class="cunit-dot"></span>Guest educator sessions</li><li class="cunit"><span class="cunit-dot"></span>Community Q&amp;A and peer review sessions</li><li class="cunit"><span class="cunit-dot"></span>Monthly live coaching calls</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
   </div>
 </div>
-
+ 
 <!-- OWNER CURRICULUM -->
 <div style="padding:4rem var(--pad) 2rem;background:var(--onyx);border-bottom:0.5px solid #1E1E1E;">
   <div class="section-eyebrow reveal" style="color:var(--clay-light);"><span class="section-eyebrow-line" style="background:var(--clay-light);"></span>Track 02 — Owner Curriculum</div>
@@ -990,7 +991,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Owner Intensives &amp; Toolkit</div><p class="ccard-desc">Business intensives, templates, and frameworks built specifically for salon owners.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Half-day business intensive workshops</li><li class="cunit"><span class="cunit-dot"></span>Owner roundtables and peer advisory groups</li><li class="cunit"><span class="cunit-dot"></span>Hiring packet templates (job post, interview, offer)</li><li class="cunit"><span class="cunit-dot"></span>SOP templates for every core salon function</li><li class="cunit"><span class="cunit-dot"></span>Financial tracking spreadsheets &amp; KPI dashboards</li><li class="cunit"><span class="cunit-dot"></span>Marketing calendar and content templates</li><li class="cunit"><span class="cunit-dot"></span>1:1 coaching session credits</li><li class="cunit"><span class="cunit-dot"></span>Private owner community access</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
   </div>
 </div>
-
+ 
 <!-- ═══ PRICING ═══ -->
 <section id="pricing" class="pricing-section">
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
@@ -1057,7 +1058,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div>
   <p class="pricing-note">Need to enroll your whole team? <span style="color:var(--clay);cursor:none;" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Book a group pricing call →</span></p>
 </section>
-
+ 
 <!-- ═══ CALENDLY ═══ -->
 <section id="consult" class="calendly-section">
   <div class="reveal">
@@ -1076,11 +1077,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
       <button class="btn-cal" onclick="openCalendly()">Open Scheduling Calendar →</button>
     </div>
     <div class="cal-widget reveal" id="calWidget">
-      <div class="calendly-inline-widget" id="calendlyEmbed" data-url="https://calendly.com/d/test" style="min-width:320px;height:600px;"></div>
+      <div class="calendly-inline-widget" id="calendlyEmbed" data-url="https://calendly.com/kosiaacademy/kosia-academy-discovery?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=e8dfd0&primary_color=C48A71" style="min-width:320px;height:700px;"></div>
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ PULL QUOTE ═══ -->
 <section class="voice-section">
   <div class="voice-bg"></div>
@@ -1098,7 +1099,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <div class="vstat"><div class="vstat-num">∞</div><div class="vstat-label">On-Demand Access</div></div>
   </div>
 </section>
-
+ 
 <!-- ═══ CTA ═══ -->
 <section class="cta-section">
   <div class="cta-left reveal">
@@ -1124,7 +1125,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <p class="cta-note">No experience level required — KOSIA meets you where you are.</p>
   </div>
 </section>
-
+ 
 <footer>
   <div class="footer-brand"><div class="footer-logo">KOSIA Academy</div><div class="footer-tagline">Modern Education for Beauty Professionals</div></div>
   <div class="footer-links"><a href="#tracks">Tracks</a><a href="#color">Color Science</a><a href="#curric-section">Curriculum</a><a href="#pricing">Pricing</a><a href="#consult">Book a Call</a><a href="#" onclick="openAuth('login')">Sign In</a></div>
@@ -1160,10 +1161,10 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
         <div class="db-nav-item" onclick="showDbView('resources')"><span class="db-nav-dot"></span>Photo Gallery</div>
       </div>
     </div>
-
+ 
     <!-- MAIN AREA -->
     <div class="db-main">
-
+ 
       <!-- COURSE LIST VIEW -->
       <div class="db-course-list active-view" id="view-courses">
         <div class="db-cl-header">
@@ -1174,7 +1175,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
           <!-- populated by JS -->
         </div>
       </div>
-
+ 
       <!-- LESSON VIEW -->
       <div class="db-lesson" id="view-lesson">
         <div class="db-lesson-top" style="background:var(--onyx);">
@@ -1203,7 +1204,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
               <button class="db-ctab" onclick="switchContentTab(this,'photos')">Photos &amp; Resources</button>
               <button class="db-ctab" onclick="switchContentTab(this,'plan')">Lesson Plan</button>
             </div>
-
+ 
             <!-- WHY PANEL -->
             <div class="db-content-panel active" id="cpanel-why">
               <div class="db-why-block">
@@ -1216,7 +1217,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 <div class="db-why-body">Complementary colors — those directly opposite on the wheel — cancel each other out when combined. This is not art theory. This is chemistry. It is why a blue-violet toner neutralizes yellow brassiness, and why green ash is prescribed for red underlying pigment. You are not guessing — you are applying the wheel.</div>
               </div>
             </div>
-
+ 
             <!-- FORMULAS PANEL -->
             <div class="db-content-panel" id="cpanel-formulas">
               <div style="margin-bottom:1.25rem;"><div class="db-why-label">Module Formula Reference</div></div>
@@ -1233,7 +1234,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 </div>
               </div>
             </div>
-
+ 
             <!-- PHOTOS PANEL -->
             <div class="db-content-panel" id="cpanel-photos">
               <div style="margin-bottom:1rem;"><div class="db-why-label">Reference Photos &amp; Before/After</div><p style="font-size:0.74rem;color:var(--muted);margin-top:0.35rem;line-height:1.7;">Upload reference photos, client before/afters, and technique examples to build your visual library for this module.</p></div>
@@ -1276,7 +1277,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 </div>
               </div>
             </div>
-
+ 
             <!-- LESSON PLAN PANEL -->
             <div class="db-content-panel" id="cpanel-plan">
               <div class="db-why-label" style="margin-bottom:1rem;" id="planTitle">Module 1 — Lesson Plan</div>
@@ -1316,13 +1317,13 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 </div>
               </div>
             </div>
-
+ 
             <div class="db-lesson-nav-btns">
               <button class="btn-lesson-nav" onclick="prevLesson()">← Previous</button>
               <button class="btn-lesson-nav primary-nav" onclick="nextLesson()">Next Lesson →</button>
             </div>
           </div>
-
+ 
           <!-- RIGHT SIDEBAR -->
           <div class="db-lesson-sidebar">
             <div class="db-sidebar-tabs">
@@ -1355,7 +1356,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
           </div>
         </div>
       </div>
-
+ 
       <!-- RESOURCES VIEW -->
       <div class="db-resources" id="view-resources">
         <div class="db-cl-header"><div class="db-cl-title">Resource Library</div><div class="db-cl-sub">Formula Vault, downloadable guides, and your photo gallery</div></div>
@@ -1368,33 +1369,31 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
           <div class="db-res-card" onclick="showToast('Opening Photo Gallery...')"><div class="db-res-icon">📷</div><div class="db-res-name">Your Photo Gallery</div><p class="db-res-desc">All before/after photos and reference images you've uploaded across your modules. Organized by course unit.</p><div class="db-res-btn">Open Gallery →</div></div>
         </div>
       </div>
-
+ 
     </div><!-- end db-main -->
   </div><!-- end db-layout -->
 </div><!-- end view-dashboard -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-// ── CURSOR ──
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
 document.querySelectorAll('a,button,.ccard,.who-card,.face-card,.pcard,.mtype,.track-select-card,.lvl-table tbody tr,.db-nav-item,.db-ctab,.db-stab,.db-cl-card,.db-res-card,.track-panel,.price-card').forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('big'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
 });
-
+ 
 // ── REVEAL ──
 const ro = new IntersectionObserver(entries => {
   entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 50); });
 }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
+ 
 // ── TOAST ──
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2600);
 }
-
+ 
 // ── AUTH ──
 let selectedTrack = 'stylist';
 function openAuth(mode = 'login') {
@@ -1404,7 +1403,7 @@ function openAuth(mode = 'login') {
 function closeAuth() { document.getElementById('authModal').classList.remove('open'); }
 document.getElementById('authModal').addEventListener('click', e => { if (e.target.id === 'authModal') closeAuth(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAuth(); });
-
+ 
 function switchAuthTab(tab) {
   document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
   document.getElementById('tabSignup').classList.toggle('active', tab === 'signup');
@@ -1418,7 +1417,7 @@ function pickTrack(t) {
 }
 function clearErr(id) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
 function showErr(id, msg) { const el = document.getElementById(id); if (el) { el.textContent = msg; el.style.display = 'block'; } }
-
+ 
 function handleLogin() {
   const email = document.getElementById('loginEmail').value.trim();
   const pass = document.getElementById('loginPass').value;
@@ -1433,7 +1432,7 @@ function handleLogin() {
   closeAuth();
   enterDashboard(user.name, user.track);
 }
-
+ 
 function handleSignup() {
   const name = document.getElementById('signupName').value.trim();
   const email = document.getElementById('signupEmail').value.trim();
@@ -1449,7 +1448,7 @@ function handleSignup() {
   closeAuth();
   enterDashboard(name, selectedTrack);
 }
-
+ 
 function logout() {
   localStorage.removeItem('kosia_session');
   document.getElementById('view-marketing').style.display = 'block';
@@ -1459,7 +1458,7 @@ function logout() {
   showToast('You\'ve been signed out.');
   window.scrollTo(0, 0);
 }
-
+ 
 // ── CHECK SESSION ON LOAD ──
 window.addEventListener('DOMContentLoaded', () => {
   const session = localStorage.getItem('kosia_session');
@@ -1470,7 +1469,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch(e) { localStorage.removeItem('kosia_session'); }
   }
 });
-
+ 
 // ── DASHBOARD ──
 const stylistCourses = [
   { num:'01', cat:'Artistry', name:'Color Theory & Chemistry', desc:'The science of underlying pigment, tonal families, and predictive formulation.', progress:62, modules:8 },
@@ -1501,7 +1500,7 @@ let currentLesson = 0;
 let currentTrack = 'stylist';
 let isPlaying = false;
 let playInterval = null;
-
+ 
 function enterDashboard(name, track) {
   currentTrack = track;
   document.getElementById('view-marketing').style.display = 'none';
@@ -1517,7 +1516,7 @@ function enterDashboard(name, track) {
   showDbView('courses');
   window.scrollTo(0, 0);
 }
-
+ 
 function buildCourseList(courses) {
   const grid = document.getElementById('dbClGrid');
   grid.innerHTML = courses.map((c, i) => `
@@ -1532,7 +1531,7 @@ function buildCourseList(courses) {
     </div>
   `).join('');
 }
-
+ 
 function showDbView(view) {
   ['courses','lesson','resources'].forEach(v => {
     const el = document.getElementById('view-' + v);
@@ -1547,7 +1546,7 @@ function showDbView(view) {
   // update active nav
   document.querySelectorAll('.db-nav-item').forEach(n => n.classList.remove('active'));
 }
-
+ 
 function goToLesson(i) {
   if (i >= lessonData.length) i = 0;
   currentLesson = i;
@@ -1581,10 +1580,10 @@ function goToLesson(i) {
   document.querySelectorAll('.db-stab').forEach(t => t.classList.remove('active'));
   document.querySelector('.db-stab').classList.add('active');
 }
-
+ 
 function nextLesson() { goToLesson((currentLesson + 1) % lessonData.length); }
 function prevLesson() { goToLesson((currentLesson - 1 + lessonData.length) % lessonData.length); }
-
+ 
 function switchContentTab(btn, panel) {
   document.querySelectorAll('.db-ctab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
@@ -1592,7 +1591,7 @@ function switchContentTab(btn, panel) {
   const target = document.getElementById('cpanel-' + panel);
   if (target) { target.classList.add('active'); target.style.display = 'block'; }
 }
-
+ 
 function switchSideTab(btn, panel) {
   document.querySelectorAll('.db-stab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
@@ -1600,7 +1599,7 @@ function switchSideTab(btn, panel) {
   const target = document.getElementById('spanel-' + panel);
   if (target) { target.classList.add('active'); target.style.display = 'block'; }
 }
-
+ 
 function togglePlay() {
   isPlaying = !isPlaying;
   document.getElementById('dbPlayBtn').textContent = isPlaying ? '⏸' : '▶';
@@ -1614,7 +1613,7 @@ function togglePlay() {
     }, 400);
   } else { clearInterval(playInterval); }
 }
-
+ 
 function saveNote() {
   const input = document.getElementById('noteInput');
   const text = input.value.trim();
@@ -1627,7 +1626,7 @@ function saveNote() {
   input.value = '';
   showToast('Note saved.');
 }
-
+ 
 function saveFormula(btn) {
   const row = btn.parentElement;
   const inputs = row.querySelectorAll('input');
@@ -1642,7 +1641,7 @@ function saveFormula(btn) {
   inputs[0].value = ''; inputs[1].value = '';
   showToast('Formula saved to vault.');
 }
-
+ 
 function previewPhoto(input) {
   if (!input.files || !input.files[0]) return;
   const reader = new FileReader();
@@ -1657,40 +1656,41 @@ function previewPhoto(input) {
   reader.readAsDataURL(input.files[0]);
   showToast('Photo uploaded.');
 }
-
+ 
 // ── CALENDLY ──
 let selectedMeeting = 'discovery';
 // Replace these URLs with your actual Calendly event links
 const calUrls = {
   discovery: 'https://calendly.com/kosiaacademy/kosia-academy-discovery',
-  stylist:   'https:/calendly.com/kosiaacademy/kosia-academy-stylist-enrollment',
+  stylist:   'https://calendly.com/kosiaacademy/kosia-academy-stylist-enrollment',
   owner:     'https://calendly.com/kosiaacademy/30min',
   group:     'https://calendly.com/kosiaacademy/kosia-academy-group-call'
 };
-
+ 
 function selectMeeting(el, type) {
   document.querySelectorAll('.mtype').forEach(m => m.classList.remove('sel'));
   el.classList.add('sel');
   selectedMeeting = type;
   loadCalendlyEmbed(calUrls[type]);
 }
-
+ 
 function loadCalendlyEmbed(url) {
   const embed = document.getElementById('calendlyEmbed');
   if (!embed) return;
-  embed.setAttribute('data-url', url + '?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=e8dfd0&primary_color=C48A71');
+  const fullUrl = url + '?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=e8dfd0&primary_color=C48A71';
+  embed.setAttribute('data-url', fullUrl);
+  embed.style.height = '700px';
+  embed.innerHTML = '';
   if (window.Calendly) {
-    // Clear and re-init
-    embed.innerHTML = '';
-    Calendly.initInlineWidget({ url: embed.getAttribute('data-url'), parentElement: embed });
+    Calendly.initInlineWidget({ url: fullUrl, parentElement: embed });
   }
 }
-
+ 
 function openCalendly() {
   loadCalendlyEmbed(calUrls[selectedMeeting]);
   document.getElementById('calWidget').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
-
+ 
 // Init Calendly once script loads
 window.addEventListener('load', () => {
   if (window.Calendly) {
