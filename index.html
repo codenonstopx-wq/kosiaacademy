@@ -641,6 +641,62 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .cs-formula-body{font-size:0.68rem;color:rgba(251,249,246,0.3);line-height:1.7;}
 .cs-formula-arrow{display:none;}
 
+
+/* ══ SKIN & EYE TONES ══ */
+.tones-section{padding:8rem var(--pad);background:var(--onyx);color:var(--cream);}
+.tones-section .section-eyebrow{color:var(--clay);}
+.tones-section .section-eyebrow-line{background:var(--clay);}
+.tones-section .section-h2{color:var(--cream);}
+.tones-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end;margin-top:1.5rem;margin-bottom:4.5rem;}
+.tones-intro-body{font-size:0.85rem;color:rgba(251,249,246,0.4);line-height:1.9;}
+.tones-tabs{display:flex;gap:0;border-bottom:0.5px solid #1E1E1E;margin-bottom:3.5rem;}
+.tone-tab{padding:0.85rem 2rem;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:#2E2A28;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.tone-tab.active{color:var(--clay);border-bottom-color:var(--clay);}
+.tone-tab:hover{color:#5A5050;}
+.tone-panel{display:none;}
+.tone-panel.active{display:block;}
+
+.skin-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:0.5px solid #1E1E1E;border-top:0.5px solid #1E1E1E;}
+.skin-card{border-right:0.5px solid #1E1E1E;border-bottom:0.5px solid #1E1E1E;padding:2.25rem 2rem;transition:background .25s;}
+.skin-card:hover{background:rgba(255,255,255,0.02);}
+.skin-card-header{display:flex;align-items:center;gap:1.1rem;margin-bottom:1.5rem;}
+.skin-swatch-wrap{display:flex;gap:0.35rem;flex-shrink:0;}
+.skin-swatch{width:20px;height:20px;border-radius:50%;}
+.skin-card-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.2rem;}
+.skin-card-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--cream);}
+.skin-card-desc{font-size:0.74rem;color:rgba(251,249,246,0.35);line-height:1.85;margin-bottom:1.5rem;}
+.skin-complements{display:flex;flex-direction:column;gap:0;}
+.skin-complement-row{display:grid;grid-template-columns:110px 1fr;gap:0;border-top:0.5px solid #1A1A1A;padding:0.65rem 0;}
+.skin-complement-row:first-child{border-top:none;padding-top:0;}
+.skin-comp-key{font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:#3A3530;padding-top:0.08rem;}
+.skin-comp-val{font-size:0.74rem;color:rgba(251,249,246,0.55);line-height:1.5;}
+.skin-comp-val em{font-style:italic;color:var(--clay);font-size:0.72rem;}
+.skin-swatches-row{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.35rem;}
+.skin-color-chip{display:flex;align-items:center;gap:0.3rem;padding:0.22rem 0.5rem;border:0.5px solid #252525;font-size:0.58rem;color:#3A3530;letter-spacing:0.06em;}
+.chip-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+
+.eye-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.eye-card{border:0.5px solid #1E1E1E;padding:2rem 1.75rem;transition:all .25s;}
+.eye-card:hover{background:rgba(255,255,255,0.02);border-color:#2E2A28;}
+.eye-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
+.eye-iris{width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.eye-iris-pupil{width:14px;height:14px;border-radius:50%;background:rgba(0,0,0,0.8);flex-shrink:0;}
+.eye-card-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);font-weight:300;}
+.eye-card-sub{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);}
+.eye-card-desc{font-size:0.73rem;color:rgba(251,249,246,0.35);line-height:1.82;margin-bottom:1.25rem;}
+.eye-recommendations{display:flex;flex-direction:column;gap:0.5rem;}
+.eye-rec-row{display:flex;align-items:baseline;gap:0.5rem;padding:0.5rem 0;border-top:0.5px solid #1A1A1A;}
+.eye-rec-row:first-child{border-top:none;padding-top:0;}
+.eye-rec-label{font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:#2E2A28;min-width:70px;flex-shrink:0;}
+.eye-rec-val{font-size:0.72rem;color:rgba(251,249,246,0.5);line-height:1.5;}
+.eye-rec-val em{font-style:italic;color:var(--clay-light);}
+
+.tone-theory-strip{display:grid;grid-template-columns:repeat(4,1fr);border:0.5px solid #1E1E1E;margin-top:3.5rem;}
+.tone-theory-card{padding:2rem 1.75rem;border-right:0.5px solid #1E1E1E;}
+.tone-theory-card:last-child{border-right:none;}
+.tone-theory-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:0.65rem;}
+.tone-theory-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:0.5rem;}
+.tone-theory-body{font-size:0.71rem;color:rgba(251,249,246,0.3);line-height:1.8;}
 </style>
 </head>
 <body>
