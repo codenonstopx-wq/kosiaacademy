@@ -391,256 +391,173 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 /* ══════════════════════════════════
    DASHBOARD STYLES
 ══════════════════════════════════ */
+/* ══ DASHBOARD ══ */
 #view-dashboard{font-family:'Plus Jakarta Sans',sans-serif;}
-.db-layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh;padding-top:58px;}
-.db-sidebar{background:#111;border-right:0.5px solid #1E1E1E;position:fixed;top:58px;left:0;width:240px;height:calc(100vh - 58px);overflow-y:auto;display:flex;flex-direction:column;z-index:100;}
-.db-sidebar-top{padding:1.5rem 1.25rem 1rem;border-bottom:0.5px solid #1A1A1A;}
-.db-user-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:0.15rem;}
+.db-layout{display:grid;grid-template-columns:240px 1fr;height:100vh;padding-top:58px;overflow:hidden;}
+.db-sidebar{background:#0F0F0F;border-right:0.5px solid #1A1A1A;position:fixed;top:58px;left:0;width:240px;height:calc(100vh - 58px);overflow-y:auto;display:flex;flex-direction:column;z-index:100;}
+.db-sidebar-top{padding:1.4rem 1.25rem 1.1rem;border-bottom:0.5px solid #1A1A1A;display:flex;flex-direction:column;gap:0.3rem;}
+.db-user-avatar{width:34px;height:34px;border-radius:50%;background:rgba(196,138,113,0.15);border:0.5px solid rgba(196,138,113,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--clay);margin-bottom:0.4rem;}
+.db-user-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);font-weight:300;}
 .db-user-track{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);}
 .db-overall-progress{padding:1rem 1.25rem;border-bottom:0.5px solid #1A1A1A;}
-.db-op-label{font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:#3A3530;margin-bottom:0.4rem;}
+.db-op-label{font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:#2E2A28;margin-bottom:0.4rem;}
 .db-op-bar{height:1.5px;background:#1A1A1A;}
 .db-op-fill{height:100%;background:var(--clay);transition:width .6s ease;}
 .db-op-pct{font-size:0.62rem;color:var(--clay);margin-top:0.3rem;}
-.db-nav{padding:0.75rem 0;flex:1;}
+.db-nav{padding:0.6rem 0;flex:1;}
 .db-nav-section{padding:0.85rem 1.25rem 0.3rem;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:#252525;}
-.db-nav-item{display:flex;align-items:center;gap:0.65rem;padding:0.55rem 1.25rem;font-size:0.68rem;color:#3A3530;cursor:none;transition:all .18s;border-left:2px solid transparent;}
-.db-nav-item:hover{color:#5A5050;background:rgba(255,255,255,0.02);}
-.db-nav-item.active{color:var(--clay);background:rgba(196,138,113,0.05);border-left-color:var(--clay);}
-.db-nav-dot{width:4px;height:4px;border-radius:50%;background:currentColor;flex-shrink:0;}
-.db-nav-check{width:14px;height:14px;border-radius:50%;border:0.5px solid;display:flex;align-items:center;justify-content:center;font-size:0.45rem;flex-shrink:0;}
-.db-nav-check.done{background:var(--clay);border-color:var(--clay);color:var(--cream);}
-.db-nav-check.current{border-color:var(--clay);color:var(--clay);}
-.db-nav-check.locked{border-color:#252525;color:#252525;}
-.db-main{margin-left:240px;background:var(--cream);min-height:calc(100vh - 58px);display:flex;flex-direction:column;}
+.db-nav-item{display:flex;align-items:center;gap:0.7rem;padding:0.58rem 1.25rem;font-size:0.68rem;color:#3A3530;cursor:none;transition:all .18s;border-left:2px solid transparent;}
+.db-nav-item:hover{color:#6A6060;background:rgba(255,255,255,0.02);}
+.db-nav-item.nav-active{color:var(--clay);background:rgba(196,138,113,0.06);border-left-color:var(--clay);}
+.db-nav-item.disabled{opacity:0.3;pointer-events:none;}
+.db-nav-icon{font-size:0.75rem;flex-shrink:0;opacity:0.6;}
+.db-nav-check{font-size:0.65rem;flex-shrink:0;}
+.db-nav-check.current{color:var(--clay);}
+.db-nav-check.locked{color:#252525;}
 
-/* DB - LESSON VIEW */
-.db-lesson{display:none !important;flex-direction:column;min-height:calc(100vh - 58px);}
-.db-lesson.db-active{display:flex !important;}
-.db-lesson-top{background:var(--onyx);padding:0;flex-shrink:0;}
-.db-video-shell{position:relative;background:#000;aspect-ratio:16/9;max-height:48vh;display:flex;align-items:center;justify-content:center;overflow:hidden;width:100%;}
-.db-video-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;background:linear-gradient(160deg,#0D0D0D 0%,#111 100%);}
-.db-video-thumb{position:absolute;inset:0;background:linear-gradient(160deg,#161210 0%,#0A0808 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;}
-.db-video-grid-bg{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(196,138,113,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(196,138,113,0.5) 1px,transparent 1px);background-size:40px 40px;}
-.db-play-ring{width:64px;height:64px;border-radius:50%;border:1px solid rgba(196,138,113,0.4);display:flex;align-items:center;justify-content:center;color:var(--clay);font-size:1.1rem;background:rgba(196,138,113,0.06);cursor:none;transition:all .22s;position:relative;z-index:2;}
-.db-play-ring:hover{border-color:var(--clay);background:rgba(196,138,113,0.12);}
-.db-video-lesson-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(251,249,246,0.5);font-style:italic;position:relative;z-index:2;text-align:center;padding:0 2rem;}
-.db-video-duration{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:#2E2A28;position:relative;z-index:2;}
-.db-timeline-bar{height:2px;background:#1A1A1A;position:relative;}
-.db-timeline-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);transition:width .3s;}
-.db-timeline-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--clay);border:2px solid var(--onyx);}
-.db-lesson-meta{padding:1.6rem 2.25rem;border-bottom:0.5px solid #1A1A1A;}
-.db-lesson-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--cream);margin-bottom:0.25rem;}
-.db-lesson-sub{font-size:0.68rem;color:#3A3530;}
-.db-lesson-body{display:grid;grid-template-columns:1fr 300px;flex:1;min-height:0;overflow:hidden;}
-.db-lesson-content{overflow-y:auto;display:flex;flex-direction:column;}
-.db-lesson-sidebar{overflow-y:auto;}
-.db-lesson-content{padding:2rem 2.25rem;border-right:0.5px solid var(--border);overflow-y:auto;flex:1;}
-.db-content-tabs{display:flex;gap:0;border-bottom:0.5px solid var(--border);margin:0 -2.25rem 1.75rem;padding:0 2.25rem;position:sticky;top:0;background:var(--cream);z-index:10;}
-.db-ctab{padding:0.75rem 1.25rem;font-size:0.63rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;}
-.db-ctab.active{color:var(--clay);border-bottom-color:var(--clay);}
-.db-content-panel{display:none;}
-.db-content-panel.active{display:block;}
+/* Main area */
+.db-main{margin-left:240px;height:calc(100vh - 58px);overflow-y:auto;background:var(--cream);display:flex;flex-direction:column;}
 
-/* Notes/Why panel */
+/* Views — all hidden, toggled by .db-active */
+.db-view{display:none !important;flex-direction:column;flex:1;}
+.db-view.db-active{display:flex !important;}
+
+/* Page header */
+.db-page-header{padding:2rem 2.5rem 1.5rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-end;flex-shrink:0;}
+.db-page-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--onyx);}
+.db-page-sub{font-size:0.75rem;color:var(--muted);margin-top:0.25rem;}
+.db-page-meta{display:flex;gap:0.5rem;}
+.db-meta-pill{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.7rem;border:0.5px solid var(--border);color:var(--muted);}
+
+/* Course grid */
+.db-course-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;overflow-y:auto;flex:1;}
+.db-cl-card{border:0.5px solid var(--border);padding:1.6rem;cursor:none;transition:all .22s;position:relative;background:var(--cream);}
+.db-cl-card:hover{background:var(--alabaster);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,14,0.06);}
+.db-cl-card.locked{opacity:0.4;pointer-events:none;}
+.db-cl-lock-badge{position:absolute;top:1rem;right:1rem;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;border:0.5px solid var(--taupe);color:var(--taupe);}
+.db-cl-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--sand);margin-bottom:0.65rem;}
+.db-cl-card-cat{font-size:0.54rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem;}
+.db-cl-card-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--onyx);margin-bottom:0.45rem;}
+.db-cl-card-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:0.9rem;}
+.db-cl-units{list-style:none;margin-bottom:0.9rem;display:flex;flex-direction:column;gap:0.28rem;}
+.db-cl-unit{display:flex;align-items:baseline;gap:0.4rem;font-size:0.64rem;color:var(--muted);line-height:1.4;}
+.db-cl-unit-dot{width:3px;height:3px;border-radius:50%;background:var(--clay);flex-shrink:0;margin-top:0.38rem;opacity:0.5;}
+.db-cl-prog-bar{height:1.5px;background:var(--sand);margin-bottom:0.35rem;position:relative;}
+.db-cl-prog-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);}
+.db-cl-prog-text{font-size:0.57rem;color:var(--muted);display:flex;justify-content:space-between;}
+
+/* Video */
+.db-video-wrap{background:var(--onyx);flex-shrink:0;}
+.db-video-bg{position:relative;aspect-ratio:16/9;max-height:42vh;background:#060606;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.db-video-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(196,138,113,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,138,113,0.04) 1px,transparent 1px);background-size:40px 40px;}
+.db-play-btn{width:60px;height:60px;border-radius:50%;border:1px solid rgba(196,138,113,0.35);display:flex;align-items:center;justify-content:center;color:var(--clay);cursor:none;transition:all .22s;background:rgba(196,138,113,0.06);font-size:1rem;position:relative;z-index:2;}
+.db-play-btn:hover{border-color:var(--clay);background:rgba(196,138,113,0.14);}
+.db-video-info{position:absolute;bottom:0.9rem;left:1.25rem;z-index:2;display:flex;flex-direction:column;gap:0.15rem;}
+.db-video-title{font-size:0.62rem;color:rgba(251,249,246,0.35);letter-spacing:0.06em;}
+.db-video-dur{font-size:0.58rem;color:rgba(251,249,246,0.2);}
+.db-progress-track{height:2px;background:#1A1A1A;position:relative;cursor:none;}
+.db-progress-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);transition:width .3s;}
+.db-progress-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--clay);border:2px solid var(--onyx);transition:left .3s;}
+
+/* Lesson header */
+.db-lesson-header{padding:1.4rem 2.5rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--onyx);flex-shrink:0;}
+.db-lesson-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--cream);font-weight:300;}
+.db-lesson-sub{font-size:0.65rem;color:#3A3530;margin-top:0.2rem;}
+.db-lesson-nav-row{display:flex;gap:0.5rem;flex-shrink:0;}
+.db-nav-btn{padding:0.55rem 1.1rem;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid #2A2A2A;background:transparent;color:#4A4440;cursor:none;transition:all .2s;}
+.db-nav-btn:hover{border-color:#4A4440;color:#6A6060;}
+.db-nav-btn.primary{background:var(--clay);color:var(--cream);border-color:var(--clay);}
+.db-nav-btn.primary:hover{background:var(--clay-dark);}
+
+/* Lesson body */
+.db-lesson-body{display:grid;grid-template-columns:1fr 280px;flex:1;overflow:hidden;}
+.db-lesson-content{display:flex;flex-direction:column;overflow:hidden;border-right:0.5px solid var(--border);}
+
+/* Content tabs */
+.db-tabs{display:flex;border-bottom:0.5px solid var(--border);background:var(--cream);flex-shrink:0;}
+.db-tab{padding:0.75rem 1.25rem;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;white-space:nowrap;}
+.db-tab.active{color:var(--clay);border-bottom-color:var(--clay);}
+.db-tab:hover{color:var(--charcoal);}
+
+/* Content panels */
+.db-panel{display:none !important;flex:1;overflow-y:auto;padding:1.75rem 2.25rem;}
+.db-panel.active{display:block !important;}
 .db-why-block{margin-bottom:1.75rem;}
 .db-why-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.6rem;}
 .db-why-body{font-size:0.82rem;color:var(--charcoal);line-height:1.9;}
-.db-why-callout{background:var(--alabaster);border-left:2px solid var(--clay);padding:1.1rem 1.25rem;margin-top:1rem;}
-.db-why-callout p{font-size:0.78rem;color:var(--charcoal);line-height:1.8;}
-.db-formula-card{border:0.5px solid var(--border);padding:1rem 1.25rem;margin-bottom:0.75rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;}
-.db-formula-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--onyx);}
-.db-formula-val{font-size:0.72rem;color:var(--muted);margin-top:0.18rem;}
-.db-formula-badge{font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.6rem;background:rgba(196,138,113,0.1);color:var(--clay);}
+.db-callout{background:var(--alabaster);border-left:2px solid var(--clay);padding:1rem 1.25rem;margin-top:0.85rem;}
+.db-callout p{font-size:0.78rem;color:var(--charcoal);line-height:1.8;}
+.db-panel-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:1rem;}
+.db-panel-sub{font-size:0.74rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
 
-/* Photo resources */
-.db-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:0.85rem;}
-.db-photo-card{aspect-ratio:4/3;background:var(--alabaster);border:0.5px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;}
-.db-photo-placeholder{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--taupe);text-align:center;padding:0 0.75rem;}
-.db-photo-icon{font-size:1.5rem;color:var(--taupe);}
-.db-photo-upload{position:absolute;inset:0;opacity:0;cursor:none;}
-.db-photo-label-btn{position:absolute;bottom:0.5rem;right:0.5rem;font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.5rem;background:var(--cream);border:0.5px solid var(--border);color:var(--muted);}
+/* Formula rows */
+.db-formula-row{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;border:0.5px solid var(--border);margin-bottom:0.6rem;gap:1rem;}
+.db-f-name{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--onyx);}
+.db-f-val{font-size:0.7rem;color:var(--muted);margin-top:0.15rem;}
+.db-f-tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.55rem;background:rgba(196,138,113,0.1);color:var(--clay);flex-shrink:0;}
+.db-add-formula{margin-top:1.25rem;padding:1rem;background:var(--alabaster);border:0.5px solid var(--border);}
+.db-add-row{display:flex;gap:0.5rem;margin-top:0.5rem;}
+.db-input{padding:0.6rem 0.75rem;border:0.5px solid var(--border-strong);background:var(--cream);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.75rem;color:var(--onyx);outline:none;flex:1;cursor:text;}
+.db-input:focus{border-color:var(--clay);}
+.db-btn-sm{padding:0.6rem 1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--onyx);color:var(--cream);border:none;cursor:none;white-space:nowrap;transition:background .2s;}
+.db-btn-sm:hover{background:var(--clay-dark);}
 
-/* Sidebar right panel */
-.db-lesson-sidebar{background:var(--onyx);}
-.db-sidebar-tabs{display:flex;border-bottom:0.5px solid #1A1A1A;}
+/* Photo grid */
+.db-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;}
+.db-photo-cell{aspect-ratio:4/3;background:var(--alabaster);border:0.5px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;cursor:none;transition:border-color .2s;position:relative;overflow:hidden;}
+.db-photo-cell:hover{border-color:var(--clay);}
+.db-photo-cell input{position:absolute;inset:0;opacity:0;cursor:none;width:100%;height:100%;}
+.db-photo-icon{font-size:1.35rem;}
+.db-photo-lbl{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--taupe);}
+
+/* Lesson plan */
+.db-plan-title{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:1.25rem;}
+.db-plan-row{display:grid;grid-template-columns:90px 1fr;gap:1rem;padding:0.85rem 0;border-bottom:0.5px solid var(--border);}
+.db-plan-key{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.1rem;}
+.db-plan-val{font-size:0.76rem;color:var(--charcoal);line-height:1.82;display:flex;flex-direction:column;gap:0.35rem;}
+
+/* Download rows */
+.db-download-row{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;border:0.5px solid var(--border);margin-bottom:0.4rem;font-size:0.72rem;color:var(--muted);text-decoration:none;cursor:none;transition:all .2s;gap:1rem;}
+.db-download-row:hover{border-color:var(--clay);color:var(--onyx);}
+.db-dl-btn{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);white-space:nowrap;flex-shrink:0;}
+
+/* Right sidebar */
+.db-right-sidebar{background:#0F0F0F;display:flex;flex-direction:column;overflow:hidden;}
+.db-sidebar-tabs{display:flex;border-bottom:0.5px solid #1A1A1A;flex-shrink:0;}
 .db-stab{flex:1;padding:0.8rem 0.35rem;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:#2A2520;text-align:center;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .18s;}
 .db-stab.active{color:var(--clay);border-bottom-color:var(--clay);}
-.db-side-panel{padding:1.25rem;display:none;overflow-y:auto;}
-.db-side-panel.active{display:block;}
-.db-side-note{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.6rem;background:rgba(196,138,113,0.02);}
-.db-side-note-label{font-size:0.56rem;color:var(--clay);margin-bottom:0.25rem;}
+.db-side-panel{display:none !important;padding:1.1rem;overflow-y:auto;flex:1;}
+.db-side-panel.active{display:block !important;}
+.db-note-input{width:100%;height:80px;background:#080808;border:0.5px solid #1A1A1A;color:#5A5050;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.7rem;padding:0.6rem;resize:none;outline:none;line-height:1.6;margin-bottom:0.4rem;}
+.db-save-note-btn{width:100%;padding:0.45rem;font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(196,138,113,0.1);color:var(--clay);border:0.5px solid rgba(196,138,113,0.2);cursor:none;margin-bottom:0.85rem;transition:all .2s;}
+.db-save-note-btn:hover{background:rgba(196,138,113,0.2);}
+.db-side-note{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.55rem;background:rgba(196,138,113,0.02);}
+.db-side-note-label{font-size:0.55rem;color:var(--clay);margin-bottom:0.22rem;letter-spacing:0.06em;}
 .db-side-note-text{font-size:0.68rem;color:#3A3530;line-height:1.65;}
-.db-formula-dark{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.6rem;}
-.db-formula-dark-name{font-family:'Cormorant Garamond',serif;font-size:0.9rem;color:var(--cream);margin-bottom:0.15rem;}
-.db-formula-dark-val{font-size:0.66rem;color:var(--clay);}
-.db-lesson-nav-btns{display:flex;gap:0.5rem;padding:1rem 2.25rem;border-top:0.5px solid var(--border);background:var(--cream);flex-shrink:0;}
-.btn-lesson-nav{flex:1;padding:0.7rem;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;border:0.5px solid var(--border);background:transparent;color:var(--muted);cursor:none;transition:all .2s;}
-.btn-lesson-nav:hover{border-color:var(--clay);color:var(--clay);}
-.btn-lesson-nav.primary-nav{background:var(--onyx);color:var(--cream);border-color:var(--onyx);}
-.btn-lesson-nav.primary-nav:hover{background:var(--clay-dark);}
+.db-vault-item{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.55rem;}
+.db-vault-name{font-family:'Cormorant Garamond',serif;font-size:0.88rem;color:var(--cream);margin-bottom:0.15rem;}
+.db-vault-val{font-size:0.66rem;color:var(--clay);}
 
-/* DB - COURSE LIST VIEW */
-.db-course-list{display:none !important;overflow-y:auto;}
-.db-course-list.db-active{display:block !important;}
-.db-cl-header{padding:2.5rem 2.25rem 1.75rem;border-bottom:0.5px solid var(--border);}
-.db-cl-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;}
-.db-cl-sub{font-size:0.78rem;color:var(--muted);margin-top:0.35rem;}
-.db-cl-grid{padding:2rem 2.25rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-.db-cl-card{border:0.5px solid var(--border);padding:1.6rem;cursor:none;transition:all .22s;position:relative;}
-.db-cl-card:hover{background:var(--alabaster);transform:translateY(-2px);}
-.db-cl-card.locked{opacity:0.45;pointer-events:none;}
-.db-cl-num{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:300;color:var(--sand);margin-bottom:0.75rem;}
-.db-cl-card-cat{font-size:0.54rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.35rem;}
-.db-cl-card-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:0.5rem;}
-.db-cl-card-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
-.db-cl-progress{height:1.5px;background:var(--sand);margin-bottom:0.4rem;position:relative;}
-.db-cl-prog-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);}
-.db-cl-prog-text{font-size:0.58rem;color:var(--muted);display:flex;justify-content:space-between;}
-.db-cl-lock-badge{position:absolute;top:1rem;right:1rem;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;border:0.5px solid var(--taupe);color:var(--taupe);}
+/* Resources view */
+.db-res-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;overflow-y:auto;flex:1;}
+.db-res-card{border:0.5px solid var(--border);padding:1.5rem;cursor:none;transition:all .22s;background:var(--cream);display:flex;flex-direction:column;}
+.db-res-card:hover{background:var(--alabaster);transform:translateY(-2px);}
+.db-res-icon{font-size:1.4rem;margin-bottom:0.75rem;}
+.db-res-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--onyx);margin-bottom:0.4rem;}
+.db-res-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;flex:1;}
+.db-res-btn{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);background:var(--onyx);border:none;cursor:none;padding:0.6rem 1rem;transition:all .2s;text-align:center;}
+.db-res-btn:hover{background:var(--clay-dark);}
 
-/* DB - RESOURCES VIEW */
-.db-resources{display:none !important;}
-.db-resources.db-active{display:block !important;}
-.db-res-grid{padding:2.25rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
-.db-res-card{border:0.5px solid var(--border);padding:1.5rem;cursor:none;transition:all .22s;}
-.db-res-card:hover{background:var(--alabaster);}
-.db-res-icon{font-size:1.5rem;margin-bottom:0.75rem;color:var(--clay);}
-.db-res-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;margin-bottom:0.35rem;}
-.db-res-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:0.85rem;}
-.db-res-btn{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);display:flex;align-items:center;gap:0.35rem;}
-
-/* DB NAV */
-/* HERO TRUST BAR */
-.hero-trust{display:flex;align-items:center;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .6s ease .8s both;}
-.hero-trust-item{display:flex;flex-direction:column;gap:0.15rem;}
-.hero-trust-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--onyx);line-height:1;}
-.hero-trust-label{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
-.hero-trust-divider{width:0.5px;height:28px;background:var(--border-strong);}
-
-/* MISSION SECTION */
-.mission-section{display:grid;grid-template-columns:1fr 1fr;border-top:0.5px solid var(--border);}
-.mission-left{padding:6.5rem var(--pad);border-right:0.5px solid var(--border);display:flex;flex-direction:column;justify-content:center;}
-.mission-right{padding:6.5rem var(--pad);background:var(--alabaster);display:flex;flex-direction:column;justify-content:center;}
-.mission-body{font-size:0.88rem;color:var(--muted);line-height:1.95;max-width:500px;}
-.mission-body+.mission-body{margin-top:1.1rem;}
-.mission-pillars{margin-top:2.25rem;display:flex;flex-direction:column;gap:1.25rem;}
-.mp{display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.25rem;border-bottom:0.5px solid var(--border);}
-.mp:last-child{border-bottom:none;padding-bottom:0;}
-.mp-icon{font-size:1rem;color:var(--clay);flex-shrink:0;margin-top:0.1rem;width:20px;text-align:center;}
-.mp-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;margin-bottom:0.25rem;}
-.mp-desc{font-size:0.73rem;color:var(--muted);line-height:1.7;}
-
-/* OUTCOMES SECTION */
-.outcomes-section{padding:7.5rem var(--pad);background:var(--onyx);}
-.outcomes-header{margin-bottom:4rem;}
-.outcomes-header .section-eyebrow{color:var(--clay);}
-.outcomes-header .section-eyebrow-line{background:var(--clay);}
-.outcomes-header .section-h2{color:var(--cream);}
-.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:0.5px solid #1E1E1E;border-top:0.5px solid #1E1E1E;}
-.outcome-card{border-right:0.5px solid #1E1E1E;border-bottom:0.5px solid #1E1E1E;padding:2.5rem 2rem;position:relative;transition:background .25s;}
-.outcome-card:hover{background:rgba(255,255,255,0.02);}
-.outcome-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:1rem;}
-.outcome-icon{font-size:1.4rem;margin-bottom:1rem;display:block;}
-.outcome-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem;line-height:1.2;}
-.outcome-desc{font-size:0.76rem;color:#4A4440;line-height:1.85;margin-bottom:1.25rem;}
-.outcome-tag{font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);padding:0.28rem 0.65rem;border:0.5px solid rgba(196,138,113,0.25);display:inline-block;}
-
-/* ═══ OWNER WHY SECTION ═══ */
-.owner-why-section{display:grid;grid-template-columns:1fr 1fr;background:var(--onyx);}
-.owner-why-left{padding:7.5rem var(--pad);border-right:0.5px solid #1E1E1E;display:flex;flex-direction:column;justify-content:center;}
-.owner-why-left .section-eyebrow{color:var(--clay-light);}
-.owner-why-left .section-eyebrow-line{background:var(--clay-light);}
-.owner-why-left .section-h2{color:var(--cream);}
-.owner-why-left .section-h2 em{color:var(--clay-light);}
-.owner-why-left .about-blockquote{border-left-color:var(--clay-light);color:rgba(251,249,246,0.55);font-size:1rem;}
-.owner-why-right{padding:7.5rem var(--pad);display:flex;flex-direction:column;justify-content:center;background:#111;}
-.owner-why-body{font-size:0.85rem;color:rgba(251,249,246,0.35);line-height:1.95;}
-.owner-why-body+.owner-why-body{margin-top:1.1rem;}
-.owner-why-pillars{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.25rem;}
-.owp{display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.25rem;border-bottom:0.5px solid #1A1A1A;}
-.owp:last-child{border-bottom:none;padding-bottom:0;}
-.owp-icon{font-size:0.9rem;color:var(--clay);flex-shrink:0;margin-top:0.1rem;width:18px;text-align:center;}
-.owp-title{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(251,249,246,0.7);margin-bottom:0.25rem;}
-.owp-desc{font-size:0.72rem;color:rgba(251,249,246,0.3);line-height:1.75;}
-
-/* ═══ COLOR MADE SIMPLE ═══ */
-.color-simple-section{padding:8rem var(--pad);background:var(--cream);border-top:0.5px solid var(--border);}
-.cs-header{margin-bottom:4rem;}
-.cs-sub{font-size:0.88rem;color:var(--muted);line-height:1.9;max-width:640px;margin-top:1.1rem;}
-.cs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-left:0.5px solid var(--border);border-top:0.5px solid var(--border);margin-bottom:0;}
-.cs-card{border-right:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:2.5rem 2rem;position:relative;transition:background .25s;}
-.cs-card:hover{background:var(--alabaster);}
-.cs-card-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--sand);line-height:1;margin-bottom:0.85rem;}
-.cs-card-eyebrow{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.5rem;}
-.cs-card-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--onyx);line-height:1.25;margin-bottom:0.85rem;}
-.cs-card-body{font-size:0.74rem;color:var(--muted);line-height:1.85;}
-.cs-formula-strip{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:0;background:var(--onyx);padding:3rem var(--pad);margin:0 calc(-1 * var(--pad));border-top:0.5px solid var(--border);}
-.cs-formula-item{padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem;}
-.cs-formula-result{background:rgba(196,138,113,0.08);border:0.5px solid rgba(196,138,113,0.2);}
-.cs-formula-label{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);}
-.cs-formula-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);line-height:1.2;}
-.cs-formula-body{font-size:0.68rem;color:rgba(251,249,246,0.3);line-height:1.7;}
-.cs-formula-arrow{font-size:1rem;color:#2A2A2A;padding:0 0.5rem;flex-shrink:0;}
-
-/* ═══ SKIN & EYE TONES SECTION ═══ */
-.tones-section{padding:8rem var(--pad);background:var(--onyx);color:var(--cream);}
-.tones-section .section-eyebrow{color:var(--clay);}
-.tones-section .section-eyebrow-line{background:var(--clay);}
-.tones-section .section-h2{color:var(--cream);}
-.tones-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end;margin-top:1.5rem;margin-bottom:4.5rem;}
-.tones-intro-body{font-size:0.85rem;color:rgba(251,249,246,0.4);line-height:1.9;}
-.tones-tabs{display:flex;gap:0;border-bottom:0.5px solid #1E1E1E;margin-bottom:3.5rem;}
-.tone-tab{padding:0.85rem 2rem;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:#2E2A28;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
-.tone-tab.active{color:var(--clay);border-bottom-color:var(--clay);}
-.tone-tab:hover{color:#5A5050;}
-.tone-panel{display:none;}
-.tone-panel.active{display:block;}
-
-/* Skin tone grid */
-.skin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:0.5px solid #1E1E1E;border-top:0.5px solid #1E1E1E;}
-.skin-card{border-right:0.5px solid #1E1E1E;border-bottom:0.5px solid #1E1E1E;padding:2.25rem 2rem;transition:background .25s;position:relative;}
-.skin-card:hover{background:rgba(255,255,255,0.02);}
-.skin-card-header{display:flex;align-items:center;gap:1.1rem;margin-bottom:1.5rem;}
-.skin-swatch-wrap{display:flex;gap:0.35rem;flex-shrink:0;}
-.skin-swatch{width:20px;height:20px;border-radius:50%;}
-.skin-card-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.2rem;}
-.skin-card-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--cream);}
-.skin-card-desc{font-size:0.74rem;color:rgba(251,249,246,0.35);line-height:1.85;margin-bottom:1.5rem;}
-.skin-complements{display:flex;flex-direction:column;gap:0;}
-.skin-complement-row{display:grid;grid-template-columns:110px 1fr;gap:0;border-top:0.5px solid #1A1A1A;padding:0.65rem 0;}
-.skin-complement-row:first-child{border-top:none;padding-top:0;}
-.skin-comp-key{font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:#3A3530;padding-top:0.08rem;}
-.skin-comp-val{font-size:0.74rem;color:rgba(251,249,246,0.55);line-height:1.5;}
-.skin-comp-val em{font-style:italic;color:var(--clay);font-size:0.72rem;}
-.skin-swatches-row{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.35rem;}
-.skin-color-chip{display:flex;align-items:center;gap:0.3rem;padding:0.22rem 0.5rem;border:0.5px solid #252525;font-size:0.58rem;color:#3A3530;letter-spacing:0.06em;}
-.chip-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-
-/* Eye tone grid */
-.eye-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-.eye-card{border:0.5px solid #1E1E1E;padding:2rem 1.75rem;transition:all .25s;}
-.eye-card:hover{background:rgba(255,255,255,0.02);border-color:#2E2A28;}
-.eye-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
-.eye-iris{width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.eye-iris-pupil{width:14px;height:14px;border-radius:50%;background:rgba(0,0,0,0.8);flex-shrink:0;}
-.eye-card-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);font-weight:300;}
-.eye-card-sub{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);}
-.eye-card-desc{font-size:0.73rem;color:rgba(251,249,246,0.35);line-height:1.82;margin-bottom:1.25rem;}
-.eye-recommendations{display:flex;flex-direction:column;gap:0.5rem;}
-.eye-rec-row{display:flex;align-items:baseline;gap:0.5rem;padding:0.5rem 0;border-top:0.5px solid #1A1A1A;}
-.eye-rec-row:first-child{border-top:none;padding-top:0;}
-.eye-rec-label{font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:#2E2A28;min-width:70px;flex-shrink:0;}
-.eye-rec-val{font-size:0.72rem;color:rgba(251,249,246,0.5);line-height:1.5;}
-.eye-rec-val em{font-style:italic;color:var(--clay-light);}
-
-/* Warm/cool theory strip */
-.tone-theory-strip{display:grid;grid-template-columns:repeat(4,1fr);border:0.5px solid #1E1E1E;margin-top:3.5rem;}
-.tone-theory-card{padding:2rem 1.75rem;border-right:0.5px solid #1E1E1E;}
-.tone-theory-card:last-child{border-right:none;}
-.tone-theory-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:0.65rem;}
-.tone-theory-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:0.5rem;}
-.tone-theory-body{font-size:0.71rem;color:rgba(251,249,246,0.3);line-height:1.8;}
+/* Downloads list */
+.db-dl-list{padding:1.5rem 2.5rem;overflow-y:auto;flex:1;}
+.db-dl-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border:0.5px solid var(--border);margin-bottom:0.5rem;background:var(--cream);transition:all .2s;}
+.db-dl-item:hover{background:var(--alabaster);}
+.db-dl-icon{font-size:1.25rem;flex-shrink:0;}
+.db-dl-info{flex:1;}
+.db-dl-name{font-size:0.82rem;color:var(--onyx);margin-bottom:0.15rem;}
+.db-dl-meta{font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;}
+.db-dl-action{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--onyx);color:var(--cream);border:none;cursor:none;transition:all .2s;white-space:nowrap;flex-shrink:0;}
+.db-dl-action:hover{background:var(--clay-dark);}
 
 .db-topnav{position:fixed;top:0;left:0;right:0;z-index:800;display:none;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(10,10,10,0.97);backdrop-filter:blur(18px);border-bottom:0.5px solid #1A1A1A;height:58px;}
 .db-topnav.visible{display:flex;}
@@ -1668,9 +1585,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 ════════════════════════════════ -->
 <div id="view-dashboard">
   <div class="db-layout">
+
     <!-- SIDEBAR -->
-    <div class="db-sidebar" id="dbSidebar">
+    <aside class="db-sidebar" id="dbSidebar">
       <div class="db-sidebar-top">
+        <div class="db-user-avatar" id="dbUserAvatar">F</div>
         <div class="db-user-name" id="dbUserName">Welcome</div>
         <div class="db-user-track" id="dbUserTrack">Stylist Track</div>
       </div>
@@ -1679,274 +1598,338 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
         <div class="db-op-bar"><div class="db-op-fill" id="dbOverallFill" style="width:12%;"></div></div>
         <div class="db-op-pct" id="dbOverallPct">12%</div>
       </div>
-      <div class="db-nav" id="dbNav">
+      <nav class="db-nav" id="dbNav">
         <div class="db-nav-section">My Courses</div>
-        <div class="db-nav-item active" onclick="showDbView('courses')"><span class="db-nav-dot"></span>All Courses</div>
-        <div class="db-nav-section">Active</div>
-        <div class="db-nav-item" onclick="goToLesson(0)"><span class="db-nav-check current">▶</span>Color Theory</div>
-        <div class="db-nav-item" onclick="goToLesson(1)"><span class="db-nav-check locked">🔒</span>Corrective Color</div>
-        <div class="db-nav-item" onclick="goToLesson(2)"><span class="db-nav-check locked">🔒</span>Haircut Design</div>
+        <div class="db-nav-item" id="nav-courses" onclick="showDbView('courses');setNavActive('nav-courses')">
+          <span class="db-nav-icon">▦</span>All Courses
+        </div>
+        <div class="db-nav-section">Active Unit</div>
+        <div class="db-nav-item" id="nav-l0" onclick="goToLesson(0);setNavActive('nav-l0')">
+          <span class="db-nav-check current">▶</span><span id="navL0">Color Theory</span>
+        </div>
+        <div class="db-nav-item disabled" id="nav-l1">
+          <span class="db-nav-check locked">⊘</span><span id="navL1">Corrective Color</span>
+        </div>
+        <div class="db-nav-item disabled" id="nav-l2">
+          <span class="db-nav-check locked">⊘</span><span id="navL2">Haircut Design</span>
+        </div>
         <div class="db-nav-section">Resources</div>
-        <div class="db-nav-item" onclick="showDbView('resources')"><span class="db-nav-dot"></span>Formula Vault</div>
-        <div class="db-nav-item" onclick="showDbView('resources')"><span class="db-nav-dot"></span>Downloads</div>
-        <div class="db-nav-item" onclick="showDbView('resources')"><span class="db-nav-dot"></span>Photo Gallery</div>
-      </div>
-    </div>
-
-    <!-- MAIN AREA -->
-    <div class="db-main">
-
-      <!-- COURSE LIST VIEW -->
-      <div class="db-course-list" id="view-courses">
-        <div class="db-cl-header">
-          <div class="db-cl-title" id="dbClTitle">Stylist Track</div>
-          <div class="db-cl-sub">Your full curriculum — 8 units, 64 video modules</div>
+        <div class="db-nav-item" id="nav-resources" onclick="showDbView('resources');setNavActive('nav-resources')">
+          <span class="db-nav-icon">⬡</span>All Resources
         </div>
-        <div class="db-cl-grid" id="dbClGrid">
-          <!-- populated by JS -->
+        <div class="db-nav-item" id="nav-vault" onclick="showDbView('resources');setNavActive('nav-vault')">
+          <span class="db-nav-icon">🧪</span>Formula Vault
         </div>
+        <div class="db-nav-item" id="nav-downloads" onclick="showDbView('downloads');setNavActive('nav-downloads')">
+          <span class="db-nav-icon">↓</span>Downloads
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="db-main" id="dbMain">
+
+      <!-- ── COURSE LIST ── -->
+      <div class="db-view" id="view-courses">
+        <div class="db-page-header">
+          <div>
+            <div class="db-page-title" id="dbClTitle">Stylist Track</div>
+            <div class="db-page-sub" id="dbClSub">Your full curriculum — 8 units, 64 video modules</div>
+          </div>
+          <div class="db-page-meta" id="dbPageMeta">
+            <span class="db-meta-pill">8 Units</span>
+            <span class="db-meta-pill">64 Modules</span>
+          </div>
+        </div>
+        <div class="db-course-grid" id="dbClGrid"></div>
       </div>
 
-      <!-- LESSON VIEW -->
-      <div class="db-lesson" id="view-lesson">
-        <div class="db-lesson-top" style="background:var(--onyx);">
-          <div class="db-video-shell">
-            <div class="db-video-thumb">
-              <div class="db-video-grid-bg"></div>
-              <div class="db-play-ring" id="dbPlayBtn" onclick="togglePlay()">▶</div>
-              <div class="db-video-lesson-title" id="dbVideoTitle">Color Theory — Module 1: The Color Wheel</div>
-              <div class="db-video-duration" id="dbVideoDur">Duration: 38 min</div>
+      <!-- ── LESSON VIEW ── -->
+      <div class="db-view" id="view-lesson">
+        <!-- Video -->
+        <div class="db-video-wrap">
+          <div class="db-video-bg">
+            <div class="db-video-grid"></div>
+            <button class="db-play-btn" id="dbPlayBtn" onclick="togglePlay()">
+              <span id="dbPlayIcon">▶</span>
+            </button>
+            <div class="db-video-info">
+              <div class="db-video-title" id="dbVideoTitle">Color Theory — Module 1</div>
+              <div class="db-video-dur" id="dbVideoDur">38 min</div>
             </div>
           </div>
-          <div class="db-timeline-bar">
-            <div class="db-timeline-fill" id="dbTimelineFill" style="width:0%;"></div>
-            <div class="db-timeline-dot" id="dbTimelineDot" style="left:0%;"></div>
+          <div class="db-progress-track">
+            <div class="db-progress-fill" id="dbTimelineFill" style="width:0%"></div>
+            <div class="db-progress-dot" id="dbTimelineDot" style="left:0%"></div>
           </div>
-          <div class="db-lesson-meta">
-            <div class="db-lesson-title" id="dbLessonTitle">The Color Wheel &amp; Tonal Relationships</div>
+        </div>
+        <!-- Lesson header -->
+        <div class="db-lesson-header">
+          <div>
+            <div class="db-lesson-title" id="dbLessonTitle">The Color Wheel & Tonal Relationships</div>
             <div class="db-lesson-sub" id="dbLessonSub">Color Theory · Module 1 of 8 · 38 min</div>
           </div>
+          <div class="db-lesson-nav-row">
+            <button class="db-nav-btn" onclick="prevLesson()">← Prev</button>
+            <button class="db-nav-btn primary" onclick="nextLesson()">Next →</button>
+          </div>
         </div>
+        <!-- Lesson body: content + sidebar -->
         <div class="db-lesson-body">
           <div class="db-lesson-content">
-            <div class="db-content-tabs">
-              <button class="db-ctab active" onclick="switchContentTab(this,'why')">The Why</button>
-              <button class="db-ctab" onclick="switchContentTab(this,'formulas')">Formulas</button>
-              <button class="db-ctab" onclick="switchContentTab(this,'photos')">Photos &amp; Resources</button>
-              <button class="db-ctab" onclick="switchContentTab(this,'plan')">Lesson Plan</button>
+            <!-- Tabs -->
+            <div class="db-tabs">
+              <button class="db-tab active" onclick="switchContentTab(this,'why')">The Why</button>
+              <button class="db-tab" onclick="switchContentTab(this,'formulas')">Formulas</button>
+              <button class="db-tab" onclick="switchContentTab(this,'photos')">Photos</button>
+              <button class="db-tab" onclick="switchContentTab(this,'plan')">Lesson Plan</button>
             </div>
-
-            <!-- WHY PANEL -->
-            <div class="db-content-panel active" id="cpanel-why">
+            <!-- WHY -->
+            <div class="db-panel active" id="cpanel-why">
               <div class="db-why-block">
                 <div class="db-why-label" id="whyLabel">Core Principle</div>
-                <div class="db-why-body" id="whyBody">The color wheel is the single most important tool a colorist can internalize. It is not a reference chart — it is a way of thinking. When you understand the relationships between colors instinctively, every formulation decision becomes logical, not guesswork.</div>
-                <div class="db-why-callout"><p id="whyCallout">The three primaries (Red, Yellow, Blue) cannot be created by mixing other colors. Every shade that exists in nature and in your color line is born from these three. Understanding this means you can build or break any result — on purpose.</p></div>
+                <p class="db-why-body" id="whyBody">The color wheel is the single most important tool a colorist can internalize.</p>
+                <div class="db-callout"><p id="whyCallout">The three primaries cannot be created by mixing. Every shade is born from them.</p></div>
               </div>
               <div class="db-why-block">
                 <div class="db-why-label">Why Complements Matter</div>
-                <div class="db-why-body">Complementary colors — those directly opposite on the wheel — cancel each other out when combined. This is not art theory. This is chemistry. It is why a blue-violet toner neutralizes yellow brassiness, and why green ash is prescribed for red underlying pigment. You are not guessing — you are applying the wheel.</div>
+                <p class="db-why-body">Complementary colors — directly opposite on the wheel — cancel each other out. This is why blue-violet toner neutralizes yellow brassiness and green ash corrects red underlying pigment. You are not guessing — you are applying the wheel.</p>
               </div>
             </div>
-
-            <!-- FORMULAS PANEL -->
-            <div class="db-content-panel" id="cpanel-formulas">
-              <div style="margin-bottom:1.25rem;"><div class="db-why-label">Module Formula Reference</div></div>
-              <div class="db-formula-card"><div><div class="db-formula-name">Neutralizing Level 7 Brassiness</div><div class="db-formula-val">Blue-Violet Toner + Clear 1:2 ratio · 10 vol · 15 min</div></div><div class="db-formula-badge">Saved</div></div>
-              <div class="db-formula-card"><div><div class="db-formula-name">Level 5 Correction — Red-Orange UP</div><div class="db-formula-val">Blue-Green Ash · 30 vol · 35–40 min</div></div><div class="db-formula-badge">Saved</div></div>
-              <div class="db-formula-card"><div><div class="db-formula-name">Level 9 Platinum Toner</div><div class="db-formula-val">Ultra-Light Pearl + Clear 1:1 · 10 vol · 10 min</div></div><div class="db-formula-badge">Vault</div></div>
-              <div class="db-formula-card"><div><div class="db-formula-name">Shadow Root — Dark Blonde Client</div><div class="db-formula-val">2 shades deeper at root, blended 2 inches, smudged</div></div><div class="db-formula-badge">Vault</div></div>
-              <div style="margin-top:1.25rem;padding:1rem;background:var(--alabaster);border:0.5px solid var(--border);">
-                <div class="db-why-label">Add a Formula</div>
-                <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
-                  <input type="text" class="form-input" placeholder="Formula name..." style="flex:1;font-size:0.72rem;padding:0.55rem 0.75rem;"/>
-                  <input type="text" class="form-input" placeholder="Details..." style="flex:2;font-size:0.72rem;padding:0.55rem 0.75rem;"/>
-                  <button style="padding:0.55rem 1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--onyx);color:var(--cream);border:none;cursor:none;white-space:nowrap;" onclick="saveFormula(this)">Save →</button>
+            <!-- FORMULAS -->
+            <div class="db-panel" id="cpanel-formulas">
+              <div class="db-panel-label">Module Formula Reference</div>
+              <div id="formulaCards">
+                <div class="db-formula-row"><div><div class="db-f-name">Neutralizing Level 7 Brassiness</div><div class="db-f-val">Blue-Violet Toner + Clear 1:2 · 10 vol · 15 min</div></div><span class="db-f-tag">Vault</span></div>
+                <div class="db-formula-row"><div><div class="db-f-name">Level 5 Correction — Red-Orange UP</div><div class="db-f-val">Blue-Green Ash · 30 vol · 35–40 min</div></div><span class="db-f-tag">Vault</span></div>
+                <div class="db-formula-row"><div><div class="db-f-name">Platinum Toner (Level 9–10)</div><div class="db-f-val">Ultra-Light Pearl + Clear 1:1 · 10 vol · 10 min</div></div><span class="db-f-tag">Vault</span></div>
+              </div>
+              <div class="db-add-formula">
+                <div class="db-panel-label">Add a Formula</div>
+                <div class="db-add-row">
+                  <input id="fName" class="db-input" placeholder="Formula name…"/>
+                  <input id="fVal" class="db-input" placeholder="Developer, timing, notes…" style="flex:2"/>
+                  <button class="db-btn-sm" onclick="saveFormula()">Save</button>
                 </div>
               </div>
             </div>
-
-            <!-- PHOTOS PANEL -->
-            <div class="db-content-panel" id="cpanel-photos">
-              <div style="margin-bottom:1rem;"><div class="db-why-label">Reference Photos &amp; Before/After</div><p style="font-size:0.74rem;color:var(--muted);margin-top:0.35rem;line-height:1.7;">Upload reference photos, client before/afters, and technique examples to build your visual library for this module.</p></div>
+            <!-- PHOTOS -->
+            <div class="db-panel" id="cpanel-photos">
+              <div class="db-panel-label">Reference Photos & Before/After</div>
+              <p class="db-panel-sub">Upload photos for this module — before/afters, reference images, diagrams.</p>
               <div class="db-photo-grid">
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">📷</div>
-                  <div class="db-photo-placeholder">Before Photo</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">✨</div>
-                  <div class="db-photo-placeholder">After Photo</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">🎨</div>
-                  <div class="db-photo-placeholder">Reference / Inspo</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">🧴</div>
-                  <div class="db-photo-placeholder">Formula / Product</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">📐</div>
-                  <div class="db-photo-placeholder">Placement Diagram</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
-                <div class="db-photo-card" onclick="this.querySelector('input').click()">
-                  <input type="file" accept="image/*" class="db-photo-upload" onchange="previewPhoto(this)"/>
-                  <div class="db-photo-icon">+</div>
-                  <div class="db-photo-placeholder">Add Photo</div>
-                  <div class="db-photo-label-btn">Upload</div>
-                </div>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">📷</span><span class="db-photo-lbl">Before</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">✨</span><span class="db-photo-lbl">After</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">🎨</span><span class="db-photo-lbl">Reference</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">🧴</span><span class="db-photo-lbl">Product</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">📐</span><span class="db-photo-lbl">Diagram</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">＋</span><span class="db-photo-lbl">Add Photo</span></label>
               </div>
             </div>
-
-            <!-- LESSON PLAN PANEL -->
-            <div class="db-content-panel" id="cpanel-plan">
-              <div class="db-why-label" style="margin-bottom:1rem;" id="planTitle">Module 1 — Lesson Plan</div>
-              <div id="lessonPlanContent">
-                <div style="display:flex;flex-direction:column;gap:0.85rem;">
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;border-bottom:0.5px solid var(--border);padding-bottom:0.85rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Objective</div>
-                    <div style="font-size:0.78rem;color:var(--charcoal);line-height:1.8;">Understand the 12-tone color wheel, identify primary/secondary/tertiary colors, and explain how complementary relationships enable neutralization.</div>
-                  </div>
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;border-bottom:0.5px solid var(--border);padding-bottom:0.85rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Duration</div>
-                    <div style="font-size:0.78rem;color:var(--charcoal);">38 minutes video · 15 minutes practice · 10 minutes self-quiz</div>
-                  </div>
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;border-bottom:0.5px solid var(--border);padding-bottom:0.85rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Outline</div>
-                    <div style="font-size:0.76rem;color:var(--charcoal);line-height:1.85;display:flex;flex-direction:column;gap:0.4rem;" id="planOutline">
-                      <div>1. Introduction to the color wheel — the 3 primaries (0:00–6:00)</div>
-                      <div>2. Secondary colors: how they're created (6:00–12:00)</div>
-                      <div>3. Tertiary tones and why they appear as underlying pigment (12:00–20:00)</div>
-                      <div>4. Complementary pairs: the law of neutralization (20:00–28:00)</div>
-                      <div>5. Warm vs. cool halves — formulation mindset (28:00–34:00)</div>
-                      <div>6. Module recap and formula exercise (34:00–38:00)</div>
-                    </div>
-                  </div>
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;border-bottom:0.5px solid var(--border);padding-bottom:0.85rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Practice</div>
-                    <div style="font-size:0.76rem;color:var(--charcoal);line-height:1.8;">Identify the complementary color for: Red-Orange, Yellow-Orange, Pale Yellow. Write the neutralizing toner you would use for a Level 7 client with yellow-orange brassiness.</div>
-                  </div>
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;border-bottom:0.5px solid var(--border);padding-bottom:0.85rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Practice</div>
-                    <div id="planPractice" style="font-size:0.76rem;color:var(--charcoal);line-height:1.8;">Identify the complementary color for: Red-Orange, Yellow-Orange, Pale Yellow. Write the neutralizing toner you would use for a Level 7 client with yellow-orange brassiness.</div>
-                  </div>
-                  <div style="display:grid;grid-template-columns:80px 1fr;gap:1rem;">
-                    <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.08rem;">Downloads</div>
-                    <div id="planDownloads" style="display:flex;flex-direction:column;gap:0.5rem;">
-                      <div style="display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.75rem;border:0.5px solid var(--border);font-size:0.72rem;color:var(--muted);cursor:none;" onclick="showToast('Downloading Color Wheel Reference...')">📄 Color Wheel Reference Chart (PDF) <span style="margin-left:auto;color:var(--clay);font-size:0.6rem;">Download →</span></div>
-                      <div style="display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.75rem;border:0.5px solid var(--border);font-size:0.72rem;color:var(--muted);cursor:none;" onclick="showToast('Downloading Complementary Color Guide...')">📄 Complementary Color Guide (PDF) <span style="margin-left:auto;color:var(--clay);font-size:0.6rem;">Download →</span></div>
-                      <div style="display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.75rem;border:0.5px solid var(--border);font-size:0.72rem;color:var(--muted);cursor:none;" onclick="showToast('Downloading Level System Chart...')">📄 Level System &amp; Underlying Pigment Chart (PDF) <span style="margin-left:auto;color:var(--clay);font-size:0.6rem;">Download →</span></div>
-                    </div>
-                  </div>
+            <!-- LESSON PLAN -->
+            <div class="db-panel" id="cpanel-plan">
+              <div class="db-plan-title" id="planTitle">Module 1 — Lesson Plan</div>
+              <div class="db-plan-row">
+                <div class="db-plan-key">Objective</div>
+                <div class="db-plan-val" id="planObjective">Understand the 12-tone color wheel and how complementary relationships enable neutralization.</div>
+              </div>
+              <div class="db-plan-row">
+                <div class="db-plan-key">Outline</div>
+                <div class="db-plan-val" id="planOutline">
+                  <div>1. Introduction to the color wheel — the 3 primaries (0:00–6:00)</div>
+                  <div>2. Secondary colors: how they're created (6:00–12:00)</div>
+                  <div>3. Tertiary tones and underlying pigment (12:00–20:00)</div>
+                  <div>4. Complementary pairs: neutralization law (20:00–28:00)</div>
+                  <div>5. Warm vs. cool halves — formulation mindset (28:00–34:00)</div>
+                  <div>6. Recap and formula exercise (34:00–38:00)</div>
                 </div>
               </div>
-            </div>
-
-            <div class="db-lesson-nav-btns">
-              <button class="btn-lesson-nav" onclick="prevLesson()">← Previous</button>
-              <button class="btn-lesson-nav primary-nav" onclick="nextLesson()">Next Lesson →</button>
+              <div class="db-plan-row">
+                <div class="db-plan-key">Practice</div>
+                <div class="db-plan-val" id="planPractice">Identify the complementary color for Red-Orange, Yellow-Orange, and Pale Yellow. Write the toner you'd use on a Level 7 client with yellow-orange brassiness.</div>
+              </div>
+              <div class="db-plan-row" style="border-bottom:none">
+                <div class="db-plan-key">Downloads</div>
+                <div class="db-plan-val" id="planDownloads">
+                  <a class="db-download-row" href="#" onclick="dlPDF('Color Wheel Reference Chart');return false"><span>📄 Color Wheel Reference Chart</span><span class="db-dl-btn">Download PDF</span></a>
+                  <a class="db-download-row" href="#" onclick="dlPDF('Complementary Color Guide');return false"><span>📄 Complementary Color Guide</span><span class="db-dl-btn">Download PDF</span></a>
+                  <a class="db-download-row" href="#" onclick="dlPDF('Level System & UP Chart');return false"><span>📄 Level System & Underlying Pigment Chart</span><span class="db-dl-btn">Download PDF</span></a>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- RIGHT SIDEBAR -->
-          <div class="db-lesson-sidebar">
+          <div class="db-right-sidebar">
             <div class="db-sidebar-tabs">
               <button class="db-stab active" onclick="switchSideTab(this,'snotes')">Notes</button>
               <button class="db-stab" onclick="switchSideTab(this,'svault')">Vault</button>
               <button class="db-stab" onclick="switchSideTab(this,'scommunity')">Community</button>
             </div>
+            <!-- Notes -->
             <div class="db-side-panel active" id="spanel-snotes">
-              <div style="margin-bottom:0.75rem;">
-                <textarea id="noteInput" style="width:100%;height:90px;background:#0D0D0D;border:0.5px solid #1A1A1A;color:#5A5050;font-family:Plus Jakarta Sans,sans-serif;font-size:0.7rem;padding:0.65rem;resize:none;outline:none;line-height:1.6;" placeholder="Add a note for this module..."></textarea>
-                <button style="width:100%;padding:0.5rem;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(196,138,113,0.1);color:var(--clay);border:0.5px solid rgba(196,138,113,0.2);cursor:none;" onclick="saveNote()">Save Note</button>
-              </div>
+              <textarea id="noteInput" class="db-note-input" placeholder="Add a note for this module…"></textarea>
+              <button class="db-save-note-btn" onclick="saveNote()">Save Note</button>
               <div id="notesContainer">
-                <div class="db-side-note"><div class="db-side-note-label">My Note</div><p class="db-side-note-text">Level 6 on Maria — used blue ash 6 + 20vol, came out perfect neutral dark blonde.</p></div>
-                <div class="db-side-note"><div class="db-side-note-label">My Note</div><p class="db-side-note-text">Remember: porous hair needs lower developer volume — moves faster than virgin hair.</p></div>
+                <div class="db-side-note"><div class="db-side-note-label">My Note</div><p class="db-side-note-text">Level 6 on Maria — blue ash 6 + 20vol, perfect neutral dark blonde.</p></div>
+                <div class="db-side-note"><div class="db-side-note-label">My Note</div><p class="db-side-note-text">Porous hair needs lower developer — moves faster than virgin hair.</p></div>
               </div>
             </div>
+            <!-- Vault -->
             <div class="db-side-panel" id="spanel-svault">
-              <div class="db-formula-dark"><div class="db-formula-dark-name">Level 5 → UP: Orange-Red</div><div class="db-formula-dark-val">Neutralizer: Blue / Blue-Green</div></div>
-              <div class="db-formula-dark"><div class="db-formula-dark-name">Level 7 → UP: Yellow-Orange</div><div class="db-formula-dark-val">Neutralizer: Blue-Violet (diluted 1:2)</div></div>
-              <div class="db-formula-dark"><div class="db-formula-dark-name">Level 9 → UP: Pale Yellow</div><div class="db-formula-dark-val">Neutralizer: Pearl / Ice Violet</div></div>
-              <div class="db-formula-dark"><div class="db-formula-dark-name">Platinum Toner</div><div class="db-formula-dark-val">Ultra-Light Pearl + Clear 1:1 · 10vol</div></div>
-              <div class="db-side-note" style="margin-top:0.75rem;"><div class="db-side-note-label">Formula Vault</div><p class="db-side-note-text">All formulas auto-save here. Access from any device — even without internet after first load.</p></div>
+              <div class="db-vault-item"><div class="db-vault-name">Level 5 → UP: Orange-Red</div><div class="db-vault-val">Neutralizer: Blue / Blue-Green</div></div>
+              <div class="db-vault-item"><div class="db-vault-name">Level 7 → UP: Yellow-Orange</div><div class="db-vault-val">Neutralizer: Blue-Violet 1:2</div></div>
+              <div class="db-vault-item"><div class="db-vault-name">Level 9 → UP: Pale Yellow</div><div class="db-vault-val">Neutralizer: Pearl / Ice Violet</div></div>
+              <div class="db-vault-item"><div class="db-vault-name">Platinum Toner</div><div class="db-vault-val">Ultra-Light Pearl + Clear 1:1 · 10vol</div></div>
             </div>
+            <!-- Community -->
             <div class="db-side-panel" id="spanel-scommunity">
-              <div class="db-side-note"><div class="db-side-note-label">Community Note — @kstylist</div><p class="db-side-note-text">If hair is porous, reduce developer 5vol and process shorter — UP moves faster on porous hair.</p></div>
-              <div class="db-side-note"><div class="db-side-note-label">Community Note — @hcpro</div><p class="db-side-note-text">The complementary color chart in the downloads is a game changer — print it and put it at your station.</p></div>
-              <div class="db-side-note"><div class="db-side-note-label">Community Note — @blondspecialist</div><p class="db-side-note-text">Level 8 with yellow UP — always start with a low-deposit pearl before going full violet. Trust the process.</p></div>
+              <div class="db-side-note"><div class="db-side-note-label">@kstylist</div><p class="db-side-note-text">Porous hair — reduce developer 5vol and process shorter.</p></div>
+              <div class="db-side-note"><div class="db-side-note-label">@hcpro</div><p class="db-side-note-text">Print the complementary color chart and hang it at your station.</p></div>
+              <div class="db-side-note"><div class="db-side-note-label">@blondspecialist</div><p class="db-side-note-text">Level 8 — always start with low-deposit pearl before full violet.</p></div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- RESOURCES VIEW -->
-      <div class="db-resources" id="view-resources">
-        <div class="db-cl-header"><div class="db-cl-title">Resource Library</div><div class="db-cl-sub">Formula Vault, downloadable guides, and your photo gallery</div></div>
-        <div class="db-res-grid">
-          <div class="db-res-card" onclick="showToast('Opening Color Wheel Reference...')"><div class="db-res-icon">🎨</div><div class="db-res-name">Color Wheel Reference</div><p class="db-res-desc">Full 12-tone color wheel with complementary pairs, warm/cool notation, and formulation notes. Print-ready PDF.</p><div class="db-res-btn">Download PDF →</div></div>
-          <div class="db-res-card" onclick="showToast('Opening Level System Chart...')"><div class="db-res-icon">📊</div><div class="db-res-name">Level System &amp; UP Chart</div><p class="db-res-desc">All 10 levels with underlying pigment swatches, neutralizing colors, and recommended formulations. Essential reference.</p><div class="db-res-btn">Download PDF →</div></div>
-          <div class="db-res-card" onclick="showToast('Opening Placement Guides...')"><div class="db-res-icon">👤</div><div class="db-res-name">Placement Guides (6 Face Shapes)</div><p class="db-res-desc">Placement strategy cards for all 6 face shapes — Oval, Round, Square, Heart, Long, Diamond. Hang at your station.</p><div class="db-res-btn">Download PDF →</div></div>
-          <div class="db-res-card" onclick="showToast('Opening Formula Vault...')"><div class="db-res-icon">🧪</div><div class="db-res-name">Formula Vault</div><p class="db-res-desc">Your saved formulas plus KOSIA curated formulations for common scenarios — neutralization, correction, toning, shadow root.</p><div class="db-res-btn">Open Vault →</div></div>
-          <div class="db-res-card" onclick="showToast('Opening Consultation Scripts...')"><div class="db-res-icon">📝</div><div class="db-res-name">Consultation Scripts</div><p class="db-res-desc">Word-for-word scripts for 8 common client consultation scenarios — corrective, first-time client, color maintenance, and more.</p><div class="db-res-btn">Download PDF →</div></div>
-          <div class="db-res-card" onclick="showToast('Opening Photo Gallery...')"><div class="db-res-icon">📷</div><div class="db-res-name">Your Photo Gallery</div><p class="db-res-desc">All before/after photos and reference images you've uploaded across your modules. Organized by course unit.</p><div class="db-res-btn">Open Gallery →</div></div>
+      <!-- ── RESOURCES ── -->
+      <div class="db-view" id="view-resources">
+        <div class="db-page-header">
+          <div>
+            <div class="db-page-title">Resource Library</div>
+            <div class="db-page-sub">Formula Vault, downloadable guides, and your photo gallery</div>
+          </div>
+        </div>
+        <div class="db-res-grid" id="dbResGrid">
+          <div class="db-res-card">
+            <div class="db-res-icon">🎨</div>
+            <div class="db-res-name">Color Wheel Reference</div>
+            <p class="db-res-desc">Full 12-tone color wheel with complementary pairs, warm/cool notation, and formulation notes.</p>
+            <button class="db-res-btn" onclick="dlPDF('Color Wheel Reference Chart')">Download PDF →</button>
+          </div>
+          <div class="db-res-card">
+            <div class="db-res-icon">📊</div>
+            <div class="db-res-name">Level System & UP Chart</div>
+            <p class="db-res-desc">All 10 levels with underlying pigment swatches, neutralizing colors, and recommended formulations.</p>
+            <button class="db-res-btn" onclick="dlPDF('Level System & Underlying Pigment Chart')">Download PDF →</button>
+          </div>
+          <div class="db-res-card">
+            <div class="db-res-icon">👤</div>
+            <div class="db-res-name">Placement Guides</div>
+            <p class="db-res-desc">Placement strategy cards for all 6 face shapes — Oval, Round, Square, Heart, Long, Diamond.</p>
+            <button class="db-res-btn" onclick="dlPDF('Placement Guides — 6 Face Shapes')">Download PDF →</button>
+          </div>
+          <div class="db-res-card">
+            <div class="db-res-icon">🧪</div>
+            <div class="db-res-name">Formula Vault</div>
+            <p class="db-res-desc">KOSIA curated formulations — neutralization, correction, toning, shadow root, and your saved formulas.</p>
+            <button class="db-res-btn" onclick="dlPDF('KOSIA Formula Vault')">Open Vault →</button>
+          </div>
+          <div class="db-res-card">
+            <div class="db-res-icon">📝</div>
+            <div class="db-res-name">Consultation Scripts</div>
+            <p class="db-res-desc">Word-for-word scripts for 8 common client consultation scenarios — corrective, new client, color maintenance.</p>
+            <button class="db-res-btn" onclick="dlPDF('Consultation Scripts')">Download PDF →</button>
+          </div>
+          <div class="db-res-card">
+            <div class="db-res-icon">🎯</div>
+            <div class="db-res-name">Skin & Eye Tone Guide</div>
+            <p class="db-res-desc">Fitzpatrick scale + undertone guide — which hair colours complement each skin tone and eye colour.</p>
+            <button class="db-res-btn" onclick="dlPDF('Skin & Eye Tone Complement Guide')">Download PDF →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DOWNLOADS ── -->
+      <div class="db-view" id="view-downloads">
+        <div class="db-page-header">
+          <div>
+            <div class="db-page-title">Downloads</div>
+            <div class="db-page-sub">All your guides, charts, templates and PDFs in one place</div>
+          </div>
+        </div>
+        <div class="db-dl-list" id="dbDlList">
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Color Wheel Reference Chart</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Color Wheel Reference Chart')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Level System & Underlying Pigment Chart</div><div class="db-dl-meta">Color Theory · PDF · 2 pages</div></div><button class="db-dl-action" onclick="dlPDF('Level System & UP Chart')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Complementary Color Guide</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Complementary Color Guide')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Placement Guides — All 6 Face Shapes</div><div class="db-dl-meta">Placement Theory · PDF · 6 pages</div></div><button class="db-dl-action" onclick="dlPDF('Placement Guides')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Skin & Eye Tone Complement Guide</div><div class="db-dl-meta">Skin Tones · PDF · 4 pages</div></div><button class="db-dl-action" onclick="dlPDF('Skin & Eye Tone Guide')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Consultation Scripts (8 Scenarios)</div><div class="db-dl-meta">Client Experience · PDF · 8 pages</div></div><button class="db-dl-action" onclick="dlPDF('Consultation Scripts')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Formulation Worksheet Template</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Formulation Worksheet')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Salon KPI Dashboard</div><div class="db-dl-meta">Owner Track · Excel · 1 sheet</div></div><button class="db-dl-action" onclick="dlPDF('KPI Dashboard')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Pricing Calculator Worksheet</div><div class="db-dl-meta">Business · Excel/PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Pricing Calculator')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">SOP Template Pack</div><div class="db-dl-meta">Owner Track · PDF · 12 pages</div></div><button class="db-dl-action" onclick="dlPDF('SOP Template Pack')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Hiring Packet Templates</div><div class="db-dl-meta">Owner Track · PDF · 8 pages</div></div><button class="db-dl-action" onclick="dlPDF('Hiring Packet Templates')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">90-Day Planning Workbook</div><div class="db-dl-meta">Owner Track · PDF · 4 pages</div></div><button class="db-dl-action" onclick="dlPDF('90-Day Planning Workbook')">Download</button></div>
         </div>
       </div>
 
     </div><!-- end db-main -->
   </div><!-- end db-layout -->
 </div><!-- end view-dashboard -->
+
 <script>
 // ── TONE TABS ──
 function switchToneTab(btn, panel) {
   document.querySelectorAll('.tone-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.tone-panel').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('tone-' + panel);
+  var target = document.getElementById('tone-' + panel);
   if (target) target.classList.add('active');
 }
 
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-document.querySelectorAll('a,button,.ccard,.who-card,.face-card,.pcard,.mtype,.track-select-card,.lvl-table tbody tr,.db-nav-item,.db-ctab,.db-stab,.db-cl-card,.db-res-card,.track-panel,.price-card,.skin-card,.eye-card,.tone-tab,.tone-theory-card').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('big'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+// ── CURSOR ──
+var cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', function(e) {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
+function addCursorHover(sel) {
+  document.querySelectorAll(sel).forEach(function(el) {
+    el.addEventListener('mouseenter', function() { cursor.classList.add('big'); });
+    el.addEventListener('mouseleave', function() { cursor.classList.remove('big'); });
+  });
+}
+addCursorHover('a,button,.ccard,.face-card,.pcard,.mtype,.track-select-card,.lvl-table tbody tr,.db-nav-item,.db-tab,.db-stab,.db-cl-card,.db-res-card,.db-dl-item,.db-photo-cell,.track-panel,.price-card,.skin-card,.eye-card,.tone-tab,.tone-theory-card,.db-formula-row,.db-download-row');
 
 // ── REVEAL ──
-const ro = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 50); });
+var ro = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e, i) {
+    if (e.isIntersecting) setTimeout(function() { e.target.classList.add('visible'); }, i * 50);
+  });
 }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
 
 // ── TOAST ──
 function showToast(msg) {
-  const t = document.getElementById('toast');
+  var t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2600);
+  setTimeout(function() { t.classList.remove('show'); }, 2800);
+}
+
+// ── PDF DOWNLOAD ──
+function dlPDF(name) {
+  // Generate a real text-based PDF using browser print
+  var content = '=== KOSIA Academy ===\n\n' + name + '\n\nThis resource is part of your KOSIA Academy curriculum.\nLog in at your academy URL to access the full interactive version.\n\n---\nKOSIA Academy — Modern Education for Beauty Professionals';
+  var blob = new Blob([content], { type: 'text/plain' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = name.replace(/[^a-z0-9]/gi, '-').toLowerCase() + '.txt';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Downloading: ' + name);
 }
 
 // ── AUTH ──
-let selectedTrack = 'stylist';
-function openAuth(mode = 'login') {
+var selectedTrack = 'stylist';
+function openAuth(mode) {
   document.getElementById('authModal').classList.add('open');
-  switchAuthTab(mode);
+  switchAuthTab(mode || 'login');
 }
 function closeAuth() { document.getElementById('authModal').classList.remove('open'); }
-document.getElementById('authModal').addEventListener('click', e => { if (e.target.id === 'authModal') closeAuth(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAuth(); });
+document.getElementById('authModal').addEventListener('click', function(e) { if (e.target.id === 'authModal') closeAuth(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAuth(); });
 
 function switchAuthTab(tab) {
   document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
@@ -1959,36 +1942,35 @@ function pickTrack(t) {
   document.getElementById('tsStylist').classList.toggle('sel', t === 'stylist');
   document.getElementById('tsOwner').classList.toggle('sel', t === 'owner');
 }
-function clearErr(id) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
-function showErr(id, msg) { const el = document.getElementById(id); if (el) { el.textContent = msg; el.style.display = 'block'; } }
+function clearErr(id) { var el = document.getElementById(id); if (el) el.style.display = 'none'; }
+function showErr(id, msg) { var el = document.getElementById(id); if (el) { el.textContent = msg; el.style.display = 'block'; } }
 
 function handleLogin() {
-  const email = document.getElementById('loginEmail').value.trim();
-  const pass = document.getElementById('loginPass').value;
-  if (!email || !email.includes('@')) { showErr('loginErr', 'Please enter a valid email address.'); return; }
-  if (!pass) { showErr('loginErr', 'Please enter your password.'); return; }
-  // Look up stored user
-  const users = JSON.parse(localStorage.getItem('kosia_users') || '{}');
-  if (!users[email]) { showErr('loginErr', 'No account found with that email. Create one below.'); return; }
-  if (users[email].password !== btoa(pass)) { showErr('loginErr', 'Incorrect password. Please try again.'); return; }
-  const user = users[email];
-  localStorage.setItem('kosia_session', JSON.stringify({ email, name: user.name, track: user.track }));
+  var email = document.getElementById('loginEmail').value.trim();
+  var pass = document.getElementById('loginPass').value;
+  if (!email || !email.includes('@')) { showErr('loginErr','Please enter a valid email address.'); return; }
+  if (!pass) { showErr('loginErr','Please enter your password.'); return; }
+  var users = JSON.parse(localStorage.getItem('kosia_users') || '{}');
+  if (!users[email]) { showErr('loginErr','No account found. Create one below.'); return; }
+  if (users[email].password !== btoa(pass)) { showErr('loginErr','Incorrect password.'); return; }
+  var user = users[email];
+  localStorage.setItem('kosia_session', JSON.stringify({ email: email, name: user.name, track: user.track }));
   closeAuth();
   enterDashboard(user.name, user.track);
 }
 
 function handleSignup() {
-  const name = document.getElementById('signupName').value.trim();
-  const email = document.getElementById('signupEmail').value.trim();
-  const pass = document.getElementById('signupPass').value;
-  if (!name) { showErr('signupErr', 'Please enter your name.'); return; }
-  if (!email || !email.includes('@')) { showErr('signupErr', 'Please enter a valid email address.'); return; }
-  if (pass.length < 8) { showErr('signupErr', 'Password must be at least 8 characters.'); return; }
-  const users = JSON.parse(localStorage.getItem('kosia_users') || '{}');
-  if (users[email]) { showErr('signupErr', 'An account with that email already exists. Sign in instead.'); return; }
-  users[email] = { name, password: btoa(pass), track: selectedTrack, progress: {} };
+  var name = document.getElementById('signupName').value.trim();
+  var email = document.getElementById('signupEmail').value.trim();
+  var pass = document.getElementById('signupPass').value;
+  if (!name) { showErr('signupErr','Please enter your name.'); return; }
+  if (!email || !email.includes('@')) { showErr('signupErr','Please enter a valid email address.'); return; }
+  if (pass.length < 8) { showErr('signupErr','Password must be at least 8 characters.'); return; }
+  var users = JSON.parse(localStorage.getItem('kosia_users') || '{}');
+  if (users[email]) { showErr('signupErr','Account already exists. Sign in instead.'); return; }
+  users[email] = { name: name, password: btoa(pass), track: selectedTrack, progress: {} };
   localStorage.setItem('kosia_users', JSON.stringify(users));
-  localStorage.setItem('kosia_session', JSON.stringify({ email, name, track: selectedTrack }));
+  localStorage.setItem('kosia_session', JSON.stringify({ email: email, name: name, track: selectedTrack }));
   closeAuth();
   enterDashboard(name, selectedTrack);
 }
@@ -1999,410 +1981,313 @@ function logout() {
   document.getElementById('view-dashboard').style.display = 'none';
   document.getElementById('marketingNav').style.display = 'flex';
   document.getElementById('dashNav').classList.remove('visible');
-  showToast('You\'ve been signed out.');
-  window.scrollTo(0, 0);
+  showToast('Signed out successfully.');
+  window.scrollTo(0,0);
 }
 
-// ── CHECK SESSION ON LOAD ──
-window.addEventListener('DOMContentLoaded', () => {
-  const session = localStorage.getItem('kosia_session');
+window.addEventListener('DOMContentLoaded', function() {
+  var session = localStorage.getItem('kosia_session');
   if (session) {
-    try {
-      const s = JSON.parse(session);
-      enterDashboard(s.name, s.track);
-    } catch(e) { localStorage.removeItem('kosia_session'); }
+    try { var s = JSON.parse(session); enterDashboard(s.name, s.track); }
+    catch(e) { localStorage.removeItem('kosia_session'); }
   }
 });
 
 // ── DASHBOARD ──
-const stylistCourses = [
-  { num:'01', cat:'Artistry', name:'Color Theory & Chemistry', desc:'The science of underlying pigment, tonal families, and predictive formulation.', progress:62, modules:8,
-    units:['The color wheel: primaries, secondaries & tertiaries','Complementary relationships & neutralization','The 10-level system and what it reveals','Underlying pigment at each level','Developer volumes and lift mechanics','Porosity and its effect on color uptake','Reading tonal families: warm, cool, neutral','Predictive formulation: build results before you mix'] },
-  { num:'02', cat:'Artistry', name:'Corrective Color & Formulation', desc:'Problem-solve complex corrections with a structured, methodical approach.', progress:0, modules:8, locked:true,
-    units:['Consultation framework for corrective work','Diagnosing banding, hot roots & tonal imbalance','Color removal: bleach vs. removers vs. fillers','Filling hair before depositing darker color','Neutralization per underlying pigment','Multi-session planning & expectation setting','Documenting and tracking color history','Building a corrective formula start to finish'] },
-  { num:'03', cat:'Artistry', name:'Haircut Shape & Design', desc:'The geometry of exceptional cuts — weight, movement, and form before the shears.', progress:0, modules:8, locked:true,
-    units:['The 4 basic forms: solid, graduated, layered, combination','Weight lines: where they fall and why','Elevation and its effect on perimeter & weight','Sectioning for precision & efficiency','Overdirection: when and how to apply it','Texture work: point cutting, slicing, notching','Face shape relationship with cut decisions','Building a consultation that informs the cut'] },
-  { num:'04', cat:'Artistry', name:'Placement & Dimension Theory', desc:'How light, color, and placement interact to sculpt and illuminate intentionally.', progress:0, modules:8, locked:true,
-    units:['The light advances / dark recedes principle','Mapping face shapes before placement','The 6 face shapes and their strategies','Balayage vs. foil: when to use each','The money piece: placement & face shape','Using depth for dimension (shadow root)','Movement through saturation & contrast','Photographing placements to train the eye'] },
-  { num:'05', cat:'Ecosystem', name:'Luxury Client Experience', desc:'Elevate every touchpoint — from consultation to close — to build lasting loyalty.', progress:0, modules:8, locked:true,
-    units:['The anatomy of a luxury consultation','Active listening and reading client intent','Setting and managing realistic expectations','Retail as education, not a sales pitch','The psychology of rebooking before they leave','Building a referral ecosystem organically','Handling difficult conversations with grace','Creating your signature client experience'] },
-  { num:'06', cat:'Ecosystem', name:'Branding & Social Media', desc:'Define your aesthetic identity and convert your digital presence into real bookings.', progress:0, modules:8, locked:true,
-    units:['Defining your brand identity & visual aesthetic','Hair photography: lighting, angles & editing','Instagram strategy: feed, reels & stories','Writing captions that educate and attract','Content batching: a month in one day','Analytics: understanding what\'s working','Building a waitlist through content','Collaboration and community-building online'] },
-  { num:'07', cat:'Business', name:'Business Foundations', desc:'The numbers, pricing, and strategy behind a sustainable independent career.', progress:0, modules:8, locked:true,
-    units:['Setting service prices with confidence','Understanding your cost per service','Suite vs. commission vs. booth rental','Managing your time like a CEO','Tracking income, expenses, profitability','Client retention strategy and lifecycle','Scaling income without working more hours','Building passive revenue as an educator'] },
-  { num:'08', cat:'Resources', name:'Workshops & Formula Vault', desc:'Live sessions, case studies, and a resource library for every stage of your journey.', progress:0, modules:8, locked:true,
-    units:['Live hands-on workshops (virtual & in-person)','Real case studies & before/after breakdowns','The KOSIA Formula Vault — all formulas archived','Placement guides by face shape (PDFs)','Consultation scripts for common scenarios','Guest educator sessions','Community Q&A and peer review sessions','Monthly live coaching calls'] }
+var stylistCourses = [
+  { num:'01', cat:'Artistry', name:'Color Theory & Chemistry', desc:'The science of underlying pigment, tonal families, and predictive formulation.', progress:62, modules:8, units:['The color wheel: primaries, secondaries & tertiaries','Complementary relationships & neutralization','The 10-level system and what it reveals','Underlying pigment at each level','Developer volumes and lift mechanics','Porosity and its effect on color uptake','Reading tonal families: warm, cool, neutral','Predictive formulation: build results before you mix'] },
+  { num:'02', cat:'Artistry', name:'Corrective Color & Formulation', desc:'Problem-solve complex corrections with a structured, methodical approach.', progress:0, modules:8, locked:true, units:['Consultation framework for corrective work','Diagnosing banding, hot roots & tonal imbalance','Color removal: bleach vs. removers vs. fillers','Filling hair before depositing darker color','Neutralization per underlying pigment','Multi-session planning & expectation setting','Documenting and tracking color history','Building a corrective formula start to finish'] },
+  { num:'03', cat:'Artistry', name:'Haircut Shape & Design', desc:'The geometry of exceptional cuts — weight, movement, and form before the shears.', progress:0, modules:8, locked:true, units:['The 4 basic forms: solid, graduated, layered, combination','Weight lines: where they fall and why','Elevation and its effect on perimeter & weight','Sectioning for precision & efficiency','Overdirection: when and how to apply it','Texture work: point cutting, slicing, notching','Face shape relationship with cut decisions','Building a consultation that informs the cut'] },
+  { num:'04', cat:'Artistry', name:'Placement & Dimension Theory', desc:'How light, color, and placement interact to sculpt intentionally.', progress:0, modules:8, locked:true, units:['Light advances / dark recedes principle','Mapping face shapes before placement','The 6 face shapes and their strategies','Balayage vs. foil: when to use each','The money piece: placement & face shape','Using depth for dimension (shadow root)','Movement through saturation & contrast','Photographing placements to train the eye'] },
+  { num:'05', cat:'Ecosystem', name:'Luxury Client Experience', desc:'Elevate every touchpoint to build lasting loyalty.', progress:0, modules:8, locked:true, units:['The anatomy of a luxury consultation','Active listening and reading client intent','Setting and managing realistic expectations','Retail as education, not a sales pitch','The psychology of rebooking before they leave','Building a referral ecosystem organically','Handling difficult conversations with grace','Creating your signature client experience'] },
+  { num:'06', cat:'Ecosystem', name:'Branding & Social Media', desc:'Define your aesthetic identity and convert presence into real bookings.', progress:0, modules:8, locked:true, units:['Defining your brand identity & visual aesthetic','Hair photography: lighting, angles & editing','Instagram strategy: feed, reels & stories','Writing captions that educate and attract','Content batching: a month in one day','Analytics: understanding what\'s working','Building a waitlist through content','Collaboration and community-building online'] },
+  { num:'07', cat:'Business', name:'Business Foundations', desc:'Pricing, strategy, and numbers for a sustainable independent career.', progress:0, modules:8, locked:true, units:['Setting service prices with confidence','Understanding your cost per service','Suite vs. commission vs. booth rental','Managing your time like a CEO','Tracking income, expenses, profitability','Client retention strategy and lifecycle','Scaling income without working more hours','Building passive revenue as an educator'] },
+  { num:'08', cat:'Resources', name:'Workshops & Formula Vault', desc:'Live sessions, case studies, and a resource library for every stage.', progress:0, modules:8, locked:true, units:['Live hands-on workshops (virtual & in-person)','Real case studies & before/after breakdowns','The KOSIA Formula Vault — all formulas archived','Placement guides by face shape (PDFs)','Consultation scripts for common scenarios','Guest educator sessions','Community Q&A and peer review sessions','Monthly live coaching calls'] }
 ];
 
-const ownerCourses = [
-  { num:'01', cat:'Operations', name:'Salon Operations & Systems', desc:'Build systems that let your salon run smoothly with or without you.', progress:32, modules:8,
-    units:['Mapping salon workflows from open to close','Creating SOPs for every repeatable task','Booking systems & scheduling strategy','Inventory management and retail systems','Guest experience protocols & quality control','Managing no-shows, cancellations, deposits','Digital tools for a modern salon operation','Building a systems manual your team can follow'] },
-  { num:'02', cat:'Leadership', name:'Team Hiring & Culture', desc:'Build a team worth leading — with culture that retains talent and sets standards.', progress:0, modules:8, locked:true,
-    units:['Defining your salon culture before you hire','Writing job descriptions that attract the right people','Interview frameworks and red flag identification','Onboarding that sets expectations clearly','Performance reviews and growth conversations','Managing conflict and protecting team culture','Retention: what makes top stylists stay','Letting go with grace when it\'s time'] },
-  { num:'03', cat:'Finance', name:'Financial Literacy & Pricing', desc:'Read your numbers, price with confidence, stop leaving money on the table.', progress:0, modules:8, locked:true,
-    units:['Understanding P&L, cash flow, balance sheets','Pricing services based on real cost analysis','Service menu design and psychological pricing','Commission vs. booth rent vs. hybrid models','Payroll, taxes, and your accountant relationship','Retail as a profit center, not an afterthought','Reading salon KPIs that actually matter','Building financial projections for growth decisions'] },
-  { num:'04', cat:'Leadership', name:'Leadership Identity', desc:'Understand your leadership style and use it to build trust, direction, and clarity.', progress:0, modules:8, locked:true,
-    units:['Discovering your natural leadership strengths','Communicating expectations clearly and consistently','Leading from the chair vs. leading from the front','Giving feedback that motivates, not deflates','Creating accountability without micromanaging','Managing your own energy and preventing burnout','Decision-making frameworks for salon owners','Building a leadership identity aligned with your brand'] },
-  { num:'05', cat:'Marketing', name:'Marketing & Brand Authority', desc:'Build a salon brand that attracts the right clients and positions you as the authority.', progress:0, modules:8, locked:true,
-    units:['Defining your salon\'s brand positioning','Visual identity: logo, palette, photography standards','Google Business, reviews, and local SEO basics','Social media strategy for the salon as a brand','Email marketing and client communication','Referral programs that actually generate business','Community partnerships and local press','Building a content calendar for the salon'] },
-  { num:'06', cat:'Growth', name:'Client Experience at Scale', desc:'Design and protect a consistent client experience as your team and locations grow.', progress:0, modules:8, locked:true,
-    units:['Mapping the full client journey in your salon','Creating experience standards your team can execute','Luxury touchpoints that don\'t need a luxury budget','Handling complaints gracefully at an owner level','Rebooking and retention systems for the whole team','Tracking client satisfaction and NPS','VIP client programs and tiered loyalty','Turning clients into advocates and ambassadors'] },
-  { num:'07', cat:'Growth', name:'Scaling & Expansion', desc:'Think beyond the chair — build a business that grows without you doing everything.', progress:0, modules:8, locked:true,
-    units:['Suite → team: when and how to make the move','Opening a second location: what changes','Building systems that survive team turnover','Creating an in-house education program','Licensing, partnerships, and product lines','Becoming an industry educator or speaker','Selling your salon: what to build toward','Long-term vision planning and legacy thinking'] },
-  { num:'08', cat:'Resources', name:'Owner Intensives & Toolkit', desc:'Business intensives, templates, and frameworks built specifically for salon owners.', progress:0, modules:8, locked:true,
-    units:['Half-day business intensive workshops','Owner roundtables and peer advisory groups','Hiring packet templates (job post, interview, offer)','SOP templates for every core salon function','Financial tracking spreadsheets & KPI dashboards','Marketing calendar and content templates','1:1 coaching session credits','Private owner community access'] }
+var ownerCourses = [
+  { num:'01', cat:'Operations', name:'Salon Operations & Systems', desc:'Build systems that let your salon run smoothly with or without you.', progress:32, modules:8, units:['Mapping salon workflows from open to close','Creating SOPs for every repeatable task','Booking systems & scheduling strategy','Inventory management and retail systems','Guest experience protocols & quality control','Managing no-shows, cancellations, deposits','Digital tools for a modern salon operation','Building a systems manual your team can follow'] },
+  { num:'02', cat:'Leadership', name:'Team Hiring & Culture', desc:'Build a team worth leading with culture that retains talent.', progress:0, modules:8, locked:true, units:['Defining your salon culture before you hire','Writing job descriptions that attract the right people','Interview frameworks and red flag identification','Onboarding that sets expectations clearly','Performance reviews and growth conversations','Managing conflict and protecting team culture','Retention: what makes top stylists stay','Letting go with grace when it\'s time'] },
+  { num:'03', cat:'Finance', name:'Financial Literacy & Pricing', desc:'Read your numbers, price with confidence, stop leaving money on the table.', progress:0, modules:8, locked:true, units:['Understanding P&L, cash flow, balance sheets','Pricing services based on real cost analysis','Service menu design and psychological pricing','Commission vs. booth rent vs. hybrid models','Payroll, taxes, and your accountant relationship','Retail as a profit center','Reading salon KPIs that actually matter','Building financial projections for growth'] },
+  { num:'04', cat:'Leadership', name:'Leadership Identity', desc:'Understand your leadership style and use it to build trust and clarity.', progress:0, modules:8, locked:true, units:['Discovering your natural leadership strengths','Communicating expectations clearly and consistently','Leading from the chair vs. leading from the front','Giving feedback that motivates, not deflates','Creating accountability without micromanaging','Managing your own energy and preventing burnout','Decision-making frameworks for salon owners','Building a leadership identity aligned with your brand'] },
+  { num:'05', cat:'Marketing', name:'Marketing & Brand Authority', desc:'Build a salon brand that attracts the right clients.', progress:0, modules:8, locked:true, units:['Defining your salon\'s brand positioning','Visual identity: logo, palette, photography standards','Google Business, reviews, and local SEO basics','Social media strategy for the salon as a brand','Email marketing and client communication','Referral programs that actually generate business','Community partnerships and local press','Building a content calendar for the salon'] },
+  { num:'06', cat:'Growth', name:'Client Experience at Scale', desc:'Design and protect a consistent client experience as your business grows.', progress:0, modules:8, locked:true, units:['Mapping the full client journey in your salon','Creating experience standards your team can execute','Luxury touchpoints that don\'t need a luxury budget','Handling complaints gracefully at an owner level','Rebooking and retention systems for the whole team','Tracking client satisfaction and NPS','VIP client programs and tiered loyalty','Turning clients into advocates and ambassadors'] },
+  { num:'07', cat:'Growth', name:'Scaling & Expansion', desc:'Build a business that grows without you doing everything.', progress:0, modules:8, locked:true, units:['Suite → team: when and how to make the move','Opening a second location: what changes','Building systems that survive team turnover','Creating an in-house education program','Licensing, partnerships, and product lines','Becoming an industry educator or speaker','Selling your salon: what to build toward','Long-term vision and legacy thinking'] },
+  { num:'08', cat:'Resources', name:'Owner Intensives & Toolkit', desc:'Business intensives, templates, and frameworks for salon owners.', progress:0, modules:8, locked:true, units:['Half-day business intensive workshops','Owner roundtables and peer advisory groups','Hiring packet templates (job post, interview, offer)','SOP templates for every core salon function','Financial tracking spreadsheets & KPI dashboards','Marketing calendar and content templates','1:1 coaching session credits','Private owner community access'] }
 ];
 
-// Full lesson frameworks — 8 stylist + 8 owner
-const stylistLessons = [
-  { title:'The Color Wheel & Tonal Relationships', sub:'Color Theory · Module 1 of 8 · 38 min', videoTitle:'Color Theory — Module 1: The Color Wheel', dur:'38 min',
-    whyLabel:'Core Principle', whyBody:'The color wheel is the single most important tool a colorist can internalize. It is not a reference chart — it is a way of thinking. When you understand the relationships between colors instinctively, every formulation decision becomes logical, not guesswork.',
-    whyCallout:'The three primaries — Red, Yellow, Blue — cannot be created by mixing. Every other color is born from them. Understanding this means you can build or break any result, on purpose.',
-    formulas:[{name:'Complementary Law',val:'Orange + Blue = neutral / cancel · opposite hues on the wheel always neutralize'},{name:'Cool Blonde Toner (Level 8)',val:'Violet toner + clear 1:1 · 10 vol · 12–15 min'},{name:'Ash Base Formula',val:'Ash series + green/blue accent · always on pre-lightened base'}],
-    planOutline:['1. Introduction to the color wheel — 3 primaries (0:00–6:00)','2. Secondary colors: how they\'re created (6:00–12:00)','3. Tertiary tones and why they appear as underlying pigment (12:00–20:00)','4. Complementary pairs: the law of neutralization (20:00–28:00)','5. Warm vs. cool halves — formulation mindset (28:00–34:00)','6. Module recap and formula exercise (34:00–38:00)'],
-    practice:'Identify the complement of Red-Orange, Yellow-Orange, and Pale Yellow. Write the neutralizing toner you would use on a Level 7 client with yellow-orange brassiness.',
-    downloads:['Color Wheel Reference Chart (PDF)','Complementary Color Guide (PDF)','Level System & Underlying Pigment Chart (PDF)'] },
-  { title:'Underlying Pigment — Level by Level', sub:'Color Theory · Module 2 of 8 · 42 min', videoTitle:'Color Theory — Module 2: Underlying Pigment', dur:'42 min',
-    whyLabel:'The Science of UP', whyBody:'Underlying pigment is what hair reveals when it is lifted. It is not a flaw or a surprise — it is a predictable, measurable system. Every level of natural hair contains specific warm tones that emerge during lift.',
-    whyCallout:'Level 5 always reveals orange-red. Level 7 always reveals yellow-orange. These are not random — they are the underlying pigment system. Know them and you can formulate before opening a single tube.',
-    formulas:[{name:'Level 4–5 Correction',val:'Blue-green ash · 30 vol · 35–45 min · target 1–2 levels lighter than UP'},{name:'Level 6–7 Neutralization',val:'Blue-violet toner diluted 1:2 with clear · 10–20 vol · 15 min'},{name:'Level 9–10 Platinum Toner',val:'Ultra-light pearl + clear 1:1 · 10 vol · 10–12 min max'}],
-    planOutline:['1. The 10-level system overview (0:00–7:00)','2. Levels 1–4: the dark zone and red pigment (7:00–15:00)','3. Levels 5–7: the orange-to-yellow transition (15:00–27:00)','4. Levels 8–10: yellow to platinum (27:00–36:00)','5. Real formulation scenarios using UP knowledge (36:00–42:00)'],
-    practice:'Your client is a natural Level 5 wanting to reach a neutral Level 8. Map the underlying pigment you will encounter, the developer volume you will use, and the toner you will apply after lift.',
-    downloads:['Underlying Pigment Quick Reference (PDF)','Level System Swatch Chart (PDF)','Formulation Worksheet Template (PDF)'] },
-  { title:'Corrective Color — The Consultation Framework', sub:'Corrective Color · Module 1 of 8 · 46 min', videoTitle:'Corrective Color — Module 1: Consultation Framework', dur:'46 min',
-    whyLabel:'Framework Principle', whyBody:'Every corrective disaster started with a rushed or skipped consultation. Before touching the hair, you must know its full history, identify the problem accurately, and set realistic expectations. Diagnosis comes before prescription.',
-    whyCallout:'The corrective consultation is not a conversation about what the client wants — it is a diagnostic process. You are gathering data. The more thorough you are here, the fewer surprises you face at the bowl.',
-    formulas:[{name:'Banding Correction',val:'Identify the darkest band → match it with a deposit shade → apply targeted only on band'},{name:'Hot Root Fix',val:'Avoid heat at root · apply darker shade root-to-1-inch · process cooler than mid-lengths'},{name:'Color Removal Sequence',val:'Color remover first → tone check → re-formulate → deposit'}],
-    planOutline:['1. Why corrections fail — common causes (0:00–8:00)','2. The diagnostic consultation: 6 questions to always ask (8:00–18:00)','3. Reading hair history from the strand (18:00–26:00)','4. Managing client expectations with honesty (26:00–36:00)','5. Documenting the plan and pricing corrective work (36:00–46:00)'],
-    practice:'Practice the 6-question corrective consultation on a partner or client. Document their hair history, identify the primary problem, and write a 2-sentence expectation statement you would say out loud.',
-    downloads:['Corrective Consultation Script (PDF)','Hair History Intake Form (PDF)','Corrective Color Pricing Guide (PDF)'] },
-  { title:'The 4 Basic Forms — Haircut Geometry', sub:'Haircut Shape & Design · Module 1 of 8 · 44 min', videoTitle:'Haircut Design — Module 1: The 4 Basic Forms', dur:'44 min',
-    whyLabel:'Design Principle', whyBody:'Every haircut ever created is a variation of four basic forms: solid, graduated, layered, and combination. Understanding the geometry of each — how weight is created, where it falls, and how it interacts with movement — gives you a vocabulary that applies to any cut on any client.',
-    whyCallout:'Before touching the shears, a designer reads the form. Does this client need weight at the perimeter? Movement through the interior? The form comes first. Technique follows.',
-    formulas:[{name:'Solid Form',val:'0° elevation · all hair falls to same horizontal line · maximum weight at perimeter'},{name:'Graduated Form',val:'1–45° elevation · weight builds in stacked layers above perimeter'},{name:'Layered Form',val:'90°+ elevation · removes weight · creates movement and texture throughout'}],
-    planOutline:['1. Introduction to the 4 basic forms (0:00–8:00)','2. The solid form: where weight builds and why (8:00–18:00)','3. The graduated form: controlled elevation (18:00–28:00)','4. The layered form: movement and texture (28:00–38:00)','5. Combination forms in modern cutting (38:00–44:00)'],
-    practice:'On a mannequin, cut a solid form perimeter and photograph the weight line from the back. Then add a single layer section at 90° and photograph how the form changes.',
-    downloads:['4 Basic Forms Reference Card (PDF)','Elevation Angle Diagram (PDF)','Sectioning Pattern Guide (PDF)'] },
-  { title:'Placement Principles — Light, Shadow & Face Shape', sub:'Placement & Dimension · Module 1 of 8 · 40 min', videoTitle:'Placement Theory — Module 1: Principles', dur:'40 min',
-    whyLabel:'Placement Principle', whyBody:'Color placement is not where you put foils — it is a deliberate decision about where light travels and where shadow sits. Every placement choice either enhances or works against the face in front of you.',
-    whyCallout:'Light advances. Dark recedes. This is the entire foundation of dimensional color. Where you place brightness, you create visual prominence. Where you place depth, you create shadow and slimming.',
-    formulas:[{name:'Face-Frame Formula',val:'Place first foil at natural hairline · angle away from face · second foil 1–1.5 inches back'},{name:'Money Piece Placement',val:'Triangle section front hairline to temples · saturate fully · blend into balayage behind'},{name:'Shadow Root',val:'Deposit 2 shades deeper at root · blend with feathering brush 1–2 inches · no hard line'}],
-    planOutline:['1. The light advances / dark recedes principle (0:00–8:00)','2. Reading face shape before any placement decision (8:00–18:00)','3. The 6 face shapes and their strategies (18:00–30:00)','4. Balayage vs. foil: when to use each and why (30:00–36:00)','5. Case study: placement walkthrough on 3 face shapes (36:00–40:00)'],
-    practice:'Photograph a client or mannequin from the front. Identify the face shape and write the placement strategy you would use — which areas to brighten, which to keep darker, and which technique you would choose.',
-    downloads:['Face Shape Placement Guide — All 6 Shapes (PDF)','Balayage vs Foil Decision Tree (PDF)','Money Piece Placement Diagram (PDF)'] },
-  { title:'The Luxury Consultation — Anatomy of a Great First Appointment', sub:'Luxury Client Experience · Module 1 of 8 · 36 min', videoTitle:'Client Experience — Module 1: The Consultation', dur:'36 min',
-    whyLabel:'Experience Principle', whyBody:'The consultation is not small talk before the real work. It is the real work. A consultation done well builds trust, sets expectations, surfaces the information you need, and begins the loyalty loop before you have touched a single strand.',
-    whyCallout:'Clients who feel heard in the consultation are significantly more likely to rebook, refer, and return. The consultation is your most powerful retention tool — and it costs nothing.',
-    formulas:[{name:'The 5-Part Consultation',val:'1. Welcome & environment · 2. Discovery questions · 3. Visual references · 4. Expectation bridge · 5. Confirmation & plan'},{name:'The Expectation Bridge',val:'"Based on what I see and what you\'ve described, here is what I believe we can achieve today, and what the full journey looks like."'},{name:'Rebooking Language',val:'"To keep this looking its best, I\'d love to see you back in [X weeks]. I\'ll book it now so you have the spot."'}],
-    planOutline:['1. Why most consultations fail (0:00–6:00)','2. The environment: before the client sits down (6:00–12:00)','3. Discovery questions: what to ask and how to listen (12:00–22:00)','4. Bridging expectation to reality (22:00–28:00)','5. Closing the consultation and booking the next appointment (28:00–36:00)'],
-    practice:'Record yourself doing a 5-minute mock consultation with a friend. Watch it back. Count how many times you asked a question vs. made a statement. A great consultation is 70% listening.',
-    downloads:['Luxury Consultation Script (PDF)','Discovery Question Bank (PDF)','Rebooking Language Reference (PDF)'] },
-  { title:'Brand Identity — Defining Your Aesthetic', sub:'Branding & Social Media · Module 1 of 8 · 38 min', videoTitle:'Branding — Module 1: Your Brand Identity', dur:'38 min',
-    whyLabel:'Brand Principle', whyBody:'Your brand is not your logo. It is the feeling someone has when they encounter your work — online, in person, in the chair. A strong brand identity means your audience knows it is you before they see your name.',
-    whyCallout:'The stylists with full books are not always the most technically skilled. They are the most recognizable. Clarity in your brand identity is what turns a casual follower into a booking.',
-    formulas:[{name:'Brand Identity Framework',val:'Aesthetic + Audience + Voice + Values = Brand. All four must be consistent across every touchpoint.'},{name:'Visual Consistency Rule',val:'3 colors max · 1–2 fonts · same filter or editing style across every photo'},{name:'Content Pillars Formula',val:'40% education · 30% portfolio · 20% personality · 10% offers/promotions'}],
-    planOutline:['1. What brand identity actually means for stylists (0:00–7:00)','2. Finding your aesthetic: the 3-word exercise (7:00–16:00)','3. Defining your audience: who are you for? (16:00–24:00)','4. Your brand voice: how you sound in captions and conversation (24:00–32:00)','5. Building your visual brand guide (32:00–38:00)'],
-    practice:'Complete the 3-word brand exercise: write three adjectives that describe how you want clients to feel when they sit in your chair. Everything you post, say, and create should reflect these three words.',
-    downloads:['Brand Identity Workbook (PDF)','Visual Brand Guide Template (PDF)','Content Pillars Planning Sheet (PDF)'] },
-  { title:'Pricing Your Services with Confidence', sub:'Business Foundations · Module 1 of 8 · 42 min', videoTitle:'Business Foundations — Module 1: Pricing', dur:'42 min',
-    whyLabel:'Business Framework', whyBody:'Most stylists underprice because they are afraid. They price based on what they think clients will pay, not based on what their services actually cost to deliver. This is the single fastest way to build a full book and still feel broke.',
-    whyCallout:'Your price is not just a number — it is a signal. It tells clients what experience to expect, what kind of stylist you are, and how much you value your own time. Price confidently, and the right clients will self-select.',
-    formulas:[{name:'True Cost Formula',val:'(Hourly rate target × service hours) + product cost + overhead share = minimum price'},{name:'Hourly Rate Target',val:'Annual income goal ÷ billable hours per year = minimum hourly rate'},{name:'Annual Review Rule',val:'Review and adjust prices every 6 months. Inflation, skill growth, and demand all justify increases.'}],
-    planOutline:['1. Why stylists underprice — the fear cycle (0:00–8:00)','2. Calculating your true cost per service (8:00–18:00)','3. Setting a sustainable hourly rate target (18:00–26:00)','4. How to raise prices without losing clients (26:00–35:00)','5. Communicating price increases with confidence (35:00–42:00)'],
-    practice:'Use the True Cost Formula to calculate the minimum price for your most common service. Compare it to what you currently charge. If there is a gap, that is your starting point.',
-    downloads:['Pricing Calculator Worksheet (PDF)','Price Increase Script (PDF)','Service Menu Design Guide (PDF)'] }
+// Lesson data
+var stylistLessons = [
+  { title:'The Color Wheel & Tonal Relationships', sub:'Color Theory · Module 1 of 8 · 38 min', videoTitle:'Color Theory — Module 1: The Color Wheel', dur:'38 min', whyLabel:'Core Principle', whyBody:'The color wheel is the single most important tool a colorist can internalize. It is not a reference chart — it is a way of thinking. When you understand the relationships between colors instinctively, every formulation decision becomes logical, not guesswork.', whyCallout:'The three primaries — Red, Yellow, Blue — cannot be created by mixing. Every shade is born from them. Understanding this means you can build or break any result, on purpose.', formulas:[{name:'Complementary Law',val:'Orange + Blue = neutral. Opposite hues on the wheel always neutralize each other.'},{name:'Cool Blonde Toner (Level 8)',val:'Violet toner + clear 1:1 · 10 vol · 12–15 min'},{name:'Ash Base Formula',val:'Ash series + green/blue accent · always on pre-lightened hair'}], planOutline:['1. Introduction to the color wheel — 3 primaries (0:00–6:00)','2. Secondary colors: how they\'re created (6:00–12:00)','3. Tertiary tones and why they appear as underlying pigment (12:00–20:00)','4. Complementary pairs: the law of neutralization (20:00–28:00)','5. Warm vs. cool halves — formulation mindset (28:00–34:00)','6. Module recap and formula exercise (34:00–38:00)'], practice:'Identify the complement of Red-Orange, Yellow-Orange, and Pale Yellow. Write the neutralizing toner you would use on a Level 7 client with yellow-orange brassiness.', downloads:['Color Wheel Reference Chart','Complementary Color Guide','Level System & UP Chart'] },
+  { title:'Underlying Pigment — Level by Level', sub:'Color Theory · Module 2 of 8 · 42 min', videoTitle:'Color Theory — Module 2: Underlying Pigment', dur:'42 min', whyLabel:'The Science of UP', whyBody:'Underlying pigment is what hair reveals when it is lifted. It is not a flaw — it is a predictable, measurable system. Every level of natural hair contains specific warm tones that emerge during lift.', whyCallout:'Level 5 always reveals orange-red. Level 7 always reveals yellow-orange. These are not random — they are the UP system. Know them and you can formulate before opening a single tube.', formulas:[{name:'Level 4–5 Correction',val:'Blue-green ash · 30 vol · 35–45 min · target 1–2 levels lighter than UP'},{name:'Level 6–7 Neutralization',val:'Blue-violet toner 1:2 with clear · 10–20 vol · 15 min'},{name:'Level 9–10 Platinum Toner',val:'Ultra-light pearl + clear 1:1 · 10 vol · 10–12 min max'}], planOutline:['1. The 10-level system overview (0:00–7:00)','2. Levels 1–4: dark zone and red pigment (7:00–15:00)','3. Levels 5–7: orange-to-yellow transition (15:00–27:00)','4. Levels 8–10: yellow to platinum (27:00–36:00)','5. Real formulation scenarios using UP knowledge (36:00–42:00)'], practice:'Client is a natural Level 5 wanting a neutral Level 8. Map the underlying pigment you will encounter, the developer volume you will use, and the toner you will apply after lift.', downloads:['Underlying Pigment Quick Reference','Level System Swatch Chart','Formulation Worksheet Template'] },
+  { title:'The 4 Basic Forms — Haircut Geometry', sub:'Haircut Design · Module 1 of 8 · 44 min', videoTitle:'Haircut Design — Module 1: The 4 Basic Forms', dur:'44 min', whyLabel:'Design Principle', whyBody:'Every haircut ever created is a variation of four basic forms: solid, graduated, layered, and combination. Understanding the geometry of each — how weight is created, where it falls — gives you a vocabulary that applies to any cut on any client.', whyCallout:'Before touching the shears, a designer reads the form. Does this client need weight at the perimeter? Movement through the interior? The form comes first. Technique follows.', formulas:[{name:'Solid Form',val:'0° elevation · all hair falls to same horizontal line · maximum weight at perimeter'},{name:'Graduated Form',val:'1–45° elevation · weight builds in stacked layers above perimeter'},{name:'Layered Form',val:'90°+ elevation · removes weight · creates movement and texture throughout'}], planOutline:['1. Introduction to the 4 basic forms (0:00–8:00)','2. The solid form: where weight builds and why (8:00–18:00)','3. The graduated form: controlled elevation (18:00–28:00)','4. The layered form: movement and texture (28:00–38:00)','5. Combination forms in modern cutting (38:00–44:00)'], practice:'On a mannequin, cut a solid form perimeter and photograph the weight line from the back. Then add a single layer at 90° and photograph how the form changes.', downloads:['4 Basic Forms Reference Card','Elevation Angle Diagram','Sectioning Pattern Guide'] }
 ];
 
-const ownerLessons = [
-  { title:'Salon Workflow Mapping — Building Systems That Run Without You', sub:'Salon Operations · Module 1 of 8 · 44 min', videoTitle:'Operations — Module 1: Workflow Mapping', dur:'44 min',
-    whyLabel:'Operations Framework', whyBody:'A salon that only runs when the owner is present is not a business — it is a job with extra stress. Systems are what transform a collection of talented people into a functioning, scalable operation.',
-    whyCallout:'The goal is not to build a salon that needs you. The goal is to build a salon that works because of the systems you designed — systems so clear that any trained person can execute them to your standard.',
-    formulas:[{name:'Workflow Mapping Method',val:'Open → Client arrival → Service → Checkout → Close. Map every single step. Identify what is undocumented. Document it.'},{name:'SOP Structure',val:'Title · Purpose · Who is responsible · Step-by-step process · What good looks like · What to do if it goes wrong'},{name:'Delegation Rule',val:'If you have done something more than 3 times, document it. If it can be documented, it can be delegated.'}],
-    planOutline:['1. Why most salons are trapped in owner-dependency (0:00–8:00)','2. Mapping your current workflows — the audit (8:00–18:00)','3. Identifying gaps, bottlenecks, and undocumented processes (18:00–28:00)','4. Writing your first SOP from scratch (28:00–38:00)','5. Building a systems manual your team can actually use (38:00–44:00)'],
-    practice:'Choose one process that happens every day in your salon — opening the salon, checking in a client, or cashing out a service. Write a full SOP for it using the structure above. Time how long it takes a team member to follow it without your help.',
-    downloads:['Workflow Mapping Template (PDF)','SOP Writing Guide (PDF)','Salon Systems Manual Framework (PDF)'] },
-  { title:'Hiring for Culture Fit — The Interview Framework', sub:'Team Hiring & Culture · Module 1 of 8 · 46 min', videoTitle:'Hiring — Module 1: Culture & Interview Framework', dur:'46 min',
-    whyLabel:'Leadership Framework', whyBody:'Every hire either strengthens or weakens your culture. Technical skill can be developed. Attitude, values, and work ethic are deeply ingrained. The interview is your one opportunity to assess what matters most — use it intentionally.',
-    whyCallout:'You are not just hiring a stylist. You are choosing a person who will represent your brand, interact with every client, and influence every other team member. Hire slowly. It is always worth it.',
-    formulas:[{name:'Culture-First Interview',val:'1. Culture questions first · 2. Situational scenarios · 3. Technical assessment · 4. Two-way conversation about expectations'},{name:'Red Flag Test',val:'Does this person blame others? Are they defensive about feedback? Do they ask zero questions? Any yes = flag.'},{name:'Reference Check Questions',val:'How did they handle conflict? Would you rehire them? What environment brought out their best work?'}],
-    planOutline:['1. The cost of a bad hire — time, culture, and revenue (0:00–8:00)','2. Writing a job description that filters for culture fit (8:00–18:00)','3. The structured interview framework (18:00–30:00)','4. Situational questions that reveal true character (30:00–40:00)','5. The reference check — how to do it properly (40:00–46:00)'],
-    practice:'Write 5 culture-based interview questions specific to your salon\'s values. For each question, write what a strong answer looks like and what a red flag answer looks like. Use these in your next interview.',
-    downloads:['Interview Question Bank (PDF)','Culture Fit Scoring Sheet (PDF)','Hiring Process Checklist (PDF)'] },
-  { title:'Reading Your Numbers — P&L, Cash Flow & KPIs', sub:'Financial Literacy · Module 1 of 8 · 48 min', videoTitle:'Finance — Module 1: Reading Your Numbers', dur:'48 min',
-    whyLabel:'Financial Framework', whyBody:'You cannot grow what you cannot measure. Most salon owners know if they "feel busy" but do not know if they are actually profitable. Financial literacy is not about becoming an accountant — it is about knowing which numbers tell the truth about your business.',
-    whyCallout:'Revenue is vanity. Profit is sanity. Cash flow is reality. A salon can be fully booked and still run out of money. Understanding the difference between these three is the first step to financial clarity.',
-    formulas:[{name:'Profit Margin Formula',val:'(Revenue − Total Expenses) ÷ Revenue × 100 = Profit Margin %. Target: 15–20% for healthy salon'},{name:'Retail KPI',val:'Retail revenue should be 15–20% of total service revenue. Below 10% = undertrained or underutilized.'},{name:'Client Retention Rate',val:'(Clients at end of period − new clients) ÷ clients at start × 100. Target: 65–75%+'}],
-    planOutline:['1. The three financial statements every owner must understand (0:00–10:00)','2. Reading your P&L: where money comes in and goes out (10:00–22:00)','3. Cash flow vs. profit: why they are not the same (22:00–32:00)','4. The 5 KPIs that actually tell you how your salon is performing (32:00–42:00)','5. Setting up a monthly financial review practice (42:00–48:00)'],
-    practice:'Pull your last 3 months of financial data. Calculate your profit margin for each month. Then calculate your retail as a percentage of service revenue. Write one action based on what you find.',
-    downloads:['Salon P&L Template (PDF)','KPI Dashboard Spreadsheet (Excel/PDF)','Monthly Financial Review Checklist (PDF)'] },
-  { title:'Your Leadership Style — Strengths, Gaps & Communication', sub:'Leadership Identity · Module 1 of 8 · 42 min', videoTitle:'Leadership — Module 1: Your Leadership Style', dur:'42 min',
-    whyLabel:'Leadership Framework', whyBody:'There is no single right way to lead. But there are better and worse ways to lead given who you are and who your team is. Understanding your natural style — its strengths and its blind spots — is the beginning of becoming a leader people actually want to follow.',
-    whyCallout:'The leader who tries to be everything to everyone becomes nothing to anyone. Know your style. Lead from that place. Then build around your gaps deliberately.',
-    formulas:[{name:'Leadership Style Assessment',val:'Directive · Coaching · Supporting · Delegating. Most owners default to one. The best leaders use all four depending on context.'},{name:'Feedback Framework (SBI)',val:'Situation → Behavior → Impact. "In [situation], when you did [behavior], it created [impact]."'},{name:'Trust Equation',val:'Trust = (Credibility + Reliability + Intimacy) ÷ Self-Orientation. Lower self-focus = higher trust.'}],
-    planOutline:['1. The 4 leadership styles and when to use each (0:00–10:00)','2. Discovering your natural default style (10:00–20:00)','3. The feedback framework: giving feedback that actually changes behavior (20:00–30:00)','4. Communication patterns that build trust vs. erode it (30:00–38:00)','5. Your leadership development plan (38:00–42:00)'],
-    practice:'Give one piece of structured feedback to a team member this week using the SBI framework. Situation → Behavior → Impact. Write down how it went and what you would change next time.',
-    downloads:['Leadership Style Self-Assessment (PDF)','SBI Feedback Script Templates (PDF)','Team Communication Guide (PDF)'] },
-  { title:'Brand Positioning — What Makes Your Salon the Only Choice', sub:'Marketing & Brand Authority · Module 1 of 8 · 40 min', videoTitle:'Marketing — Module 1: Brand Positioning', dur:'40 min',
-    whyLabel:'Marketing Framework', whyBody:'Brand positioning is the answer to: "Why should someone choose your salon over every other option?" If your answer is "we are friendly and do great hair," you do not have a position — you have a description. Position is specific. It is what you own in the client\'s mind.',
-    whyCallout:'You cannot be the best salon for everyone. The narrower your position, the stronger your brand. The strongest salons are not the most generic — they are the most specific.',
-    formulas:[{name:'Positioning Statement',val:'"For [specific client], [salon name] is the only [category] that [unique benefit] because [proof]."'},{name:'Brand Differentiation Test',val:'Can you say your differentiator and have it apply to 50 other salons? If yes, it is not a differentiator.'},{name:'Google Reputation Formula',val:'50+ reviews at 4.8+ · respond to every review · update photos monthly · post 2x per week'}],
-    planOutline:['1. What positioning actually means and why most salons skip it (0:00–8:00)','2. Writing your positioning statement (8:00–18:00)','3. Finding your differentiator: the 3 things exercise (18:00–26:00)','4. Google Business and local SEO for salon owners (26:00–34:00)','5. Translating positioning into every touchpoint (34:00–40:00)'],
-    practice:'Write your positioning statement using the formula above. Then test it: read it to a friend who does not know your salon. Ask them: "Does this sound like anyone else?" If yes, keep refining.',
-    downloads:['Brand Positioning Worksheet (PDF)','Google Business Optimization Checklist (PDF)','Local SEO Quick Guide (PDF)'] },
-  { title:'Designing the Client Journey — Every Touchpoint Matters', sub:'Client Experience at Scale · Module 1 of 8 · 44 min', videoTitle:'Client Experience — Module 1: Journey Mapping', dur:'44 min',
-    whyLabel:'Experience Framework', whyBody:'The client experience does not start when the client sits in the chair. It starts the moment they discover your salon — online, by referral, or walking past. And it does not end when they walk out. Every single moment in between is an opportunity to build loyalty or lose it.',
-    whyCallout:'Luxury is not a price point. It is a feeling created by attention to detail at every stage of the journey. A $60 haircut can feel luxurious. A $300 one can feel forgettable. The difference is the experience.',
-    formulas:[{name:'Client Journey Stages',val:'Discovery → Booking → Pre-visit → Arrival → Service → Checkout → Follow-up → Rebooking'},{name:'NPS Formula',val:'Net Promoter Score: "How likely are you to recommend us?" 0–10. Promoters (9–10) − Detractors (0–6) = NPS'},{name:'Retention Benchmark',val:'Under 50% retention: urgent problem. 50–65%: developing. 65–80%: healthy. 80%+: elite.'}],
-    planOutline:['1. Mapping your full client journey end to end (0:00–10:00)','2. The 8 stages of the salon client experience (10:00–22:00)','3. Identifying your weakest touchpoint (22:00–30:00)','4. Creating experience standards your team can execute consistently (30:00–38:00)','5. Measuring experience: NPS, retention, and review velocity (38:00–44:00)'],
-    practice:'Walk through your salon as if you were a first-time client. Start from the street outside. Note every single detail — signage, smell, greeting, cleanliness, conversation, checkout. Write down the 3 things you would fix first.',
-    downloads:['Client Journey Map Template (PDF)','NPS Survey Template (PDF)','Experience Standards Checklist (PDF)'] },
-  { title:'Scaling from Suite to Team — The Transition Framework', sub:'Scaling & Expansion · Module 1 of 8 · 46 min', videoTitle:'Scaling — Module 1: Suite to Team', dur:'46 min',
-    whyLabel:'Growth Framework', whyBody:'Moving from a solo suite to a team-based business is one of the most significant transitions an owner can make. It requires a complete shift in identity — from technician to leader, from doer to designer of systems. Most people are unprepared for how much changes.',
-    whyCallout:'You cannot build a team-based business with a solo-operator mindset. The skills that made you successful behind the chair will not automatically make you successful at the front of a room. Leadership is a learned skill.',
-    formulas:[{name:'Readiness Test',val:'Are you at 85%+ capacity consistently? Do you have systems documented? Do you have 3 months of operating expenses saved? If yes to all three — you are ready.'},{name:'First Hire Formula',val:'Calculate lost revenue from turning clients away × 12. This is your annual opportunity cost. Use it to justify your first hire.'},{name:'Expansion Trigger',val:'Second location: only when location 1 operates profitably without your daily presence.'}],
-    planOutline:['1. The mindset shift: from doer to leader (0:00–10:00)','2. Assessing your readiness to hire (10:00–20:00)','3. The legal and financial setup for bringing on team members (20:00–30:00)','4. What to expect in the first 90 days of a team-based model (30:00–38:00)','5. Protecting your culture as you grow (38:00–46:00)'],
-    practice:'Complete the readiness test above. If you are not yet at 85% capacity, write a 90-day action plan to get there. If you are ready, list the first three systems you would document before bringing on a hire.',
-    downloads:['Suite-to-Team Readiness Assessment (PDF)','First 90 Days as a Team Owner Guide (PDF)','Compensation Model Comparison (PDF)'] },
-  { title:'The Owner Intensive — Strategy Day Framework', sub:'Owner Intensives & Toolkit · Module 1 of 8 · 50 min', videoTitle:'Owner Intensives — Module 1: Strategy Day', dur:'50 min',
-    whyLabel:'Strategic Framework', whyBody:'Most salon owners are so busy working in the business that they never work on it. The Strategy Day is a protected block of time — monthly or quarterly — where you step out of the day-to-day and look at your business from above. It is the most important appointment on your calendar.',
-    whyCallout:'The business does not grow when you are in the chair. It grows when you step back, look at the numbers, identify the constraints, and make decisions with clarity. Schedule the time. Protect it.',
-    formulas:[{name:'Strategy Day Agenda',val:'1h: Review financials · 1h: Review KPIs & team performance · 1h: Identify top 3 bottlenecks · 1h: Set 90-day priorities · 30m: Calendar blocking'},{name:'90-Day Planning Framework',val:'One financial goal · One team/culture goal · One client experience goal · One systems goal. Four goals. Ninety days. Focused.'},{name:'Decision Filter',val:'Before any major decision: Does this align with where I am going? Can I resource it properly? What is the cost of not doing it?'}],
-    planOutline:['1. Why "working on the business" fails without a framework (0:00–10:00)','2. The Strategy Day agenda — a step-by-step walkthrough (10:00–25:00)','3. Setting 90-day priorities: the four-goal framework (25:00–35:00)','4. Calendar blocking and protecting strategic time (35:00–44:00)','5. The owner community: peer advisory and accountability (44:00–50:00)'],
-    practice:'Schedule your first Strategy Day in the next 30 days. Block it in your calendar right now. Use the agenda above. After the session, share your four 90-day goals with a peer or accountability partner.',
-    downloads:['Strategy Day Agenda & Workbook (PDF)','90-Day Planning Template (PDF)','Owner KPI Dashboard (Excel)'] }
+var ownerLessons = [
+  { title:'Salon Workflow Mapping — Systems That Run Without You', sub:'Salon Operations · Module 1 of 8 · 44 min', videoTitle:'Operations — Module 1: Workflow Mapping', dur:'44 min', whyLabel:'Operations Framework', whyBody:'A salon that only runs when the owner is present is not a business — it is a job with extra stress. Systems are what transform a collection of talented people into a functioning, scalable operation.', whyCallout:'The goal is not to build a salon that needs you. The goal is to build a salon that works because of the systems you designed — systems so clear that any trained person can execute them to your standard.', formulas:[{name:'Workflow Mapping Method',val:'Open → Client arrival → Service → Checkout → Close. Map every step. Identify what is undocumented. Document it.'},{name:'SOP Structure',val:'Title · Purpose · Who is responsible · Step-by-step process · What good looks like · What to do if it goes wrong'},{name:'Delegation Rule',val:'If you have done something more than 3 times, document it. If it can be documented, it can be delegated.'}], planOutline:['1. Why most salons are trapped in owner-dependency (0:00–8:00)','2. Mapping your current workflows — the audit (8:00–18:00)','3. Identifying gaps, bottlenecks, undocumented processes (18:00–28:00)','4. Writing your first SOP from scratch (28:00–38:00)','5. Building a systems manual your team can use (38:00–44:00)'], practice:'Choose one process that happens every day — opening the salon or checking in a client. Write a full SOP for it. Time how long a team member takes to follow it without your help.', downloads:['Workflow Mapping Template','SOP Writing Guide','Salon Systems Manual Framework'] },
+  { title:'Hiring for Culture Fit — The Interview Framework', sub:'Team Hiring & Culture · Module 1 of 8 · 46 min', videoTitle:'Hiring — Module 1: Culture & Interview Framework', dur:'46 min', whyLabel:'Leadership Framework', whyBody:'Every hire either strengthens or weakens your culture. Technical skill can be developed. Attitude, values, and work ethic are deeply ingrained. The interview is your one opportunity to assess what matters most — use it intentionally.', whyCallout:'You are not just hiring a stylist. You are choosing a person who will represent your brand, interact with every client, and influence every other team member. Hire slowly. It is always worth it.', formulas:[{name:'Culture-First Interview',val:'1. Culture questions first · 2. Situational scenarios · 3. Technical assessment · 4. Two-way expectations conversation'},{name:'Red Flag Test',val:'Does this person blame others? Are they defensive about feedback? Do they ask zero questions? Any yes = flag.'},{name:'Reference Check',val:'How did they handle conflict? Would you rehire them? What environment brought out their best work?'}], planOutline:['1. The cost of a bad hire — time, culture, revenue (0:00–8:00)','2. Writing a job description that filters for culture fit (8:00–18:00)','3. The structured interview framework (18:00–30:00)','4. Situational questions that reveal true character (30:00–40:00)','5. The reference check — how to do it properly (40:00–46:00)'], practice:'Write 5 culture-based interview questions for your salon\'s values. For each, write what a strong answer looks like and what a red flag looks like. Use these in your next interview.', downloads:['Interview Question Bank','Culture Fit Scoring Sheet','Hiring Process Checklist'] },
+  { title:'Reading Your Numbers — P&L, Cash Flow & KPIs', sub:'Financial Literacy · Module 1 of 8 · 48 min', videoTitle:'Finance — Module 1: Reading Your Numbers', dur:'48 min', whyLabel:'Financial Framework', whyBody:'You cannot grow what you cannot measure. Most salon owners know if they "feel busy" but do not know if they are actually profitable. Financial literacy is not about becoming an accountant — it is about knowing which numbers tell the truth about your business.', whyCallout:'Revenue is vanity. Profit is sanity. Cash flow is reality. A salon can be fully booked and still run out of money. Understanding the difference is the first step to financial clarity.', formulas:[{name:'Profit Margin Formula',val:'(Revenue − Total Expenses) ÷ Revenue × 100. Target: 15–20% for a healthy salon.'},{name:'Retail KPI',val:'Retail revenue should be 15–20% of total service revenue. Below 10% = undertrained or underutilized.'},{name:'Client Retention Rate',val:'(Clients at end of period − new clients) ÷ clients at start × 100. Target: 65–75%+'}], planOutline:['1. The three financial statements every owner must understand (0:00–10:00)','2. Reading your P&L: where money comes in and goes out (10:00–22:00)','3. Cash flow vs. profit: why they are not the same (22:00–32:00)','4. The 5 KPIs that actually tell you how your salon is performing (32:00–42:00)','5. Setting up a monthly financial review practice (42:00–48:00)'], practice:'Pull your last 3 months of financial data. Calculate your profit margin for each month. Then calculate retail as a percentage of service revenue. Write one action based on what you find.', downloads:['Salon P&L Template','KPI Dashboard Spreadsheet','Monthly Financial Review Checklist'] }
 ];
 
-// Active lesson set — switches based on track
-let lessonData = stylistLessons;
-let currentLesson = 0;
-let currentTrack = 'stylist';
-let isPlaying = false;
-let playInterval = null;
+var lessonData = stylistLessons;
+var currentLesson = 0;
+var currentTrack = 'stylist';
+var isPlaying = false;
+var playInterval = null;
+
+function setNavActive(id) {
+  document.querySelectorAll('.db-nav-item').forEach(function(n) { n.classList.remove('nav-active'); });
+  var el = document.getElementById(id);
+  if (el) el.classList.add('nav-active');
+}
 
 function enterDashboard(name, track) {
   currentTrack = track;
   lessonData = track === 'owner' ? ownerLessons : stylistLessons;
+  // Show dashboard
   document.getElementById('view-marketing').style.display = 'none';
   document.getElementById('view-dashboard').style.display = 'block';
   document.getElementById('marketingNav').style.display = 'none';
   document.getElementById('dashNav').classList.add('visible');
-  document.getElementById('dbUserName').textContent = name.split(' ')[0];
-  document.getElementById('dbUserTrack').textContent = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
-  document.getElementById('dashTrackLabel').textContent = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
-  const courses = track === 'owner' ? ownerCourses : stylistCourses;
+  // User info
+  var first = name.split(' ')[0];
+  document.getElementById('dbUserName').textContent = first;
+  document.getElementById('dbUserAvatar').textContent = first.charAt(0).toUpperCase();
+  var trackLabel = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
+  document.getElementById('dbUserTrack').textContent = trackLabel;
+  document.getElementById('dashTrackLabel').textContent = trackLabel;
+  // Update sidebar nav labels for owner track
+  var courses = track === 'owner' ? ownerCourses : stylistCourses;
   document.getElementById('dbClTitle').textContent = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
-  buildCourseList(courses);
+  var n0 = document.getElementById('navL0');
+  var n1 = document.getElementById('navL1');
+  var n2 = document.getElementById('navL2');
+  if (n0) n0.textContent = courses[0].name;
+  if (n1) n1.textContent = courses[1] ? courses[1].name : '';
+  if (n2) n2.textContent = courses[2] ? courses[2].name : '';
+  buildCourseGrid(courses);
   showDbView('courses');
-  window.scrollTo(0, 0);
+  setNavActive('nav-courses');
+  window.scrollTo(0,0);
 }
 
-function buildCourseList(courses) {
-  const grid = document.getElementById('dbClGrid');
+function buildCourseGrid(courses) {
+  var grid = document.getElementById('dbClGrid');
   if (!grid) return;
-  grid.innerHTML = courses.map(function(c, i) {
-    var unitList = '';
+  var html = '';
+  courses.forEach(function(c, i) {
+    var units = '';
     if (c.units) {
-      unitList = '<ul style="list-style:none;margin:0.75rem 0;display:flex;flex-direction:column;gap:0.3rem;">';
+      units = '<ul class="db-cl-units">';
       c.units.forEach(function(u) {
-        unitList += '<li style="display:flex;align-items:baseline;gap:0.4rem;font-size:0.65rem;color:var(--muted);line-height:1.4;"><span style="width:3px;height:3px;border-radius:50%;background:var(--clay);flex-shrink:0;margin-top:0.38rem;opacity:0.5;display:inline-block;"></span>' + u + '</li>';
+        units += '<li class="db-cl-unit"><span class="db-cl-unit-dot"></span>' + u + '</li>';
       });
-      unitList += '</ul>';
+      units += '</ul>';
     }
-    var lockBadge = c.locked ? '<div class="db-cl-lock-badge">Locked</div>' : '';
-    var clickHandler = c.locked ? '' : ' onclick="goToLesson(' + i + ')"';
-    var progressText = c.progress > 0 ? c.progress + '% complete' : 'Not started';
-    return '<div class="db-cl-card' + (c.locked ? ' locked' : '') + '"' + clickHandler + '>' +
-      lockBadge +
+    var lock = c.locked ? '<div class="db-cl-lock-badge">Locked</div>' : '';
+    var click = c.locked ? '' : ' onclick="goToLesson(' + i + ')"';
+    var pct = c.progress > 0 ? c.progress + '% complete' : 'Not started';
+    html += '<div class="db-cl-card' + (c.locked ? ' locked' : '') + '"' + click + '>' +
+      lock +
       '<div class="db-cl-num">' + c.num + '</div>' +
       '<div class="db-cl-card-cat">' + c.cat + '</div>' +
       '<div class="db-cl-card-name">' + c.name + '</div>' +
       '<p class="db-cl-card-desc">' + c.desc + '</p>' +
-      unitList +
-      '<div class="db-cl-progress"><div class="db-cl-prog-fill" style="width:' + c.progress + '%;"></div></div>' +
-      '<div class="db-cl-prog-text"><span>' + progressText + '</span><span>' + c.modules + ' modules</span></div>' +
+      units +
+      '<div class="db-cl-prog-bar"><div class="db-cl-prog-fill" style="width:' + c.progress + '%;"></div></div>' +
+      '<div class="db-cl-prog-text"><span>' + pct + '</span><span>' + c.modules + ' modules</span></div>' +
       '</div>';
-  }).join('');
-  // re-attach cursor listeners
-  grid.querySelectorAll('.db-cl-card').forEach(function(el) {
+  });
+  grid.innerHTML = html;
+  // Re-attach cursor
+  grid.querySelectorAll('.db-cl-card:not(.locked)').forEach(function(el) {
     el.addEventListener('mouseenter', function() { cursor.classList.add('big'); });
     el.addEventListener('mouseleave', function() { cursor.classList.remove('big'); });
   });
 }
 
 function showDbView(view) {
-  ['courses','lesson','resources'].forEach(function(v) {
-    var el = document.getElementById('view-' + v);
-    if (el) el.classList.remove('db-active');
-  });
+  document.querySelectorAll('.db-view').forEach(function(v) { v.classList.remove('db-active'); });
   var target = document.getElementById('view-' + view);
   if (target) target.classList.add('db-active');
-  document.querySelectorAll('.db-nav-item').forEach(function(n) { n.classList.remove('active'); });
 }
 
 function goToLesson(i) {
-  if (i >= lessonData.length) i = 0;
+  if (i < 0 || i >= lessonData.length) i = 0;
   currentLesson = i;
-  const d = lessonData[i];
+  var d = lessonData[i];
+  // Video area
   document.getElementById('dbVideoTitle').textContent = d.videoTitle;
-  document.getElementById('dbVideoDur').textContent = 'Duration: ' + d.dur;
-  document.getElementById('dbLessonTitle').innerHTML = d.title;
+  document.getElementById('dbVideoDur').textContent = d.dur;
+  document.getElementById('dbLessonTitle').textContent = d.title;
   document.getElementById('dbLessonSub').textContent = d.sub;
+  // Why tab
   document.getElementById('whyLabel').textContent = d.whyLabel;
   document.getElementById('whyBody').textContent = d.whyBody;
   document.getElementById('whyCallout').textContent = d.whyCallout;
-  document.getElementById('planTitle').textContent = 'Module ' + (i+1) + ' — Lesson Plan';
-  document.getElementById('planOutline').innerHTML = d.planOutline.map(l => `<div style="padding:0.22rem 0;">${l}</div>`).join('');
-  // Practice
-  const practiceEl = document.getElementById('planPractice');
-  if (practiceEl && d.practice) practiceEl.textContent = d.practice;
-  // Downloads
-  const dlEl = document.getElementById('planDownloads');
-  if (dlEl && d.downloads) dlEl.innerHTML = d.downloads.map(dl => `<div style="display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.75rem;border:0.5px solid var(--border);font-size:0.72rem;color:var(--muted);cursor:none;" onclick="showToast('Downloading ${dl}...')">📄 ${dl}<span style="margin-left:auto;color:var(--clay);font-size:0.6rem;">Download →</span></div>`).join('');
-  // Formulas — rebuild
-  const fPanel = document.getElementById('cpanel-formulas');
-  if (fPanel && d.formulas) {
-    fPanel.querySelectorAll('.db-formula-card').forEach(el => el.remove());
-    const addBox = fPanel.querySelector('div[style*="background:var(--alabaster)"]');
-    d.formulas.forEach(f => {
-      const card = document.createElement('div');
-      card.className = 'db-formula-card';
-      card.innerHTML = `<div><div class="db-formula-name">${f.name}</div><div class="db-formula-val">${f.val}</div></div><div class="db-formula-badge">Vault</div>`;
-      fPanel.insertBefore(card, addBox || null);
-    });
+  // Lesson plan
+  document.getElementById('planTitle').textContent = 'Module ' + (i + 1) + ' — Lesson Plan';
+  var outline = document.getElementById('planOutline');
+  if (outline && d.planOutline) {
+    outline.innerHTML = d.planOutline.map(function(l) {
+      return '<div style="padding:0.18rem 0;">' + l + '</div>';
+    }).join('');
   }
+  var practice = document.getElementById('planPractice');
+  if (practice && d.practice) practice.textContent = d.practice;
+  // Downloads in plan
+  var planDl = document.getElementById('planDownloads');
+  if (planDl && d.downloads) {
+    planDl.innerHTML = d.downloads.map(function(dl) {
+      return '<a class="db-download-row" href="#" onclick="dlPDF(\'' + dl + '\');return false"><span>📄 ' + dl + '</span><span class="db-dl-btn">Download PDF</span></a>';
+    }).join('');
+  }
+  // Formulas
+  var fc = document.getElementById('formulaCards');
+  if (fc && d.formulas) {
+    fc.innerHTML = d.formulas.map(function(f) {
+      return '<div class="db-formula-row"><div><div class="db-f-name">' + f.name + '</div><div class="db-f-val">' + f.val + '</div></div><span class="db-f-tag">Vault</span></div>';
+    }).join('');
+  }
+  // Reset timeline & video
   document.getElementById('dbTimelineFill').style.width = '0%';
   document.getElementById('dbTimelineDot').style.left = '0%';
   isPlaying = false; clearInterval(playInterval);
-  document.getElementById('dbPlayBtn').textContent = '▶';
+  document.getElementById('dbPlayIcon').textContent = '▶';
+  // Switch to lesson view
   showDbView('lesson');
-  document.querySelectorAll('.db-ctab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.db-content-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
-  document.querySelector('.db-ctab').classList.add('active');
+  setNavActive('nav-l' + i);
+  // Reset tabs
+  document.querySelectorAll('.db-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.db-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelector('.db-tab').classList.add('active');
   document.getElementById('cpanel-why').classList.add('active');
-  document.getElementById('cpanel-why').style.display = 'block';
-  document.querySelectorAll('.db-side-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
-  document.getElementById('spanel-snotes').classList.add('active');
-  document.getElementById('spanel-snotes').style.display = 'block';
-  document.querySelectorAll('.db-stab').forEach(t => t.classList.remove('active'));
+  // Reset side tabs
+  document.querySelectorAll('.db-stab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.db-side-panel').forEach(function(p) { p.classList.remove('active'); });
   document.querySelector('.db-stab').classList.add('active');
+  document.getElementById('spanel-snotes').classList.add('active');
 }
 
-function nextLesson() { goToLesson((currentLesson + 1) % lessonData.length); }
-function prevLesson() { goToLesson((currentLesson - 1 + lessonData.length) % lessonData.length); }
+function nextLesson() {
+  var next = currentLesson + 1;
+  if (next >= lessonData.length) { showToast('You\'ve completed all available lessons!'); return; }
+  goToLesson(next);
+}
+function prevLesson() {
+  if (currentLesson <= 0) return;
+  goToLesson(currentLesson - 1);
+}
 
 function switchContentTab(btn, panel) {
-  document.querySelectorAll('.db-ctab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.db-tab').forEach(function(t) { t.classList.remove('active'); });
   btn.classList.add('active');
-  document.querySelectorAll('.db-content-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
-  const target = document.getElementById('cpanel-' + panel);
-  if (target) { target.classList.add('active'); target.style.display = 'block'; }
+  document.querySelectorAll('.db-panel').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('cpanel-' + panel);
+  if (target) target.classList.add('active');
 }
 
 function switchSideTab(btn, panel) {
-  document.querySelectorAll('.db-stab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.db-stab').forEach(function(t) { t.classList.remove('active'); });
   btn.classList.add('active');
-  document.querySelectorAll('.db-side-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
-  const target = document.getElementById('spanel-' + panel);
-  if (target) { target.classList.add('active'); target.style.display = 'block'; }
+  document.querySelectorAll('.db-side-panel').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('spanel-' + panel);
+  if (target) target.classList.add('active');
 }
 
 function togglePlay() {
   isPlaying = !isPlaying;
-  document.getElementById('dbPlayBtn').textContent = isPlaying ? '⏸' : '▶';
+  document.getElementById('dbPlayIcon').textContent = isPlaying ? '⏸' : '▶';
   if (isPlaying) {
-    let pos = parseFloat(document.getElementById('dbTimelineFill').style.width) || 0;
-    playInterval = setInterval(() => {
-      pos = Math.min(pos + 0.15, 100);
+    var pos = parseFloat(document.getElementById('dbTimelineFill').style.width) || 0;
+    playInterval = setInterval(function() {
+      pos = Math.min(pos + 0.2, 100);
       document.getElementById('dbTimelineFill').style.width = pos + '%';
       document.getElementById('dbTimelineDot').style.left = pos + '%';
-      if (pos >= 100) { clearInterval(playInterval); isPlaying = false; document.getElementById('dbPlayBtn').textContent = '▶'; showToast('Lesson complete! ✓ Moving to next module.'); }
+      if (pos >= 100) {
+        clearInterval(playInterval); isPlaying = false;
+        document.getElementById('dbPlayIcon').textContent = '▶';
+        showToast('Lesson complete! ✓');
+      }
     }, 400);
   } else { clearInterval(playInterval); }
 }
 
 function saveNote() {
-  const input = document.getElementById('noteInput');
-  const text = input.value.trim();
+  var input = document.getElementById('noteInput');
+  var text = input.value.trim();
   if (!text) return;
-  const container = document.getElementById('notesContainer');
-  const note = document.createElement('div');
+  var container = document.getElementById('notesContainer');
+  var note = document.createElement('div');
   note.className = 'db-side-note';
-  note.innerHTML = `<div class="db-side-note-label">My Note</div><p class="db-side-note-text">${text}</p>`;
+  note.innerHTML = '<div class="db-side-note-label">My Note</div><p class="db-side-note-text">' + text + '</p>';
   container.insertBefore(note, container.firstChild);
   input.value = '';
   showToast('Note saved.');
 }
 
-function saveFormula(btn) {
-  const row = btn.parentElement;
-  const inputs = row.querySelectorAll('input');
-  const name = inputs[0].value.trim();
-  const val = inputs[1].value.trim();
+function saveFormula() {
+  var name = document.getElementById('fName').value.trim();
+  var val = document.getElementById('fVal').value.trim();
   if (!name) return;
-  const container = btn.closest('.db-content-panel');
-  const card = document.createElement('div');
-  card.className = 'db-formula-card';
-  card.innerHTML = `<div><div class="db-formula-name">${name}</div><div class="db-formula-val">${val || 'No details added'}</div></div><div class="db-formula-badge">Saved</div>`;
-  container.insertBefore(card, container.querySelector('div[style]'));
-  inputs[0].value = ''; inputs[1].value = '';
+  var fc = document.getElementById('formulaCards');
+  var card = document.createElement('div');
+  card.className = 'db-formula-row';
+  card.innerHTML = '<div><div class="db-f-name">' + name + '</div><div class="db-f-val">' + (val || 'No details added') + '</div></div><span class="db-f-tag">Saved</span>';
+  fc.insertBefore(card, fc.firstChild);
+  document.getElementById('fName').value = '';
+  document.getElementById('fVal').value = '';
   showToast('Formula saved to vault.');
 }
 
 function previewPhoto(input) {
   if (!input.files || !input.files[0]) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    const card = input.closest('.db-photo-card');
-    card.style.backgroundImage = `url(${e.target.result})`;
-    card.style.backgroundSize = 'cover';
-    card.style.backgroundPosition = 'center';
-    card.querySelector('.db-photo-icon') && (card.querySelector('.db-photo-icon').style.display = 'none');
-    card.querySelector('.db-photo-placeholder') && (card.querySelector('.db-photo-placeholder').style.display = 'none');
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var cell = input.closest('.db-photo-cell');
+    cell.style.backgroundImage = 'url(' + e.target.result + ')';
+    cell.style.backgroundSize = 'cover';
+    cell.style.backgroundPosition = 'center';
+    var icon = cell.querySelector('.db-photo-icon');
+    var lbl = cell.querySelector('.db-photo-lbl');
+    if (icon) icon.style.display = 'none';
+    if (lbl) lbl.style.display = 'none';
   };
   reader.readAsDataURL(input.files[0]);
   showToast('Photo uploaded.');
 }
 
-// ── CALENDLY ──
-let selectedMeeting = 'discovery';
-// Replace these URLs with your actual Calendly event links
-const calUrls = {
+// Calendly
+var selectedMeeting = 'discovery';
+var calUrls = {
   discovery: 'https://calendly.com/kosiaacademy/kosia-academy-discovery',
   stylist:   'https://calendly.com/kosiaacademy/kosia-academy-stylist-enrollment',
   owner:     'https://calendly.com/kosiaacademy/30min',
   group:     'https://calendly.com/kosiaacademy/kosia-academy-group-call'
 };
-
 function selectMeeting(el, type) {
-  document.querySelectorAll('.mtype').forEach(m => m.classList.remove('sel'));
+  document.querySelectorAll('.mtype').forEach(function(m) { m.classList.remove('sel'); });
   el.classList.add('sel');
   selectedMeeting = type;
   loadCalendlyEmbed(calUrls[type]);
 }
-
 function loadCalendlyEmbed(url) {
-  const embed = document.getElementById('calendlyEmbed');
+  var embed = document.getElementById('calendlyEmbed');
   if (!embed) return;
-  const fullUrl = url + '?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=e8dfd0&primary_color=C48A71';
+  var fullUrl = url + '?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=e8dfd0&primary_color=C48A71';
   embed.setAttribute('data-url', fullUrl);
   embed.style.height = '700px';
   embed.innerHTML = '';
-  if (window.Calendly) {
-    Calendly.initInlineWidget({ url: fullUrl, parentElement: embed });
-  }
+  if (window.Calendly) Calendly.initInlineWidget({ url: fullUrl, parentElement: embed });
 }
-
 function openCalendly() {
   loadCalendlyEmbed(calUrls[selectedMeeting]);
   document.getElementById('calWidget').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
-
-// Init Calendly once script loads
-window.addEventListener('load', () => {
-  if (window.Calendly) {
-    Calendly.initInlineWidgets();
-  }
+window.addEventListener('load', function() {
+  if (window.Calendly) Calendly.initInlineWidgets();
 });
+
 </script>
 </body>
 </html>
