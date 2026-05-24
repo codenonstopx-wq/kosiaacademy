@@ -567,6 +567,80 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-topnav-track{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--clay);}
 .db-logout{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:#3A3530;background:none;border:none;cursor:none;transition:color .2s;}
 .db-logout:hover{color:var(--clay);}
+
+/* ══ MISSION SECTION ══ */
+.mission-section{display:grid;grid-template-columns:1fr 1fr;border-top:0.5px solid var(--border);}
+.mission-left{padding:6.5rem var(--pad);border-right:0.5px solid var(--border);display:flex;flex-direction:column;justify-content:center;}
+.mission-right{padding:6.5rem var(--pad);background:var(--alabaster);display:flex;flex-direction:column;justify-content:center;}
+.mission-body{font-size:0.88rem;color:var(--muted);line-height:1.95;max-width:500px;}
+.mission-body+.mission-body{margin-top:1.1rem;}
+.mission-pillars{margin-top:2.25rem;display:flex;flex-direction:column;gap:1.25rem;}
+.mp{display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.25rem;border-bottom:0.5px solid var(--border);}
+.mp:last-child{border-bottom:none;padding-bottom:0;}
+.mp-icon{font-size:0.9rem;color:var(--clay);flex-shrink:0;margin-top:0.1rem;width:18px;text-align:center;}
+.mp-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--onyx);margin-bottom:0.25rem;}
+.mp-desc{font-size:0.73rem;color:var(--muted);line-height:1.75;}
+
+/* ══ OUTCOMES ══ */
+.outcomes-section{padding:7.5rem var(--pad);background:var(--onyx);}
+.outcomes-header{margin-bottom:4rem;}
+.outcomes-header .section-eyebrow{color:var(--clay);}
+.outcomes-header .section-eyebrow-line{background:var(--clay);}
+.outcomes-header .section-h2{color:var(--cream);}
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:0.5px solid #1E1E1E;border-top:0.5px solid #1E1E1E;}
+.outcome-card{border-right:0.5px solid #1E1E1E;border-bottom:0.5px solid #1E1E1E;padding:2.5rem 2rem;transition:background .25s;}
+.outcome-card:hover{background:rgba(255,255,255,0.02);}
+.outcome-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:1rem;}
+.outcome-icon{font-size:1.4rem;margin-bottom:1rem;display:block;}
+.outcome-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--cream);margin-bottom:0.75rem;line-height:1.2;}
+.outcome-desc{font-size:0.76rem;color:#4A4440;line-height:1.85;margin-bottom:1.25rem;}
+.outcome-tag{font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);padding:0.28rem 0.65rem;border:0.5px solid rgba(196,138,113,0.25);display:inline-block;}
+
+/* ══ HERO TRUST BAR ══ */
+.hero-trust{display:flex;align-items:center;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .6s ease .8s both;}
+.hero-trust-item{display:flex;flex-direction:column;gap:0.15rem;}
+.hero-trust-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--onyx);line-height:1;}
+.hero-trust-label{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+.hero-trust-divider{width:0.5px;height:28px;background:var(--border-strong);}
+
+/* ══ OWNER WHY ══ */
+.owner-why-section{display:grid;grid-template-columns:1fr 1fr;background:var(--onyx);}
+.owner-why-left{padding:7.5rem var(--pad);border-right:0.5px solid #1E1E1E;display:flex;flex-direction:column;justify-content:center;}
+.owner-why-left .section-eyebrow{color:var(--clay-light);}
+.owner-why-left .section-eyebrow-line{background:var(--clay-light);}
+.owner-why-left .section-h2{color:var(--cream);}
+.owner-why-left .section-h2 em{color:var(--clay-light);}
+.owner-why-left .about-blockquote{border-left-color:var(--clay-light);color:rgba(251,249,246,0.55);font-size:1rem;}
+.owner-why-right{padding:7.5rem var(--pad);display:flex;flex-direction:column;justify-content:center;background:#111;}
+.owner-why-body{font-size:0.85rem;color:rgba(251,249,246,0.35);line-height:1.95;}
+.owner-why-body+.owner-why-body{margin-top:1.1rem;}
+.owner-why-pillars{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.25rem;}
+.owp{display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.25rem;border-bottom:0.5px solid #1A1A1A;}
+.owp:last-child{border-bottom:none;padding-bottom:0;}
+.owp-icon{font-size:0.9rem;color:var(--clay);flex-shrink:0;margin-top:0.1rem;width:18px;text-align:center;}
+.owp-title{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(251,249,246,0.7);margin-bottom:0.25rem;}
+.owp-desc{font-size:0.72rem;color:rgba(251,249,246,0.3);line-height:1.75;}
+
+/* ══ COLOR MADE SIMPLE ══ */
+.color-simple-section{padding:8rem var(--pad);background:var(--cream);border-top:0.5px solid var(--border);}
+.cs-header{margin-bottom:4rem;}
+.cs-sub{font-size:0.88rem;color:var(--muted);line-height:1.9;max-width:640px;margin-top:1.1rem;}
+.cs-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:0.5px solid var(--border);border-top:0.5px solid var(--border);}
+.cs-card{border-right:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:2.5rem 2rem;transition:background .25s;}
+.cs-card:hover{background:var(--alabaster);}
+.cs-card-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--sand);line-height:1;margin-bottom:0.85rem;}
+.cs-card-eyebrow{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.5rem;}
+.cs-card-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--onyx);line-height:1.25;margin-bottom:0.85rem;}
+.cs-card-body{font-size:0.74rem;color:var(--muted);line-height:1.85;}
+.cs-formula-strip{display:flex;align-items:stretch;background:var(--onyx);padding:3rem var(--pad);margin:0 calc(-1 * var(--pad));gap:0;}
+.cs-formula-item{padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem;flex:1;border-right:0.5px solid #1E1E1E;}
+.cs-formula-item:last-child{border-right:none;}
+.cs-formula-result{background:rgba(196,138,113,0.08);}
+.cs-formula-label{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);}
+.cs-formula-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);line-height:1.2;}
+.cs-formula-body{font-size:0.68rem;color:rgba(251,249,246,0.3);line-height:1.7;}
+.cs-formula-arrow{display:none;}
+
 </style>
 </head>
 <body>
@@ -1583,7 +1657,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 <!-- ════════════════════════════════
      DASHBOARD VIEW
 ════════════════════════════════ -->
-<div id="view-dashboard">
+<div id="view-dashboard" style="display:none;">
   <div class="db-layout">
 
     <!-- SIDEBAR -->
@@ -2051,48 +2125,73 @@ function setNavActive(id) {
 }
 
 function enterDashboard(name, track) {
-  currentTrack = track;
-  lessonData = track === 'owner' ? ownerLessons : stylistLessons;
-  // Show dashboard
-  document.getElementById('view-marketing').style.display = 'none';
-  document.getElementById('view-dashboard').style.display = 'block';
-  document.getElementById('marketingNav').style.display = 'none';
-  document.getElementById('dashNav').classList.add('visible');
-  // User info
-  var first = name.split(' ')[0];
-  document.getElementById('dbUserName').textContent = first;
-  document.getElementById('dbUserAvatar').textContent = first.charAt(0).toUpperCase();
-  var trackLabel = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
-  document.getElementById('dbUserTrack').textContent = trackLabel;
-  document.getElementById('dashTrackLabel').textContent = trackLabel;
-  // Update sidebar nav labels for owner track
-  var courses = track === 'owner' ? ownerCourses : stylistCourses;
-  document.getElementById('dbClTitle').textContent = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
-  var n0 = document.getElementById('navL0');
-  var n1 = document.getElementById('navL1');
-  var n2 = document.getElementById('navL2');
-  if (n0) n0.textContent = courses[0].name;
-  if (n1) n1.textContent = courses[1] ? courses[1].name : '';
-  if (n2) n2.textContent = courses[2] ? courses[2].name : '';
-  buildCourseGrid(courses);
-  // Force the course view visible — belt AND suspenders
-  document.querySelectorAll('.db-view').forEach(function(v) {
-    v.classList.remove('db-active');
-    v.style.display = 'none';
-  });
-  var cv = document.getElementById('view-courses');
-  if (cv) {
-    cv.classList.add('db-active');
-    cv.style.display = 'block';
+  try {
+    currentTrack = track;
+    lessonData = track === 'owner' ? ownerLessons : stylistLessons;
+
+    // Switch views
+    var mkt = document.getElementById('view-marketing');
+    var dash = document.getElementById('view-dashboard');
+    var mNav = document.getElementById('marketingNav');
+    var dNav = document.getElementById('dashNav');
+    if (mkt) mkt.style.cssText = 'display:none!important';
+    if (dash) { dash.style.display = 'block'; dash.style.visibility = 'visible'; }
+    if (mNav) mNav.style.display = 'none';
+    if (dNav) dNav.classList.add('visible');
+
+    // User info
+    var first = name ? name.split(' ')[0] : 'Welcome';
+    var avatar = document.getElementById('dbUserAvatar');
+    var userName = document.getElementById('dbUserName');
+    var userTrack = document.getElementById('dbUserTrack');
+    var trackLbl = document.getElementById('dashTrackLabel');
+    var label = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
+    if (avatar) avatar.textContent = first.charAt(0).toUpperCase();
+    if (userName) userName.textContent = first;
+    if (userTrack) userTrack.textContent = label;
+    if (trackLbl) trackLbl.textContent = label;
+
+    // Courses
+    var courses = track === 'owner' ? ownerCourses : stylistCourses;
+    var title = document.getElementById('dbClTitle');
+    if (title) title.textContent = (track === 'owner' ? 'Owner' : 'Stylist') + ' Track';
+
+    // Nav labels
+    var n0 = document.getElementById('navL0');
+    var n1 = document.getElementById('navL1');
+    var n2 = document.getElementById('navL2');
+    if (n0 && courses[0]) n0.textContent = courses[0].name;
+    if (n1 && courses[1]) n1.textContent = courses[1].name;
+    if (n2 && courses[2]) n2.textContent = courses[2].name;
+
+    // Build grid
+    buildCourseGrid(courses);
+
+    // Show courses view — direct style, no class dependency
+    var allViews = document.querySelectorAll('.db-view');
+    allViews.forEach(function(v) {
+      v.style.display = 'none';
+      v.classList.remove('db-active');
+    });
+    var cv = document.getElementById('view-courses');
+    if (cv) {
+      cv.style.display = 'block';
+      cv.classList.add('db-active');
+    }
+
+    setNavActive('nav-courses');
+    window.scrollTo(0, 0);
+    console.log('[KOSIA] Dashboard loaded for', first, '/', track);
+  } catch(e) {
+    console.error('[KOSIA] enterDashboard error:', e);
   }
-  setNavActive('nav-courses');
-  window.scrollTo(0,0);
 }
 
 function buildCourseGrid(courses) {
   var grid = document.getElementById('dbClGrid');
-  if (!grid) { console.error('dbClGrid not found'); return; }
+  if (!grid) { console.error('[KOSIA] dbClGrid not found'); return; }
   if (!courses || !courses.length) { grid.innerHTML = '<p style="padding:2rem;color:var(--muted);">No courses found.</p>'; return; }
+  grid.style.cssText = 'display:grid!important;grid-template-columns:repeat(2,1fr);gap:1rem;padding:2rem 2.5rem;';
   var html = '';
   courses.forEach(function(c, i) {
     var units = '';
