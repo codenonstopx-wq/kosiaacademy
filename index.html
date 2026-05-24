@@ -546,6 +546,65 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .outcome-desc{font-size:0.76rem;color:#4A4440;line-height:1.85;margin-bottom:1.25rem;}
 .outcome-tag{font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);padding:0.28rem 0.65rem;border:0.5px solid rgba(196,138,113,0.25);display:inline-block;}
 
+/* ═══ SKIN & EYE TONES SECTION ═══ */
+.tones-section{padding:8rem var(--pad);background:var(--onyx);color:var(--cream);}
+.tones-section .section-eyebrow{color:var(--clay);}
+.tones-section .section-eyebrow-line{background:var(--clay);}
+.tones-section .section-h2{color:var(--cream);}
+.tones-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end;margin-top:1.5rem;margin-bottom:4.5rem;}
+.tones-intro-body{font-size:0.85rem;color:rgba(251,249,246,0.4);line-height:1.9;}
+.tones-tabs{display:flex;gap:0;border-bottom:0.5px solid #1E1E1E;margin-bottom:3.5rem;}
+.tone-tab{padding:0.85rem 2rem;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:#2E2A28;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.tone-tab.active{color:var(--clay);border-bottom-color:var(--clay);}
+.tone-tab:hover{color:#5A5050;}
+.tone-panel{display:none;}
+.tone-panel.active{display:block;}
+
+/* Skin tone grid */
+.skin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:0.5px solid #1E1E1E;border-top:0.5px solid #1E1E1E;}
+.skin-card{border-right:0.5px solid #1E1E1E;border-bottom:0.5px solid #1E1E1E;padding:2.25rem 2rem;transition:background .25s;position:relative;}
+.skin-card:hover{background:rgba(255,255,255,0.02);}
+.skin-card-header{display:flex;align-items:center;gap:1.1rem;margin-bottom:1.5rem;}
+.skin-swatch-wrap{display:flex;gap:0.35rem;flex-shrink:0;}
+.skin-swatch{width:20px;height:20px;border-radius:50%;}
+.skin-card-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.2rem;}
+.skin-card-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--cream);}
+.skin-card-desc{font-size:0.74rem;color:rgba(251,249,246,0.35);line-height:1.85;margin-bottom:1.5rem;}
+.skin-complements{display:flex;flex-direction:column;gap:0;}
+.skin-complement-row{display:grid;grid-template-columns:110px 1fr;gap:0;border-top:0.5px solid #1A1A1A;padding:0.65rem 0;}
+.skin-complement-row:first-child{border-top:none;padding-top:0;}
+.skin-comp-key{font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:#3A3530;padding-top:0.08rem;}
+.skin-comp-val{font-size:0.74rem;color:rgba(251,249,246,0.55);line-height:1.5;}
+.skin-comp-val em{font-style:italic;color:var(--clay);font-size:0.72rem;}
+.skin-swatches-row{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.35rem;}
+.skin-color-chip{display:flex;align-items:center;gap:0.3rem;padding:0.22rem 0.5rem;border:0.5px solid #252525;font-size:0.58rem;color:#3A3530;letter-spacing:0.06em;}
+.chip-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+
+/* Eye tone grid */
+.eye-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.eye-card{border:0.5px solid #1E1E1E;padding:2rem 1.75rem;transition:all .25s;}
+.eye-card:hover{background:rgba(255,255,255,0.02);border-color:#2E2A28;}
+.eye-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
+.eye-iris{width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.eye-iris-pupil{width:14px;height:14px;border-radius:50%;background:rgba(0,0,0,0.8);flex-shrink:0;}
+.eye-card-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);font-weight:300;}
+.eye-card-sub{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);}
+.eye-card-desc{font-size:0.73rem;color:rgba(251,249,246,0.35);line-height:1.82;margin-bottom:1.25rem;}
+.eye-recommendations{display:flex;flex-direction:column;gap:0.5rem;}
+.eye-rec-row{display:flex;align-items:baseline;gap:0.5rem;padding:0.5rem 0;border-top:0.5px solid #1A1A1A;}
+.eye-rec-row:first-child{border-top:none;padding-top:0;}
+.eye-rec-label{font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:#2E2A28;min-width:70px;flex-shrink:0;}
+.eye-rec-val{font-size:0.72rem;color:rgba(251,249,246,0.5);line-height:1.5;}
+.eye-rec-val em{font-style:italic;color:var(--clay-light);}
+
+/* Warm/cool theory strip */
+.tone-theory-strip{display:grid;grid-template-columns:repeat(4,1fr);border:0.5px solid #1E1E1E;margin-top:3.5rem;}
+.tone-theory-card{padding:2rem 1.75rem;border-right:0.5px solid #1E1E1E;}
+.tone-theory-card:last-child{border-right:none;}
+.tone-theory-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:0.65rem;}
+.tone-theory-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:0.5rem;}
+.tone-theory-body{font-size:0.71rem;color:rgba(251,249,246,0.3);line-height:1.8;}
+
 .db-topnav{position:fixed;top:0;left:0;right:0;z-index:800;display:none;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(10,10,10,0.97);backdrop-filter:blur(18px);border-bottom:0.5px solid #1A1A1A;height:58px;}
 .db-topnav.visible{display:flex;}
 .db-topnav-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--cream);}
@@ -624,6 +683,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   <ul class="nav-links">
     <li><a href="#tracks">Tracks</a></li>
     <li><a href="#color">Color Science</a></li>
+    <li><a href="#skin-tones">Skin &amp; Eye Tones</a></li>
     <li><a href="#curric-section">Curriculum</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#consult">Book a Call</a></li>
@@ -953,6 +1013,355 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 </section>
 
 <!-- ═══ CURRICULUM PREVIEW ═══ -->
+<!-- ═══ SKIN & EYE TONES ═══ -->
+<section id="skin-tones" class="tones-section">
+  <div class="reveal">
+    <div class="section-eyebrow"><span class="section-eyebrow-line"></span>Skin &amp; Eye Tone Theory</div>
+    <h2 class="section-h2">The right color <em>for every client</em> —<br/>reading undertones before you formulate</h2>
+  </div>
+  <div class="tones-intro reveal">
+    <p class="tones-intro-body">Hair color does not exist in isolation — it lives against a client's skin tone and interacts with their eye color every single day. Understanding warm, cool, and neutral undertones, and knowing which hair colors complement or clash with them, is what separates a technically skilled colorist from a truly transformative one. Read the person, then formulate.</p>
+    <p class="tones-intro-body">The Fitzpatrick scale gives us a clinical framework for skin classification. But as colorists, we layer a second system on top: <em>undertones</em> — the warm (golden, peachy, yellow), cool (pink, red, bluish), and neutral (balanced mix) tones that sit beneath the surface and determine how a hair color will read in the light.</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tones-tabs">
+    <button class="tone-tab active" onclick="switchToneTab(this,'skin')">Skin Tones</button>
+    <button class="tone-tab" onclick="switchToneTab(this,'eyes')">Eye Tones</button>
+    <button class="tone-tab" onclick="switchToneTab(this,'theory')">Warm · Cool · Neutral</button>
+  </div>
+
+  <!-- SKIN TONE PANEL -->
+  <div class="tone-panel active" id="tone-skin">
+    <div class="skin-grid">
+
+      <!-- FAIR -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#F5DFD0;"></div>
+            <div class="skin-swatch" style="background:#ECC9B2;"></div>
+            <div class="skin-swatch" style="background:#E8BFA0;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick I–II</div><div class="skin-card-name">Fair Skin</div></div>
+        </div>
+        <p class="skin-card-desc">Very light skin that burns easily. Undertones range from cool pink/rosy to warm peachy-ivory. The client's vein color and how they react to sun are your best indicators: blue-purple veins = cool, green veins = warm.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Icy blonde, platinum, champagne, ash — cool tones echo the natural skin, creating harmony. Avoid brassy warm oranges which read harsh.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Golden blonde, strawberry, warm copper, honey — golden tones amplify the peachy warmth beautifully. Avoid stark ash which can make skin look washed out.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Avoid</div><div class="skin-comp-val">Jet black (too stark unless intentional), heavy orange brassiness, aggressive red-violet.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#F5EBD8;"></div>Champagne</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#E8DCC8;"></div>Platinum</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A85A;"></div>Golden Honey</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#C07845;"></div>Warm Copper</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- LIGHT / MEDIUM -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#D4A882;"></div>
+            <div class="skin-swatch" style="background:#C49070;"></div>
+            <div class="skin-swatch" style="background:#B87A58;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick III</div><div class="skin-card-name">Light / Medium</div></div>
+        </div>
+        <p class="skin-card-desc">Skin that tans moderately and rarely burns severely. The most versatile range — undertones can be warm (golden, olive-warm) or cool (neutral-pink). Most clients in this range can wear a wide spectrum of hair colors with the right saturation.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Mocha brunette, cool espresso, mushroom blonde, soft ash. Avoid overtly warm reds which can make neutral-pink skin look ruddy.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Caramel, toffee, warm chestnut, butterscotch balayage. The golden warmth in the skin is amplified beautifully by these tones.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Versatile options</div><div class="skin-comp-val">Sandy blonde, light brown with face-frame highlights, dimensional brunette with warmth at mid-lengths.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#C8A060;"></div>Caramel</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#8B6040;"></div>Chestnut</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#D8C090;"></div>Sandy Blonde</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#7A6058;"></div>Mocha</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- OLIVE -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#A87850;"></div>
+            <div class="skin-swatch" style="background:#9A6840;"></div>
+            <div class="skin-swatch" style="background:#8A6035;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick III–IV</div><div class="skin-card-name">Olive Skin</div></div>
+        </div>
+        <p class="skin-card-desc">Naturally warm with a golden-green cast. Olive skin has inherent warmth and richness — the goal is to work with it, not fight it. Cool, ashy, or platinum tones on olive skin can look grey or washed out without proper warmth underneath.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Warm gold, rich chestnut, cognac, auburn, dark chocolate with caramel highlights</em> — warmth plays beautifully against the golden-green cast.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Use warm blonde highlights rather than ash. Face-framing at temples in golden honey or warm butterscotch creates radiance against olive skin.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Use caution</div><div class="skin-comp-val">Platinum and stark ash can look greenish or grey. If going lighter, always finish with a warm toner — never ice or blue-based.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#B07040;"></div>Cognac</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#7A4020;"></div>Auburn</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Warm Gold</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#4A2810;"></div>Dark Choc</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- MEDIUM DARK -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#7A4A28;"></div>
+            <div class="skin-swatch" style="background:#6A3A1E;"></div>
+            <div class="skin-swatch" style="background:#5A3018;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick IV–V</div><div class="skin-card-name">Medium Dark</div></div>
+        </div>
+        <p class="skin-card-desc">Rich, warm-to-neutral undertones with deep melanin. This range includes warm brown, red-brown, and cool-neutral tones. Hair color should enhance the depth and richness of the skin — not contrast harshly against it without intention.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich copper, warm auburn, honey bronze, deep chocolate with bright face-frame</em> — these create dimensional contrast without washing the skin.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Balayage with caramel or honey — placed at face frame and mid-lengths to create brightness and dimension. Avoid highlighting all over which can lighten the overall depth too much.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Use caution</div><div class="skin-comp-val">Stark platinum without proper transition reads harsh. Ash blonde can look grey against warm-undertone skin in this range.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#D49040;"></div>Honey</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#6A3818;"></div>Auburn</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#2A1508;"></div>Deep Choc</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- DEEP WARM -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#4A2808;"></div>
+            <div class="skin-swatch" style="background:#3A2008;"></div>
+            <div class="skin-swatch" style="background:#2C1808;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick V–VI Warm</div><div class="skin-card-name">Deep Warm</div></div>
+        </div>
+        <p class="skin-card-desc">Deep, warm undertones — rich red-brown to mahogany. The warmth in the skin is a strength, not something to fight. Color choices should celebrate this depth and add dimension rather than trying to lift dramatically.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich mahogany, warm red, deep auburn, cognac with bronze highlights</em> — colours that live in the warm family, amplifying the depth and richness.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Copper face-framing and scattered bronze balayage create warmth and dimension. Bright gold at temples is stunning against deep warm skin.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Burgundy, deep plum, and wine reds complement deep warm skin beautifully. The depth of the skin holds and enriches these vivid tones.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#8B2010;"></div>Mahogany</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#C04820;"></div>Copper</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#B85030;"></div>Auburn</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#601830;"></div>Burgundy</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- DEEP COOL -->
+      <div class="skin-card reveal">
+        <div class="skin-card-header">
+          <div class="skin-swatch-wrap">
+            <div class="skin-swatch" style="background:#2A1A18;"></div>
+            <div class="skin-swatch" style="background:#1E1010;"></div>
+            <div class="skin-swatch" style="background:#150C0A;"></div>
+          </div>
+          <div><div class="skin-card-label">Fitzpatrick V–VI Cool</div><div class="skin-card-name">Deep Cool</div></div>
+        </div>
+        <p class="skin-card-desc">Deep skin with cool blue-red or neutral undertones. This range often has a natural blue-black depth that is extraordinary. Cool hair tones harmonize with the cool undertone while warm tones create intentional contrast.</p>
+        <div class="skin-complements">
+          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Blue-black, cool espresso, burgundy-violet, dark plum, jet black</em> — cool tones align with the skin's blue undertone and create a polished, editorial result.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Warm contrast</div><div class="skin-comp-val">Strategic warm face-framing in honey or copper creates intentional, beautiful contrast. Used sparingly, warmth near the face illuminates without clashing.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Deep violet, midnight blue, and blue-black are especially striking — the cool skin's depth holds and enriches these tones in a way no other skin range can.</div></div>
+          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
+            <div class="skin-swatches-row">
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#0A0A18;"></div>Blue-Black</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#3A1040;"></div>Deep Plum</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#601840;"></div>Burgundy</div>
+              <div class="skin-color-chip"><div class="chip-dot" style="background:#1A0A08;"></div>Espresso</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+    </div><!-- end skin-grid -->
+  </div><!-- end tone-skin -->
+
+  <!-- EYE TONE PANEL -->
+  <div class="tone-panel" id="tone-eyes">
+    <div class="eye-grid">
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #4A8BB0 0%, #2A5A80 50%, #1A3A60 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Blue Eyes</div><div class="eye-card-sub">Cool · Light · Striking</div></div>
+        </div>
+        <p class="eye-card-desc">Blue eyes are intensified by contrasting warm hair tones — the warm-cool interplay makes both the eyes and the hair color pop. Cool hair tones create a harmonious, soft, monochromatic look.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm golden blonde, strawberry, copper, caramel</em> — the warmth creates contrast that makes blue irises appear more vivid and intense.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Soften with</div><div class="eye-rec-val">Icy blonde, platinum, silver, cool ash — harmonizes with the cool iris for a softer, editorial look.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Brassy orange without intention — competes with the eye colour rather than framing it.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Deep chocolate or black creates dramatic contrast — blue eyes appear to "pop" against very dark backgrounds.</div></div>
+        </div>
+      </div>
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #7AB870 0%, #508840 50%, #2A5820 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Green Eyes</div><div class="eye-card-sub">Warm-Cool · Rare · Versatile</div></div>
+        </div>
+        <p class="eye-card-desc">Green eyes contain both warm (yellow-green) and cool (blue-green) tones depending on the individual. They are most intensified by red and auburn tones — complementary colors on the wheel directly opposite green.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Auburn, warm red, copper, chestnut</em> — red and red-brown are the complements to green on the colour wheel. These make green eyes appear deeper and more vivid.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Warm option</div><div class="eye-rec-val">Golden blonde and honey amplify the yellow-green tones in the iris for a warm, radiant effect.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Cool option</div><div class="eye-rec-val">Ash brown and mushroom tones harmonize with blue-green irises for a sophisticated, muted look.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid red or bright copper — green eyes against warm red hair is one of the most striking combinations in colour theory.</div></div>
+        </div>
+      </div>
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #8B6840 0%, #6A4820 50%, #4A3010 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Hazel Eyes</div><div class="eye-card-sub">Mixed · Warm · Changeable</div></div>
+        </div>
+        <p class="eye-card-desc">Hazel eyes shift between green, brown, and gold depending on lighting and clothing. Their warmth makes them one of the most versatile eye tones — they respond beautifully to both warm and jewel-toned hair colours.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm auburn, amber, golden brown, copper</em> — echoing the gold-green in hazel eyes with warm hair tones creates a cohesive, glowing result.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Jewel tones</div><div class="eye-rec-val">Deep plum and rich burgundy bring out the green in hazel eyes — the contrast between warm-red hair and green iris reads beautifully.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Caramel effect</div><div class="eye-rec-val">Warm caramel balayage near the face reflects warmth into the eyes, making the golden flecks in hazel irises more pronounced.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy ash tones can grey out hazel eyes and mute their warmth. Always finish with a warm toner if lightening.</div></div>
+        </div>
+      </div>
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #6A4020 0%, #4A2808 50%, #2A1505 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Warm Brown Eyes</div><div class="eye-card-sub">Warm · Rich · Universal</div></div>
+        </div>
+        <p class="eye-card-desc">Warm brown eyes — amber to honey-brown — have a natural warmth and richness that pairs with almost any hair colour. The key is choosing tones that amplify the depth and luminosity of the iris rather than flattening it.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm chocolate, caramel, golden auburn, honey blonde</em> — warm tones that echo the iris amplify the eye's natural richness and glow.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Icy blonde and platinum create high contrast that makes warm brown eyes stand out dramatically — particularly effective on medium-dark skin tones.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Rich tones</div><div class="eye-rec-val">Deep espresso, warm black, and dark chocolate with face-frame highlights create depth and make the warmth in the iris glow.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid copper or warm red — warm brown eyes against a rich copper-red base is deeply harmonious and striking.</div></div>
+        </div>
+      </div>
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #3A2820 0%, #201510 50%, #100A08 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Deep Brown Eyes</div><div class="eye-card-sub">Cool-Neutral · Deep · Versatile</div></div>
+        </div>
+        <p class="eye-card-desc">Deep brown eyes — nearly black — are neutral in undertone and extraordinarily versatile. The depth of the iris means almost any hair colour reads well. The goal is to choose tones that illuminate the face rather than compete with the eye.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Rich black, deep espresso, blue-black, dark chocolate</em> — the iris depth is maximised when hair tones are similarly rich. Contrast occurs through face-framing highlights.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Bold platinum or ash blonde — the high contrast between very light hair and very dark eyes is editorial and dramatic. Requires carefully chosen skin tone pairing.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Warm option</div><div class="eye-rec-val">Warm chestnut and copper add warmth without competing — the deep iris holds its presence against warm tones.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Vivid option</div><div class="eye-rec-val">Deep plum, navy, midnight — dark fantasy tones read beautifully because the iris depth grounds them.</div></div>
+        </div>
+      </div>
+
+      <div class="eye-card reveal">
+        <div class="eye-card-header">
+          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #788090 0%, #505870 50%, #2A3050 100%);">
+            <div class="eye-iris-pupil"></div>
+          </div>
+          <div><div class="eye-card-name">Grey / Steel Eyes</div><div class="eye-card-sub">Cool · Rare · Editorial</div></div>
+        </div>
+        <p class="eye-card-desc">Grey and steel-blue eyes are cool and silvery — they belong firmly in the cool family and are most intensified by either harmonising cool tones or bold warm contrast. They have a unique chameleon quality that shifts in different lighting.</p>
+        <div class="eye-recommendations">
+          <div class="eye-rec-row"><div class="eye-rec-label">Harmonise</div><div class="eye-rec-val"><em>Silver, platinum, icy ash, moonstone blonde</em> — harmonising with the cool iris creates an ethereal, monochromatic editorial look that is striking and modern.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Warm auburn or copper — warm-cool contrast makes grey eyes appear more blue or blue-green, intensifying their colour.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy orange-brassy tones — they compete with the cool iris in an unflattering way. Warm tones must be controlled and intentional.</div></div>
+          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Graphite or dark ash — very dark cool hair against grey eyes is an editorial statement that works particularly well with cool skin undertones.</div></div>
+        </div>
+      </div>
+
+    </div><!-- end eye-grid -->
+  </div><!-- end tone-eyes -->
+
+  <!-- WARM / COOL / NEUTRAL THEORY PANEL -->
+  <div class="tone-panel" id="tone-theory">
+    <div class="skin-grid" style="margin-bottom:2.5rem;">
+      <div class="skin-card reveal">
+        <div class="skin-card-label" style="margin-bottom:0.75rem;">Warm Undertones</div>
+        <div class="skin-card-name" style="margin-bottom:1rem;">Golden · Peachy · Yellow</div>
+        <p class="skin-card-desc">Warm undertones have a golden, peachy, or yellow cast beneath the surface. Indicators: veins appear green, gold jewellery is flattering, skin tans easily. Hair colours in the warm family — golden blonde, copper, auburn, caramel — create harmony. Cool tones (ash, platinum) can look washed out or grey without a warm base toner.</p>
+        <div class="skin-swatches-row" style="margin-top:1rem;">
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Golden Blonde</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#B07840;"></div>Caramel</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#7A3818;"></div>Auburn</div>
+        </div>
+      </div>
+      <div class="skin-card reveal">
+        <div class="skin-card-label" style="margin-bottom:0.75rem;">Cool Undertones</div>
+        <div class="skin-card-name" style="margin-bottom:1rem;">Pink · Red · Bluish</div>
+        <p class="skin-card-desc">Cool undertones have a pink, red, or bluish cast beneath the surface. Indicators: veins appear blue or purple, silver jewellery is more flattering, skin burns before it tans. Cool hair tones — ash, platinum, mushroom, icy blonde — create harmony. Warm tones can make cool-undertone skin look ruddy or flushed unless balanced carefully.</p>
+        <div class="skin-swatches-row" style="margin-top:1rem;">
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#E8E0D0;"></div>Platinum</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#B0A898;"></div>Mushroom</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#888098;"></div>Ash Blonde</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#3A3848;"></div>Cool Espresso</div>
+        </div>
+      </div>
+      <div class="skin-card reveal">
+        <div class="skin-card-label" style="margin-bottom:0.75rem;">Neutral Undertones</div>
+        <div class="skin-card-name" style="margin-bottom:1rem;">Balanced · Mixed · Versatile</div>
+        <p class="skin-card-desc">Neutral undertones have a balanced mix of warm and cool — no single hue dominates. Both gold and silver jewellery look flattering. This is the most versatile undertone: most hair colours work, and the key is choosing based on personal preference and eye colour rather than strict undertone matching.</p>
+        <div class="skin-swatches-row" style="margin-top:1rem;">
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#D4B870;"></div>Sandy Blonde</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#906840;"></div>Neutral Brown</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#C89060;"></div>Warm Toffee</div>
+          <div class="skin-color-chip"><div class="chip-dot" style="background:#3A2818;"></div>Dark Chestnut</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How to identify undertone -->
+    <div class="tone-theory-strip">
+      <div class="tone-theory-card">
+        <div class="tone-theory-num">01</div>
+        <div class="tone-theory-title">The Vein Test</div>
+        <p class="tone-theory-body">Look at the inside of the wrist in natural light. Blue or purple veins = cool undertone. Green veins = warm undertone. Blue-green = neutral. This is the fastest and most reliable reading you can do in a consultation.</p>
+      </div>
+      <div class="tone-theory-card">
+        <div class="tone-theory-num">02</div>
+        <div class="tone-theory-title">The Jewellery Test</div>
+        <p class="tone-theory-body">Does gold or silver jewellery look more flattering on the client? Gold = warm. Silver = cool. Both equally = neutral. Ask the client which they gravitate toward — they have usually already worked it out.</p>
+      </div>
+      <div class="tone-theory-card">
+        <div class="tone-theory-num">03</div>
+        <div class="tone-theory-title">Sun Reaction</div>
+        <p class="tone-theory-body">How does the skin respond to sun? Burns easily, rarely tans = cool (Fitzpatrick I–II). Tans easily, rarely burns = warm. Both = neutral. This also gives you context for how reactive the scalp and skin may be during chemical services.</p>
+      </div>
+      <div class="tone-theory-card">
+        <div class="tone-theory-num">04</div>
+        <div class="tone-theory-title">Apply at Consultation</div>
+        <p class="tone-theory-body">Run this three-point check in every new client consultation before discussing colour. Undertone knowledge changes your formulation, your toner choice, and your placement recommendation — three major decisions resolved in two minutes.</p>
+      </div>
+    </div>
+  </div><!-- end tone-theory -->
+
+</section><!-- end tones-section -->
+
 <div id="curric-section" style="padding:4rem var(--pad) 2rem;border-bottom:0.5px solid var(--border);">
   <div class="section-eyebrow reveal"><span class="section-eyebrow-line"></span>Track 01 — Stylist Curriculum</div>
   <h2 class="section-h2 reveal" style="margin-top:0.5rem;">The <em>artistry</em> curriculum — 8 units</h2>
@@ -1128,7 +1537,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 
 <footer>
   <div class="footer-brand"><div class="footer-logo">KOSIA Academy</div><div class="footer-tagline">Modern Education for Beauty Professionals</div></div>
-  <div class="footer-links"><a href="#tracks">Tracks</a><a href="#color">Color Science</a><a href="#curric-section">Curriculum</a><a href="#pricing">Pricing</a><a href="#consult">Book a Call</a><a href="#" onclick="openAuth('login')">Sign In</a></div>
+  <div class="footer-links"><a href="#tracks">Tracks</a><a href="#color">Color Science</a><a href="#skin-tones">Skin &amp; Eye Tones</a><a href="#curric-section">Curriculum</a><a href="#pricing">Pricing</a><a href="#consult">Book a Call</a><a href="#" onclick="openAuth('login')">Sign In</a></div>
   <div class="footer-copy">© 2025 KOSIA Academy. All rights reserved.</div>
 </footer>
 </div><!-- end view-marketing -->
@@ -1378,9 +1787,18 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div><!-- end db-layout -->
 </div><!-- end view-dashboard -->
 <script>
+// ── TONE TABS ──
+function switchToneTab(btn, panel) {
+  document.querySelectorAll('.tone-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tone-panel').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('tone-' + panel);
+  if (target) target.classList.add('active');
+}
+
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-document.querySelectorAll('a,button,.ccard,.who-card,.face-card,.pcard,.mtype,.track-select-card,.lvl-table tbody tr,.db-nav-item,.db-ctab,.db-stab,.db-cl-card,.db-res-card,.track-panel,.price-card').forEach(el => {
+document.querySelectorAll('a,button,.ccard,.who-card,.face-card,.pcard,.mtype,.track-select-card,.lvl-table tbody tr,.db-nav-item,.db-ctab,.db-stab,.db-cl-card,.db-res-card,.track-panel,.price-card,.skin-card,.eye-card,.tone-tab,.tone-theory-card').forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('big'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
 });
