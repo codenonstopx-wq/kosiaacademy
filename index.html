@@ -393,7 +393,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 ══════════════════════════════════ */
 /* ══ DASHBOARD ══ */
 #view-dashboard{font-family:'Plus Jakarta Sans',sans-serif;}
-.db-layout{display:grid;grid-template-columns:240px 1fr;height:100vh;padding-top:58px;overflow:hidden;}
+.db-layout{display:block;padding-top:58px;}
 .db-sidebar{background:#0F0F0F;border-right:0.5px solid #1A1A1A;position:fixed;top:58px;left:0;width:240px;height:calc(100vh - 58px);overflow-y:auto;display:flex;flex-direction:column;z-index:100;}
 .db-sidebar-top{padding:1.4rem 1.25rem 1.1rem;border-bottom:0.5px solid #1A1A1A;display:flex;flex-direction:column;gap:0.3rem;}
 .db-user-avatar{width:34px;height:34px;border-radius:50%;background:rgba(196,138,113,0.15);border:0.5px solid rgba(196,138,113,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--clay);margin-bottom:0.4rem;}
@@ -416,11 +416,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-nav-check.locked{color:#252525;}
 
 /* Main area */
-.db-main{margin-left:240px;height:calc(100vh - 58px);overflow-y:auto;background:var(--cream);display:flex;flex-direction:column;}
+.db-main{margin-left:240px;min-height:calc(100vh - 58px);background:var(--cream);}
 
 /* Views — all hidden, toggled by .db-active */
-.db-view{display:none !important;flex-direction:column;flex:1;}
-.db-view.db-active{display:flex !important;}
+.db-view{display:none !important;}
+.db-view.db-active{display:block !important;}
 
 /* Page header */
 .db-page-header{padding:2rem 2.5rem 1.5rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-end;flex-shrink:0;}
@@ -430,7 +430,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-meta-pill{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.7rem;border:0.5px solid var(--border);color:var(--muted);}
 
 /* Course grid */
-.db-course-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;overflow-y:auto;flex:1;}
+.db-course-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
 .db-cl-card{border:0.5px solid var(--border);padding:1.6rem;cursor:none;transition:all .22s;position:relative;background:var(--cream);}
 .db-cl-card:hover{background:var(--alabaster);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,14,0.06);}
 .db-cl-card.locked{opacity:0.4;pointer-events:none;}
@@ -470,8 +470,8 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-nav-btn.primary:hover{background:var(--clay-dark);}
 
 /* Lesson body */
-.db-lesson-body{display:grid;grid-template-columns:1fr 280px;flex:1;overflow:hidden;}
-.db-lesson-content{display:flex;flex-direction:column;overflow:hidden;border-right:0.5px solid var(--border);}
+.db-lesson-body{display:grid;grid-template-columns:1fr 280px;min-height:500px;}
+.db-lesson-content{border-right:0.5px solid var(--border);}
 
 /* Content tabs */
 .db-tabs{display:flex;border-bottom:0.5px solid var(--border);background:var(--cream);flex-shrink:0;}
@@ -480,7 +480,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-tab:hover{color:var(--charcoal);}
 
 /* Content panels */
-.db-panel{display:none !important;flex:1;overflow-y:auto;padding:1.75rem 2.25rem;}
+.db-panel{display:none !important;padding:1.75rem 2.25rem;}
 .db-panel.active{display:block !important;}
 .db-why-block{margin-bottom:1.75rem;}
 .db-why-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.6rem;}
@@ -522,11 +522,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-dl-btn{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);white-space:nowrap;flex-shrink:0;}
 
 /* Right sidebar */
-.db-right-sidebar{background:#0F0F0F;display:flex;flex-direction:column;overflow:hidden;}
+.db-right-sidebar{background:#0F0F0F;}
 .db-sidebar-tabs{display:flex;border-bottom:0.5px solid #1A1A1A;flex-shrink:0;}
 .db-stab{flex:1;padding:0.8rem 0.35rem;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:#2A2520;text-align:center;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .18s;}
 .db-stab.active{color:var(--clay);border-bottom-color:var(--clay);}
-.db-side-panel{display:none !important;padding:1.1rem;overflow-y:auto;flex:1;}
+.db-side-panel{display:none !important;padding:1.1rem;}
 .db-side-panel.active{display:block !important;}
 .db-note-input{width:100%;height:80px;background:#080808;border:0.5px solid #1A1A1A;color:#5A5050;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.7rem;padding:0.6rem;resize:none;outline:none;line-height:1.6;margin-bottom:0.4rem;}
 .db-save-note-btn{width:100%;padding:0.45rem;font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(196,138,113,0.1);color:var(--clay);border:0.5px solid rgba(196,138,113,0.2);cursor:none;margin-bottom:0.85rem;transition:all .2s;}
@@ -539,7 +539,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-vault-val{font-size:0.66rem;color:var(--clay);}
 
 /* Resources view */
-.db-res-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;overflow-y:auto;flex:1;}
+.db-res-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
 .db-res-card{border:0.5px solid var(--border);padding:1.5rem;cursor:none;transition:all .22s;background:var(--cream);display:flex;flex-direction:column;}
 .db-res-card:hover{background:var(--alabaster);transform:translateY(-2px);}
 .db-res-icon{font-size:1.4rem;margin-bottom:0.75rem;}
@@ -549,7 +549,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .db-res-btn:hover{background:var(--clay-dark);}
 
 /* Downloads list */
-.db-dl-list{padding:1.5rem 2.5rem;overflow-y:auto;flex:1;}
+.db-dl-list{padding:1.5rem 2.5rem;}
 .db-dl-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border:0.5px solid var(--border);margin-bottom:0.5rem;background:var(--cream);transition:all .2s;}
 .db-dl-item:hover{background:var(--alabaster);}
 .db-dl-icon{font-size:1.25rem;flex-shrink:0;}
@@ -1645,7 +1645,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
       </div>
 
       <!-- ── LESSON VIEW ── -->
-      <div class="db-view" id="view-lesson">
+      <div class="db-view" id="view-lesson" style="display:none;">
         <!-- Video -->
         <div class="db-video-wrap">
           <div class="db-video-bg">
@@ -1986,10 +1986,19 @@ function logout() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
+  console.log('[KOSIA] DOM loaded');
   var session = localStorage.getItem('kosia_session');
   if (session) {
-    try { var s = JSON.parse(session); enterDashboard(s.name, s.track); }
-    catch(e) { localStorage.removeItem('kosia_session'); }
+    try {
+      var s = JSON.parse(session);
+      console.log('[KOSIA] Session found:', s.name, s.track);
+      enterDashboard(s.name, s.track);
+    } catch(e) {
+      console.error('[KOSIA] Session error:', e);
+      localStorage.removeItem('kosia_session');
+    }
+  } else {
+    console.log('[KOSIA] No session, showing marketing');
   }
 });
 
@@ -2066,14 +2075,24 @@ function enterDashboard(name, track) {
   if (n1) n1.textContent = courses[1] ? courses[1].name : '';
   if (n2) n2.textContent = courses[2] ? courses[2].name : '';
   buildCourseGrid(courses);
-  showDbView('courses');
+  // Force the course view visible — belt AND suspenders
+  document.querySelectorAll('.db-view').forEach(function(v) {
+    v.classList.remove('db-active');
+    v.style.display = 'none';
+  });
+  var cv = document.getElementById('view-courses');
+  if (cv) {
+    cv.classList.add('db-active');
+    cv.style.display = 'block';
+  }
   setNavActive('nav-courses');
   window.scrollTo(0,0);
 }
 
 function buildCourseGrid(courses) {
   var grid = document.getElementById('dbClGrid');
-  if (!grid) return;
+  if (!grid) { console.error('dbClGrid not found'); return; }
+  if (!courses || !courses.length) { grid.innerHTML = '<p style="padding:2rem;color:var(--muted);">No courses found.</p>'; return; }
   var html = '';
   courses.forEach(function(c, i) {
     var units = '';
@@ -2107,9 +2126,21 @@ function buildCourseGrid(courses) {
 }
 
 function showDbView(view) {
-  document.querySelectorAll('.db-view').forEach(function(v) { v.classList.remove('db-active'); });
+  // Hide all views
+  document.querySelectorAll('.db-view').forEach(function(v) {
+    v.classList.remove('db-active');
+    v.style.display = 'none';
+  });
   var target = document.getElementById('view-' + view);
-  if (target) target.classList.add('db-active');
+  if (target) {
+    target.classList.add('db-active');
+    if (view === 'lesson') {
+      target.style.display = 'flex';
+      target.style.flexDirection = 'column';
+    } else {
+      target.style.display = 'block';
+    }
+  }
 }
 
 function goToLesson(i) {
