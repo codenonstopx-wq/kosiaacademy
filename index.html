@@ -697,6 +697,66 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 .tone-theory-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#1E1E1E;line-height:1;margin-bottom:0.65rem;}
 .tone-theory-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:0.5rem;}
 .tone-theory-body{font-size:0.71rem;color:rgba(251,249,246,0.3);line-height:1.8;}
+
+/* ══ ANNOUNCE BAR ══ */
+.announce-bar{background:var(--onyx);padding:0.6rem var(--pad);display:flex;align-items:center;justify-content:center;gap:1.5rem;position:fixed;top:0;left:0;right:0;z-index:900;height:36px;}
+.announce-text{font-size:0.62rem;letter-spacing:0.1em;color:#4A4440;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.announce-cta{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.28rem 0.85rem;background:var(--clay);color:var(--cream);border:none;cursor:none;white-space:nowrap;transition:background .2s;flex-shrink:0;}
+.announce-cta:hover{background:var(--clay-dark);}
+
+/* ══ NEW HERO ══ */
+.hero-new{min-height:100vh;background:var(--cream);display:flex;align-items:center;padding-top:94px;}
+.hero-new-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:5rem var(--pad);}
+.hero-eyebrow{display:flex;align-items:center;gap:0.8rem;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);margin-bottom:1.5rem;animation:fadeUp .6s ease .2s both;}
+.hero-eyebrow-line{width:24px;height:0.5px;background:var(--clay);}
+.hero-new-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:1.02;letter-spacing:-0.015em;margin-bottom:1.5rem;animation:fadeUp .6s ease .32s both;}
+.hero-new-h1 em{font-style:italic;color:var(--clay);}
+.hero-new-sub{font-size:0.95rem;color:var(--muted);line-height:1.9;max-width:460px;margin-bottom:2.25rem;animation:fadeUp .6s ease .44s both;}
+.hero-new-actions{display:flex;gap:0.85rem;flex-wrap:wrap;animation:fadeUp .6s ease .56s both;}
+.btn-hero-primary{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.2rem;font-weight:500;background:var(--onyx);color:var(--cream);border:none;cursor:none;transition:all .22s;}
+.btn-hero-primary:hover{background:var(--clay-dark);transform:translateY(-2px);}
+.btn-hero-ghost{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2rem;background:transparent;color:var(--muted);border:0.5px solid var(--taupe);cursor:none;transition:all .22s;}
+.btn-hero-ghost:hover{border-color:var(--onyx);color:var(--onyx);}
+.hero-social-proof{display:flex;align-items:center;gap:1.25rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .6s ease .68s both;}
+.hsp-item{display:flex;flex-direction:column;gap:0.12rem;}
+.hsp-num{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:var(--onyx);line-height:1;}
+.hsp-label{font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+.hsp-dot{width:3px;height:3px;border-radius:50%;background:var(--taupe);}
+
+/* ══ HERO CARD STACK ══ */
+.hero-card-stack{position:relative;height:420px;display:flex;align-items:center;justify-content:center;}
+.hcs-card{background:var(--cream);border:0.5px solid var(--border-strong);padding:1.75rem;box-shadow:0 24px 64px rgba(26,20,14,0.1);position:absolute;width:320px;}
+.hcs-back{transform:rotate(-3deg) translateY(12px);z-index:1;background:var(--alabaster);}
+.hcs-front{transform:rotate(1.5deg);z-index:2;animation:float 5s ease-in-out infinite;}
+.hcs-card-eyebrow{font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clay);margin-bottom:0.5rem;}
+.hcs-card-label{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage);margin-bottom:0.45rem;}
+.hcs-card-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--onyx);margin-bottom:0.5rem;line-height:1.2;}
+.hcs-rule{width:18px;height:0.5px;background:var(--clay);margin-bottom:0.5rem;}
+.hcs-card-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:0.5rem;}
+.hcs-badge{display:inline-block;font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.65rem;background:var(--onyx);color:var(--cream);}
+.hcs-prog-bar{height:1.5px;background:var(--sand);margin-top:0.75rem;}
+.hcs-prog-fill{height:100%;background:var(--clay);}
+.hcs-prog-text{font-size:0.6rem;color:var(--muted);margin-top:0.3rem;}
+.hcs-tag{position:absolute;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.65rem;background:rgba(196,138,113,0.1);border:0.5px solid rgba(196,138,113,0.25);color:var(--clay);white-space:nowrap;z-index:3;}
+.hcs-tag-1{top:10%;right:-5%;transform:rotate(3deg);}
+.hcs-tag-2{bottom:22%;left:-8%;transform:rotate(-2deg);}
+.hcs-tag-3{bottom:8%;right:0%;transform:rotate(1deg);}
+
+/* ══ HELP SECTION ══ */
+.help-section{padding:7rem var(--pad);background:var(--alabaster);}
+.help-header{margin-bottom:3.5rem;}
+.help-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);}
+.help-card{background:var(--cream);padding:2.5rem 2rem;cursor:none;transition:all .25s;display:flex;flex-direction:column;}
+.help-card:hover{background:#F7F2ED;transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,20,14,0.07);}
+.help-icon{font-size:1.6rem;margin-bottom:1.1rem;}
+.help-card-tag{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.5rem;}
+.help-card-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--onyx);margin-bottom:0.65rem;line-height:1.2;}
+.help-card-desc{font-size:0.74rem;color:var(--muted);line-height:1.82;flex:1;margin-bottom:1.25rem;}
+.help-card-link{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);transition:gap .2s;}
+
+/* ══ MISSION ══ */
+.btn-mission{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.85rem 1.8rem;background:var(--onyx);color:var(--cream);border:none;cursor:none;transition:all .22s;display:inline-block;}
+.btn-mission:hover{background:var(--clay-dark);}
 </style>
 </head>
 <body>
@@ -792,77 +852,143 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 ════════════════════════════════ -->
 <div id="view-marketing">
 
-<!-- ═══ HERO ═══ -->
-<section class="hero">
-  <div class="hero-bg-text">KOSIA</div>
-  <div class="hero-content">
-    <div class="hero-kicker"><span class="hero-kicker-line"></span><span class="hero-kicker-text">Modern Education for Beauty Professionals</span></div>
-    <h1 class="hero-h1">Learn the <em>science.</em><br/>Refine the craft.<br/>Build the future.</h1>
-    <p class="hero-sub">A modern education platform for beauty professionals who want to think deeper, create intentionally, and grow with real clarity — not just content.</p>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="openAuth('signup')">Explore the Academy</button>
-      <button class="btn-outline" onclick="document.getElementById('tracks').scrollIntoView({behavior:'smooth'})">See Both Tracks ↓</button>
-    </div>
-    <div class="hero-trust">
-      <div class="hero-trust-item"><span class="hero-trust-num">2</span><span class="hero-trust-label">Focused Tracks</span></div>
-      <div class="hero-trust-divider"></div>
-      <div class="hero-trust-item"><span class="hero-trust-num">16</span><span class="hero-trust-label">Course Units</span></div>
-      <div class="hero-trust-divider"></div>
-      <div class="hero-trust-item"><span class="hero-trust-num">128</span><span class="hero-trust-label">Video Modules</span></div>
-      <div class="hero-trust-divider"></div>
-      <div class="hero-trust-item"><span class="hero-trust-num">∞</span><span class="hero-trust-label">On-Demand Access</span></div>
-    </div>
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  <span class="announce-text">✦ Enrollment now open — Stylist &amp; Owner tracks available &nbsp;·&nbsp; First 50 students get lifetime access pricing &nbsp;</span>
+  <button class="announce-cta" onclick="openAuth('signup')">Enroll Now →</button>
+</div>
+
+<!-- NAV -->
+<nav id="marketingNav" style="top:36px;">
+  <div class="nav-logo">K<span class="dot">·</span>O<span class="dot">·</span>S<span class="dot">·</span>I<span class="dot">·</span>A <span style="color:var(--taupe);letter-spacing:0.14em;font-weight:300;font-size:0.86rem;margin-left:0.2rem;">Academy</span></div>
+  <ul class="nav-links">
+    <li><a href="#tracks">Programs</a></li>
+    <li><a href="#color">Color Science</a></li>
+    <li><a href="#skin-tones">Skin &amp; Eye Tones</a></li>
+    <li><a href="#curric-section">Curriculum</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#consult">Book a Call</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-signin" onclick="openAuth('login')">Sign In</button>
+    <button class="nav-enroll" onclick="openAuth('signup')">Enroll Now</button>
   </div>
-  <div class="hero-visual">
-    <div class="hero-panel">
-      <div class="hero-panel-bg"></div>
-      <div class="hero-panel-pattern"></div>
-      <div class="hero-card-float">
-        <div class="hero-card-inner">
-          <div class="hc-tag">Currently Learning</div>
-          <div class="hc-title">Color Theory &amp; Chemistry</div>
-          <div class="hc-rule"></div>
-          <p class="hc-desc">Understanding underlying pigment, tonal families, and the science of every formula.</p>
-          <div class="hc-badge">Module 3 of 8</div>
-        </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-new">
+  <div class="hero-new-inner">
+    <div class="hero-new-content reveal">
+      <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Modern Education for Beauty Professionals</div>
+      <h1 class="hero-new-h1">Stop guessing.<br/>Start <em>knowing.</em></h1>
+      <p class="hero-new-sub">KOSIA Academy teaches you the science behind every formula, the geometry behind every cut, and the strategy behind every business decision. Real understanding. Real results.</p>
+      <div class="hero-new-actions">
+        <button class="btn-hero-primary" onclick="openAuth('signup')">Start Learning Today</button>
+        <button class="btn-hero-ghost" onclick="document.getElementById('tracks').scrollIntoView({behavior:'smooth'})">See Both Programs ↓</button>
       </div>
-      <div class="hero-panel-bottom">
-        <div class="hero-panel-bottom-label">Your Progress — Color Theory</div>
-        <div class="progress-bar"><div class="progress-fill"></div></div>
-        <div class="progress-meta"><span>Module 3 of 8</span><span style="color:var(--clay);">62% complete</span></div>
+      <div class="hero-social-proof">
+        <div class="hsp-item"><span class="hsp-num">2</span><span class="hsp-label">Focused Tracks</span></div>
+        <div class="hsp-dot"></div>
+        <div class="hsp-item"><span class="hsp-num">16</span><span class="hsp-label">Course Units</span></div>
+        <div class="hsp-dot"></div>
+        <div class="hsp-item"><span class="hsp-num">128</span><span class="hsp-label">Video Modules</span></div>
+        <div class="hsp-dot"></div>
+        <div class="hsp-item"><span class="hsp-num">∞</span><span class="hsp-label">On-Demand Access</span></div>
+      </div>
+    </div>
+    <div class="hero-new-visual reveal">
+      <div class="hero-card-stack">
+        <div class="hcs-card hcs-back">
+          <div class="hcs-card-label">Owner Track</div>
+          <div class="hcs-card-title">Financial Literacy &amp; Pricing</div>
+          <div class="hcs-prog-bar"><div class="hcs-prog-fill" style="width:32%"></div></div>
+          <div class="hcs-prog-text">Module 1 · 32% complete</div>
+        </div>
+        <div class="hcs-card hcs-front">
+          <div class="hcs-card-eyebrow">Currently Learning</div>
+          <div class="hcs-card-title">Color Theory &amp; Chemistry</div>
+          <div class="hcs-rule"></div>
+          <p class="hcs-card-desc">Understanding underlying pigment, tonal families, and the science of every formula.</p>
+          <div class="hcs-badge">Module 3 of 8</div>
+          <div class="hcs-prog-bar" style="margin-top:1rem;"><div class="hcs-prog-fill" style="width:62%"></div></div>
+          <div class="hcs-prog-text">62% complete</div>
+        </div>
+        <!-- Floating tags -->
+        <div class="hcs-tag hcs-tag-1">✓ Underlying Pigment</div>
+        <div class="hcs-tag hcs-tag-2">✓ Level System</div>
+        <div class="hcs-tag hcs-tag-3">✓ Neutralization</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ MARQUEE ═══ -->
+<!-- MARQUEE -->
 <div class="marquee-wrap"><div class="marquee-track">
   <span class="marquee-item">Color Theory<span class="marquee-dot"></span></span>
   <span class="marquee-item">Haircut Architecture<span class="marquee-dot"></span></span>
   <span class="marquee-item">Corrective Formulation<span class="marquee-dot"></span></span>
   <span class="marquee-item">Salon Leadership<span class="marquee-dot"></span></span>
   <span class="marquee-item">Brand Strategy<span class="marquee-dot"></span></span>
-  <span class="marquee-item">Client Experience<span class="marquee-dot"></span></span>
+  <span class="marquee-item">Underlying Pigment<span class="marquee-dot"></span></span>
   <span class="marquee-item">Placement Theory<span class="marquee-dot"></span></span>
   <span class="marquee-item">Face Shape Analysis<span class="marquee-dot"></span></span>
-  <span class="marquee-item">Color Wheel Mastery<span class="marquee-dot"></span></span>
+  <span class="marquee-item">Financial Literacy<span class="marquee-dot"></span></span>
   <span class="marquee-item">Business Growth<span class="marquee-dot"></span></span>
   <span class="marquee-item">Color Theory<span class="marquee-dot"></span></span>
   <span class="marquee-item">Haircut Architecture<span class="marquee-dot"></span></span>
   <span class="marquee-item">Corrective Formulation<span class="marquee-dot"></span></span>
   <span class="marquee-item">Salon Leadership<span class="marquee-dot"></span></span>
   <span class="marquee-item">Brand Strategy<span class="marquee-dot"></span></span>
-  <span class="marquee-item">Client Experience<span class="marquee-dot"></span></span>
+  <span class="marquee-item">Underlying Pigment<span class="marquee-dot"></span></span>
   <span class="marquee-item">Placement Theory<span class="marquee-dot"></span></span>
   <span class="marquee-item">Face Shape Analysis<span class="marquee-dot"></span></span>
 </div></div>
 
-<!-- ═══ MISSION STATEMENT ═══ -->
+<!-- HOW CAN WE HELP -->
+<section class="help-section">
+  <div class="help-header reveal">
+    <div class="section-eyebrow" style="justify-content:center;"><span class="section-eyebrow-line"></span>How Can We Help You?<span class="section-eyebrow-line" style="transform:scaleX(-1)"></span></div>
+    <h2 class="section-h2" style="text-align:center;margin-top:0.6rem;">Take <em>action</em> today</h2>
+  </div>
+  <div class="help-grid">
+    <div class="help-card reveal" onclick="document.getElementById('tracks').scrollIntoView({behavior:'smooth'})">
+      <div class="help-icon">✂</div>
+      <div class="help-card-tag">Stylist Track</div>
+      <h3 class="help-card-title">Programs &amp; Curriculum</h3>
+      <p class="help-card-desc">Science-first education covering color theory, haircut geometry, placement, client experience, and branding. 8 units built around the <em>why</em>.</p>
+      <div class="help-card-link">Explore the Stylist Track →</div>
+    </div>
+    <div class="help-card reveal" onclick="document.getElementById('tracks').scrollIntoView({behavior:'smooth'})">
+      <div class="help-icon">◈</div>
+      <div class="help-card-tag">Owner Track</div>
+      <h3 class="help-card-title">Salon Owner Education</h3>
+      <p class="help-card-desc">Operations, hiring, financial literacy, leadership identity, marketing, and scaling frameworks. Built for the owner who wants a business that runs.</p>
+      <div class="help-card-link">Explore the Owner Track →</div>
+    </div>
+    <div class="help-card reveal" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">
+      <div class="help-icon">◎</div>
+      <div class="help-card-tag">Free Resource</div>
+      <h3 class="help-card-title">Book a Discovery Call</h3>
+      <p class="help-card-desc">Not sure which track is right for you? Book a free 20-minute call. We'll ask the right questions and map out your next steps together.</p>
+      <div class="help-card-link">Schedule Your Free Call →</div>
+    </div>
+    <div class="help-card reveal" onclick="openAuth('signup')">
+      <div class="help-icon">⬡</div>
+      <div class="help-card-tag">Community</div>
+      <h3 class="help-card-title">Join the Academy</h3>
+      <p class="help-card-desc">Get full access to your chosen track, live coaching calls, the Formula Vault, downloadable guides, and the KOSIA student community.</p>
+      <div class="help-card-link">Enroll Now →</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION SPLIT -->
 <section class="mission-section">
   <div class="mission-left reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>Why KOSIA Exists</div>
     <h2 class="section-h2">Cosmetology school taught you <em>what</em> to do.<br/>We teach you <em>why</em> it works.</h2>
     <blockquote class="about-blockquote" style="margin-top:2rem;">"We don't teach trends. We teach the architecture behind them."</blockquote>
+    <button class="btn-mission" onclick="openAuth('signup')" style="margin-top:2rem;">Start Learning Today →</button>
   </div>
   <div class="mission-right reveal">
     <p class="mission-body">Most beauty education is built around repetition — do this step, use this product, follow this technique. KOSIA is built around understanding. When you know the science of color, the geometry of a cut, and the psychology of a great client experience, you stop guessing and start creating with intention.</p>
@@ -875,7 +1001,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div>
 </section>
 
-<!-- ═══ TWO TRACKS ═══ -->
+<!-- TWO TRACKS -->
 <section id="tracks" class="track-split">
   <div class="track-panel track-panel-stylist reveal">
     <div class="track-bg-word">Stylist</div>
@@ -891,14 +1017,17 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
       <li class="track-list-item"><span class="track-dot"></span>Luxury Client Experience</li>
       <li class="track-list-item"><span class="track-dot"></span>Branding &amp; Social Media</li>
     </ul>
-    <button class="btn-track-s" onclick="openAuth('signup')">Enroll — Stylist Track →</button>
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+      <button class="btn-track-s" onclick="openAuth('signup')">Enroll — $47/mo →</button>
+      <button style="font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.82rem 1.4rem;background:transparent;border:0.5px solid var(--border-strong);color:var(--muted);cursor:none;" onclick="document.getElementById('curric-section').scrollIntoView({behavior:'smooth'})">View Curriculum</button>
+    </div>
   </div>
   <div class="track-panel track-panel-owner reveal">
     <div class="track-bg-word">Owner</div>
     <div class="track-pill">Track 02</div>
     <div class="track-label">For Salon Owners</div>
     <h2 class="track-h2">Lead with <em>clarity.</em><br/>Build something lasting.</h2>
-    <p class="track-desc">Designed for salon owners and suite holders who need more than technique. Leadership, financial, operations, and culture-building frameworks that turn a chair into a company.</p>
+    <p class="track-desc">Leadership, financial, operations, and culture-building frameworks that turn a chair into a company. Built for owners who need more than inspiration.</p>
     <ul class="track-list">
       <li class="track-list-item"><span class="track-dot"></span>Salon Operations &amp; Systems</li>
       <li class="track-list-item"><span class="track-dot"></span>Team Hiring, Culture &amp; Retention</li>
@@ -907,67 +1036,34 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
       <li class="track-list-item"><span class="track-dot"></span>Marketing &amp; Brand Authority</li>
       <li class="track-list-item"><span class="track-dot"></span>Scaling: Suite → Team → Multi-Location</li>
     </ul>
-    <button class="btn-track-o" onclick="openAuth('signup')">Enroll — Owner Track →</button>
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+      <button class="btn-track-o" onclick="openAuth('signup')">Enroll — $697/yr →</button>
+      <button style="font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.82rem 1.4rem;background:transparent;border:0.5px solid rgba(196,138,113,0.2);color:#3A3530;cursor:none;" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Book a Call First</button>
+    </div>
   </div>
 </section>
 
-<!-- ═══ OUTCOMES ═══ -->
+<!-- OUTCOMES -->
 <section class="outcomes-section">
   <div class="outcomes-header reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>What You'll Walk Away With</div>
-    <h2 class="section-h2" style="max-width:620px;">Not just technique — a <em>way of thinking</em> that never goes out of style</h2>
+    <h2 class="section-h2" style="max-width:640px;margin-top:0.6rem;">Not just technique — a <em>way of thinking</em><br/>that never goes out of style</h2>
   </div>
   <div class="outcomes-grid">
-    <div class="outcome-card reveal">
-      <div class="outcome-num">01</div>
-      <div class="outcome-icon">🎨</div>
-      <h3 class="outcome-title">Predictive Color Confidence</h3>
-      <p class="outcome-desc">You'll be able to look at any head of hair, identify the underlying pigment, predict the lift result, and formulate a correction — before touching a single tube. No more guessing. No more surprises.</p>
-      <div class="outcome-tag">Stylist &amp; Owner Track</div>
-    </div>
-    <div class="outcome-card reveal">
-      <div class="outcome-num">02</div>
-      <div class="outcome-icon">✂</div>
-      <h3 class="outcome-title">Design Vocabulary</h3>
-      <p class="outcome-desc">Understand the geometry of every cut — what creates weight, where it falls, how elevation and overdirection change the form. You'll be able to articulate and replicate any shape with intention.</p>
-      <div class="outcome-tag">Stylist Track</div>
-    </div>
-    <div class="outcome-card reveal">
-      <div class="outcome-num">03</div>
-      <div class="outcome-icon">👤</div>
-      <h3 class="outcome-title">Placement That Sculpts</h3>
-      <p class="outcome-desc">Read the face before picking up a brush. Use light and shadow to enhance features, create balance, and guide the eye. Your placements will look intentional because they will be.</p>
-      <div class="outcome-tag">Stylist Track</div>
-    </div>
-    <div class="outcome-card reveal">
-      <div class="outcome-num">04</div>
-      <div class="outcome-icon">💼</div>
-      <h3 class="outcome-title">A Business That Works for You</h3>
-      <p class="outcome-desc">Price your services with confidence. Hire the right people. Build systems that don't require you to be present for every decision. Run a salon that's sustainable — not just surviving.</p>
-      <div class="outcome-tag">Owner Track</div>
-    </div>
-    <div class="outcome-card reveal">
-      <div class="outcome-num">05</div>
-      <div class="outcome-icon">✦</div>
-      <h3 class="outcome-title">A Client Experience Worth Talking About</h3>
-      <p class="outcome-desc">Consultation frameworks, rebooking psychology, retail as education — every touchpoint elevated so clients don't just return, they refer. Loyalty built on experience, not just results.</p>
-      <div class="outcome-tag">Stylist &amp; Owner Track</div>
-    </div>
-    <div class="outcome-card reveal">
-      <div class="outcome-num">06</div>
-      <div class="outcome-icon">◈</div>
-      <h3 class="outcome-title">A Brand That Reflects Your Work</h3>
-      <p class="outcome-desc">Photography, social strategy, content planning — turn your artistry into an audience. Build a digital presence that attracts the clients you actually want to work with.</p>
-      <div class="outcome-tag">Stylist Track</div>
-    </div>
+    <div class="outcome-card reveal"><div class="outcome-num">01</div><span class="outcome-icon">🎨</span><h3 class="outcome-title">Predictive Color Confidence</h3><p class="outcome-desc">Look at any head of hair, identify the underlying pigment, predict the lift result, and formulate a correction — before touching a single tube. No more guessing.</p><span class="outcome-tag">Stylist Track</span></div>
+    <div class="outcome-card reveal"><div class="outcome-num">02</div><span class="outcome-icon">✂</span><h3 class="outcome-title">Design Vocabulary</h3><p class="outcome-desc">Understand the geometry of every cut — what creates weight, where it falls, how elevation changes the form. Articulate and replicate any shape with intention.</p><span class="outcome-tag">Stylist Track</span></div>
+    <div class="outcome-card reveal"><div class="outcome-num">03</div><span class="outcome-icon">👤</span><h3 class="outcome-title">Placement That Sculpts</h3><p class="outcome-desc">Read the face before picking up a brush. Use light and shadow to enhance features, create balance, and guide the eye. Intentional every time.</p><span class="outcome-tag">Stylist Track</span></div>
+    <div class="outcome-card reveal"><div class="outcome-num">04</div><span class="outcome-icon">💼</span><h3 class="outcome-title">A Business That Works for You</h3><p class="outcome-desc">Price confidently. Hire intentionally. Build systems that don't require you to be present for every decision. Sustainable — not just surviving.</p><span class="outcome-tag">Owner Track</span></div>
+    <div class="outcome-card reveal"><div class="outcome-num">05</div><span class="outcome-icon">✦</span><h3 class="outcome-title">A Client Experience Worth Talking About</h3><p class="outcome-desc">Consultation frameworks, rebooking psychology, retail as education — every touchpoint elevated. Clients don't just return, they refer.</p><span class="outcome-tag">Both Tracks</span></div>
+    <div class="outcome-card reveal"><div class="outcome-num">06</div><span class="outcome-icon">◈</span><h3 class="outcome-title">A Brand That Reflects Your Work</h3><p class="outcome-desc">Photography, social strategy, content planning — turn your artistry into an audience. Attract the clients you actually want to work with.</p><span class="outcome-tag">Stylist Track</span></div>
   </div>
 </section>
 
-<!-- ═══ COLOR WHEEL ═══ -->
+<!-- COLOR WHEEL -->
 <section id="color" class="color-section">
   <div class="reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>Color Science</div>
-    <h2 class="section-h2">Understanding the <em>color wheel</em> —<br/>the foundation of every formula</h2>
+    <h2 class="section-h2" style="margin-top:0.6rem;">Understanding the <em>color wheel</em> —<br/>the foundation of every formula</h2>
   </div>
   <div class="color-grid">
     <div class="reveal">
@@ -989,7 +1085,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
         <line x1="105" y1="200" x2="295" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
         <line x1="127" y1="127" x2="273" y2="273" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
         <line x1="273" y1="127" x2="127" y2="273" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-        <text x="200" y="43" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Plus Jakarta Sans" letter-spacing="1.5">RED</text>
+        <text x="200" y="43" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Plus Jakarta Sans">RED</text>
         <text x="302" y="83" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Plus Jakarta Sans">R-O</text>
         <text x="358" y="168" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Plus Jakarta Sans">ORG</text>
         <text x="358" y="242" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Plus Jakarta Sans">Y-O</text>
@@ -1017,7 +1113,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
       <div>
         <div class="section-eyebrow" style="color:var(--clay);margin-bottom:0.6rem;"><span class="section-eyebrow-line" style="background:var(--clay);"></span>Complementary Relationships</div>
         <h3 class="ct-block-title">Opposites cancel — that's the science of neutralization</h3>
-        <p class="ct-block-body">Colors directly across the wheel are complements. When mixed, they neutralize each other — why blue-violet toner kills yellow brassiness, and green ash cancels red. Every correction formula is built on this single law.</p>
+        <p class="ct-block-body">Colors directly across the wheel are complements. When mixed, they neutralize — why blue-violet toner kills yellow brassiness, and green ash cancels red. Every correction formula is built on this single law.</p>
         <div class="ct-comp-grid">
           <div class="ct-comp-pair"><div class="ct-comp-swatch" style="background:#E8322C"></div><div class="ct-comp-label"><strong>Red</strong>Neutralize with Green / Blue-Green</div></div>
           <div class="ct-comp-pair"><div class="ct-comp-swatch" style="background:#F7941D"></div><div class="ct-comp-label"><strong>Orange</strong>Neutralize with Blue Ash</div></div>
@@ -1026,24 +1122,18 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
         </div>
       </div>
       <div class="ct-rule"></div>
-      <div>
-        <h3 class="ct-block-title">Warm vs. Cool in Formulation</h3>
-        <p class="ct-block-body">The warm half (Reds, Oranges, Yellows) is what hair reveals as you lift. The cool half (Blues, Greens, Violets) is your neutralizing toolkit. A great colorist reads the wheel instinctively before opening any tube.</p>
-      </div>
+      <div><h3 class="ct-block-title">Warm vs. Cool in Formulation</h3><p class="ct-block-body">The warm half (Reds, Oranges, Yellows) is what hair reveals as you lift. The cool half (Blues, Greens, Violets) is your neutralizing toolkit. A great colorist reads the wheel instinctively before opening any tube.</p></div>
       <div class="ct-rule"></div>
-      <div>
-        <h3 class="ct-block-title">Primary, Secondary &amp; Tertiary</h3>
-        <p class="ct-block-body">The three primaries — Red, Yellow, Blue — cannot be mixed. Every other color is born from them. Tertiaries are the exact tones you encounter as underlying pigment during lift — you will see them on every client.</p>
-      </div>
+      <div><h3 class="ct-block-title">Primary, Secondary &amp; Tertiary</h3><p class="ct-block-body">The three primaries — Red, Yellow, Blue — cannot be mixed. Every other color is born from them. Tertiaries are the exact tones you encounter as underlying pigment during lift — every client, every time.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ LEVEL SYSTEM ═══ -->
+<!-- LEVEL SYSTEM -->
 <section class="levels-section">
   <div class="levels-intro reveal">
-    <div><div class="section-eyebrow"><span class="section-eyebrow-line"></span>The Level System</div><h2 class="section-h2">What lives <em>underneath</em><br/>every level</h2></div>
-    <p class="levels-sub">Every natural level contains underlying pigment revealed during lifting. Understanding what emerges at each level is the difference between a predictable result and a corrective nightmare. This is the foundation of all formulation science.</p>
+    <div><div class="section-eyebrow"><span class="section-eyebrow-line"></span>The Level System</div><h2 class="section-h2" style="margin-top:0.5rem;">What lives <em>underneath</em><br/>every level</h2></div>
+    <p class="levels-sub">Every natural level contains underlying pigment revealed during lifting. Understanding what emerges at each level is the difference between a predictable result and a corrective nightmare.</p>
   </div>
   <div class="lgb-wrap reveal">
     <div class="lgb-lvl"><div class="lgb-bar" style="height:29px;background:#1A0A00;"></div><div class="lgb-n">1</div></div>
@@ -1074,378 +1164,79 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </table>
 </section>
 
-<!-- ═══ PLACEMENT ═══ -->
+<!-- PLACEMENT -->
 <section class="placement-section">
   <div class="placement-intro reveal">
-    <div><div class="section-eyebrow"><span class="section-eyebrow-line"></span>Placement Theory</div><h2 class="section-h2">Read the face first.<br/><em>Then</em> choose your technique.</h2></div>
-    <div><p class="placement-sub">Color placement is a deliberate act of light and shadow — designed to enhance, balance, and sculpt facial features. Before any technique decision, a skilled colorist maps the face: where should the eye travel? What to soften? What to illuminate?</p></div>
+    <div><div class="section-eyebrow"><span class="section-eyebrow-line"></span>Placement Theory</div><h2 class="section-h2" style="margin-top:0.5rem;">Read the face first.<br/><em>Then</em> choose your technique.</h2></div>
+    <div><p class="placement-sub">Color placement is a deliberate act of light and shadow — designed to enhance, balance, and sculpt facial features. Before any technique decision, map the face first.</p></div>
   </div>
   <div class="face-grid">
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="16" ry="22" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="28" y1="6" x2="28" y2="50" stroke="rgba(196,138,113,0.2)" stroke-width="0.5" stroke-dasharray="2,3"/></svg></div><div><div class="face-title">Oval</div><div class="face-sub">The balanced standard</div></div></div><p class="face-desc">The ideal proportional shape — goal is to maintain harmony. Any technique works; client preference guides the decision.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Face-framing temple to chin, following growth pattern</div><div class="face-tip"><span class="face-tip-dot"></span>Balayage flowing naturally with hair movement</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid over-brightening at crown — preserve balance</div></div></div>
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="20" ry="20" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="28" y1="8" x2="28" y2="48" stroke="rgba(196,138,113,0.25)" stroke-width="1" stroke-dasharray="2,2"/></svg></div><div><div class="face-title">Round</div><div class="face-sub">Create length &amp; definition</div></div></div><p class="face-desc">Full cheeks and rounded jaw. Placement creates the illusion of length — vertical placement draws the eye up, not across.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Highlights at crown and center panel — not sides</div><div class="face-tip"><span class="face-tip-dot"></span>Keep sides darker to visually recede width</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid horizontal banding at cheek level</div></div></div>
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><rect x="10" y="8" width="36" height="40" rx="4" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Square</div><div class="face-sub">Soften the angles</div></div></div><p class="face-desc">Strong jaw and wide forehead. Placement softens angular corners through diagonal light flow and away-from-jaw brightness.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Balayage sweeping inward, away from jaw corners</div><div class="face-tip"><span class="face-tip-dot"></span>Light highlights at temples — avoid jaw-level brightness</div><div class="face-tip"><span class="face-tip-dot"></span>Diagonal placement creates softness and movement</div></div></div>
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><path d="M28,48 C28,48 8,34 8,20 C8,12 14,8 20,10 C24,11 28,16 28,16 C28,16 32,11 36,10 C42,8 48,12 48,20 C48,34 28,48 28,48Z" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Heart</div><div class="face-sub">Balance the forehead</div></div></div><p class="face-desc">Widest at the forehead, tapering to a narrow chin. Minimize forehead width while adding brightness at mid-lengths and ends.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Minimize highlights at forehead hairline center</div><div class="face-tip"><span class="face-tip-dot"></span>Add brightness at mid-lengths and ends</div><div class="face-tip"><span class="face-tip-dot"></span>Lighter ends draw eye down to chin, creating balance</div></div></div>
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="12" ry="24" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="16" y1="28" x2="40" y2="28" stroke="rgba(196,138,113,0.3)" stroke-width="1" stroke-dasharray="2,2"/></svg></div><div><div class="face-title">Long / Oblong</div><div class="face-sub">Add visual width</div></div></div><p class="face-desc">Narrow and extended. Placement creates horizontal visual interest — the illusion of width rather than length.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Highlights through sides from temple to cheekbone</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid crown-heavy placement — adds perceived length</div><div class="face-tip"><span class="face-tip-dot"></span>Horizontal banding at cheek level is flattering here</div></div></div>
-    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><polygon points="28,4 48,28 28,52 8,28" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Diamond</div><div class="face-sub">Widen forehead &amp; chin</div></div></div><p class="face-desc">Narrow at forehead and chin, widest at cheekbones. Add visual mass where face is narrowest — top and bottom.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Bright face-frame at temples and hairline</div><div class="face-tip"><span class="face-tip-dot"></span>Lighter ends draw attention to chin</div><div class="face-tip"><span class="face-tip-dot"></span>Keep cheekbone area darker — don't widen the widest point</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="16" ry="22" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="28" y1="6" x2="28" y2="50" stroke="rgba(196,138,113,0.2)" stroke-width="0.5" stroke-dasharray="2,3"/></svg></div><div><div class="face-title">Oval</div><div class="face-sub">The balanced standard</div></div></div><p class="face-desc">The ideal proportional shape — goal is to maintain harmony. Any technique works; client preference guides the decision.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Face-framing temple to chin, following growth pattern</div><div class="face-tip"><span class="face-tip-dot"></span>Balayage flowing naturally with hair movement</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid over-brightening at crown</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="20" ry="20" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="28" y1="8" x2="28" y2="48" stroke="rgba(196,138,113,0.25)" stroke-width="1" stroke-dasharray="2,2"/></svg></div><div><div class="face-title">Round</div><div class="face-sub">Create length &amp; definition</div></div></div><p class="face-desc">Placement creates the illusion of length — vertical placement draws the eye up, not across.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Highlights at crown and center panel — not sides</div><div class="face-tip"><span class="face-tip-dot"></span>Keep sides darker to visually recede width</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid horizontal banding at cheek level</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><rect x="10" y="8" width="36" height="40" rx="4" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Square</div><div class="face-sub">Soften the angles</div></div></div><p class="face-desc">Placement softens angular corners through diagonal light flow and away-from-jaw brightness.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Balayage sweeping inward, away from jaw corners</div><div class="face-tip"><span class="face-tip-dot"></span>Light highlights at temples — avoid jaw-level brightness</div><div class="face-tip"><span class="face-tip-dot"></span>Diagonal placement creates softness</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><path d="M28,48 C28,48 8,34 8,20 C8,12 14,8 20,10 C24,11 28,16 28,16 C28,16 32,11 36,10 C42,8 48,12 48,20 C48,34 28,48 28,48Z" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Heart</div><div class="face-sub">Balance the forehead</div></div></div><p class="face-desc">Minimize forehead width while adding brightness at mid-lengths and ends.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Minimize highlights at forehead hairline center</div><div class="face-tip"><span class="face-tip-dot"></span>Add brightness at mid-lengths and ends</div><div class="face-tip"><span class="face-tip-dot"></span>Lighter ends draw eye down to chin</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="12" ry="24" fill="none" stroke="#C48A71" stroke-width="1"/><line x1="16" y1="28" x2="40" y2="28" stroke="rgba(196,138,113,0.3)" stroke-width="1" stroke-dasharray="2,2"/></svg></div><div><div class="face-title">Long / Oblong</div><div class="face-sub">Add visual width</div></div></div><p class="face-desc">Placement creates horizontal visual interest — the illusion of width rather than length.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Highlights through sides from temple to cheekbone</div><div class="face-tip"><span class="face-tip-dot"></span>Avoid crown-heavy placement</div><div class="face-tip"><span class="face-tip-dot"></span>Horizontal banding at cheek level works here</div></div></div>
+    <div class="face-card reveal"><div class="face-hd"><div class="face-icon"><svg viewBox="0 0 56 56"><polygon points="28,4 48,28 28,52 8,28" fill="none" stroke="#C48A71" stroke-width="1"/></svg></div><div><div class="face-title">Diamond</div><div class="face-sub">Widen forehead &amp; chin</div></div></div><p class="face-desc">Add visual mass where face is narrowest — top and bottom.</p><div class="face-tips"><div class="face-tip"><span class="face-tip-dot"></span>Bright face-frame at temples and hairline</div><div class="face-tip"><span class="face-tip-dot"></span>Lighter ends draw attention to chin</div><div class="face-tip"><span class="face-tip-dot"></span>Keep cheekbone area darker</div></div></div>
   </div>
   <div class="principles-row">
     <div class="pcard"><div class="pcard-num">01</div><div class="pcard-title">Light Advances</div><p class="pcard-body">Lighter tones draw the eye forward and add visual weight. Where you place brightness, you create prominence.</p></div>
     <div class="pcard"><div class="pcard-num">02</div><div class="pcard-title">Dark Recedes</div><p class="pcard-body">Depth and shadow push areas back visually — creating the illusion of narrowing or slimming.</p></div>
     <div class="pcard"><div class="pcard-num">03</div><div class="pcard-title">Contrast Directs</div><p class="pcard-body">Vertical placement elongates; horizontal widens. Choose the direction that serves the face.</p></div>
-    <div class="pcard"><div class="pcard-num">04</div><div class="pcard-title">Read the Face First</div><p class="pcard-body">No technique decision before mapping facial structure. The face is the canvas — placement is in service of it.</p></div>
+    <div class="pcard"><div class="pcard-num">04</div><div class="pcard-title">Read the Face First</div><p class="pcard-body">No technique decision before mapping facial structure. The face is the canvas.</p></div>
   </div>
 </section>
 
-<!-- ═══ CURRICULUM PREVIEW ═══ -->
-<!-- ═══ SKIN & EYE TONES ═══ -->
+<!-- SKIN & EYE TONES -->
 <section id="skin-tones" class="tones-section">
   <div class="reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>Skin &amp; Eye Tone Theory</div>
-    <h2 class="section-h2">The right color <em>for every client</em> —<br/>reading undertones before you formulate</h2>
+    <h2 class="section-h2" style="margin-top:0.6rem;">The right color <em>for every client</em> —<br/>reading undertones before you formulate</h2>
   </div>
   <div class="tones-intro reveal">
     <p class="tones-intro-body">Hair color does not exist in isolation — it lives against a client's skin tone and interacts with their eye color every single day. Understanding warm, cool, and neutral undertones, and knowing which hair colors complement or clash with them, is what separates a technically skilled colorist from a truly transformative one. Read the person, then formulate.</p>
-    <p class="tones-intro-body">The Fitzpatrick scale gives us a clinical framework for skin classification. But as colorists, we layer a second system on top: <em>undertones</em> — the warm (golden, peachy, yellow), cool (pink, red, bluish), and neutral (balanced mix) tones that sit beneath the surface and determine how a hair color will read in the light.</p>
+    <p class="tones-intro-body">The Fitzpatrick scale gives us a clinical framework for skin classification. But as colorists, we layer a second system on top: <em style="color:var(--clay-light);font-style:italic;">undertones</em> — the warm (golden, peachy, yellow), cool (pink, red, bluish), and neutral tones that sit beneath the surface and determine how a hair color will read in the light.</p>
   </div>
-
-  <!-- TABS -->
   <div class="tones-tabs">
     <button class="tone-tab active" onclick="switchToneTab(this,'skin')">Skin Tones</button>
     <button class="tone-tab" onclick="switchToneTab(this,'eyes')">Eye Tones</button>
     <button class="tone-tab" onclick="switchToneTab(this,'theory')">Warm · Cool · Neutral</button>
   </div>
-
-  <!-- SKIN TONE PANEL -->
   <div class="tone-panel active" id="tone-skin">
     <div class="skin-grid">
-
-      <!-- FAIR -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#F5DFD0;"></div>
-            <div class="skin-swatch" style="background:#ECC9B2;"></div>
-            <div class="skin-swatch" style="background:#E8BFA0;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick I–II</div><div class="skin-card-name">Fair Skin</div></div>
-        </div>
-        <p class="skin-card-desc">Very light skin that burns easily. Undertones range from cool pink/rosy to warm peachy-ivory. The client's vein color and how they react to sun are your best indicators: blue-purple veins = cool, green veins = warm.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Icy blonde, platinum, champagne, ash — cool tones echo the natural skin, creating harmony. Avoid brassy warm oranges which read harsh.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Golden blonde, strawberry, warm copper, honey — golden tones amplify the peachy warmth beautifully. Avoid stark ash which can make skin look washed out.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Avoid</div><div class="skin-comp-val">Jet black (too stark unless intentional), heavy orange brassiness, aggressive red-violet.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#F5EBD8;"></div>Champagne</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#E8DCC8;"></div>Platinum</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A85A;"></div>Golden Honey</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#C07845;"></div>Warm Copper</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-      <!-- LIGHT / MEDIUM -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#D4A882;"></div>
-            <div class="skin-swatch" style="background:#C49070;"></div>
-            <div class="skin-swatch" style="background:#B87A58;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick III</div><div class="skin-card-name">Light / Medium</div></div>
-        </div>
-        <p class="skin-card-desc">Skin that tans moderately and rarely burns severely. The most versatile range — undertones can be warm (golden, olive-warm) or cool (neutral-pink). Most clients in this range can wear a wide spectrum of hair colors with the right saturation.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Mocha brunette, cool espresso, mushroom blonde, soft ash. Avoid overtly warm reds which can make neutral-pink skin look ruddy.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Caramel, toffee, warm chestnut, butterscotch balayage. The golden warmth in the skin is amplified beautifully by these tones.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Versatile options</div><div class="skin-comp-val">Sandy blonde, light brown with face-frame highlights, dimensional brunette with warmth at mid-lengths.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#C8A060;"></div>Caramel</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#8B6040;"></div>Chestnut</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#D8C090;"></div>Sandy Blonde</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#7A6058;"></div>Mocha</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-      <!-- OLIVE -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#A87850;"></div>
-            <div class="skin-swatch" style="background:#9A6840;"></div>
-            <div class="skin-swatch" style="background:#8A6035;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick III–IV</div><div class="skin-card-name">Olive Skin</div></div>
-        </div>
-        <p class="skin-card-desc">Naturally warm with a golden-green cast. Olive skin has inherent warmth and richness — the goal is to work with it, not fight it. Cool, ashy, or platinum tones on olive skin can look grey or washed out without proper warmth underneath.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Warm gold, rich chestnut, cognac, auburn, dark chocolate with caramel highlights</em> — warmth plays beautifully against the golden-green cast.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Use warm blonde highlights rather than ash. Face-framing at temples in golden honey or warm butterscotch creates radiance against olive skin.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Use caution</div><div class="skin-comp-val">Platinum and stark ash can look greenish or grey. If going lighter, always finish with a warm toner — never ice or blue-based.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#B07040;"></div>Cognac</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#7A4020;"></div>Auburn</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Warm Gold</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#4A2810;"></div>Dark Choc</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-      <!-- MEDIUM DARK -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#7A4A28;"></div>
-            <div class="skin-swatch" style="background:#6A3A1E;"></div>
-            <div class="skin-swatch" style="background:#5A3018;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick IV–V</div><div class="skin-card-name">Medium Dark</div></div>
-        </div>
-        <p class="skin-card-desc">Rich, warm-to-neutral undertones with deep melanin. This range includes warm brown, red-brown, and cool-neutral tones. Hair color should enhance the depth and richness of the skin — not contrast harshly against it without intention.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich copper, warm auburn, honey bronze, deep chocolate with bright face-frame</em> — these create dimensional contrast without washing the skin.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Balayage with caramel or honey — placed at face frame and mid-lengths to create brightness and dimension. Avoid highlighting all over which can lighten the overall depth too much.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Use caution</div><div class="skin-comp-val">Stark platinum without proper transition reads harsh. Ash blonde can look grey against warm-undertone skin in this range.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#D49040;"></div>Honey</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#6A3818;"></div>Auburn</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#2A1508;"></div>Deep Choc</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-      <!-- DEEP WARM -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#4A2808;"></div>
-            <div class="skin-swatch" style="background:#3A2008;"></div>
-            <div class="skin-swatch" style="background:#2C1808;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick V–VI Warm</div><div class="skin-card-name">Deep Warm</div></div>
-        </div>
-        <p class="skin-card-desc">Deep, warm undertones — rich red-brown to mahogany. The warmth in the skin is a strength, not something to fight. Color choices should celebrate this depth and add dimension rather than trying to lift dramatically.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich mahogany, warm red, deep auburn, cognac with bronze highlights</em> — colours that live in the warm family, amplifying the depth and richness.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Highlights</div><div class="skin-comp-val">Copper face-framing and scattered bronze balayage create warmth and dimension. Bright gold at temples is stunning against deep warm skin.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Burgundy, deep plum, and wine reds complement deep warm skin beautifully. The depth of the skin holds and enriches these vivid tones.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#8B2010;"></div>Mahogany</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#C04820;"></div>Copper</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#B85030;"></div>Auburn</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#601830;"></div>Burgundy</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-      <!-- DEEP COOL -->
-      <div class="skin-card reveal">
-        <div class="skin-card-header">
-          <div class="skin-swatch-wrap">
-            <div class="skin-swatch" style="background:#2A1A18;"></div>
-            <div class="skin-swatch" style="background:#1E1010;"></div>
-            <div class="skin-swatch" style="background:#150C0A;"></div>
-          </div>
-          <div><div class="skin-card-label">Fitzpatrick V–VI Cool</div><div class="skin-card-name">Deep Cool</div></div>
-        </div>
-        <p class="skin-card-desc">Deep skin with cool blue-red or neutral undertones. This range often has a natural blue-black depth that is extraordinary. Cool hair tones harmonize with the cool undertone while warm tones create intentional contrast.</p>
-        <div class="skin-complements">
-          <div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Blue-black, cool espresso, burgundy-violet, dark plum, jet black</em> — cool tones align with the skin's blue undertone and create a polished, editorial result.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Warm contrast</div><div class="skin-comp-val">Strategic warm face-framing in honey or copper creates intentional, beautiful contrast. Used sparingly, warmth near the face illuminates without clashing.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Deep violet, midnight blue, and blue-black are especially striking — the cool skin's depth holds and enriches these tones in a way no other skin range can.</div></div>
-          <div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div>
-            <div class="skin-swatches-row">
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#0A0A18;"></div>Blue-Black</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#3A1040;"></div>Deep Plum</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#601840;"></div>Burgundy</div>
-              <div class="skin-color-chip"><div class="chip-dot" style="background:#1A0A08;"></div>Espresso</div>
-            </div>
-          </div></div>
-        </div>
-      </div>
-
-    </div><!-- end skin-grid -->
-  </div><!-- end tone-skin -->
-
-  <!-- EYE TONE PANEL -->
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#F5DFD0;"></div><div class="skin-swatch" style="background:#ECC9B2;"></div><div class="skin-swatch" style="background:#E8BFA0;"></div></div><div><div class="skin-card-label">Fitzpatrick I–II</div><div class="skin-card-name">Fair Skin</div></div></div><p class="skin-card-desc">Very light skin that burns easily. Undertones range from cool pink/rosy to warm peachy-ivory.</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Icy blonde, platinum, champagne, ash.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Golden blonde, strawberry, warm copper, honey.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Avoid</div><div class="skin-comp-val">Jet black (too stark), heavy orange brassiness.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#F5EBD8;"></div>Champagne</div><div class="skin-color-chip"><div class="chip-dot" style="background:#E8DCC8;"></div>Platinum</div><div class="skin-color-chip"><div class="chip-dot" style="background:#D4A85A;"></div>Golden Honey</div><div class="skin-color-chip"><div class="chip-dot" style="background:#C07845;"></div>Warm Copper</div></div></div></div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#D4A882;"></div><div class="skin-swatch" style="background:#C49070;"></div><div class="skin-swatch" style="background:#B87A58;"></div></div><div><div class="skin-card-label">Fitzpatrick III</div><div class="skin-card-name">Light / Medium</div></div></div><p class="skin-card-desc">The most versatile range — undertones can be warm (golden, olive-warm) or cool (neutral-pink).</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Cool Undertone</div><div class="skin-comp-val"><em>Best:</em> Mocha brunette, cool espresso, mushroom blonde, soft ash.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Warm Undertone</div><div class="skin-comp-val"><em>Best:</em> Caramel, toffee, warm chestnut, butterscotch balayage.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#C8A060;"></div>Caramel</div><div class="skin-color-chip"><div class="chip-dot" style="background:#8B6040;"></div>Chestnut</div><div class="skin-color-chip"><div class="chip-dot" style="background:#D8C090;"></div>Sandy Blonde</div><div class="skin-color-chip"><div class="chip-dot" style="background:#7A6058;"></div>Mocha</div></div></div></div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#A87850;"></div><div class="skin-swatch" style="background:#9A6840;"></div><div class="skin-swatch" style="background:#8A6035;"></div></div><div><div class="skin-card-label">Fitzpatrick III–IV</div><div class="skin-card-name">Olive Skin</div></div></div><p class="skin-card-desc">Naturally warm with a golden-green cast. Work with it, not against it.</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Warm gold, rich chestnut, cognac, auburn</em> — warmth plays beautifully against the golden-green cast.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Use caution</div><div class="skin-comp-val">Platinum and stark ash can look greenish. Always finish with a warm toner.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#B07040;"></div>Cognac</div><div class="skin-color-chip"><div class="chip-dot" style="background:#7A4020;"></div>Auburn</div><div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Warm Gold</div><div class="skin-color-chip"><div class="chip-dot" style="background:#4A2810;"></div>Dark Choc</div></div></div></div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#7A4A28;"></div><div class="skin-swatch" style="background:#6A3A1E;"></div><div class="skin-swatch" style="background:#5A3018;"></div></div><div><div class="skin-card-label">Fitzpatrick IV–V</div><div class="skin-card-name">Medium Dark</div></div></div><p class="skin-card-desc">Rich, warm-to-neutral undertones with deep melanin. Color should enhance depth.</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich copper, warm auburn, honey bronze, deep chocolate</em> with bright face-frame.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div><div class="skin-color-chip"><div class="chip-dot" style="background:#D49040;"></div>Honey</div><div class="skin-color-chip"><div class="chip-dot" style="background:#6A3818;"></div>Auburn</div><div class="skin-color-chip"><div class="chip-dot" style="background:#2A1508;"></div>Deep Choc</div></div></div></div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#4A2808;"></div><div class="skin-swatch" style="background:#3A2008;"></div><div class="skin-swatch" style="background:#2C1808;"></div></div><div><div class="skin-card-label">Fitzpatrick V–VI Warm</div><div class="skin-card-name">Deep Warm</div></div></div><p class="skin-card-desc">Deep, warm undertones. The warmth is a strength — color choices should celebrate it.</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Rich mahogany, warm red, deep auburn, cognac with bronze highlights.</em></div></div><div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Burgundy, deep plum, and wine reds complement deep warm skin beautifully.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#8B2010;"></div>Mahogany</div><div class="skin-color-chip"><div class="chip-dot" style="background:#C04820;"></div>Copper</div><div class="skin-color-chip"><div class="chip-dot" style="background:#601830;"></div>Burgundy</div></div></div></div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-header"><div class="skin-swatch-wrap"><div class="skin-swatch" style="background:#2A1A18;"></div><div class="skin-swatch" style="background:#1E1010;"></div><div class="skin-swatch" style="background:#150C0A;"></div></div><div><div class="skin-card-label">Fitzpatrick V–VI Cool</div><div class="skin-card-name">Deep Cool</div></div></div><p class="skin-card-desc">Deep skin with cool blue-red or neutral undertones. Cool tones harmonize beautifully.</p><div class="skin-complements"><div class="skin-complement-row"><div class="skin-comp-key">Best tones</div><div class="skin-comp-val"><em>Blue-black, cool espresso, burgundy-violet, dark plum.</em></div></div><div class="skin-complement-row"><div class="skin-comp-key">Bold choices</div><div class="skin-comp-val">Deep violet and midnight blue are especially striking against deep cool skin.</div></div><div class="skin-complement-row"><div class="skin-comp-key">Color chips</div><div><div class="skin-swatches-row"><div class="skin-color-chip"><div class="chip-dot" style="background:#0A0A18;"></div>Blue-Black</div><div class="skin-color-chip"><div class="chip-dot" style="background:#3A1040;"></div>Deep Plum</div><div class="skin-color-chip"><div class="chip-dot" style="background:#1A0A08;"></div>Espresso</div></div></div></div></div></div>
+    </div>
+  </div>
   <div class="tone-panel" id="tone-eyes">
     <div class="eye-grid">
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #4A8BB0 0%, #2A5A80 50%, #1A3A60 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Blue Eyes</div><div class="eye-card-sub">Cool · Light · Striking</div></div>
-        </div>
-        <p class="eye-card-desc">Blue eyes are intensified by contrasting warm hair tones — the warm-cool interplay makes both the eyes and the hair color pop. Cool hair tones create a harmonious, soft, monochromatic look.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm golden blonde, strawberry, copper, caramel</em> — the warmth creates contrast that makes blue irises appear more vivid and intense.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Soften with</div><div class="eye-rec-val">Icy blonde, platinum, silver, cool ash — harmonizes with the cool iris for a softer, editorial look.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Brassy orange without intention — competes with the eye colour rather than framing it.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Deep chocolate or black creates dramatic contrast — blue eyes appear to "pop" against very dark backgrounds.</div></div>
-        </div>
-      </div>
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #7AB870 0%, #508840 50%, #2A5820 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Green Eyes</div><div class="eye-card-sub">Warm-Cool · Rare · Versatile</div></div>
-        </div>
-        <p class="eye-card-desc">Green eyes contain both warm (yellow-green) and cool (blue-green) tones depending on the individual. They are most intensified by red and auburn tones — complementary colors on the wheel directly opposite green.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Auburn, warm red, copper, chestnut</em> — red and red-brown are the complements to green on the colour wheel. These make green eyes appear deeper and more vivid.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Warm option</div><div class="eye-rec-val">Golden blonde and honey amplify the yellow-green tones in the iris for a warm, radiant effect.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Cool option</div><div class="eye-rec-val">Ash brown and mushroom tones harmonize with blue-green irises for a sophisticated, muted look.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid red or bright copper — green eyes against warm red hair is one of the most striking combinations in colour theory.</div></div>
-        </div>
-      </div>
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #8B6840 0%, #6A4820 50%, #4A3010 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Hazel Eyes</div><div class="eye-card-sub">Mixed · Warm · Changeable</div></div>
-        </div>
-        <p class="eye-card-desc">Hazel eyes shift between green, brown, and gold depending on lighting and clothing. Their warmth makes them one of the most versatile eye tones — they respond beautifully to both warm and jewel-toned hair colours.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm auburn, amber, golden brown, copper</em> — echoing the gold-green in hazel eyes with warm hair tones creates a cohesive, glowing result.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Jewel tones</div><div class="eye-rec-val">Deep plum and rich burgundy bring out the green in hazel eyes — the contrast between warm-red hair and green iris reads beautifully.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Caramel effect</div><div class="eye-rec-val">Warm caramel balayage near the face reflects warmth into the eyes, making the golden flecks in hazel irises more pronounced.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy ash tones can grey out hazel eyes and mute their warmth. Always finish with a warm toner if lightening.</div></div>
-        </div>
-      </div>
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #6A4020 0%, #4A2808 50%, #2A1505 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Warm Brown Eyes</div><div class="eye-card-sub">Warm · Rich · Universal</div></div>
-        </div>
-        <p class="eye-card-desc">Warm brown eyes — amber to honey-brown — have a natural warmth and richness that pairs with almost any hair colour. The key is choosing tones that amplify the depth and luminosity of the iris rather than flattening it.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm chocolate, caramel, golden auburn, honey blonde</em> — warm tones that echo the iris amplify the eye's natural richness and glow.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Icy blonde and platinum create high contrast that makes warm brown eyes stand out dramatically — particularly effective on medium-dark skin tones.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Rich tones</div><div class="eye-rec-val">Deep espresso, warm black, and dark chocolate with face-frame highlights create depth and make the warmth in the iris glow.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid copper or warm red — warm brown eyes against a rich copper-red base is deeply harmonious and striking.</div></div>
-        </div>
-      </div>
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #3A2820 0%, #201510 50%, #100A08 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Deep Brown Eyes</div><div class="eye-card-sub">Cool-Neutral · Deep · Versatile</div></div>
-        </div>
-        <p class="eye-card-desc">Deep brown eyes — nearly black — are neutral in undertone and extraordinarily versatile. The depth of the iris means almost any hair colour reads well. The goal is to choose tones that illuminate the face rather than compete with the eye.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Rich black, deep espresso, blue-black, dark chocolate</em> — the iris depth is maximised when hair tones are similarly rich. Contrast occurs through face-framing highlights.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Bold platinum or ash blonde — the high contrast between very light hair and very dark eyes is editorial and dramatic. Requires carefully chosen skin tone pairing.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Warm option</div><div class="eye-rec-val">Warm chestnut and copper add warmth without competing — the deep iris holds its presence against warm tones.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Vivid option</div><div class="eye-rec-val">Deep plum, navy, midnight — dark fantasy tones read beautifully because the iris depth grounds them.</div></div>
-        </div>
-      </div>
-
-      <div class="eye-card reveal">
-        <div class="eye-card-header">
-          <div class="eye-iris" style="background:radial-gradient(circle at 40% 40%, #788090 0%, #505870 50%, #2A3050 100%);">
-            <div class="eye-iris-pupil"></div>
-          </div>
-          <div><div class="eye-card-name">Grey / Steel Eyes</div><div class="eye-card-sub">Cool · Rare · Editorial</div></div>
-        </div>
-        <p class="eye-card-desc">Grey and steel-blue eyes are cool and silvery — they belong firmly in the cool family and are most intensified by either harmonising cool tones or bold warm contrast. They have a unique chameleon quality that shifts in different lighting.</p>
-        <div class="eye-recommendations">
-          <div class="eye-rec-row"><div class="eye-rec-label">Harmonise</div><div class="eye-rec-val"><em>Silver, platinum, icy ash, moonstone blonde</em> — harmonising with the cool iris creates an ethereal, monochromatic editorial look that is striking and modern.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Warm auburn or copper — warm-cool contrast makes grey eyes appear more blue or blue-green, intensifying their colour.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy orange-brassy tones — they compete with the cool iris in an unflattering way. Warm tones must be controlled and intentional.</div></div>
-          <div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Graphite or dark ash — very dark cool hair against grey eyes is an editorial statement that works particularly well with cool skin undertones.</div></div>
-        </div>
-      </div>
-
-    </div><!-- end eye-grid -->
-  </div><!-- end tone-eyes -->
-
-  <!-- WARM / COOL / NEUTRAL THEORY PANEL -->
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#4A8BB0 0%,#2A5A80 50%,#1A3A60 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Blue Eyes</div><div class="eye-card-sub">Cool · Light · Striking</div></div></div><p class="eye-card-desc">Blue eyes are intensified by contrasting warm hair tones — the warm-cool interplay makes both pop.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm golden blonde, strawberry, copper, caramel</em> — warmth creates contrast.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Soften with</div><div class="eye-rec-val">Icy blonde, platinum, silver — harmonizes with the cool iris.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Brassy orange without intention — competes with the eye colour.</div></div></div></div>
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#7AB870 0%,#508840 50%,#2A5820 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Green Eyes</div><div class="eye-card-sub">Warm-Cool · Rare · Versatile</div></div></div><p class="eye-card-desc">Most intensified by red and auburn tones — the complement of green on the colour wheel.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Auburn, warm red, copper, chestnut</em> — red is the wheel complement to green.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Warm option</div><div class="eye-rec-val">Golden blonde and honey amplify the yellow-green tones in the iris.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid red or bright copper — one of the most striking combinations in colour theory.</div></div></div></div>
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#8B6840 0%,#6A4820 50%,#4A3010 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Hazel Eyes</div><div class="eye-card-sub">Mixed · Warm · Changeable</div></div></div><p class="eye-card-desc">Hazel eyes shift between green, brown, and gold. They respond beautifully to warm and jewel tones.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm auburn, amber, golden brown, copper</em> — echoes the gold-green in hazel.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Jewel tones</div><div class="eye-rec-val">Deep plum and rich burgundy bring out the green in hazel eyes.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy ash tones can grey out hazel eyes and mute their warmth.</div></div></div></div>
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#6A4020 0%,#4A2808 50%,#2A1505 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Warm Brown Eyes</div><div class="eye-card-sub">Warm · Rich · Universal</div></div></div><p class="eye-card-desc">Warm brown eyes pair with almost any hair colour — the key is amplifying depth and luminosity.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Warm chocolate, caramel, golden auburn, honey blonde.</em></div></div><div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Icy blonde and platinum create high contrast that makes warm brown eyes stand out.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Bold option</div><div class="eye-rec-val">Vivid copper or warm red — deeply harmonious and striking.</div></div></div></div>
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#3A2820 0%,#201510 50%,#100A08 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Deep Brown Eyes</div><div class="eye-card-sub">Cool-Neutral · Deep · Versatile</div></div></div><p class="eye-card-desc">Deep brown eyes are extraordinarily versatile. Almost any hair colour reads well.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Enhance with</div><div class="eye-rec-val"><em>Rich black, deep espresso, blue-black, dark chocolate.</em></div></div><div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Bold platinum or ash blonde — editorial and dramatic.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Vivid option</div><div class="eye-rec-val">Deep plum, navy — dark fantasy tones read beautifully.</div></div></div></div>
+      <div class="eye-card reveal"><div class="eye-card-header"><div class="eye-iris" style="background:radial-gradient(circle at 40% 40%,#788090 0%,#505870 50%,#2A3050 100%);"><div class="eye-iris-pupil"></div></div><div><div class="eye-card-name">Grey / Steel Eyes</div><div class="eye-card-sub">Cool · Rare · Editorial</div></div></div><p class="eye-card-desc">Grey and steel-blue eyes are cool and silvery — most intensified by harmonising cool tones or bold warm contrast.</p><div class="eye-recommendations"><div class="eye-rec-row"><div class="eye-rec-label">Harmonise</div><div class="eye-rec-val"><em>Silver, platinum, icy ash, moonstone blonde</em> — ethereal monochromatic look.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Contrast</div><div class="eye-rec-val">Warm auburn or copper — warm-cool contrast intensifies grey eye colour.</div></div><div class="eye-rec-row"><div class="eye-rec-label">Avoid</div><div class="eye-rec-val">Heavy orange-brassy tones compete unfavourably with the cool iris.</div></div></div></div>
+    </div>
+  </div>
   <div class="tone-panel" id="tone-theory">
     <div class="skin-grid" style="margin-bottom:2.5rem;">
-      <div class="skin-card reveal">
-        <div class="skin-card-label" style="margin-bottom:0.75rem;">Warm Undertones</div>
-        <div class="skin-card-name" style="margin-bottom:1rem;">Golden · Peachy · Yellow</div>
-        <p class="skin-card-desc">Warm undertones have a golden, peachy, or yellow cast beneath the surface. Indicators: veins appear green, gold jewellery is flattering, skin tans easily. Hair colours in the warm family — golden blonde, copper, auburn, caramel — create harmony. Cool tones (ash, platinum) can look washed out or grey without a warm base toner.</p>
-        <div class="skin-swatches-row" style="margin-top:1rem;">
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Golden Blonde</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#B07840;"></div>Caramel</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#7A3818;"></div>Auburn</div>
-        </div>
-      </div>
-      <div class="skin-card reveal">
-        <div class="skin-card-label" style="margin-bottom:0.75rem;">Cool Undertones</div>
-        <div class="skin-card-name" style="margin-bottom:1rem;">Pink · Red · Bluish</div>
-        <p class="skin-card-desc">Cool undertones have a pink, red, or bluish cast beneath the surface. Indicators: veins appear blue or purple, silver jewellery is more flattering, skin burns before it tans. Cool hair tones — ash, platinum, mushroom, icy blonde — create harmony. Warm tones can make cool-undertone skin look ruddy or flushed unless balanced carefully.</p>
-        <div class="skin-swatches-row" style="margin-top:1rem;">
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#E8E0D0;"></div>Platinum</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#B0A898;"></div>Mushroom</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#888098;"></div>Ash Blonde</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#3A3848;"></div>Cool Espresso</div>
-        </div>
-      </div>
-      <div class="skin-card reveal">
-        <div class="skin-card-label" style="margin-bottom:0.75rem;">Neutral Undertones</div>
-        <div class="skin-card-name" style="margin-bottom:1rem;">Balanced · Mixed · Versatile</div>
-        <p class="skin-card-desc">Neutral undertones have a balanced mix of warm and cool — no single hue dominates. Both gold and silver jewellery look flattering. This is the most versatile undertone: most hair colours work, and the key is choosing based on personal preference and eye colour rather than strict undertone matching.</p>
-        <div class="skin-swatches-row" style="margin-top:1rem;">
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#D4B870;"></div>Sandy Blonde</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#906840;"></div>Neutral Brown</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#C89060;"></div>Warm Toffee</div>
-          <div class="skin-color-chip"><div class="chip-dot" style="background:#3A2818;"></div>Dark Chestnut</div>
-        </div>
-      </div>
+      <div class="skin-card reveal"><div class="skin-card-label" style="margin-bottom:0.75rem;">Warm Undertones</div><div class="skin-card-name" style="margin-bottom:1rem;">Golden · Peachy · Yellow</div><p class="skin-card-desc">Golden, peachy, or yellow cast beneath the surface. Veins appear green, gold jewellery is flattering. Warm hair colours create harmony.</p><div class="skin-swatches-row" style="margin-top:1rem;"><div class="skin-color-chip"><div class="chip-dot" style="background:#D4A040;"></div>Golden Blonde</div><div class="skin-color-chip"><div class="chip-dot" style="background:#C06828;"></div>Copper</div><div class="skin-color-chip"><div class="chip-dot" style="background:#B07840;"></div>Caramel</div><div class="skin-color-chip"><div class="chip-dot" style="background:#7A3818;"></div>Auburn</div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-label" style="margin-bottom:0.75rem;">Cool Undertones</div><div class="skin-card-name" style="margin-bottom:1rem;">Pink · Red · Bluish</div><p class="skin-card-desc">Pink, red, or bluish cast beneath the surface. Veins appear blue or purple, silver jewellery is more flattering. Cool hair tones create harmony.</p><div class="skin-swatches-row" style="margin-top:1rem;"><div class="skin-color-chip"><div class="chip-dot" style="background:#E8E0D0;"></div>Platinum</div><div class="skin-color-chip"><div class="chip-dot" style="background:#B0A898;"></div>Mushroom</div><div class="skin-color-chip"><div class="chip-dot" style="background:#888098;"></div>Ash Blonde</div><div class="skin-color-chip"><div class="chip-dot" style="background:#3A3848;"></div>Cool Espresso</div></div></div>
+      <div class="skin-card reveal"><div class="skin-card-label" style="margin-bottom:0.75rem;">Neutral Undertones</div><div class="skin-card-name" style="margin-bottom:1rem;">Balanced · Mixed · Versatile</div><p class="skin-card-desc">Balanced mix of warm and cool — no single hue dominates. Both gold and silver jewellery look flattering. Most hair colours work well.</p><div class="skin-swatches-row" style="margin-top:1rem;"><div class="skin-color-chip"><div class="chip-dot" style="background:#D4B870;"></div>Sandy Blonde</div><div class="skin-color-chip"><div class="chip-dot" style="background:#906840;"></div>Neutral Brown</div><div class="skin-color-chip"><div class="chip-dot" style="background:#3A2818;"></div>Dark Chestnut</div></div></div>
     </div>
-
-    <!-- How to identify undertone -->
     <div class="tone-theory-strip">
-      <div class="tone-theory-card">
-        <div class="tone-theory-num">01</div>
-        <div class="tone-theory-title">The Vein Test</div>
-        <p class="tone-theory-body">Look at the inside of the wrist in natural light. Blue or purple veins = cool undertone. Green veins = warm undertone. Blue-green = neutral. This is the fastest and most reliable reading you can do in a consultation.</p>
-      </div>
-      <div class="tone-theory-card">
-        <div class="tone-theory-num">02</div>
-        <div class="tone-theory-title">The Jewellery Test</div>
-        <p class="tone-theory-body">Does gold or silver jewellery look more flattering on the client? Gold = warm. Silver = cool. Both equally = neutral. Ask the client which they gravitate toward — they have usually already worked it out.</p>
-      </div>
-      <div class="tone-theory-card">
-        <div class="tone-theory-num">03</div>
-        <div class="tone-theory-title">Sun Reaction</div>
-        <p class="tone-theory-body">How does the skin respond to sun? Burns easily, rarely tans = cool (Fitzpatrick I–II). Tans easily, rarely burns = warm. Both = neutral. This also gives you context for how reactive the scalp and skin may be during chemical services.</p>
-      </div>
-      <div class="tone-theory-card">
-        <div class="tone-theory-num">04</div>
-        <div class="tone-theory-title">Apply at Consultation</div>
-        <p class="tone-theory-body">Run this three-point check in every new client consultation before discussing colour. Undertone knowledge changes your formulation, your toner choice, and your placement recommendation — three major decisions resolved in two minutes.</p>
-      </div>
+      <div class="tone-theory-card"><div class="tone-theory-num">01</div><div class="tone-theory-title">The Vein Test</div><p class="tone-theory-body">Blue or purple veins = cool undertone. Green veins = warm. Blue-green = neutral. The fastest and most reliable reading you can do in a consultation.</p></div>
+      <div class="tone-theory-card"><div class="tone-theory-num">02</div><div class="tone-theory-title">The Jewellery Test</div><p class="tone-theory-body">Gold more flattering = warm. Silver more flattering = cool. Both equally = neutral. Ask the client — they've usually already worked it out.</p></div>
+      <div class="tone-theory-card"><div class="tone-theory-num">03</div><div class="tone-theory-title">Sun Reaction</div><p class="tone-theory-body">Burns easily, rarely tans = cool. Tans easily, rarely burns = warm. Both = neutral. Also gives context for scalp reactivity during chemical services.</p></div>
+      <div class="tone-theory-card"><div class="tone-theory-num">04</div><div class="tone-theory-title">Apply at Consultation</div><p class="tone-theory-body">Run this three-point check in every new client consultation. Undertone knowledge changes your formulation, toner choice, and placement recommendation — three major decisions resolved in two minutes.</p></div>
     </div>
-  </div><!-- end tone-theory -->
+  </div>
+</section>
 
-</section><!-- end tones-section -->
-
+<!-- CURRICULUM HEADERS -->
 <div id="curric-section" style="padding:4rem var(--pad) 2rem;border-bottom:0.5px solid var(--border);">
   <div class="section-eyebrow reveal"><span class="section-eyebrow-line"></span>Track 01 — Stylist Curriculum</div>
   <h2 class="section-h2 reveal" style="margin-top:0.5rem;">The <em>artistry</em> curriculum — 8 units</h2>
@@ -1457,13 +1248,32 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <div class="ccard"><div class="ccard-num">01</div><div class="ccard-cat">Artistry</div><div class="ccard-name">Color Theory &amp; Chemistry</div><p class="ccard-desc">The science of underlying pigment, tonal families, and predictive formulation.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>The color wheel: primaries, secondaries &amp; tertiaries</li><li class="cunit"><span class="cunit-dot"></span>Complementary relationships &amp; neutralization</li><li class="cunit"><span class="cunit-dot"></span>The 10-level system and what it reveals</li><li class="cunit"><span class="cunit-dot"></span>Underlying pigment at each level</li><li class="cunit"><span class="cunit-dot"></span>Developer volumes and lift mechanics</li><li class="cunit"><span class="cunit-dot"></span>Porosity and its effect on color uptake</li><li class="cunit"><span class="cunit-dot"></span>Reading tonal families: warm, cool, neutral</li><li class="cunit"><span class="cunit-dot"></span>Predictive formulation: build results before you mix</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">02</div><div class="ccard-cat">Artistry</div><div class="ccard-name">Corrective Color &amp; Formulation</div><p class="ccard-desc">Problem-solve complex corrections with a structured, methodical approach.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Consultation framework for corrective work</li><li class="cunit"><span class="cunit-dot"></span>Diagnosing banding, hot roots &amp; tonal imbalance</li><li class="cunit"><span class="cunit-dot"></span>Color removal: bleach vs. removers vs. fillers</li><li class="cunit"><span class="cunit-dot"></span>Filling hair before depositing darker color</li><li class="cunit"><span class="cunit-dot"></span>Neutralization per underlying pigment</li><li class="cunit"><span class="cunit-dot"></span>Multi-session planning &amp; expectation setting</li><li class="cunit"><span class="cunit-dot"></span>Documenting and tracking color history</li><li class="cunit"><span class="cunit-dot"></span>Building a corrective formula start to finish</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">03</div><div class="ccard-cat">Artistry</div><div class="ccard-name">Haircut Shape &amp; Design</div><p class="ccard-desc">The geometry of exceptional cuts — weight, movement, and form before the shears.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>The 4 basic forms: solid, graduated, layered, combination</li><li class="cunit"><span class="cunit-dot"></span>Weight lines: where they fall and why</li><li class="cunit"><span class="cunit-dot"></span>Elevation and its effect on perimeter &amp; weight</li><li class="cunit"><span class="cunit-dot"></span>Sectioning for precision &amp; efficiency</li><li class="cunit"><span class="cunit-dot"></span>Overdirection: when and how to apply it</li><li class="cunit"><span class="cunit-dot"></span>Texture work: point cutting, slicing, notching</li><li class="cunit"><span class="cunit-dot"></span>Face shape relationship with cut decisions</li><li class="cunit"><span class="cunit-dot"></span>Building a consultation that informs the cut</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">04</div><div class="ccard-cat">Artistry</div><div class="ccard-name">Placement &amp; Dimension Theory</div><p class="ccard-desc">How light, color, and placement interact to sculpt and illuminate intentionally.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>The light advances / dark recedes principle</li><li class="cunit"><span class="cunit-dot"></span>Mapping face shapes before placement</li><li class="cunit"><span class="cunit-dot"></span>The 6 face shapes and their strategies</li><li class="cunit"><span class="cunit-dot"></span>Balayage vs. foil: when to use each</li><li class="cunit"><span class="cunit-dot"></span>The money piece: placement &amp; face shape</li><li class="cunit"><span class="cunit-dot"></span>Using depth for dimension (shadow root)</li><li class="cunit"><span class="cunit-dot"></span>Movement through saturation &amp; contrast</li><li class="cunit"><span class="cunit-dot"></span>Photographing placements to train the eye</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">04</div><div class="ccard-cat">Artistry</div><div class="ccard-name">Placement &amp; Dimension Theory</div><p class="ccard-desc">How light, color, and placement interact to sculpt and illuminate intentionally.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Light advances / dark recedes principle</li><li class="cunit"><span class="cunit-dot"></span>Mapping face shapes before placement</li><li class="cunit"><span class="cunit-dot"></span>The 6 face shapes and their strategies</li><li class="cunit"><span class="cunit-dot"></span>Balayage vs. foil: when to use each</li><li class="cunit"><span class="cunit-dot"></span>The money piece: placement &amp; face shape</li><li class="cunit"><span class="cunit-dot"></span>Using depth for dimension (shadow root)</li><li class="cunit"><span class="cunit-dot"></span>Movement through saturation &amp; contrast</li><li class="cunit"><span class="cunit-dot"></span>Photographing placements to train the eye</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">05</div><div class="ccard-cat">Ecosystem</div><div class="ccard-name">Luxury Client Experience</div><p class="ccard-desc">Elevate every touchpoint — from consultation to close — to build lasting loyalty.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>The anatomy of a luxury consultation</li><li class="cunit"><span class="cunit-dot"></span>Active listening and reading client intent</li><li class="cunit"><span class="cunit-dot"></span>Setting and managing realistic expectations</li><li class="cunit"><span class="cunit-dot"></span>Retail as education, not a sales pitch</li><li class="cunit"><span class="cunit-dot"></span>The psychology of rebooking before they leave</li><li class="cunit"><span class="cunit-dot"></span>Building a referral ecosystem organically</li><li class="cunit"><span class="cunit-dot"></span>Handling difficult conversations with grace</li><li class="cunit"><span class="cunit-dot"></span>Creating your signature client experience</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">06</div><div class="ccard-cat">Ecosystem</div><div class="ccard-name">Branding &amp; Social Media</div><p class="ccard-desc">Define your aesthetic identity and convert your digital presence into real bookings.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Defining your brand identity &amp; visual aesthetic</li><li class="cunit"><span class="cunit-dot"></span>Hair photography: lighting, angles &amp; editing</li><li class="cunit"><span class="cunit-dot"></span>Instagram strategy: feed, reels &amp; stories</li><li class="cunit"><span class="cunit-dot"></span>Writing captions that educate and attract</li><li class="cunit"><span class="cunit-dot"></span>Content batching: a month in one day</li><li class="cunit"><span class="cunit-dot"></span>Analytics: understanding what's working</li><li class="cunit"><span class="cunit-dot"></span>Building a waitlist through content</li><li class="cunit"><span class="cunit-dot"></span>Collaboration and community-building online</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">07</div><div class="ccard-cat">Business</div><div class="ccard-name">Business Foundations</div><p class="ccard-desc">The numbers, pricing, and strategy behind a sustainable independent career.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Setting service prices with confidence</li><li class="cunit"><span class="cunit-dot"></span>Understanding your cost per service</li><li class="cunit"><span class="cunit-dot"></span>Suite vs. commission vs. booth rental</li><li class="cunit"><span class="cunit-dot"></span>Managing your time like a CEO</li><li class="cunit"><span class="cunit-dot"></span>Tracking income, expenses, profitability</li><li class="cunit"><span class="cunit-dot"></span>Client retention strategy and lifecycle</li><li class="cunit"><span class="cunit-dot"></span>Scaling income without working more hours</li><li class="cunit"><span class="cunit-dot"></span>Building passive revenue as an educator</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Workshops &amp; Formula Vault</div><p class="ccard-desc">Live sessions, case studies, and a resource library for every stage of your journey.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Live hands-on workshops (virtual &amp; in-person)</li><li class="cunit"><span class="cunit-dot"></span>Real case studies &amp; before/after breakdowns</li><li class="cunit"><span class="cunit-dot"></span>The KOSIA Formula Vault — all formulas archived</li><li class="cunit"><span class="cunit-dot"></span>Placement guides by face shape (PDFs)</li><li class="cunit"><span class="cunit-dot"></span>Consultation scripts for common scenarios</li><li class="cunit"><span class="cunit-dot"></span>Guest educator sessions</li><li class="cunit"><span class="cunit-dot"></span>Community Q&amp;A and peer review sessions</li><li class="cunit"><span class="cunit-dot"></span>Monthly live coaching calls</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Workshops &amp; Formula Vault</div><p class="ccard-desc">Live sessions, case studies, and a resource library for every stage.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Live hands-on workshops (virtual &amp; in-person)</li><li class="cunit"><span class="cunit-dot"></span>Real case studies &amp; before/after breakdowns</li><li class="cunit"><span class="cunit-dot"></span>The KOSIA Formula Vault — all formulas archived</li><li class="cunit"><span class="cunit-dot"></span>Placement guides by face shape (PDFs)</li><li class="cunit"><span class="cunit-dot"></span>Consultation scripts for common scenarios</li><li class="cunit"><span class="cunit-dot"></span>Guest educator sessions</li><li class="cunit"><span class="cunit-dot"></span>Community Q&amp;A and peer review sessions</li><li class="cunit"><span class="cunit-dot"></span>Monthly live coaching calls</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
   </div>
 </div>
+
+<!-- OWNER WHY -->
+<section class="owner-why-section">
+  <div class="owner-why-left reveal">
+    <div class="section-eyebrow" style="color:var(--clay-light);"><span class="section-eyebrow-line" style="background:var(--clay-light);"></span>The Owner Track</div>
+    <h2 class="section-h2" style="color:var(--cream);margin-top:0.5rem;">You didn't go to school<br/>to learn how to <em>run a business.</em><br/>Neither did anyone else.</h2>
+    <blockquote class="about-blockquote" style="margin-top:2rem;border-left-color:var(--clay-light);color:rgba(251,249,246,0.55);font-size:1rem;">"The skills that built your clientele are not the same skills that will build your company. That gap is what the Owner Track is designed to close."</blockquote>
+    <button style="margin-top:2rem;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.82rem 1.7rem;font-weight:500;background:var(--clay);color:var(--cream);border:none;cursor:none;transition:all .22s;" onclick="openAuth('signup')">Enroll — Owner Track →</button>
+  </div>
+  <div class="owner-why-right reveal">
+    <p class="owner-why-body">Cosmetology school taught you how to colour, cut, and create. It did not teach you how to read a profit and loss statement, write a job description, build a team culture, or price a service based on actual costs. Those gaps are not a personal failure — they are a gap in the education system.</p>
+    <p class="owner-why-body">The Owner Track was built for the stylist who has outgrown the chair and is ready to build something that lasts — with real frameworks, real numbers, and a clear-eyed view of what leadership actually requires.</p>
+    <div class="owner-why-pillars">
+      <div class="owp"><div class="owp-icon">◐</div><div><div class="owp-title">Systems Before People</div><div class="owp-desc">Every great team operates within great systems. We build the infrastructure first so your hires have something to step into.</div></div></div>
+      <div class="owp"><div class="owp-icon">◻</div><div><div class="owp-title">Financial Clarity</div><div class="owp-desc">Revenue is not profit. Busy is not successful. We teach you to read the numbers that actually matter.</div></div></div>
+      <div class="owp"><div class="owp-icon">◈</div><div><div class="owp-title">Culture Is a Strategy</div><div class="owp-desc">The salons that retain exceptional talent do so because of culture, not compensation. We build that from the ground up.</div></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- OWNER CURRICULUM -->
 <div style="padding:4rem var(--pad) 2rem;background:var(--onyx);border-bottom:0.5px solid #1E1E1E;">
@@ -1475,169 +1285,54 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   <div class="curric-header reveal" style="border-bottom-color:#1E1E1E;"><div><div class="section-eyebrow" style="color:var(--clay-light);"><span class="section-eyebrow-line" style="background:var(--clay-light);"></span>Owner Track</div><h2 class="section-h2" style="color:var(--cream);margin-top:0.4rem;">Eight frameworks for <em>growth</em></h2></div><div style="text-align:right;"><div class="curric-count">08</div><div style="font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:#2E2A28;">Course Units</div></div></div>
   <div class="curric-grid reveal">
     <div class="ccard"><div class="ccard-num">01</div><div class="ccard-cat">Operations</div><div class="ccard-name">Salon Operations &amp; Systems</div><p class="ccard-desc">Build systems that let your salon run smoothly with or without you.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Mapping salon workflows from open to close</li><li class="cunit"><span class="cunit-dot"></span>Creating SOPs for every repeatable task</li><li class="cunit"><span class="cunit-dot"></span>Booking systems &amp; scheduling strategy</li><li class="cunit"><span class="cunit-dot"></span>Inventory management and retail systems</li><li class="cunit"><span class="cunit-dot"></span>Guest experience protocols</li><li class="cunit"><span class="cunit-dot"></span>Managing no-shows, cancellations, deposits</li><li class="cunit"><span class="cunit-dot"></span>Digital tools for a modern salon</li><li class="cunit"><span class="cunit-dot"></span>Building a systems manual your team can follow</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">02</div><div class="ccard-cat">Leadership</div><div class="ccard-name">Team Hiring &amp; Culture</div><p class="ccard-desc">Build a team worth leading — with culture that retains talent and sets standards.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Defining your salon culture before you hire</li><li class="cunit"><span class="cunit-dot"></span>Writing job descriptions that attract the right people</li><li class="cunit"><span class="cunit-dot"></span>Interview frameworks and red flag identification</li><li class="cunit"><span class="cunit-dot"></span>Onboarding that sets expectations clearly</li><li class="cunit"><span class="cunit-dot"></span>Performance reviews and growth conversations</li><li class="cunit"><span class="cunit-dot"></span>Managing conflict and protecting culture</li><li class="cunit"><span class="cunit-dot"></span>Retention: what makes top stylists stay</li><li class="cunit"><span class="cunit-dot"></span>Letting go with grace when it's time</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">02</div><div class="ccard-cat">Leadership</div><div class="ccard-name">Team Hiring &amp; Culture</div><p class="ccard-desc">Build a team worth leading with culture that retains talent.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Defining your salon culture before you hire</li><li class="cunit"><span class="cunit-dot"></span>Writing job descriptions that attract the right people</li><li class="cunit"><span class="cunit-dot"></span>Interview frameworks and red flag identification</li><li class="cunit"><span class="cunit-dot"></span>Onboarding that sets expectations clearly</li><li class="cunit"><span class="cunit-dot"></span>Performance reviews and growth conversations</li><li class="cunit"><span class="cunit-dot"></span>Managing conflict and protecting culture</li><li class="cunit"><span class="cunit-dot"></span>Retention: what makes top stylists stay</li><li class="cunit"><span class="cunit-dot"></span>Letting go with grace when it's time</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">03</div><div class="ccard-cat">Finance</div><div class="ccard-name">Financial Literacy &amp; Pricing</div><p class="ccard-desc">Read your numbers, price with confidence, stop leaving money on the table.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Understanding P&amp;L, cash flow, balance sheets</li><li class="cunit"><span class="cunit-dot"></span>Pricing services based on real cost analysis</li><li class="cunit"><span class="cunit-dot"></span>Service menu design and psychological pricing</li><li class="cunit"><span class="cunit-dot"></span>Commission vs. booth rent vs. hybrid models</li><li class="cunit"><span class="cunit-dot"></span>Payroll, taxes, and your accountant relationship</li><li class="cunit"><span class="cunit-dot"></span>Retail as a profit center</li><li class="cunit"><span class="cunit-dot"></span>Reading salon KPIs that actually matter</li><li class="cunit"><span class="cunit-dot"></span>Building financial projections for growth</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">04</div><div class="ccard-cat">Leadership</div><div class="ccard-name">Leadership Identity</div><p class="ccard-desc">Understand your leadership style and use it to build trust, direction, and clarity.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Discovering your leadership strengths</li><li class="cunit"><span class="cunit-dot"></span>Communicating expectations clearly</li><li class="cunit"><span class="cunit-dot"></span>Leading from the chair vs. the front</li><li class="cunit"><span class="cunit-dot"></span>Giving feedback that motivates, not deflates</li><li class="cunit"><span class="cunit-dot"></span>Creating accountability without micromanaging</li><li class="cunit"><span class="cunit-dot"></span>Managing your energy and preventing burnout</li><li class="cunit"><span class="cunit-dot"></span>Decision-making frameworks for owners</li><li class="cunit"><span class="cunit-dot"></span>Leadership identity aligned with your brand</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">04</div><div class="ccard-cat">Leadership</div><div class="ccard-name">Leadership Identity</div><p class="ccard-desc">Understand your leadership style and use it to build trust and clarity.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Discovering your natural leadership strengths</li><li class="cunit"><span class="cunit-dot"></span>Communicating expectations clearly</li><li class="cunit"><span class="cunit-dot"></span>Leading from the chair vs. leading from the front</li><li class="cunit"><span class="cunit-dot"></span>Giving feedback that motivates, not deflates</li><li class="cunit"><span class="cunit-dot"></span>Creating accountability without micromanaging</li><li class="cunit"><span class="cunit-dot"></span>Managing your energy and preventing burnout</li><li class="cunit"><span class="cunit-dot"></span>Decision-making frameworks for owners</li><li class="cunit"><span class="cunit-dot"></span>Leadership identity aligned with your brand</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
     <div class="ccard"><div class="ccard-num">05</div><div class="ccard-cat">Marketing</div><div class="ccard-name">Marketing &amp; Brand Authority</div><p class="ccard-desc">Build a salon brand that attracts the right clients and positions you as the authority.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Defining your salon's brand positioning</li><li class="cunit"><span class="cunit-dot"></span>Visual identity: logo, palette, photography</li><li class="cunit"><span class="cunit-dot"></span>Google Business, reviews, and local SEO</li><li class="cunit"><span class="cunit-dot"></span>Social media strategy for the salon as a brand</li><li class="cunit"><span class="cunit-dot"></span>Email marketing and client communication</li><li class="cunit"><span class="cunit-dot"></span>Referral programs that generate real business</li><li class="cunit"><span class="cunit-dot"></span>Community partnerships and local press</li><li class="cunit"><span class="cunit-dot"></span>Content calendar for the salon</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">06</div><div class="ccard-cat">Growth</div><div class="ccard-name">Client Experience at Scale</div><p class="ccard-desc">Design and protect a consistent client experience as your team and locations grow.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Mapping the full client journey in your salon</li><li class="cunit"><span class="cunit-dot"></span>Creating experience standards your team can execute</li><li class="cunit"><span class="cunit-dot"></span>Luxury touchpoints on any budget</li><li class="cunit"><span class="cunit-dot"></span>Handling complaints gracefully at owner level</li><li class="cunit"><span class="cunit-dot"></span>Rebooking and retention systems for the whole team</li><li class="cunit"><span class="cunit-dot"></span>Tracking client satisfaction and NPS</li><li class="cunit"><span class="cunit-dot"></span>VIP programs and tiered loyalty</li><li class="cunit"><span class="cunit-dot"></span>Turning clients into advocates and ambassadors</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">07</div><div class="ccard-cat">Growth</div><div class="ccard-name">Scaling &amp; Expansion</div><p class="ccard-desc">Think beyond the chair — build a business that grows without you doing everything.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Suite → team: when and how to make the move</li><li class="cunit"><span class="cunit-dot"></span>Opening a second location: what changes</li><li class="cunit"><span class="cunit-dot"></span>Building systems that survive team turnover</li><li class="cunit"><span class="cunit-dot"></span>Creating an in-house education program</li><li class="cunit"><span class="cunit-dot"></span>Licensing, partnerships, and product lines</li><li class="cunit"><span class="cunit-dot"></span>Becoming an industry educator or speaker</li><li class="cunit"><span class="cunit-dot"></span>Selling your salon: what to build toward</li><li class="cunit"><span class="cunit-dot"></span>Long-term vision planning and legacy thinking</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
-    <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Owner Intensives &amp; Toolkit</div><p class="ccard-desc">Business intensives, templates, and frameworks built specifically for salon owners.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Half-day business intensive workshops</li><li class="cunit"><span class="cunit-dot"></span>Owner roundtables and peer advisory groups</li><li class="cunit"><span class="cunit-dot"></span>Hiring packet templates (job post, interview, offer)</li><li class="cunit"><span class="cunit-dot"></span>SOP templates for every core salon function</li><li class="cunit"><span class="cunit-dot"></span>Financial tracking spreadsheets &amp; KPI dashboards</li><li class="cunit"><span class="cunit-dot"></span>Marketing calendar and content templates</li><li class="cunit"><span class="cunit-dot"></span>1:1 coaching session credits</li><li class="cunit"><span class="cunit-dot"></span>Private owner community access</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">06</div><div class="ccard-cat">Growth</div><div class="ccard-name">Client Experience at Scale</div><p class="ccard-desc">Design and protect a consistent client experience as your business grows.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Mapping the full client journey in your salon</li><li class="cunit"><span class="cunit-dot"></span>Creating experience standards your team can execute</li><li class="cunit"><span class="cunit-dot"></span>Luxury touchpoints on any budget</li><li class="cunit"><span class="cunit-dot"></span>Handling complaints gracefully at owner level</li><li class="cunit"><span class="cunit-dot"></span>Rebooking and retention systems for the whole team</li><li class="cunit"><span class="cunit-dot"></span>Tracking client satisfaction and NPS</li><li class="cunit"><span class="cunit-dot"></span>VIP programs and tiered loyalty</li><li class="cunit"><span class="cunit-dot"></span>Turning clients into advocates</div></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">07</div><div class="ccard-cat">Growth</div><div class="ccard-name">Scaling &amp; Expansion</div><p class="ccard-desc">Build a business that grows without you doing everything.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Suite → team: when and how to make the move</li><li class="cunit"><span class="cunit-dot"></span>Opening a second location: what changes</li><li class="cunit"><span class="cunit-dot"></span>Building systems that survive team turnover</li><li class="cunit"><span class="cunit-dot"></span>Creating an in-house education program</li><li class="cunit"><span class="cunit-dot"></span>Licensing, partnerships, and product lines</li><li class="cunit"><span class="cunit-dot"></span>Becoming an industry educator or speaker</li><li class="cunit"><span class="cunit-dot"></span>Selling your salon: what to build toward</li><li class="cunit"><span class="cunit-dot"></span>Long-term vision and legacy thinking</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
+    <div class="ccard"><div class="ccard-num">08</div><div class="ccard-cat">Resources</div><div class="ccard-name">Owner Intensives &amp; Toolkit</div><p class="ccard-desc">Business intensives, templates, and frameworks for salon owners.</p><ul class="ccard-units"><li class="cunit"><span class="cunit-dot"></span>Half-day business intensive workshops</li><li class="cunit"><span class="cunit-dot"></span>Owner roundtables and peer advisory groups</li><li class="cunit"><span class="cunit-dot"></span>Hiring packet templates</li><li class="cunit"><span class="cunit-dot"></span>SOP templates for every core salon function</li><li class="cunit"><span class="cunit-dot"></span>Financial tracking spreadsheets &amp; KPI dashboards</li><li class="cunit"><span class="cunit-dot"></span>Marketing calendar and content templates</li><li class="cunit"><span class="cunit-dot"></span>1:1 coaching session credits</li><li class="cunit"><span class="cunit-dot"></span>Private owner community access</li></ul><div class="ccard-link" onclick="openAuth('signup')">Start Unit <span class="ccard-arrow">→</span></div></div>
   </div>
 </div>
 
-<!-- ═══ OWNER — THE WHY ═══ -->
-<section class="owner-why-section">
-  <div class="owner-why-left reveal">
-    <div class="section-eyebrow"><span class="section-eyebrow-line"></span>The Owner Track — Why It Exists</div>
-    <h2 class="section-h2">You didn't go to school<br/>to learn how to <em>run a business.</em><br/>Neither did anyone else.</h2>
-    <blockquote class="about-blockquote" style="margin-top:2rem;">"The skills that built your clientele are not the same skills that will build your company. That gap is what the Owner Track is designed to close."</blockquote>
-  </div>
-  <div class="owner-why-right reveal">
-    <p class="owner-why-body">Cosmetology school taught you how to colour, cut, and create. It did not teach you how to read a profit and loss statement, write a job description, build a team culture, or price a service based on actual costs. Those gaps are not a personal failure — they are a gap in the education system. Most beauty professionals discover them the hard way: through a bad hire, a cash flow crisis, a team that walks out, or a full book that somehow still doesn't feel profitable.</p>
-    <p class="owner-why-body">The Owner Track was built for the stylist who has outgrown the chair and is ready to build something that lasts — with real frameworks, real numbers, and a clear-eyed view of what leadership actually requires.</p>
-    <div class="owner-why-pillars">
-      <div class="owp"><div class="owp-icon">◐</div><div><div class="owp-title">Systems Before People</div><div class="owp-desc">Every great team operates within great systems. We build the infrastructure first so your hires have something to step into — not something to figure out.</div></div></div>
-      <div class="owp"><div class="owp-icon">◻</div><div><div class="owp-title">Financial Clarity</div><div class="owp-desc">Revenue is not profit. Busy is not successful. We teach you to read the numbers that actually matter and build a business that is profitable by design.</div></div></div>
-      <div class="owp"><div class="owp-icon">◈</div><div><div class="owp-title">Culture Is a Strategy</div><div class="owp-desc">The salons that retain exceptional talent do so because of culture, not compensation. We build that from the ground up — before the first hire walks in.</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ COLOR MADE SIMPLE ═══ -->
+<!-- COLOR MADE SIMPLE -->
 <section class="color-simple-section">
   <div class="cs-header reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>The Philosophy Behind the Curriculum</div>
-    <h2 class="section-h2" style="max-width:700px;">When you understand your <em>why,</em><br/>colour becomes simple.</h2>
-    <p class="cs-sub">This is the belief at the centre of everything KOSIA teaches. Not that colour is easy — but that it becomes predictable, logical, and creative once the underlying principles are clear. Here is what we mean.</p>
+    <h2 class="section-h2" style="margin-top:0.5rem;max-width:680px;">When you understand your <em>why,</em><br/>colour becomes simple.</h2>
+    <p class="cs-sub">Not that colour is easy — but that it becomes predictable, logical, and creative once the underlying principles are clear.</p>
   </div>
   <div class="cs-grid">
-    <div class="cs-card reveal">
-      <div class="cs-card-num">01</div>
-      <div class="cs-card-eyebrow">The Problem</div>
-      <h3 class="cs-card-title">Most colour education teaches steps, not principles</h3>
-      <p class="cs-card-body">You are taught: use this toner, apply this developer, follow this timing. You are rarely taught: here is why this toner works, here is what the developer is doing to the hair structure, here is why timing matters based on porosity. Steps produce one result. Principles produce infinite results.</p>
-    </div>
-    <div class="cs-card reveal">
-      <div class="cs-card-num">02</div>
-      <div class="cs-card-eyebrow">The Why</div>
-      <h3 class="cs-card-title">Underlying pigment is the entire secret</h3>
-      <p class="cs-card-body">When a client's hair goes brassy, it is not a mystery — it is underlying pigment that was not neutralised. When a correction goes wrong, it is almost always because the formulator did not account for the warmth already in the hair. Understanding UP is not advanced knowledge. It is the foundation. We teach it first, and everything else clicks into place around it.</p>
-    </div>
-    <div class="cs-card reveal">
-      <div class="cs-card-num">03</div>
-      <div class="cs-card-eyebrow">The Formula</div>
-      <h3 class="cs-card-title">The colour wheel is not art — it is science</h3>
-      <p class="cs-card-body">Every toner decision, every corrective choice, every formulation you make is an application of the colour wheel. Warm cancels cool. Cool cancels warm. Complements neutralise each other. This is chemistry, not guesswork. When a colourist truly internalises the wheel — not as a chart but as a way of thinking — they stop second-guessing and start predicting.</p>
-    </div>
-    <div class="cs-card reveal">
-      <div class="cs-card-num">04</div>
-      <div class="cs-card-eyebrow">The Result</div>
-      <h3 class="cs-card-title">Confidence is a byproduct of understanding</h3>
-      <p class="cs-card-body">The stylists who feel confident at the colour bowl are not the ones who have done it the most times. They are the ones who understand what they are doing and why. Repetition without understanding builds habits. Understanding builds mastery. KOSIA is built to take you from one to the other — as fast as possible, as clearly as possible.</p>
-    </div>
+    <div class="cs-card reveal"><div class="cs-card-num">01</div><div class="cs-card-eyebrow">The Problem</div><h3 class="cs-card-title">Most colour education teaches steps, not principles</h3><p class="cs-card-body">Steps produce one result. Principles produce infinite results. When you understand why a toner works, you can apply it to any client, any level, any goal.</p></div>
+    <div class="cs-card reveal"><div class="cs-card-num">02</div><div class="cs-card-eyebrow">The Why</div><h3 class="cs-card-title">Underlying pigment is the entire secret</h3><p class="cs-card-body">When hair goes brassy, it is underlying pigment that was not neutralised. Understanding UP is not advanced knowledge — it is the foundation everything else is built on.</p></div>
+    <div class="cs-card reveal"><div class="cs-card-num">03</div><div class="cs-card-eyebrow">The Formula</div><h3 class="cs-card-title">The colour wheel is not art — it is science</h3><p class="cs-card-body">Every toner decision, every corrective choice is an application of the colour wheel. When a colourist internalises the wheel as a way of thinking, they stop second-guessing and start predicting.</p></div>
+    <div class="cs-card reveal"><div class="cs-card-num">04</div><div class="cs-card-eyebrow">The Result</div><h3 class="cs-card-title">Confidence is a byproduct of understanding</h3><p class="cs-card-body">The stylists who feel confident at the colour bowl are not the ones who have done it the most times. They are the ones who understand what they are doing and why.</p></div>
   </div>
-  <!-- The simple formula strip -->
   <div class="cs-formula-strip reveal">
-    <div class="cs-formula-item">
-      <div class="cs-formula-label">Step 1</div>
-      <div class="cs-formula-title">Read the Level</div>
-      <div class="cs-formula-body">Identify the client's natural or current level. This tells you what underlying pigment you will encounter during lift.</div>
-    </div>
-    <div class="cs-formula-arrow">→</div>
-    <div class="cs-formula-item">
-      <div class="cs-formula-label">Step 2</div>
-      <div class="cs-formula-title">Predict the Pigment</div>
-      <div class="cs-formula-body">Know your UP chart. Level 5 = orange-red. Level 7 = yellow-orange. Level 9 = pale yellow. No surprises.</div>
-    </div>
-    <div class="cs-formula-arrow">→</div>
-    <div class="cs-formula-item">
-      <div class="cs-formula-label">Step 3</div>
-      <div class="cs-formula-title">Choose Your Complement</div>
-      <div class="cs-formula-body">Find the complement of the UP on the colour wheel. That is your neutralising agent — your toner, your ash series, your corrective base.</div>
-    </div>
-    <div class="cs-formula-arrow">→</div>
-    <div class="cs-formula-item">
-      <div class="cs-formula-label">Step 4</div>
-      <div class="cs-formula-title">Formulate with Intention</div>
-      <div class="cs-formula-body">Apply developer, timing, and ratio based on porosity, target result, and condition. Every variable is a decision, not a guess.</div>
-    </div>
-    <div class="cs-formula-arrow">→</div>
-    <div class="cs-formula-item cs-formula-result">
-      <div class="cs-formula-label">Result</div>
-      <div class="cs-formula-title">Predictable,<br/>Every Time</div>
-      <div class="cs-formula-body">Not because you got lucky. Because you understood the system.</div>
-    </div>
+    <div class="cs-formula-item"><div class="cs-formula-label">Step 1</div><div class="cs-formula-title">Read the Level</div><div class="cs-formula-body">Identify the client's natural level. This tells you the underlying pigment you'll encounter during lift.</div></div>
+    <div class="cs-formula-item"><div class="cs-formula-label">Step 2</div><div class="cs-formula-title">Predict the Pigment</div><div class="cs-formula-body">Level 5 = orange-red. Level 7 = yellow-orange. Level 9 = pale yellow. No surprises.</div></div>
+    <div class="cs-formula-item"><div class="cs-formula-label">Step 3</div><div class="cs-formula-title">Choose Your Complement</div><div class="cs-formula-body">Find the complement of the UP on the colour wheel. That is your neutralising agent.</div></div>
+    <div class="cs-formula-item"><div class="cs-formula-label">Step 4</div><div class="cs-formula-title">Formulate with Intention</div><div class="cs-formula-body">Apply developer, timing, and ratio based on porosity, target result, and condition.</div></div>
+    <div class="cs-formula-item cs-formula-result"><div class="cs-formula-label">Result</div><div class="cs-formula-title">Predictable,<br/>Every Time</div><div class="cs-formula-body">Not because you got lucky. Because you understood the system.</div></div>
   </div>
 </section>
 
-<!-- ═══ PRICING ═══ -->
+<!-- PRICING -->
 <section id="pricing" class="pricing-section">
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
     <div class="section-eyebrow" style="justify-content:center;"><span class="section-eyebrow-line"></span>Pricing<span class="section-eyebrow-line" style="transform:scaleX(-1);"></span></div>
     <h2 class="section-h2" style="margin-top:0.6rem;">Simple, transparent pricing.<br/>No hidden fees.</h2>
-    <p style="font-size:0.82rem;color:var(--muted);margin-top:0.85rem;line-height:1.85;">Choose your track and your pace. All plans include full curriculum access, the Formula Vault, placement guides, and the KOSIA learning platform.</p>
+    <p style="font-size:0.82rem;color:var(--muted);margin-top:0.85rem;line-height:1.85;">All plans include full curriculum access, the Formula Vault, placement guides, and the KOSIA learning platform.</p>
   </div>
   <div class="pricing-grid">
-    <div class="price-card reveal">
-      <div class="price-track-tag">Stylist Track</div>
-      <div class="price-name">Monthly</div>
-      <div class="price-amount">$47</div>
-      <div class="price-period">per month · cancel anytime</div>
-      <div class="price-save" style="min-height:1.2em;">&nbsp;</div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li class="price-feature"><span class="price-check">✓</span>Full access to Stylist Track — 8 units</li>
-        <li class="price-feature"><span class="price-check">✓</span>64 in-depth video modules</li>
-        <li class="price-feature"><span class="price-check">✓</span>Formula Vault &amp; downloadable PDFs</li>
-        <li class="price-feature"><span class="price-check">✓</span>Color wheel &amp; placement guides</li>
-        <li class="price-feature"><span class="price-check">✓</span>Community access</li>
-        <li class="price-feature price-no"><span class="price-check">—</span>Live coaching calls</li>
-        <li class="price-feature price-no"><span class="price-check">—</span>1:1 advisor session</li>
-      </ul>
-      <button class="btn-price btn-price-dark" onclick="openAuth('signup')">Start Stylist Monthly</button>
-    </div>
-    <div class="price-card featured reveal">
-      <div class="price-badge">Most Popular</div>
-      <div class="price-track-tag">Stylist Track</div>
-      <div class="price-name" style="color:var(--cream);">Annual</div>
-      <div class="price-amount" style="color:var(--cream);">$397</div>
-      <div class="price-period">per year · billed annually</div>
-      <div class="price-save">Save $167 vs. monthly</div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li class="price-feature"><span class="price-check">✓</span>Everything in Monthly</li>
-        <li class="price-feature"><span class="price-check">✓</span>Full 12-month access</li>
-        <li class="price-feature"><span class="price-check">✓</span>Monthly live group coaching calls</li>
-        <li class="price-feature"><span class="price-check">✓</span>Priority community access</li>
-        <li class="price-feature"><span class="price-check">✓</span>1:1 onboarding session (30 min)</li>
-        <li class="price-feature"><span class="price-check">✓</span>New content as it's released</li>
-        <li class="price-feature"><span class="price-check">✓</span>Printable formula &amp; guide library</li>
-      </ul>
-      <button class="btn-price btn-price-clay" onclick="openAuth('signup')">Start Stylist Annual</button>
-    </div>
-    <div class="price-card reveal">
-      <div class="price-track-tag">Owner Track</div>
-      <div class="price-name">Owner Annual</div>
-      <div class="price-amount">$697</div>
-      <div class="price-period">per year · billed annually</div>
-      <div class="price-save">Includes 1:1 Strategy Session</div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        <li class="price-feature"><span class="price-check">✓</span>Full access to Owner Track — 8 units</li>
-        <li class="price-feature"><span class="price-check">✓</span>64 business &amp; leadership modules</li>
-        <li class="price-feature"><span class="price-check">✓</span>SOP, hiring &amp; financial templates</li>
-        <li class="price-feature"><span class="price-check">✓</span>Monthly owner roundtable calls</li>
-        <li class="price-feature"><span class="price-check">✓</span>1:1 Strategy Session (60 min)</li>
-        <li class="price-feature"><span class="price-check">✓</span>Private owner community access</li>
-        <li class="price-feature"><span class="price-check">✓</span>KPI dashboard &amp; business toolkit</li>
-      </ul>
-      <button class="btn-price btn-price-dark" onclick="openAuth('signup')">Start Owner Track</button>
-    </div>
+    <div class="price-card reveal"><div class="price-track-tag">Stylist Track</div><div class="price-name">Monthly</div><div class="price-amount">$47</div><div class="price-period">per month · cancel anytime</div><div class="price-save" style="min-height:1.2em;">&nbsp;</div><div class="price-divider"></div><ul class="price-features"><li class="price-feature"><span class="price-check">✓</span>Full access to Stylist Track — 8 units</li><li class="price-feature"><span class="price-check">✓</span>64 in-depth video modules</li><li class="price-feature"><span class="price-check">✓</span>Formula Vault &amp; downloadable PDFs</li><li class="price-feature"><span class="price-check">✓</span>Color wheel &amp; placement guides</li><li class="price-feature"><span class="price-check">✓</span>Community access</li><li class="price-feature price-no"><span class="price-check">—</span>Live coaching calls</li><li class="price-feature price-no"><span class="price-check">—</span>1:1 advisor session</li></ul><button class="btn-price btn-price-dark" onclick="openAuth('signup')">Start Stylist Monthly</button></div>
+    <div class="price-card featured reveal"><div class="price-badge">Most Popular</div><div class="price-track-tag">Stylist Track</div><div class="price-name" style="color:var(--cream);">Annual</div><div class="price-amount" style="color:var(--cream);">$397</div><div class="price-period">per year · billed annually</div><div class="price-save">Save $167 vs. monthly</div><div class="price-divider"></div><ul class="price-features"><li class="price-feature"><span class="price-check">✓</span>Everything in Monthly</li><li class="price-feature"><span class="price-check">✓</span>Full 12-month access</li><li class="price-feature"><span class="price-check">✓</span>Monthly live group coaching calls</li><li class="price-feature"><span class="price-check">✓</span>Priority community access</li><li class="price-feature"><span class="price-check">✓</span>1:1 onboarding session (30 min)</li><li class="price-feature"><span class="price-check">✓</span>New content as it's released</li><li class="price-feature"><span class="price-check">✓</span>Printable formula &amp; guide library</li></ul><button class="btn-price btn-price-clay" onclick="openAuth('signup')">Start Stylist Annual</button></div>
+    <div class="price-card reveal"><div class="price-track-tag">Owner Track</div><div class="price-name">Owner Annual</div><div class="price-amount">$697</div><div class="price-period">per year · billed annually</div><div class="price-save">Includes 1:1 Strategy Session</div><div class="price-divider"></div><ul class="price-features"><li class="price-feature"><span class="price-check">✓</span>Full access to Owner Track — 8 units</li><li class="price-feature"><span class="price-check">✓</span>64 business &amp; leadership modules</li><li class="price-feature"><span class="price-check">✓</span>SOP, hiring &amp; financial templates</li><li class="price-feature"><span class="price-check">✓</span>Monthly owner roundtable calls</li><li class="price-feature"><span class="price-check">✓</span>1:1 Strategy Session (60 min)</li><li class="price-feature"><span class="price-check">✓</span>Private owner community access</li><li class="price-feature"><span class="price-check">✓</span>KPI dashboard &amp; business toolkit</li></ul><button class="btn-price btn-price-dark" onclick="openAuth('signup')">Start Owner Track</button></div>
   </div>
-  <p class="pricing-note">Need to enroll your whole team? <span style="color:var(--clay);cursor:none;" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Book a group pricing call →</span></p>
+  <p class="pricing-note">Enrolling your whole salon team? <span style="color:var(--clay);cursor:none;" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Book a group pricing call →</span></p>
 </section>
 
-<!-- ═══ CALENDLY ═══ -->
+<!-- CALENDLY -->
 <section id="consult" class="calendly-section">
   <div class="reveal">
     <div class="section-eyebrow"><span class="section-eyebrow-line"></span>Book a Consultation</div>
@@ -1645,12 +1340,12 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div>
   <div class="cal-grid">
     <div class="reveal">
-      <p class="cal-body">Not sure which track is right for you? Want to talk through your career goals before committing? Book a free discovery call — or a full strategy session for salon owners.</p>
+      <p class="cal-body">Not sure which track is right for you? Book a free discovery call — or a full strategy session for salon owners ready to get to work.</p>
       <div class="meeting-types">
         <div class="mtype sel" onclick="selectMeeting(this,'discovery')"><div class="mtype-hd"><div class="mtype-name">Discovery Call</div><div class="mtype-dur">20 min · Free</div></div><p class="mtype-desc">Find out which KOSIA track fits your goals. We'll map out your next steps.</p></div>
-        <div class="mtype" onclick="selectMeeting(this,'stylist')"><div class="mtype-hd"><div class="mtype-name">Stylist Enrollment Call</div><div class="mtype-dur">30 min</div></div><p class="mtype-desc">For stylists ready to enroll. Review curriculum, pricing, and set up your account together.</p></div>
-        <div class="mtype" onclick="selectMeeting(this,'owner')"><div class="mtype-hd"><div class="mtype-name">Owner Strategy Session</div><div class="mtype-dur">60 min</div></div><p class="mtype-desc">A deep-dive for salon owners. Map your biggest challenges and explore how the Owner Track addresses them.</p></div>
-        <div class="mtype" onclick="selectMeeting(this,'group')"><div class="mtype-hd"><div class="mtype-name">Team &amp; Group Pricing</div><div class="mtype-dur">45 min</div></div><p class="mtype-desc">Enrolling your salon team? Custom group pricing and onboarding. Let's build a plan together.</p></div>
+        <div class="mtype" onclick="selectMeeting(this,'stylist')"><div class="mtype-hd"><div class="mtype-name">Stylist Enrollment Call</div><div class="mtype-dur">30 min</div></div><p class="mtype-desc">For stylists ready to enroll. Review curriculum, pricing, and set up your account.</p></div>
+        <div class="mtype" onclick="selectMeeting(this,'owner')"><div class="mtype-hd"><div class="mtype-name">Owner Strategy Session</div><div class="mtype-dur">60 min</div></div><p class="mtype-desc">A deep-dive for salon owners. Map your biggest challenges and explore the Owner Track.</p></div>
+        <div class="mtype" onclick="selectMeeting(this,'group')"><div class="mtype-hd"><div class="mtype-name">Team &amp; Group Pricing</div><div class="mtype-dur">45 min</div></div><p class="mtype-desc">Enrolling your salon team? Custom group pricing and onboarding.</p></div>
       </div>
       <button class="btn-cal" onclick="openCalendly()">Open Scheduling Calendar →</button>
     </div>
@@ -1660,7 +1355,7 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div>
 </section>
 
-<!-- ═══ PULL QUOTE ═══ -->
+<!-- PULL QUOTE -->
 <section class="voice-section">
   <div class="voice-bg"></div>
   <div class="reveal">
@@ -1678,19 +1373,12 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="cta-left reveal">
     <h2 class="cta-h2">Your education,<br/><em>elevated.</em></h2>
     <p class="cta-sub">KOSIA Academy is two focused tracks — one for the stylist who wants to master the craft, one for the owner who wants to build something lasting.</p>
-    <ul class="cta-list">
-      <li><span class="cta-check">✓</span>Full curriculum access — 8 units per track</li>
-      <li><span class="cta-check">✓</span>Underlying pigment charts &amp; formula vault</li>
-      <li><span class="cta-check">✓</span>Color wheel, face shape &amp; placement guides</li>
-      <li><span class="cta-check">✓</span>Live workshops and on-demand video modules</li>
-      <li><span class="cta-check">✓</span>Integrated Calendly coaching booking</li>
-      <li><span class="cta-check">✓</span>Private community and peer learning</li>
-    </ul>
+    <ul class="cta-list"><li><span class="cta-check">✓</span>Full curriculum access — 8 units per track</li><li><span class="cta-check">✓</span>Underlying pigment charts &amp; formula vault</li><li><span class="cta-check">✓</span>Color wheel, face shape &amp; placement guides</li><li><span class="cta-check">✓</span>Live workshops and on-demand video modules</li><li><span class="cta-check">✓</span>Integrated Calendly coaching booking</li><li><span class="cta-check">✓</span>Private community and peer learning</li></ul>
   </div>
   <div class="cta-right reveal">
     <div class="section-eyebrow" style="color:var(--clay);"><span class="section-eyebrow-line" style="background:var(--clay);"></span>Begin Your Journey</div>
@@ -1706,10 +1394,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 
 <footer>
   <div class="footer-brand"><div class="footer-logo">KOSIA Academy</div><div class="footer-tagline">Modern Education for Beauty Professionals</div></div>
-  <div class="footer-links"><a href="#tracks">Tracks</a><a href="#color">Color Science</a><a href="#skin-tones">Skin &amp; Eye Tones</a><a href="#curric-section">Curriculum</a><a href="#pricing">Pricing</a><a href="#consult">Book a Call</a><a href="#" onclick="openAuth('login')">Sign In</a></div>
+  <div class="footer-links"><a href="#tracks">Programs</a><a href="#color">Color Science</a><a href="#skin-tones">Skin &amp; Eye Tones</a><a href="#curric-section">Curriculum</a><a href="#pricing">Pricing</a><a href="#consult">Book a Call</a><a href="#" onclick="openAuth('login')">Sign In</a></div>
   <div class="footer-copy">© 2025 KOSIA Academy. All rights reserved.</div>
 </footer>
 </div><!-- end view-marketing -->
+
 <!-- ════════════════════════════════
      DASHBOARD VIEW
 ════════════════════════════════ -->
