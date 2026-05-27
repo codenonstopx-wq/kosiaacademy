@@ -394,170 +394,228 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
 /* ══ DASHBOARD ══ */
 #view-dashboard{font-family:'Plus Jakarta Sans',sans-serif;}
 .db-layout{display:block;padding-top:58px;}
-.db-sidebar{background:#0F0F0F;border-right:0.5px solid #1A1A1A;position:fixed;top:58px;left:0;width:240px;height:calc(100vh - 58px);overflow-y:auto;display:flex;flex-direction:column;z-index:100;}
-.db-sidebar-top{padding:1.4rem 1.25rem 1.1rem;border-bottom:0.5px solid #1A1A1A;display:flex;flex-direction:column;gap:0.3rem;}
-.db-user-avatar{width:34px;height:34px;border-radius:50%;background:rgba(196,138,113,0.15);border:0.5px solid rgba(196,138,113,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--clay);margin-bottom:0.4rem;}
+
+/* Sidebar */
+.db-sidebar{background:#0D0D0D;border-right:0.5px solid #1A1A1A;position:fixed;top:58px;left:0;width:260px;height:calc(100vh - 58px);overflow-y:auto;display:flex;flex-direction:column;z-index:100;}
+.db-sidebar-top{padding:1.5rem 1.4rem 1.2rem;border-bottom:0.5px solid #1A1A1A;display:flex;flex-direction:column;gap:0.3rem;}
+.db-user-avatar{width:36px;height:36px;border-radius:50%;background:rgba(196,138,113,0.15);border:0.5px solid rgba(196,138,113,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--clay);margin-bottom:0.45rem;}
 .db-user-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);font-weight:300;}
-.db-user-track{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);}
-.db-overall-progress{padding:1rem 1.25rem;border-bottom:0.5px solid #1A1A1A;}
-.db-op-label{font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:#2E2A28;margin-bottom:0.4rem;}
-.db-op-bar{height:1.5px;background:#1A1A1A;}
-.db-op-fill{height:100%;background:var(--clay);transition:width .6s ease;}
+.db-user-track{font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);}
+.db-overall-progress{padding:1rem 1.4rem;border-bottom:0.5px solid #1A1A1A;}
+.db-op-label{font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:#2E2A28;margin-bottom:0.4rem;}
+.db-op-bar{height:1.5px;background:#1A1A1A;border-radius:1px;}
+.db-op-fill{height:100%;background:var(--clay);transition:width .6s ease;border-radius:1px;}
 .db-op-pct{font-size:0.62rem;color:var(--clay);margin-top:0.3rem;}
-.db-nav{padding:0.6rem 0;flex:1;}
-.db-nav-section{padding:0.85rem 1.25rem 0.3rem;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:#252525;}
-.db-nav-item{display:flex;align-items:center;gap:0.7rem;padding:0.58rem 1.25rem;font-size:0.68rem;color:#3A3530;cursor:none;transition:all .18s;border-left:2px solid transparent;}
+.db-nav{padding:0.5rem 0;flex:1;}
+.db-nav-section{padding:0.9rem 1.4rem 0.3rem;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:#252525;}
+.db-nav-item{display:flex;align-items:center;gap:0.65rem;padding:0.55rem 1.4rem;font-size:0.68rem;color:#3A3530;cursor:none;transition:all .18s;border-left:2px solid transparent;}
 .db-nav-item:hover{color:#6A6060;background:rgba(255,255,255,0.02);}
 .db-nav-item.nav-active{color:var(--clay);background:rgba(196,138,113,0.06);border-left-color:var(--clay);}
-.db-nav-item.disabled{opacity:0.3;pointer-events:none;}
-.db-nav-icon{font-size:0.75rem;flex-shrink:0;opacity:0.6;}
-.db-nav-check{font-size:0.65rem;flex-shrink:0;}
+.db-nav-item.disabled{opacity:0.28;pointer-events:none;}
+.db-nav-icon{font-size:0.72rem;flex-shrink:0;opacity:0.5;}
+.db-nav-check{font-size:0.62rem;flex-shrink:0;}
 .db-nav-check.current{color:var(--clay);}
 .db-nav-check.locked{color:#252525;}
 
-/* Main area */
-.db-main{margin-left:240px;min-height:calc(100vh - 58px);background:var(--cream);}
+/* Main */
+.db-main{margin-left:260px;min-height:calc(100vh - 58px);background:#F8F6F3;}
 
-/* Views — all hidden, toggled by .db-active */
+/* All views hidden by default */
 .db-view{display:none !important;}
 .db-view.db-active{display:block !important;}
 
 /* Page header */
-.db-page-header{padding:2rem 2.5rem 1.5rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-end;flex-shrink:0;}
+.db-page-header{padding:2.25rem 2.5rem 1.75rem;background:var(--cream);border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-end;}
 .db-page-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--onyx);}
-.db-page-sub{font-size:0.75rem;color:var(--muted);margin-top:0.25rem;}
+.db-page-sub{font-size:0.73rem;color:var(--muted);margin-top:0.25rem;}
 .db-page-meta{display:flex;gap:0.5rem;}
-.db-meta-pill{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.7rem;border:0.5px solid var(--border);color:var(--muted);}
+.db-meta-pill{font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.7rem;border:0.5px solid var(--border);color:var(--muted);background:var(--cream);}
 
-/* Course grid */
-.db-course-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-.db-cl-card{border:0.5px solid var(--border);padding:1.6rem;cursor:none;transition:all .22s;position:relative;background:var(--cream);}
-.db-cl-card:hover{background:var(--alabaster);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,14,0.06);}
-.db-cl-card.locked{opacity:0.4;pointer-events:none;}
-.db-cl-lock-badge{position:absolute;top:1rem;right:1rem;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;border:0.5px solid var(--taupe);color:var(--taupe);}
-.db-cl-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--sand);margin-bottom:0.65rem;}
-.db-cl-card-cat{font-size:0.54rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem;}
-.db-cl-card-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--onyx);margin-bottom:0.45rem;}
-.db-cl-card-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:0.9rem;}
-.db-cl-units{list-style:none;margin-bottom:0.9rem;display:flex;flex-direction:column;gap:0.28rem;}
-.db-cl-unit{display:flex;align-items:baseline;gap:0.4rem;font-size:0.64rem;color:var(--muted);line-height:1.4;}
+/* ── COURSE GRID — improved ── */
+.db-course-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;}
+
+.db-cl-card{background:var(--cream);border:0.5px solid var(--border);cursor:none;transition:all .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.db-cl-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1);}
+.db-cl-card:hover{box-shadow:0 12px 32px rgba(26,20,14,0.09);transform:translateY(-3px);}
+.db-cl-card:hover::after{transform:scaleX(1);}
+.db-cl-card.locked{opacity:0.38;pointer-events:none;}
+.db-cl-lock-badge{position:absolute;top:1rem;right:1rem;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.6rem;background:#F0EBE5;color:var(--taupe);border:0.5px solid var(--taupe);}
+
+/* Card top band */
+.db-cl-band{height:4px;background:linear-gradient(90deg,var(--clay) 0%,var(--clay-light) 100%);flex-shrink:0;}
+.db-cl-band.band-artistry{background:linear-gradient(90deg,#C48A71,#D9A98F);}
+.db-cl-band.band-ecosystem{background:linear-gradient(90deg,#8A9A86,#A8B8A4);}
+.db-cl-band.band-business{background:linear-gradient(90deg,#6A7A8A,#8A9AAA);}
+.db-cl-band.band-resources{background:linear-gradient(90deg,#9A8A72,#BAA892);}
+.db-cl-band.band-operations{background:linear-gradient(90deg,#7A8A6A,#9AAA8A);}
+.db-cl-band.band-leadership{background:linear-gradient(90deg,#8A7A9A,#AA9ABA);}
+.db-cl-band.band-finance{background:linear-gradient(90deg,#7A8A9A,#9AAABA);}
+.db-cl-band.band-marketing{background:linear-gradient(90deg,#9A7A6A,#BA9A8A);}
+.db-cl-band.band-growth{background:linear-gradient(90deg,#6A8A7A,#8AAA9A);}
+
+/* Card body */
+.db-cl-body{padding:1.5rem 1.6rem 1.25rem;display:flex;flex-direction:column;flex:1;}
+.db-cl-header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.9rem;}
+.db-cl-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--sand);line-height:1;}
+.db-cl-card-cat{font-size:0.53rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);}
+.db-cl-card-name{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--onyx);margin-bottom:0.4rem;line-height:1.25;}
+.db-cl-card-desc{font-size:0.71rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;flex:1;}
+
+/* Units accordion */
+.db-cl-units-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.65rem 0;border-top:0.5px solid var(--border);cursor:none;margin-bottom:0;}
+.db-cl-units-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+.db-cl-units-arrow{font-size:0.6rem;color:var(--clay);transition:transform .22s;}
+.db-cl-units-arrow.open{transform:rotate(90deg);}
+.db-cl-units{list-style:none;display:none;flex-direction:column;gap:0.28rem;padding:0.5rem 0 0.75rem;border-top:none;}
+.db-cl-units.open{display:flex;}
+.db-cl-unit{display:flex;align-items:baseline;gap:0.4rem;font-size:0.65rem;color:var(--muted);line-height:1.4;}
 .db-cl-unit-dot{width:3px;height:3px;border-radius:50%;background:var(--clay);flex-shrink:0;margin-top:0.38rem;opacity:0.5;}
-.db-cl-prog-bar{height:1.5px;background:var(--sand);margin-bottom:0.35rem;position:relative;}
-.db-cl-prog-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);}
+
+/* Progress row */
+.db-cl-footer{padding:0 1.6rem 1.25rem;display:flex;flex-direction:column;gap:0.35rem;}
+.db-cl-prog-bar{height:2px;background:var(--sand);border-radius:1px;position:relative;}
+.db-cl-prog-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);border-radius:1px;}
 .db-cl-prog-text{font-size:0.57rem;color:var(--muted);display:flex;justify-content:space-between;}
+.db-cl-prog-pct{color:var(--clay);}
+
+/* Start button */
+.db-cl-start-btn{margin:0 1.6rem 1.25rem;padding:0.55rem;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--onyx);color:var(--cream);border:none;cursor:none;transition:all .2s;text-align:center;}
+.db-cl-start-btn:hover{background:var(--clay-dark);}
+.db-cl-card.locked .db-cl-start-btn{background:#E8E0D0;color:var(--taupe);}
 
 /* Video */
 .db-video-wrap{background:var(--onyx);flex-shrink:0;}
-.db-video-bg{position:relative;aspect-ratio:16/9;max-height:42vh;background:#060606;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.db-video-bg{position:relative;aspect-ratio:16/9;max-height:44vh;background:#060606;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .db-video-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(196,138,113,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,138,113,0.04) 1px,transparent 1px);background-size:40px 40px;}
 .db-play-btn{width:60px;height:60px;border-radius:50%;border:1px solid rgba(196,138,113,0.35);display:flex;align-items:center;justify-content:center;color:var(--clay);cursor:none;transition:all .22s;background:rgba(196,138,113,0.06);font-size:1rem;position:relative;z-index:2;}
 .db-play-btn:hover{border-color:var(--clay);background:rgba(196,138,113,0.14);}
-.db-video-info{position:absolute;bottom:0.9rem;left:1.25rem;z-index:2;display:flex;flex-direction:column;gap:0.15rem;}
+.db-video-info{position:absolute;bottom:0.9rem;left:1.25rem;z-index:2;}
 .db-video-title{font-size:0.62rem;color:rgba(251,249,246,0.35);letter-spacing:0.06em;}
-.db-video-dur{font-size:0.58rem;color:rgba(251,249,246,0.2);}
+.db-video-dur{font-size:0.58rem;color:rgba(251,249,246,0.2);margin-top:0.1rem;}
 .db-progress-track{height:2px;background:#1A1A1A;position:relative;cursor:none;}
 .db-progress-fill{position:absolute;top:0;left:0;height:100%;background:var(--clay);transition:width .3s;}
 .db-progress-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--clay);border:2px solid var(--onyx);transition:left .3s;}
 
 /* Lesson header */
-.db-lesson-header{padding:1.4rem 2.5rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--onyx);flex-shrink:0;}
+.db-lesson-header{padding:1.25rem 2.25rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--onyx);flex-shrink:0;}
 .db-lesson-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--cream);font-weight:300;}
-.db-lesson-sub{font-size:0.65rem;color:#3A3530;margin-top:0.2rem;}
+.db-lesson-sub{font-size:0.63rem;color:#3A3530;margin-top:0.18rem;}
 .db-lesson-nav-row{display:flex;gap:0.5rem;flex-shrink:0;}
-.db-nav-btn{padding:0.55rem 1.1rem;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid #2A2A2A;background:transparent;color:#4A4440;cursor:none;transition:all .2s;}
+.db-nav-btn{padding:0.5rem 1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid #2A2A2A;background:transparent;color:#4A4440;cursor:none;transition:all .2s;}
 .db-nav-btn:hover{border-color:#4A4440;color:#6A6060;}
 .db-nav-btn.primary{background:var(--clay);color:var(--cream);border-color:var(--clay);}
 .db-nav-btn.primary:hover{background:var(--clay-dark);}
 
 /* Lesson body */
 .db-lesson-body{display:grid;grid-template-columns:1fr 280px;min-height:500px;}
-.db-lesson-content{border-right:0.5px solid var(--border);}
-
-/* Content tabs */
-.db-tabs{display:flex;border-bottom:0.5px solid var(--border);background:var(--cream);flex-shrink:0;}
-.db-tab{padding:0.75rem 1.25rem;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;white-space:nowrap;}
+.db-lesson-content{border-right:0.5px solid var(--border);background:var(--cream);}
+.db-tabs{display:flex;border-bottom:0.5px solid var(--border);background:var(--cream);position:sticky;top:0;z-index:5;}
+.db-tab{padding:0.75rem 1.25rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .2s;white-space:nowrap;}
 .db-tab.active{color:var(--clay);border-bottom-color:var(--clay);}
 .db-tab:hover{color:var(--charcoal);}
-
-/* Content panels */
-.db-panel{display:none !important;padding:1.75rem 2.25rem;}
+.db-panel{display:none !important;padding:1.75rem 2rem;}
 .db-panel.active{display:block !important;}
 .db-why-block{margin-bottom:1.75rem;}
-.db-why-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.6rem;}
+.db-why-label{font-size:0.57rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.55rem;}
 .db-why-body{font-size:0.82rem;color:var(--charcoal);line-height:1.9;}
 .db-callout{background:var(--alabaster);border-left:2px solid var(--clay);padding:1rem 1.25rem;margin-top:0.85rem;}
 .db-callout p{font-size:0.78rem;color:var(--charcoal);line-height:1.8;}
-.db-panel-label{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:1rem;}
+.db-panel-label{font-size:0.57rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:0.9rem;}
 .db-panel-sub{font-size:0.74rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
-
-/* Formula rows */
-.db-formula-row{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;border:0.5px solid var(--border);margin-bottom:0.6rem;gap:1rem;}
+.db-formula-row{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;border:0.5px solid var(--border);margin-bottom:0.55rem;gap:1rem;background:var(--cream);}
 .db-f-name{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--onyx);}
-.db-f-val{font-size:0.7rem;color:var(--muted);margin-top:0.15rem;}
-.db-f-tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.55rem;background:rgba(196,138,113,0.1);color:var(--clay);flex-shrink:0;}
+.db-f-val{font-size:0.69rem;color:var(--muted);margin-top:0.12rem;}
+.db-f-tag{font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.5rem;background:rgba(196,138,113,0.1);color:var(--clay);flex-shrink:0;}
 .db-add-formula{margin-top:1.25rem;padding:1rem;background:var(--alabaster);border:0.5px solid var(--border);}
 .db-add-row{display:flex;gap:0.5rem;margin-top:0.5rem;}
-.db-input{padding:0.6rem 0.75rem;border:0.5px solid var(--border-strong);background:var(--cream);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.75rem;color:var(--onyx);outline:none;flex:1;cursor:text;}
+.db-input{padding:0.6rem 0.75rem;border:0.5px solid var(--border-strong);background:var(--cream);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.74rem;color:var(--onyx);outline:none;flex:1;cursor:text;}
 .db-input:focus{border-color:var(--clay);}
 .db-btn-sm{padding:0.6rem 1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--onyx);color:var(--cream);border:none;cursor:none;white-space:nowrap;transition:background .2s;}
 .db-btn-sm:hover{background:var(--clay-dark);}
-
-/* Photo grid */
 .db-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;}
 .db-photo-cell{aspect-ratio:4/3;background:var(--alabaster);border:0.5px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;cursor:none;transition:border-color .2s;position:relative;overflow:hidden;}
 .db-photo-cell:hover{border-color:var(--clay);}
 .db-photo-cell input{position:absolute;inset:0;opacity:0;cursor:none;width:100%;height:100%;}
 .db-photo-icon{font-size:1.35rem;}
-.db-photo-lbl{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--taupe);}
-
-/* Lesson plan */
-.db-plan-title{font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:1.25rem;}
-.db-plan-row{display:grid;grid-template-columns:90px 1fr;gap:1rem;padding:0.85rem 0;border-bottom:0.5px solid var(--border);}
-.db-plan-key{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.1rem;}
-.db-plan-val{font-size:0.76rem;color:var(--charcoal);line-height:1.82;display:flex;flex-direction:column;gap:0.35rem;}
-
-/* Download rows */
-.db-download-row{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;border:0.5px solid var(--border);margin-bottom:0.4rem;font-size:0.72rem;color:var(--muted);text-decoration:none;cursor:none;transition:all .2s;gap:1rem;}
+.db-photo-lbl{font-size:0.57rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--taupe);}
+.db-plan-title{font-size:0.57rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);margin-bottom:1.25rem;}
+.db-plan-row{display:grid;grid-template-columns:88px 1fr;gap:1rem;padding:0.85rem 0;border-bottom:0.5px solid var(--border);}
+.db-plan-key{font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);padding-top:0.1rem;}
+.db-plan-val{font-size:0.76rem;color:var(--charcoal);line-height:1.82;display:flex;flex-direction:column;gap:0.32rem;}
+.db-download-row{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;border:0.5px solid var(--border);margin-bottom:0.38rem;font-size:0.71rem;color:var(--muted);text-decoration:none;cursor:none;transition:all .2s;gap:1rem;}
 .db-download-row:hover{border-color:var(--clay);color:var(--onyx);}
-.db-dl-btn{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);white-space:nowrap;flex-shrink:0;}
+.db-dl-btn{font-size:0.57rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--clay);white-space:nowrap;flex-shrink:0;}
 
 /* Right sidebar */
-.db-right-sidebar{background:#0F0F0F;}
+.db-right-sidebar{background:#0D0D0D;display:flex;flex-direction:column;}
 .db-sidebar-tabs{display:flex;border-bottom:0.5px solid #1A1A1A;flex-shrink:0;}
-.db-stab{flex:1;padding:0.8rem 0.35rem;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:#2A2520;text-align:center;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .18s;}
+.db-stab{flex:1;padding:0.8rem 0.35rem;font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;color:#2A2520;text-align:center;border:none;background:none;cursor:none;border-bottom:1.5px solid transparent;margin-bottom:-0.5px;transition:all .18s;}
 .db-stab.active{color:var(--clay);border-bottom-color:var(--clay);}
-.db-side-panel{display:none !important;padding:1.1rem;}
+.db-side-panel{display:none !important;padding:1.1rem;overflow-y:auto;}
 .db-side-panel.active{display:block !important;}
 .db-note-input{width:100%;height:80px;background:#080808;border:0.5px solid #1A1A1A;color:#5A5050;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.7rem;padding:0.6rem;resize:none;outline:none;line-height:1.6;margin-bottom:0.4rem;}
-.db-save-note-btn{width:100%;padding:0.45rem;font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(196,138,113,0.1);color:var(--clay);border:0.5px solid rgba(196,138,113,0.2);cursor:none;margin-bottom:0.85rem;transition:all .2s;}
+.db-save-note-btn{width:100%;padding:0.45rem;font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(196,138,113,0.1);color:var(--clay);border:0.5px solid rgba(196,138,113,0.2);cursor:none;margin-bottom:0.85rem;transition:all .2s;}
 .db-save-note-btn:hover{background:rgba(196,138,113,0.2);}
-.db-side-note{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.55rem;background:rgba(196,138,113,0.02);}
-.db-side-note-label{font-size:0.55rem;color:var(--clay);margin-bottom:0.22rem;letter-spacing:0.06em;}
-.db-side-note-text{font-size:0.68rem;color:#3A3530;line-height:1.65;}
-.db-vault-item{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.55rem;}
-.db-vault-name{font-family:'Cormorant Garamond',serif;font-size:0.88rem;color:var(--cream);margin-bottom:0.15rem;}
-.db-vault-val{font-size:0.66rem;color:var(--clay);}
+.db-side-note{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.5rem;background:rgba(196,138,113,0.02);}
+.db-side-note-label{font-size:0.54rem;color:var(--clay);margin-bottom:0.2rem;letter-spacing:0.06em;}
+.db-side-note-text{font-size:0.67rem;color:#3A3530;line-height:1.65;}
+.db-vault-item{padding:0.75rem;border:0.5px solid #1A1A1A;margin-bottom:0.5rem;}
+.db-vault-name{font-family:'Cormorant Garamond',serif;font-size:0.88rem;color:var(--cream);margin-bottom:0.14rem;}
+.db-vault-val{font-size:0.65rem;color:var(--clay);}
 
-/* Resources view */
-.db-res-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+/* Resources */
+.db-res-grid{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;}
 .db-res-card{border:0.5px solid var(--border);padding:1.5rem;cursor:none;transition:all .22s;background:var(--cream);display:flex;flex-direction:column;}
-.db-res-card:hover{background:var(--alabaster);transform:translateY(-2px);}
+.db-res-card:hover{background:var(--alabaster);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,14,0.07);}
 .db-res-icon{font-size:1.4rem;margin-bottom:0.75rem;}
-.db-res-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--onyx);margin-bottom:0.4rem;}
+.db-res-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--onyx);margin-bottom:0.38rem;}
 .db-res-desc{font-size:0.7rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;flex:1;}
 .db-res-btn{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);background:var(--onyx);border:none;cursor:none;padding:0.6rem 1rem;transition:all .2s;text-align:center;}
 .db-res-btn:hover{background:var(--clay-dark);}
 
-/* Downloads list */
+/* Downloads */
 .db-dl-list{padding:1.5rem 2.5rem;}
 .db-dl-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border:0.5px solid var(--border);margin-bottom:0.5rem;background:var(--cream);transition:all .2s;}
 .db-dl-item:hover{background:var(--alabaster);}
-.db-dl-icon{font-size:1.25rem;flex-shrink:0;}
+.db-dl-icon{font-size:1.2rem;flex-shrink:0;}
 .db-dl-info{flex:1;}
-.db-dl-name{font-size:0.82rem;color:var(--onyx);margin-bottom:0.15rem;}
-.db-dl-meta{font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;}
+.db-dl-name{font-size:0.82rem;color:var(--onyx);margin-bottom:0.12rem;}
+.db-dl-meta{font-size:0.61rem;color:var(--muted);letter-spacing:0.06em;}
 .db-dl-action{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--onyx);color:var(--cream);border:none;cursor:none;transition:all .2s;white-space:nowrap;flex-shrink:0;}
 .db-dl-action:hover{background:var(--clay-dark);}
+
+/* NEW: Progress Overview */
+.db-progress-overview{padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;background:var(--cream);border-bottom:0.5px solid var(--border);}
+.db-prog-stat{text-align:center;padding:1.25rem;border:0.5px solid var(--border);background:#FAF8F5;}
+.db-prog-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--clay);line-height:1;margin-bottom:0.25rem;}
+.db-prog-stat-label{font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+
+/* NEW: Quick Actions bar */
+.db-quick-actions{display:flex;gap:0.75rem;padding:1.5rem 2.5rem;background:var(--cream);border-bottom:0.5px solid var(--border);flex-wrap:wrap;}
+.db-qa-btn{display:flex;align-items:center;gap:0.5rem;padding:0.55rem 1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid var(--border);background:var(--cream);color:var(--muted);cursor:none;transition:all .2s;white-space:nowrap;}
+.db-qa-btn:hover{border-color:var(--clay);color:var(--clay);}
+.db-qa-btn.primary{background:var(--onyx);color:var(--cream);border-color:var(--onyx);}
+.db-qa-btn.primary:hover{background:var(--clay-dark);border-color:var(--clay-dark);}
+.db-qa-icon{font-size:0.85rem;}
+
+/* NEW: Continue learning banner */
+.db-continue-banner{margin:1.75rem 2.5rem 0;padding:1.5rem 1.75rem;background:var(--onyx);display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.db-cont-left{display:flex;flex-direction:column;gap:0.3rem;}
+.db-cont-eyebrow{font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);}
+.db-cont-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--cream);}
+.db-cont-sub{font-size:0.68rem;color:#3A3530;}
+.db-cont-btn{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.4rem;background:var(--clay);color:var(--cream);border:none;cursor:none;white-space:nowrap;flex-shrink:0;transition:all .2s;}
+.db-cont-btn:hover{background:var(--clay-dark);}
+
+/* NEW: Search/filter bar */
+.db-filter-bar{display:flex;align-items:center;gap:1rem;padding:1.25rem 2.5rem;background:var(--cream);border-bottom:0.5px solid var(--border);}
+.db-search-input{flex:1;max-width:280px;padding:0.55rem 0.85rem;border:0.5px solid var(--border-strong);background:var(--cream);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.74rem;color:var(--onyx);outline:none;transition:border-color .2s;cursor:text;}
+.db-search-input:focus{border-color:var(--clay);}
+.db-filter-chips{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.db-chip{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.75rem;border:0.5px solid var(--border);color:var(--muted);cursor:none;transition:all .18s;background:var(--cream);}
+.db-chip.active{background:var(--onyx);color:var(--cream);border-color:var(--onyx);}
+.db-chip:hover{border-color:var(--clay);color:var(--clay);}
+
 
 .db-topnav{position:fixed;top:0;left:0;right:0;z-index:800;display:none;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(10,10,10,0.97);backdrop-filter:blur(18px);border-bottom:0.5px solid #1A1A1A;height:58px;}
 .db-topnav.visible{display:flex;}
@@ -1408,70 +1466,127 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
     <!-- SIDEBAR -->
     <aside class="db-sidebar" id="dbSidebar">
       <div class="db-sidebar-top">
-        <div class="db-user-avatar" id="dbUserAvatar">F</div>
+        <div class="db-user-avatar" id="dbUserAvatar">K</div>
         <div class="db-user-name" id="dbUserName">Welcome</div>
         <div class="db-user-track" id="dbUserTrack">Stylist Track</div>
       </div>
       <div class="db-overall-progress">
         <div class="db-op-label">Overall Progress</div>
         <div class="db-op-bar"><div class="db-op-fill" id="dbOverallFill" style="width:12%;"></div></div>
-        <div class="db-op-pct" id="dbOverallPct">12%</div>
+        <div class="db-op-pct" id="dbOverallPct">12% complete</div>
       </div>
       <nav class="db-nav" id="dbNav">
-        <div class="db-nav-section">My Courses</div>
-        <div class="db-nav-item" id="nav-courses" onclick="showDbView('courses');setNavActive('nav-courses')">
-          <span class="db-nav-icon">▦</span>All Courses
+        <div class="db-nav-section">Dashboard</div>
+        <div class="db-nav-item nav-active" id="nav-courses" onclick="showDbView('courses');setNavActive('nav-courses')">
+          <span class="db-nav-icon">◈</span>My Courses
         </div>
-        <div class="db-nav-section">Active Unit</div>
+        <div class="db-nav-item" id="nav-progress" onclick="showDbView('progress');setNavActive('nav-progress')">
+          <span class="db-nav-icon">◐</span>My Progress
+        </div>
+        <div class="db-nav-section">Active</div>
         <div class="db-nav-item" id="nav-l0" onclick="goToLesson(0);setNavActive('nav-l0')">
-          <span class="db-nav-check current">▶</span><span id="navL0">Color Theory</span>
+          <span class="db-nav-check current">▶</span><span id="navL0" style="font-size:0.66rem;">Color Theory</span>
         </div>
         <div class="db-nav-item disabled" id="nav-l1">
-          <span class="db-nav-check locked">⊘</span><span id="navL1">Corrective Color</span>
+          <span class="db-nav-check locked">⊘</span><span id="navL1" style="font-size:0.66rem;">Corrective Color</span>
         </div>
         <div class="db-nav-item disabled" id="nav-l2">
-          <span class="db-nav-check locked">⊘</span><span id="navL2">Haircut Design</span>
+          <span class="db-nav-check locked">⊘</span><span id="navL2" style="font-size:0.66rem;">Haircut Design</span>
         </div>
         <div class="db-nav-section">Resources</div>
         <div class="db-nav-item" id="nav-resources" onclick="showDbView('resources');setNavActive('nav-resources')">
-          <span class="db-nav-icon">⬡</span>All Resources
-        </div>
-        <div class="db-nav-item" id="nav-vault" onclick="showDbView('resources');setNavActive('nav-vault')">
-          <span class="db-nav-icon">🧪</span>Formula Vault
+          <span class="db-nav-icon">⬡</span>Resource Library
         </div>
         <div class="db-nav-item" id="nav-downloads" onclick="showDbView('downloads');setNavActive('nav-downloads')">
           <span class="db-nav-icon">↓</span>Downloads
         </div>
+        <div class="db-nav-item" id="nav-notes" onclick="showDbView('notes');setNavActive('nav-notes')">
+          <span class="db-nav-icon">✎</span>My Notes
+        </div>
       </nav>
     </aside>
 
-    <!-- MAIN -->
     <div class="db-main" id="dbMain">
 
-      <!-- ── COURSE LIST ── -->
-      <div class="db-view" id="view-courses">
+      <!-- ══ COURSES VIEW ══ -->
+      <div class="db-view db-active" id="view-courses">
         <div class="db-page-header">
           <div>
             <div class="db-page-title" id="dbClTitle">Stylist Track</div>
-            <div class="db-page-sub" id="dbClSub">Your full curriculum — 8 units, 64 video modules</div>
+            <div class="db-page-sub">Your full curriculum — 8 units · 64 modules</div>
           </div>
-          <div class="db-page-meta" id="dbPageMeta">
-            <span class="db-meta-pill">8 Units</span>
+          <div class="db-page-meta">
+            <span class="db-meta-pill" id="metaUnits">8 Units</span>
             <span class="db-meta-pill">64 Modules</span>
+            <span class="db-meta-pill" id="metaProgress">12% complete</span>
           </div>
         </div>
+
+        <!-- Continue banner -->
+        <div class="db-continue-banner" id="dbContinueBanner">
+          <div class="db-cont-left">
+            <div class="db-cont-eyebrow">Continue Learning</div>
+            <div class="db-cont-title" id="contTitle">Color Theory &amp; Chemistry · Module 3</div>
+            <div class="db-cont-sub" id="contSub">The Color Wheel &amp; Tonal Relationships · 62% complete</div>
+          </div>
+          <button class="db-cont-btn" onclick="goToLesson(0);setNavActive('nav-l0')">Resume Lesson →</button>
+        </div>
+
+        <!-- Progress stats -->
+        <div class="db-progress-overview">
+          <div class="db-prog-stat"><div class="db-prog-stat-num" id="statCompleted">1</div><div class="db-prog-stat-label">Units Started</div></div>
+          <div class="db-prog-stat"><div class="db-prog-stat-num" id="statModules">5</div><div class="db-prog-stat-label">Modules Done</div></div>
+          <div class="db-prog-stat"><div class="db-prog-stat-num" id="statStreak">3</div><div class="db-prog-stat-label">Day Streak</div></div>
+          <div class="db-prog-stat"><div class="db-prog-stat-num" id="statPct">12%</div><div class="db-prog-stat-label">Overall Progress</div></div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="db-quick-actions">
+          <button class="db-qa-btn primary" onclick="goToLesson(0);setNavActive('nav-l0')"><span class="db-qa-icon">▶</span>Resume Lesson</button>
+          <button class="db-qa-btn" onclick="showDbView('resources');setNavActive('nav-resources')"><span class="db-qa-icon">🧪</span>Formula Vault</button>
+          <button class="db-qa-btn" onclick="showDbView('downloads');setNavActive('nav-downloads')"><span class="db-qa-icon">↓</span>Downloads</button>
+          <button class="db-qa-btn" onclick="showDbView('notes');setNavActive('nav-notes')"><span class="db-qa-icon">✎</span>My Notes</button>
+          <button class="db-qa-btn" onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'});logout()"><span class="db-qa-icon">📅</span>Book a Call</button>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="db-filter-bar">
+          <input class="db-search-input" id="courseSearch" placeholder="Search courses..." oninput="filterCourses(this.value)"/>
+          <div class="db-filter-chips" id="filterChips">
+            <button class="db-chip active" onclick="filterByTag(this,'all')">All</button>
+            <button class="db-chip" onclick="filterByTag(this,'artistry')" id="chip-artistry">Artistry</button>
+            <button class="db-chip" onclick="filterByTag(this,'ecosystem')" id="chip-ecosystem">Ecosystem</button>
+            <button class="db-chip" onclick="filterByTag(this,'business')" id="chip-business">Business</button>
+            <button class="db-chip" onclick="filterByTag(this,'resources')" id="chip-resources">Resources</button>
+          </div>
+        </div>
+
+        <!-- Course cards -->
         <div class="db-course-grid" id="dbClGrid"></div>
       </div>
 
-      <!-- ── LESSON VIEW ── -->
-      <div class="db-view" id="view-lesson" style="display:none;">
-        <!-- Video -->
+      <!-- ══ PROGRESS VIEW ══ -->
+      <div class="db-view" id="view-progress">
+        <div class="db-page-header">
+          <div><div class="db-page-title">My Progress</div><div class="db-page-sub">Track your learning journey across all modules</div></div>
+        </div>
+        <div style="padding:2rem 2.5rem;">
+          <div class="db-progress-overview" style="margin-bottom:1.5rem;">
+            <div class="db-prog-stat"><div class="db-prog-stat-num">1</div><div class="db-prog-stat-label">Units Started</div></div>
+            <div class="db-prog-stat"><div class="db-prog-stat-num">5</div><div class="db-prog-stat-label">Modules Done</div></div>
+            <div class="db-prog-stat"><div class="db-prog-stat-num">3</div><div class="db-prog-stat-label">Day Streak</div></div>
+            <div class="db-prog-stat"><div class="db-prog-stat-num">12%</div><div class="db-prog-stat-label">Overall Progress</div></div>
+          </div>
+          <div id="progressList" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
+        </div>
+      </div>
+
+      <!-- ══ LESSON VIEW ══ -->
+      <div class="db-view" id="view-lesson">
         <div class="db-video-wrap">
           <div class="db-video-bg">
             <div class="db-video-grid"></div>
-            <button class="db-play-btn" id="dbPlayBtn" onclick="togglePlay()">
-              <span id="dbPlayIcon">▶</span>
-            </button>
+            <button class="db-play-btn" id="dbPlayBtn" onclick="togglePlay()"><span id="dbPlayIcon">▶</span></button>
             <div class="db-video-info">
               <div class="db-video-title" id="dbVideoTitle">Color Theory — Module 1</div>
               <div class="db-video-dur" id="dbVideoDur">38 min</div>
@@ -1482,28 +1597,25 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
             <div class="db-progress-dot" id="dbTimelineDot" style="left:0%"></div>
           </div>
         </div>
-        <!-- Lesson header -->
         <div class="db-lesson-header">
           <div>
-            <div class="db-lesson-title" id="dbLessonTitle">The Color Wheel & Tonal Relationships</div>
+            <div class="db-lesson-title" id="dbLessonTitle">The Color Wheel &amp; Tonal Relationships</div>
             <div class="db-lesson-sub" id="dbLessonSub">Color Theory · Module 1 of 8 · 38 min</div>
           </div>
           <div class="db-lesson-nav-row">
+            <button class="db-nav-btn" onclick="showDbView('courses');setNavActive('nav-courses')">← All Courses</button>
             <button class="db-nav-btn" onclick="prevLesson()">← Prev</button>
             <button class="db-nav-btn primary" onclick="nextLesson()">Next →</button>
           </div>
         </div>
-        <!-- Lesson body: content + sidebar -->
         <div class="db-lesson-body">
           <div class="db-lesson-content">
-            <!-- Tabs -->
             <div class="db-tabs">
               <button class="db-tab active" onclick="switchContentTab(this,'why')">The Why</button>
               <button class="db-tab" onclick="switchContentTab(this,'formulas')">Formulas</button>
               <button class="db-tab" onclick="switchContentTab(this,'photos')">Photos</button>
               <button class="db-tab" onclick="switchContentTab(this,'plan')">Lesson Plan</button>
             </div>
-            <!-- WHY -->
             <div class="db-panel active" id="cpanel-why">
               <div class="db-why-block">
                 <div class="db-why-label" id="whyLabel">Core Principle</div>
@@ -1515,12 +1627,11 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 <p class="db-why-body">Complementary colors — directly opposite on the wheel — cancel each other out. This is why blue-violet toner neutralizes yellow brassiness and green ash corrects red underlying pigment. You are not guessing — you are applying the wheel.</p>
               </div>
             </div>
-            <!-- FORMULAS -->
             <div class="db-panel" id="cpanel-formulas">
               <div class="db-panel-label">Module Formula Reference</div>
               <div id="formulaCards">
                 <div class="db-formula-row"><div><div class="db-f-name">Neutralizing Level 7 Brassiness</div><div class="db-f-val">Blue-Violet Toner + Clear 1:2 · 10 vol · 15 min</div></div><span class="db-f-tag">Vault</span></div>
-                <div class="db-formula-row"><div><div class="db-f-name">Level 5 Correction — Red-Orange UP</div><div class="db-f-val">Blue-Green Ash · 30 vol · 35–40 min</div></div><span class="db-f-tag">Vault</span></div>
+                <div class="db-formula-row"><div><div class="db-f-name">Level 5 — Red-Orange UP Correction</div><div class="db-f-val">Blue-Green Ash · 30 vol · 35–40 min</div></div><span class="db-f-tag">Vault</span></div>
                 <div class="db-formula-row"><div><div class="db-f-name">Platinum Toner (Level 9–10)</div><div class="db-f-val">Ultra-Light Pearl + Clear 1:1 · 10 vol · 10 min</div></div><span class="db-f-tag">Vault</span></div>
               </div>
               <div class="db-add-formula">
@@ -1532,60 +1643,36 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 </div>
               </div>
             </div>
-            <!-- PHOTOS -->
             <div class="db-panel" id="cpanel-photos">
-              <div class="db-panel-label">Reference Photos & Before/After</div>
-              <p class="db-panel-sub">Upload photos for this module — before/afters, reference images, diagrams.</p>
+              <div class="db-panel-label">Reference Photos &amp; Before/After</div>
+              <p class="db-panel-sub">Upload photos for this module — before/afters, reference images, technique diagrams.</p>
               <div class="db-photo-grid">
                 <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">📷</span><span class="db-photo-lbl">Before</span></label>
                 <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">✨</span><span class="db-photo-lbl">After</span></label>
                 <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">🎨</span><span class="db-photo-lbl">Reference</span></label>
                 <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">🧴</span><span class="db-photo-lbl">Product</span></label>
                 <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">📐</span><span class="db-photo-lbl">Diagram</span></label>
-                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">＋</span><span class="db-photo-lbl">Add Photo</span></label>
+                <label class="db-photo-cell"><input type="file" accept="image/*" onchange="previewPhoto(this)"/><span class="db-photo-icon">＋</span><span class="db-photo-lbl">Add</span></label>
               </div>
             </div>
-            <!-- LESSON PLAN -->
             <div class="db-panel" id="cpanel-plan">
               <div class="db-plan-title" id="planTitle">Module 1 — Lesson Plan</div>
-              <div class="db-plan-row">
-                <div class="db-plan-key">Objective</div>
-                <div class="db-plan-val" id="planObjective">Understand the 12-tone color wheel and how complementary relationships enable neutralization.</div>
-              </div>
-              <div class="db-plan-row">
-                <div class="db-plan-key">Outline</div>
-                <div class="db-plan-val" id="planOutline">
-                  <div>1. Introduction to the color wheel — the 3 primaries (0:00–6:00)</div>
-                  <div>2. Secondary colors: how they're created (6:00–12:00)</div>
-                  <div>3. Tertiary tones and underlying pigment (12:00–20:00)</div>
-                  <div>4. Complementary pairs: neutralization law (20:00–28:00)</div>
-                  <div>5. Warm vs. cool halves — formulation mindset (28:00–34:00)</div>
-                  <div>6. Recap and formula exercise (34:00–38:00)</div>
-                </div>
-              </div>
-              <div class="db-plan-row">
-                <div class="db-plan-key">Practice</div>
-                <div class="db-plan-val" id="planPractice">Identify the complementary color for Red-Orange, Yellow-Orange, and Pale Yellow. Write the toner you'd use on a Level 7 client with yellow-orange brassiness.</div>
-              </div>
-              <div class="db-plan-row" style="border-bottom:none">
-                <div class="db-plan-key">Downloads</div>
-                <div class="db-plan-val" id="planDownloads">
-                  <a class="db-download-row" href="#" onclick="dlPDF('Color Wheel Reference Chart');return false"><span>📄 Color Wheel Reference Chart</span><span class="db-dl-btn">Download PDF</span></a>
-                  <a class="db-download-row" href="#" onclick="dlPDF('Complementary Color Guide');return false"><span>📄 Complementary Color Guide</span><span class="db-dl-btn">Download PDF</span></a>
-                  <a class="db-download-row" href="#" onclick="dlPDF('Level System & UP Chart');return false"><span>📄 Level System & Underlying Pigment Chart</span><span class="db-dl-btn">Download PDF</span></a>
-                </div>
-              </div>
+              <div class="db-plan-row"><div class="db-plan-key">Objective</div><div class="db-plan-val" id="planObjective">Understand the 12-tone color wheel and how complementary relationships enable neutralization.</div></div>
+              <div class="db-plan-row"><div class="db-plan-key">Outline</div><div class="db-plan-val" id="planOutline"><div>1. Introduction to the color wheel — the 3 primaries (0:00–6:00)</div><div>2. Secondary colors: how they're created (6:00–12:00)</div><div>3. Tertiary tones and underlying pigment (12:00–20:00)</div><div>4. Complementary pairs: neutralization law (20:00–28:00)</div><div>5. Warm vs. cool halves — formulation mindset (28:00–34:00)</div><div>6. Recap and formula exercise (34:00–38:00)</div></div></div>
+              <div class="db-plan-row"><div class="db-plan-key">Practice</div><div class="db-plan-val" id="planPractice">Identify the complement of Red-Orange, Yellow-Orange, and Pale Yellow. Write the toner you'd use on a Level 7 client with yellow-orange brassiness.</div></div>
+              <div class="db-plan-row" style="border-bottom:none"><div class="db-plan-key">Downloads</div><div class="db-plan-val" id="planDownloads">
+                <a class="db-download-row" href="#" onclick="dlPDF('Color Wheel Reference Chart');return false"><span>📄 Color Wheel Reference Chart</span><span class="db-dl-btn">Download PDF</span></a>
+                <a class="db-download-row" href="#" onclick="dlPDF('Complementary Color Guide');return false"><span>📄 Complementary Color Guide</span><span class="db-dl-btn">Download PDF</span></a>
+                <a class="db-download-row" href="#" onclick="dlPDF('Level System & UP Chart');return false"><span>📄 Level System &amp; Underlying Pigment Chart</span><span class="db-dl-btn">Download PDF</span></a>
+              </div></div>
             </div>
           </div>
-
-          <!-- RIGHT SIDEBAR -->
           <div class="db-right-sidebar">
             <div class="db-sidebar-tabs">
               <button class="db-stab active" onclick="switchSideTab(this,'snotes')">Notes</button>
               <button class="db-stab" onclick="switchSideTab(this,'svault')">Vault</button>
               <button class="db-stab" onclick="switchSideTab(this,'scommunity')">Community</button>
             </div>
-            <!-- Notes -->
             <div class="db-side-panel active" id="spanel-snotes">
               <textarea id="noteInput" class="db-note-input" placeholder="Add a note for this module…"></textarea>
               <button class="db-save-note-btn" onclick="saveNote()">Save Note</button>
@@ -1594,14 +1681,12 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
                 <div class="db-side-note"><div class="db-side-note-label">My Note</div><p class="db-side-note-text">Porous hair needs lower developer — moves faster than virgin hair.</p></div>
               </div>
             </div>
-            <!-- Vault -->
             <div class="db-side-panel" id="spanel-svault">
               <div class="db-vault-item"><div class="db-vault-name">Level 5 → UP: Orange-Red</div><div class="db-vault-val">Neutralizer: Blue / Blue-Green</div></div>
               <div class="db-vault-item"><div class="db-vault-name">Level 7 → UP: Yellow-Orange</div><div class="db-vault-val">Neutralizer: Blue-Violet 1:2</div></div>
               <div class="db-vault-item"><div class="db-vault-name">Level 9 → UP: Pale Yellow</div><div class="db-vault-val">Neutralizer: Pearl / Ice Violet</div></div>
               <div class="db-vault-item"><div class="db-vault-name">Platinum Toner</div><div class="db-vault-val">Ultra-Light Pearl + Clear 1:1 · 10vol</div></div>
             </div>
-            <!-- Community -->
             <div class="db-side-panel" id="spanel-scommunity">
               <div class="db-side-note"><div class="db-side-note-label">@kstylist</div><p class="db-side-note-text">Porous hair — reduce developer 5vol and process shorter.</p></div>
               <div class="db-side-note"><div class="db-side-note-label">@hcpro</div><p class="db-side-note-text">Print the complementary color chart and hang it at your station.</p></div>
@@ -1611,75 +1696,57 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
         </div>
       </div>
 
-      <!-- ── RESOURCES ── -->
+      <!-- ══ RESOURCES VIEW ══ -->
       <div class="db-view" id="view-resources">
         <div class="db-page-header">
-          <div>
-            <div class="db-page-title">Resource Library</div>
-            <div class="db-page-sub">Formula Vault, downloadable guides, and your photo gallery</div>
-          </div>
+          <div><div class="db-page-title">Resource Library</div><div class="db-page-sub">Formula Vault, downloadable guides, and your photo gallery</div></div>
         </div>
-        <div class="db-res-grid" id="dbResGrid">
-          <div class="db-res-card">
-            <div class="db-res-icon">🎨</div>
-            <div class="db-res-name">Color Wheel Reference</div>
-            <p class="db-res-desc">Full 12-tone color wheel with complementary pairs, warm/cool notation, and formulation notes.</p>
-            <button class="db-res-btn" onclick="dlPDF('Color Wheel Reference Chart')">Download PDF →</button>
-          </div>
-          <div class="db-res-card">
-            <div class="db-res-icon">📊</div>
-            <div class="db-res-name">Level System & UP Chart</div>
-            <p class="db-res-desc">All 10 levels with underlying pigment swatches, neutralizing colors, and recommended formulations.</p>
-            <button class="db-res-btn" onclick="dlPDF('Level System & Underlying Pigment Chart')">Download PDF →</button>
-          </div>
-          <div class="db-res-card">
-            <div class="db-res-icon">👤</div>
-            <div class="db-res-name">Placement Guides</div>
-            <p class="db-res-desc">Placement strategy cards for all 6 face shapes — Oval, Round, Square, Heart, Long, Diamond.</p>
-            <button class="db-res-btn" onclick="dlPDF('Placement Guides — 6 Face Shapes')">Download PDF →</button>
-          </div>
-          <div class="db-res-card">
-            <div class="db-res-icon">🧪</div>
-            <div class="db-res-name">Formula Vault</div>
-            <p class="db-res-desc">KOSIA curated formulations — neutralization, correction, toning, shadow root, and your saved formulas.</p>
-            <button class="db-res-btn" onclick="dlPDF('KOSIA Formula Vault')">Open Vault →</button>
-          </div>
-          <div class="db-res-card">
-            <div class="db-res-icon">📝</div>
-            <div class="db-res-name">Consultation Scripts</div>
-            <p class="db-res-desc">Word-for-word scripts for 8 common client consultation scenarios — corrective, new client, color maintenance.</p>
-            <button class="db-res-btn" onclick="dlPDF('Consultation Scripts')">Download PDF →</button>
-          </div>
-          <div class="db-res-card">
-            <div class="db-res-icon">🎯</div>
-            <div class="db-res-name">Skin & Eye Tone Guide</div>
-            <p class="db-res-desc">Fitzpatrick scale + undertone guide — which hair colours complement each skin tone and eye colour.</p>
-            <button class="db-res-btn" onclick="dlPDF('Skin & Eye Tone Complement Guide')">Download PDF →</button>
-          </div>
+        <div class="db-res-grid">
+          <div class="db-res-card"><div class="db-res-icon">🎨</div><div class="db-res-name">Color Wheel Reference</div><p class="db-res-desc">Full 12-tone color wheel with complementary pairs, warm/cool notation, and formulation notes.</p><button class="db-res-btn" onclick="dlPDF('Color Wheel Reference Chart')">Download PDF →</button></div>
+          <div class="db-res-card"><div class="db-res-icon">📊</div><div class="db-res-name">Level System &amp; UP Chart</div><p class="db-res-desc">All 10 levels with underlying pigment swatches, neutralizing colors, and recommended formulations.</p><button class="db-res-btn" onclick="dlPDF('Level System & UP Chart')">Download PDF →</button></div>
+          <div class="db-res-card"><div class="db-res-icon">👤</div><div class="db-res-name">Placement Guides</div><p class="db-res-desc">Placement strategy cards for all 6 face shapes. Print and hang at your station.</p><button class="db-res-btn" onclick="dlPDF('Placement Guides — 6 Face Shapes')">Download PDF →</button></div>
+          <div class="db-res-card"><div class="db-res-icon">🧪</div><div class="db-res-name">Formula Vault</div><p class="db-res-desc">KOSIA curated formulations — neutralization, correction, toning, shadow root, and your saved formulas.</p><button class="db-res-btn" onclick="dlPDF('KOSIA Formula Vault')">Open Vault →</button></div>
+          <div class="db-res-card"><div class="db-res-icon">📝</div><div class="db-res-name">Consultation Scripts</div><p class="db-res-desc">Word-for-word scripts for 8 common client consultation scenarios.</p><button class="db-res-btn" onclick="dlPDF('Consultation Scripts')">Download PDF →</button></div>
+          <div class="db-res-card"><div class="db-res-icon">🎯</div><div class="db-res-name">Skin &amp; Eye Tone Guide</div><p class="db-res-desc">Fitzpatrick scale + undertone guide — which hair colours complement each skin tone and eye colour.</p><button class="db-res-btn" onclick="dlPDF('Skin & Eye Tone Guide')">Download PDF →</button></div>
         </div>
       </div>
 
-      <!-- ── DOWNLOADS ── -->
+      <!-- ══ DOWNLOADS VIEW ══ -->
       <div class="db-view" id="view-downloads">
         <div class="db-page-header">
-          <div>
-            <div class="db-page-title">Downloads</div>
-            <div class="db-page-sub">All your guides, charts, templates and PDFs in one place</div>
-          </div>
+          <div><div class="db-page-title">Downloads</div><div class="db-page-sub">All your guides, charts, templates and PDFs in one place</div></div>
         </div>
-        <div class="db-dl-list" id="dbDlList">
+        <div class="db-dl-list">
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Color Wheel Reference Chart</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Color Wheel Reference Chart')">Download</button></div>
-          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Level System & Underlying Pigment Chart</div><div class="db-dl-meta">Color Theory · PDF · 2 pages</div></div><button class="db-dl-action" onclick="dlPDF('Level System & UP Chart')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Level System &amp; Underlying Pigment Chart</div><div class="db-dl-meta">Color Theory · PDF · 2 pages</div></div><button class="db-dl-action" onclick="dlPDF('Level System & UP Chart')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Complementary Color Guide</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Complementary Color Guide')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Placement Guides — All 6 Face Shapes</div><div class="db-dl-meta">Placement Theory · PDF · 6 pages</div></div><button class="db-dl-action" onclick="dlPDF('Placement Guides')">Download</button></div>
-          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Skin & Eye Tone Complement Guide</div><div class="db-dl-meta">Skin Tones · PDF · 4 pages</div></div><button class="db-dl-action" onclick="dlPDF('Skin & Eye Tone Guide')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Skin &amp; Eye Tone Complement Guide</div><div class="db-dl-meta">Skin Tones · PDF · 4 pages</div></div><button class="db-dl-action" onclick="dlPDF('Skin & Eye Tone Guide')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Consultation Scripts (8 Scenarios)</div><div class="db-dl-meta">Client Experience · PDF · 8 pages</div></div><button class="db-dl-action" onclick="dlPDF('Consultation Scripts')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Formulation Worksheet Template</div><div class="db-dl-meta">Color Theory · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Formulation Worksheet')">Download</button></div>
-          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Salon KPI Dashboard</div><div class="db-dl-meta">Owner Track · Excel · 1 sheet</div></div><button class="db-dl-action" onclick="dlPDF('KPI Dashboard')">Download</button></div>
-          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Pricing Calculator Worksheet</div><div class="db-dl-meta">Business · Excel/PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Pricing Calculator')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Salon KPI Dashboard</div><div class="db-dl-meta">Owner Track · Excel · 1 sheet</div></div><button class="db-dl-action" onclick="dlPDF('Salon KPI Dashboard')">Download</button></div>
+          <div class="db-dl-item"><span class="db-dl-icon">📊</span><div class="db-dl-info"><div class="db-dl-name">Pricing Calculator Worksheet</div><div class="db-dl-meta">Business Foundations · PDF · 1 page</div></div><button class="db-dl-action" onclick="dlPDF('Pricing Calculator')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">SOP Template Pack</div><div class="db-dl-meta">Owner Track · PDF · 12 pages</div></div><button class="db-dl-action" onclick="dlPDF('SOP Template Pack')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">Hiring Packet Templates</div><div class="db-dl-meta">Owner Track · PDF · 8 pages</div></div><button class="db-dl-action" onclick="dlPDF('Hiring Packet Templates')">Download</button></div>
           <div class="db-dl-item"><span class="db-dl-icon">📄</span><div class="db-dl-info"><div class="db-dl-name">90-Day Planning Workbook</div><div class="db-dl-meta">Owner Track · PDF · 4 pages</div></div><button class="db-dl-action" onclick="dlPDF('90-Day Planning Workbook')">Download</button></div>
+        </div>
+      </div>
+
+      <!-- ══ NOTES VIEW ══ -->
+      <div class="db-view" id="view-notes">
+        <div class="db-page-header">
+          <div><div class="db-page-title">My Notes</div><div class="db-page-sub">All your saved notes across every module</div></div>
+        </div>
+        <div style="padding:2rem 2.5rem;">
+          <div class="db-add-formula" style="margin-bottom:1.5rem;">
+            <div class="db-panel-label">Add a New Note</div>
+            <div style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
+              <input id="noteModuleTag" class="db-input" placeholder="Module (e.g. Color Theory — Module 3)"/>
+              <textarea id="globalNoteInput" class="db-note-input" style="height:100px;background:var(--cream);border:0.5px solid var(--border-strong);color:var(--onyx);" placeholder="Your note…"></textarea>
+              <button class="db-btn-sm" style="width:auto;align-self:flex-end;padding:0.6rem 1.5rem;" onclick="saveGlobalNote()">Save Note</button>
+            </div>
+          </div>
+          <div id="allNotesContainer"></div>
         </div>
       </div>
 
@@ -1687,12 +1754,13 @@ footer{background:#0C0C0C;padding:2.5rem var(--pad);display:flex;justify-content
   </div><!-- end db-layout -->
 </div><!-- end view-dashboard -->
 
+
 <script>
 // ── TONE TABS ──
 function switchToneTab(btn, panel) {
-  document.querySelectorAll('.tone-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tone-tab').forEach(function(t) { t.classList.remove('active'); });
   btn.classList.add('active');
-  document.querySelectorAll('.tone-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tone-panel').forEach(function(p) { p.classList.remove('active'); });
   var target = document.getElementById('tone-' + panel);
   if (target) target.classList.add('active');
 }
@@ -1932,40 +2000,132 @@ function enterDashboard(name, track) {
   }
 }
 
+var activeFilter = 'all';
+var searchQuery = '';
+var allCourses = [];
+
+function filterCourses(q) {
+  searchQuery = q.toLowerCase();
+  renderCourseGrid();
+}
+
+function filterByTag(btn, tag) {
+  activeFilter = tag;
+  document.querySelectorAll('.db-chip').forEach(function(c) { c.classList.remove('active'); });
+  btn.classList.add('active');
+  renderCourseGrid();
+}
+
+function toggleUnitsById(event) {
+  var btn = event.currentTarget;
+  var uid = btn.getAttribute('data-uid');
+  var list = document.getElementById(uid);
+  if (!list) return;
+  var isOpen = list.classList.contains('open');
+  list.classList.toggle('open', !isOpen);
+  var arrow = btn.querySelector('.db-cl-units-arrow');
+  if (arrow) arrow.classList.toggle('open', !isOpen);
+}
+
+function toggleUnits(btn, uid) {
+  var list = document.getElementById(uid);
+  if (!list) return;
+  var isOpen = list.classList.contains('open');
+  list.classList.toggle('open', !isOpen);
+  var arrow = btn.querySelector('.db-cl-units-arrow');
+  if (arrow) arrow.classList.toggle('open', !isOpen);
+}
+
+function bandClass(cat) {
+  var map = {artistry:'band-artistry',ecosystem:'band-ecosystem',business:'band-business',resources:'band-resources',operations:'band-operations',leadership:'band-leadership',finance:'band-finance',marketing:'band-marketing',growth:'band-growth'};
+  return map[cat.toLowerCase()] || 'band-artistry';
+}
+
 function buildCourseGrid(courses) {
-  var grid = document.getElementById('dbClGrid');
-  if (!grid) { console.error('[KOSIA] dbClGrid not found'); return; }
-  if (!courses || !courses.length) { grid.innerHTML = '<p style="padding:2rem;color:var(--muted);">No courses found.</p>'; return; }
-  grid.style.cssText = 'display:grid!important;grid-template-columns:repeat(2,1fr);gap:1rem;padding:2rem 2.5rem;';
-  var html = '';
-  courses.forEach(function(c, i) {
-    var units = '';
-    if (c.units) {
-      units = '<ul class="db-cl-units">';
-      c.units.forEach(function(u) {
-        units += '<li class="db-cl-unit"><span class="db-cl-unit-dot"></span>' + u + '</li>';
-      });
-      units += '</ul>';
+  allCourses = courses;
+  // Update owner filter chips if needed
+  var isOwner = currentTrack === 'owner';
+  var chips = document.getElementById('filterChips');
+  if (chips) {
+    if (isOwner) {
+      chips.innerHTML = '<button class="db-chip active" onclick="filterByTag(this,\'all\')">All</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'operations\')">Operations</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'leadership\')">Leadership</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'finance\')">Finance</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'marketing\')">Marketing</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'growth\')">Growth</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'resources\')">Resources</button>';
+    } else {
+      chips.innerHTML = '<button class="db-chip active" onclick="filterByTag(this,\'all\')">All</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'artistry\')">Artistry</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'ecosystem\')">Ecosystem</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'business\')">Business</button>' +
+        '<button class="db-chip" onclick="filterByTag(this,\'resources\')">Resources</button>';
     }
-    var lock = c.locked ? '<div class="db-cl-lock-badge">Locked</div>' : '';
-    var click = c.locked ? '' : ' onclick="goToLesson(' + i + ')"';
-    var pct = c.progress > 0 ? c.progress + '% complete' : 'Not started';
-    html += '<div class="db-cl-card' + (c.locked ? ' locked' : '') + '"' + click + '>' +
-      lock +
-      '<div class="db-cl-num">' + c.num + '</div>' +
-      '<div class="db-cl-card-cat">' + c.cat + '</div>' +
-      '<div class="db-cl-card-name">' + c.name + '</div>' +
-      '<p class="db-cl-card-desc">' + c.desc + '</p>' +
-      units +
-      '<div class="db-cl-prog-bar"><div class="db-cl-prog-fill" style="width:' + c.progress + '%;"></div></div>' +
-      '<div class="db-cl-prog-text"><span>' + pct + '</span><span>' + c.modules + ' modules</span></div>' +
+  }
+  renderCourseGrid();
+}
+
+function renderCourseGrid() {
+  var grid = document.getElementById('dbClGrid');
+  if (!grid) return;
+  var courses = allCourses;
+
+  // Apply filter
+  var filtered = courses.filter(function(c, i) {
+    var matchTag = activeFilter === 'all' || c.cat.toLowerCase() === activeFilter;
+    var matchSearch = !searchQuery || c.name.toLowerCase().includes(searchQuery) || c.desc.toLowerCase().includes(searchQuery);
+    return matchTag && matchSearch;
+  });
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--muted);font-size:0.85rem;">No courses match your search.</div>';
+    return;
+  }
+
+  var h = '';
+  filtered.forEach(function(c, fi) {
+    // Find original index for goToLesson
+    var origIndex = courses.indexOf(c);
+    var uid = 'units-' + origIndex;
+    var unitItems = '';
+    if (c.units) {
+      c.units.forEach(function(u) {
+        unitItems += '<li class="db-cl-unit"><span class="db-cl-unit-dot"></span>' + u + '</li>';
+      });
+    }
+    var lockBadge = c.locked ? '<div class="db-cl-lock-badge">Locked</div>' : '';
+    var pct = c.progress > 0 ? c.progress : 0;
+    var pctText = pct > 0 ? pct + '% complete' : 'Not started';
+    var btnText = c.locked ? '🔒 Locked' : (pct > 0 ? 'Continue →' : 'Start Unit →');
+    var btnClick = c.locked ? '' : 'onclick="goToLesson(' + origIndex + ')"';
+
+    h += '<div class="db-cl-card' + (c.locked ? ' locked' : '') + '" data-cat="' + c.cat.toLowerCase() + '">' +
+      '<div class="db-cl-band ' + bandClass(c.cat) + '"></div>' +
+      '<div class="db-cl-body">' +
+        lockBadge +
+        '<div class="db-cl-header-row"><div class="db-cl-num">' + c.num + '</div><div class="db-cl-card-cat">' + c.cat + '</div></div>' +
+        '<div class="db-cl-card-name">' + c.name + '</div>' +
+        '<p class="db-cl-card-desc">' + c.desc + '</p>' +
+        (c.units ? '<div class="db-cl-units-toggle" onclick="toggleUnitsById(event)" data-uid="' + uid + '">' +
+          '<span class="db-cl-units-label">8 modules included</span>' +
+          '<span class="db-cl-units-arrow">›</span>' +
+        '</div>' +
+        '<ul class="db-cl-units" id="' + uid + '">' + unitItems + '</ul>' : '') +
+      '</div>' +
+      '<div class="db-cl-footer">' +
+        '<div class="db-cl-prog-bar"><div class="db-cl-prog-fill" style="width:' + pct + '%;"></div></div>' +
+        '<div class="db-cl-prog-text"><span>' + pctText + '</span><span class="db-cl-prog-pct">' + (pct > 0 ? pct + '%' : '') + '</span></div>' +
+      '</div>' +
+      '<button class="db-cl-start-btn" ' + btnClick + '>' + btnText + '</button>' +
       '</div>';
   });
-  grid.innerHTML = html;
-  // Re-attach cursor
+  grid.innerHTML = h;
+  grid.style.cssText = 'display:grid!important;grid-template-columns:repeat(2,1fr);gap:1.25rem;padding:2rem 2.5rem;';
+
   grid.querySelectorAll('.db-cl-card:not(.locked)').forEach(function(el) {
-    el.addEventListener('mouseenter', function() { cursor.classList.add('big'); });
-    el.addEventListener('mouseleave', function() { cursor.classList.remove('big'); });
+    el.addEventListener('mouseenter', function() { if(cursor) cursor.classList.add('big'); });
+    el.addEventListener('mouseleave', function() { if(cursor) cursor.classList.remove('big'); });
   });
 }
 
@@ -1978,13 +2138,11 @@ function showDbView(view) {
   var target = document.getElementById('view-' + view);
   if (target) {
     target.classList.add('db-active');
-    if (view === 'lesson') {
-      target.style.display = 'flex';
-      target.style.flexDirection = 'column';
-    } else {
-      target.style.display = 'block';
-    }
+    target.style.display = (view === 'lesson') ? 'block' : 'block';
   }
+  // Render notes view on open
+  if (view === 'notes') renderAllNotes();
+  if (view === 'progress') renderProgressView(allCourses);
 }
 
 function goToLesson(i) {
@@ -2132,7 +2290,57 @@ function previewPhoto(input) {
   showToast('Photo uploaded.');
 }
 
+// ── GLOBAL NOTES VIEW ──
+var globalNotes = [];
+function saveGlobalNote() {
+  var tag = document.getElementById('noteModuleTag').value.trim();
+  var text = document.getElementById('globalNoteInput').value.trim();
+  if (!text) return;
+  globalNotes.unshift({ tag: tag || 'General', text: text, date: new Date().toLocaleDateString() });
+  document.getElementById('noteModuleTag').value = '';
+  document.getElementById('globalNoteInput').value = '';
+  renderAllNotes();
+  showToast('Note saved.');
+}
+function renderAllNotes() {
+  var c = document.getElementById('allNotesContainer');
+  if (!c) return;
+  if (!globalNotes.length) { c.innerHTML = '<p style="font-size:0.8rem;color:var(--muted);padding:1rem 0;">No notes yet. Start adding notes as you study each module.</p>'; return; }
+  c.innerHTML = globalNotes.map(function(n) {
+    return '<div style="padding:1rem 1.25rem;border:0.5px solid var(--border);margin-bottom:0.6rem;background:var(--cream);">' +
+      '<div style="display:flex;justify-content:space-between;margin-bottom:0.35rem;">' +
+        '<span style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clay);">' + n.tag + '</span>' +
+        '<span style="font-size:0.58rem;color:var(--muted);">' + n.date + '</span>' +
+      '</div>' +
+      '<p style="font-size:0.78rem;color:var(--charcoal);line-height:1.75;">' + n.text + '</p>' +
+      '</div>';
+  }).join('');
+}
+
+// ── PROGRESS VIEW ──
+function renderProgressView(courses) {
+  var c = document.getElementById('progressList');
+  if (!c || !courses) return;
+  c.innerHTML = courses.map(function(course, i) {
+    var pct = course.progress || 0;
+    var statusColor = pct === 100 ? '#4A7C59' : pct > 0 ? 'var(--clay)' : 'var(--taupe)';
+    var statusText = pct === 100 ? '✓ Complete' : pct > 0 ? 'In Progress' : 'Not Started';
+    return '<div style="display:grid;grid-template-columns:auto 1fr auto;gap:1.25rem;align-items:center;padding:1rem 1.25rem;border:0.5px solid var(--border);background:var(--cream);margin-bottom:0.5rem;">' +
+      '<div style="font-family:Cormorant Garamond,serif;font-size:1.4rem;font-weight:300;color:var(--sand);min-width:2rem;">' + course.num + '</div>' +
+      '<div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:0.95rem;color:var(--onyx);margin-bottom:0.3rem;">' + course.name + '</div>' +
+        '<div style="height:2px;background:var(--sand);position:relative;margin-bottom:0.25rem;">' +
+          '<div style="position:absolute;top:0;left:0;height:100%;width:' + pct + '%;background:var(--clay);"></div>' +
+        '</div>' +
+        '<div style="font-size:0.57rem;color:var(--muted);">' + (pct > 0 ? pct + '% complete' : 'Not started') + ' · ' + course.modules + ' modules</div>' +
+      '</div>' +
+      '<span style="font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:' + statusColor + ';">' + statusText + '</span>' +
+      '</div>';
+  }).join('');
+}
+
 // Calendly
+
 var selectedMeeting = 'discovery';
 var calUrls = {
   discovery: 'https://calendly.com/kosiaacademy/kosia-academy-discovery',
